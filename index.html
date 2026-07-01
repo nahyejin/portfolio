@@ -1,0 +1,4071 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나혜진 — Product Owner Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  --bg: #0A0A0A;
+  --bg-card: #141414;
+  --bg-card-hover: #1A1A1A;
+  --border: #3A3A3A;
+  --border-light: #484848;
+  --gold: #D4C584;
+  --gold-dim: #A89B62;
+  --text-primary: #F8F8F4;
+  --text-secondary: #C8C8C2;
+  --text-muted: #888880;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Pretendard', -apple-system, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAVIGATION ── */
+nav.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--text-primary); }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 48px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.hero-name {
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.hero-name span {
+  color: var(--gold);
+}
+
+.hero-title {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  max-width: 640px;
+  line-height: 1.5;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 56px;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-num span {
+  color: var(--gold);
+}
+
+.stat-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--gold);
+  color: #0A0A0A;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover { opacity: 0.88; }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold-dim);
+  color: var(--text-primary);
+}
+
+/* ── SECTION COMMON ── */
+section {
+  padding: 100px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 64px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-title {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* ── ABOUT ── */
+#about {
+  border-top: 1px solid var(--border);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 17px;
+  color: #C8C8C2;
+  line-height: 1.85;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about-text p + p { margin-top: 20px; }
+
+.skills-section { }
+
+.skills-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.skills-group { margin-bottom: 28px; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.tag.gold {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+
+/* ── PROJECTS ── */
+#projects {
+  border-top: 4px solid var(--gold);
+  background: #F8F7F4;
+  max-width: 100%;
+  padding: 80px 0;
+}
+
+#projects > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+/* 라이트 테마 오버라이드 — projects + before-po */
+.light-section {
+  background: #F8F7F4;
+}
+
+.light-section .section-header {
+  border-bottom-color: #D8D4CC;
+}
+
+.light-section .section-eyebrow {
+  color: #8A7B40;
+}
+
+.light-section .section-title {
+  color: #1A1A18;
+}
+
+.light-section .project-headline {
+  color: #1A1A18;
+}
+
+.light-section .project-subhead {
+  color: #888880;
+}
+
+.light-section .project-index {
+  color: #8A7B40;
+}
+
+.light-section .status-done {
+  background: rgba(138,123,64,0.08);
+  color: #6A5D30;
+  border-color: #B0A060;
+}
+
+.light-section .status-ongoing {
+  background: rgba(60,140,60,0.08);
+  color: #2A7A2A;
+  border-color: #5A9A5A;
+}
+
+.light-section .slide-card {
+  background: #FFFFFF;
+  border-color: #E0DDD6;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.light-section .slide-card:hover {
+  border-color: #C8B97A;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.light-section .slide-card-header {
+  background: #FAFAF8;
+}
+
+.light-section .slide-num {
+  color: #A89B62;
+}
+
+.light-section .slide-title {
+  color: #2A2A28;
+}
+
+.light-section .slide-toggle {
+  color: #AAAAAA;
+}
+
+.light-section .slide-card.open .slide-toggle {
+  color: #8A7B40;
+}
+
+.light-section .slide-content {
+  border-top-color: #E8E4DC;
+}
+
+.light-section .slide-headline {
+  color: #8A7B40;
+  border-bottom-color: #E8E4DC;
+}
+
+.light-section .sub-headline {
+  color: #6A5D30;
+}
+
+.light-section .content-table th {
+  background: #F0EDE6;
+  color: #666660;
+  border-color: #E0DDD6;
+}
+
+.light-section .content-table td {
+  color: #333330;
+  border-color: #E0DDD6;
+}
+
+.light-section .content-table td:first-child {
+  color: #1A1A18;
+  background: #F8F6F2;
+}
+
+.light-section .content-table tr:hover td {
+  background: rgba(0,0,0,0.02);
+}
+
+.light-section .content-table tr:hover td:first-child {
+  background: #F0EDE6;
+}
+
+.light-section .body-text {
+  color: #444440;
+}
+
+.light-section .capability-tag {
+  border-color: #B0A060;
+  color: #6A5D30;
+}
+
+.light-section .code-block {
+  background: #F0EDE6;
+  border-color: #D8D4CC;
+  color: #2A6A2A;
+}
+
+.light-section .img-placeholder {
+  background: #F0EDE6;
+  border-color: #C8C4BC;
+  color: #888880;
+}
+
+.light-section .diagram-wrap rect,
+.light-section .diagram-wrap svg {
+  /* SVG 내부는 별도 처리 */
+}
+
+.light-section .project-block {
+  border-bottom: 1px solid #E0DDD6;
+  padding-bottom: 80px;
+  margin-bottom: 80px;
+}
+
+.light-section .project-block:last-child {
+  border-bottom: none;
+}
+
+/* before-po 섹션도 라이트 */
+.light-section#before-po .timeline-item::before {
+  background: #E0DDD8;
+}
+
+.light-section .timeline::before {
+  background: #D8D4CC;
+}
+
+.light-section .timeline-item::before {
+  border-color: #8A7B40;
+  background: #F8F7F4;
+}
+
+.light-section .timeline-period {
+  color: #8A7B40;
+}
+
+.light-section .timeline-company {
+  color: #1A1A18;
+}
+
+.light-section .timeline-role {
+  color: #888880;
+}
+
+.light-section .po-link {
+  color: #6A5D30;
+  border-color: #B0A060;
+}
+
+.light-section .brand-pill {
+  border-color: #D8D4CC;
+  color: #666660;
+}
+
+.light-section .framework-label {
+  color: #888880;
+}
+
+.light-section .tag {
+  border-color: #D8D4CC;
+  color: #555550;
+}
+
+.light-section .tag.gold {
+  border-color: #B0A060;
+  color: #6A5D30;
+}
+
+.project-block {
+  margin-bottom: 96px;
+}
+
+.project-block:last-child { margin-bottom: 0; }
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.project-index {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+.project-status {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 3px 8px;
+  letter-spacing: 0.08em;
+}
+
+.status-done {
+  background: rgba(200, 185, 122, 0.1);
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+}
+
+.status-ongoing {
+  background: rgba(100, 180, 100, 0.08);
+  color: #7FBF7F;
+  border: 1px solid #3A6A3A;
+}
+
+.project-headline {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.project-subhead {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+/* 슬라이드 카드들 */
+.slides {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.slide-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.slide-card:hover {
+  border-color: var(--border-light);
+}
+
+.slide-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--gold-dim);
+  letter-spacing: 0.08em;
+  min-width: 52px;
+}
+
+.slide-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.slide-toggle {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--text-muted);
+  transition: transform 0.25s;
+}
+
+.slide-card.open .slide-toggle {
+  transform: rotate(45deg);
+  color: var(--gold);
+}
+
+.slide-content {
+  display: none;
+  padding: 0 28px 32px;
+  border-top: 1px solid var(--border);
+}
+
+.slide-card.open .slide-content {
+  display: block;
+}
+
+.slide-inner {
+  padding-top: 28px;
+}
+
+/* 슬라이드 안의 이미지 플레이스홀더 */
+.img-placeholder {
+  width: 100%;
+  background: #111;
+  border: 1px dashed #404040;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #909088;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  margin: 24px 0;
+}
+
+.img-placeholder.tall { height: 320px; }
+.img-placeholder.medium { height: 220px; }
+.img-placeholder.short { height: 160px; }
+
+.img-placeholder-icon {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.img-placeholder-label { opacity: 0.7; }
+
+.img-row {
+  display: grid;
+  gap: 2px;
+  margin: 24px 0;
+}
+
+.img-row.two { grid-template-columns: 1fr 1fr; }
+.img-row.three { grid-template-columns: 1fr 1fr 1fr; }
+
+/* 슬라이드 안의 콘텐츠 */
+.slide-headline {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.4;
+}
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.content-table th {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #B0B0A8;
+  padding: 10px 16px;
+  background: #1A1A1A;
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.content-table td {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  color: #D0D0C8;
+  vertical-align: top;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.content-table td:first-child {
+  color: #F0F0EC;
+  font-weight: 600;
+  white-space: nowrap;
+  min-width: 140px;
+  background: #141414;
+}
+
+.content-table tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
+
+.content-table tr:hover td:first-child {
+  background: #1A1A1A;
+}
+
+.sub-headline {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 24px 0 12px;
+}
+
+.body-text {
+  font-size: 14px;
+  color: #C0C0B8;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.capability-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+/* 코드 블록 (Boolean 쿼리 예시) */
+.code-block {
+  background: #0F0F0F;
+  border: 1px solid var(--border-light);
+  padding: 16px 20px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: #8FD08F;
+  line-height: 1.7;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+/* ── SVG 다이어그램 ── */
+.diagram-wrap {
+  margin: 24px 0;
+  overflow: hidden;
+}
+
+/* ── BEFORE PO ── */
+#before-po {
+  border-top: 1px solid var(--border);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border-light);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--gold);
+  background: var(--bg);
+  transform: rotate(45deg);
+}
+
+.timeline-period {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.timeline-company {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+  color: #F0F0EC;
+}
+
+.timeline-role {
+  font-size: 13px;
+  color: #909088;
+  margin-bottom: 20px;
+  font-family: var(--mono);
+}
+
+.po-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--gold);
+  margin-top: 12px;
+  padding: 6px 12px;
+  border: 1px solid var(--gold-dim);
+  letter-spacing: 0.06em;
+}
+
+/* 클라이언트 브랜드 월 */
+.brand-wall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.brand-pill {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 12px;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+/* 프레임워크 태그 */
+.framework-wrap {
+  margin: 16px 0;
+}
+
+.framework-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ── CONTACT ── */
+#contact {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 100px 48px 120px;
+}
+
+.contact-headline {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.contact-sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  transition: all 0.2s;
+}
+
+.contact-link:hover {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 24px 48px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-light); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  nav .nav-links { display: none; }
+  section, #hero, #contact { padding-left: 24px; padding-right: 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-stats { flex-wrap: wrap; gap: 28px; }
+  .img-row.two, .img-row.three { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.fade-up-1 { animation-delay: 0.1s; }
+.fade-up-2 { animation-delay: 0.25s; }
+.fade-up-3 { animation-delay: 0.4s; }
+.fade-up-4 { animation-delay: 0.55s; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="site-nav">
+  <a href="#hero" class="nav-logo">NH.PORTFOLIO</a>
+  <ul class="nav-links">
+    <li><a href="#career-flow">Career Flow</a></li>
+    <li><a href="#cf-index">Projects (Index)</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero" style="max-width:1200px;">
+  <p class="hero-eyebrow fade-up fade-up-1">Product Owner · Data Platform Planner</p>
+  <h1 class="hero-name fade-up fade-up-2">나혜진<span>.</span></h1>
+  <p class="hero-title fade-up fade-up-3">
+    뷰티·금융·식품·공공·패션·가전 등 20개+ 산업군에 걸친<br>
+    마케팅 전략 수립과 빅데이터 분석 경험을 바탕으로,<br>
+    데이터 플랫폼 비즈니스를 기획하는 8년차 PO
+  </p>
+  <div class="hero-stats fade-up fade-up-4">
+    <div class="stat">
+      <span class="stat-num">8<span>+</span></span>
+      <span class="stat-label">Years of Experience</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">20<span>+</span></span>
+      <span class="stat-label">화면 기획서 작성</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">100<span>+</span></span>
+      <span class="stat-label">빅데이터 분석 보고서 작성</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">30<span>+</span></span>
+      <span class="stat-label">광고/마케팅 캠페인 집행·운영 경험</span>
+    </div>
+  </div>
+  <div class="hero-cta fade-up fade-up-4">
+    <a href="#cf-index" class="btn-primary">프로젝트 보기 →</a>
+    <a href="javascript:void(0)" onclick="document.getElementById('contact-modal').style.display='flex'" class="btn-secondary">연락하기</a>
+  </div>
+
+  <!-- 연락처 팝업 -->
+  <div id="contact-modal" onclick="if(event.target===this)this.style.display='none'"
+    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:10000; align-items:center; justify-content:center; backdrop-filter:blur(4px);">
+    <div style="background:#141414; border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:48px 56px; text-align:center; position:relative; min-width:360px;">
+      <button onclick="document.getElementById('contact-modal').style.display='none'"
+        style="position:absolute; top:16px; right:20px; background:none; border:none; color:rgba(255,255,255,0.4); font-size:20px; cursor:pointer; line-height:1;">✕</button>
+      <div style="font-family:var(--mono); font-size:11px; color:var(--gold); letter-spacing:0.1em; margin-bottom:24px;">CONTACT</div>
+      <div style="font-family:var(--mono); font-size:16px; color:#F0F0EC; margin-bottom:14px;">
+        ✉ &nbsp;920803hj@naver.com
+      </div>
+      <div style="color:rgba(255,255,255,0.15); margin-bottom:14px;">─────────────────</div>
+      <div style="font-family:var(--mono); font-size:16px; color:#F0F0EC;">
+        ☎ &nbsp;010-6299-9384
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAREER FLOW ── -->
+<style>
+/* ── CAREER FLOW 전용 스타일 ── */
+
+/* PPT 스타일 페이지 공통 */
+.cf-page {
+  padding: 80px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+.cf-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-style: italic;
+  font-weight: 400;
+  color: #F0F0EC;
+  text-align: center;
+  margin-bottom: 64px;
+  letter-spacing: 0.02em;
+}
+
+/* ── IT'S ME 장표 ── */
+.its-me-wrap {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 0;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.its-me-photo-block {
+  position: relative;
+  height: 260px;
+}
+
+.its-me-bg-shape {
+  position: absolute;
+  top: 0; left: 0;
+  width: 200px; height: 220px;
+  background: var(--gold);
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+.its-me-text {
+  position: absolute;
+  top: 20px; left: 220px;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.its-me-contact {
+  position: absolute;
+  bottom: 20px; right: 0;
+  font-size: 13px;
+  color: #909088;
+  line-height: 1.8;
+  font-family: var(--mono);
+  text-align: right;
+}
+
+.workability-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+}
+
+.wb-section { }
+
+.wb-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #D0D0C8;
+  margin-bottom: 12px;
+}
+
+.wb-check {
+  width: 18px; height: 18px;
+  border: 1.5px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.wb-check::after {
+  content: '✓';
+  color: var(--gold);
+  font-size: 11px;
+}
+
+.wb-items {
+  font-size: 13px;
+  color: #B0B0A8;
+  line-height: 1.8;
+  padding-left: 28px;
+}
+
+.wb-cert-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #B0B0A8;
+  line-height: 1.9;
+  padding-left: 28px;
+}
+
+.wb-cert-name { flex: 1; }
+.wb-cert-org { color: #888880; margin: 0 8px; }
+.wb-cert-year { color: #888880; min-width: 40px; text-align: right; }
+
+/* ── Career Flow Summary ── */
+.cfs-wrap {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+/* 왼쪽 배너 (PPT의 황금색 리본) */
+.cfs-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-right: 0;
+  position: relative;
+}
+
+.cfs-banner-item {
+  position: relative;
+  padding: 28px 20px 28px 24px;
+  margin-bottom: 2px;
+}
+
+.cfs-banner-item.active {
+  background: var(--gold);
+  clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
+}
+
+.cfs-banner-item.inactive {
+  background: rgba(212,197,132,0.18);
+  clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
+}
+
+.cfs-banner-period {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.cfs-banner-item.inactive .cfs-banner-period {
+  color: #888880;
+}
+
+.cfs-banner-role {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0A0A0A;
+  line-height: 1.3;
+}
+
+.cfs-banner-item.inactive .cfs-banner-role {
+  color: #C0C0B8;
+}
+
+/* 오른쪽 콘텐츠 영역 */
+.cfs-content {
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cfs-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2px;
+  align-items: start;
+}
+
+.cfs-company-box {
+  background: rgba(212,197,132,0.1);
+  border: 1px solid rgba(212,197,132,0.3);
+  border-radius: 24px;
+  padding: 14px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.cfs-company-box.dim {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.cfs-company-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.cfs-company-box.dim .cfs-company-name {
+  color: #C8C8C2;
+}
+
+.cfs-company-sub {
+  font-size: 12px;
+  color: #888880;
+  line-height: 1.5;
+}
+
+.cfs-company-detail {
+  font-size: 11px;
+  color: #707068;
+  margin-top: 6px;
+  font-family: var(--mono);
+}
+
+.cfs-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  color: #484848;
+  font-size: 18px;
+  align-self: center;
+}
+
+.cfs-desc-box {
+  padding: 14px 20px;
+  border-left: 2px solid rgba(212,197,132,0.2);
+}
+
+.cfs-desc-box.dim {
+  border-left-color: rgba(255,255,255,0.08);
+}
+
+.cfs-desc-bullet {
+  font-size: 12px;
+  color: #888880;
+  margin-bottom: 4px;
+  font-family: var(--mono);
+  font-weight: 600;
+}
+
+.cfs-desc-highlight {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 6px;
+  text-decoration: underline;
+  text-decoration-color: rgba(212,197,132,0.4);
+}
+
+.cfs-desc-text {
+  font-size: 12px;
+  color: #B0B0A8;
+  line-height: 1.7;
+}
+
+/* ── Career Flow Detail ── */
+.cfd-section {
+  margin-bottom: 64px;
+}
+
+.cfd-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.cfd-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1.5px solid var(--gold);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+.cfd-badge.dim {
+  border-color: #484848;
+  color: #909088;
+}
+
+.cfd-role-desc {
+  font-size: 12px;
+  color: #909088;
+  margin-left: 8px;
+}
+
+.cfd-company-wrap {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding: 16px 0 24px;
+  border-top: none;
+}
+
+/* 섹션 사이 구분선 - 역할 배지 위에 */
+.cfd-section + .cfd-section {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 48px;
+  margin-top: 0;
+}
+
+.cfd-company-left {
+  position: relative;
+}
+
+.cfd-company-label {
+  font-style: italic;
+  font-size: 11px;
+  color: #707068;
+  margin-bottom: 4px;
+}
+
+.cfd-company-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1.1;
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
+.cfd-company-name.dim {
+  color: #C0C0B8;
+}
+
+.cfd-company-year {
+  font-size: 44px;
+  font-weight: 900;
+  color: rgba(212,197,132,0.15);
+  line-height: 1;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.cfd-company-year.dim {
+  color: rgba(255,255,255,0.06);
+}
+
+.cfd-dot {
+  position: absolute;
+  left: -32px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+.cfd-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cfd-items li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13px;
+  color: #C0C0B8;
+  line-height: 1.75;
+  margin-bottom: 4px;
+}
+
+.cfd-items li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #888880;
+}
+
+/* ── Experienced Brand ── */
+.brand-wall-wrap {
+  text-align: center;
+}
+
+.brand-wall-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #D0D0C8;
+  margin-bottom: 48px;
+}
+
+.brand-wall-title span {
+  color: var(--gold);
+  margin: 0 8px;
+}
+
+.brand-logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  row-gap: 0;
+}
+
+.brand-logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.brand-logo-item {
+  font-size: 13px;
+  font-weight: 700;
+  color: #909088;
+  padding: 0 20px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.brand-logo-item:hover {
+  opacity: 1;
+  color: #C0C0B8;
+}
+
+/* ── INDEX 장표 ── */
+.index-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.index-list {
+  list-style: none;
+}
+
+.index-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s, padding-left 0.15s;
+  border-radius: 4px;
+}
+
+.index-list li:hover {
+  background: rgba(255,255,255,0.04);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.index-list li:hover .index-main {
+  color: var(--gold) !important;
+}
+
+/* 토글 헤더 hover — 명확한 인터랙션 */
+#projects-toggle, #beforepo-toggle {
+  transition: background 0.2s;
+}
+#projects-toggle:hover, #beforepo-toggle:hover {
+  background: rgba(200,185,122,0.14);
+}
+
+/* 펼치기 버튼(원형) hover 시 확대 + 진한 배경 */
+#projects-toggle:hover #projects-toggle-icon,
+#beforepo-toggle:hover #beforepo-toggle-icon {
+  transform: scale(1.15);
+  background: #C8B97A;
+  color: #fff !important;
+  box-shadow: 0 0 0 6px rgba(200,185,122,0.18);
+}
+#beforepo-toggle:hover #beforepo-toggle-icon {
+  background: #B0A88A;
+  box-shadow: 0 0 0 6px rgba(176,168,138,0.2);
+}
+
+/* "펼쳐보기" 텍스트 hover 시 강조 + 살짝 bounce */
+#projects-toggle .toggle-hint, #beforepo-toggle .toggle-hint {
+  transition: color 0.2s, transform 0.2s;
+}
+#projects-toggle:hover .toggle-hint {
+  color: var(--gold) !important;
+  font-weight: 700;
+  animation: hintBounce 0.6s ease infinite;
+}
+#beforepo-toggle:hover .toggle-hint {
+  color: #8A7B40 !important;
+  font-weight: 700;
+  animation: hintBounce 0.6s ease infinite;
+}
+@keyframes hintBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* 토글 버튼 기본 상태에도 은은한 펄스로 클릭 가능함을 암시 */
+.proj-acc-toggle, .bp-acc-toggle {
+  transition: all 0.2s;
+}
+#projects-toggle-icon, #beforepo-toggle-icon {
+  animation: idlePulse 2.4s ease-in-out infinite;
+}
+@keyframes idlePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200,185,122,0.25); }
+  50% { box-shadow: 0 0 0 5px rgba(200,185,122,0); }
+}
+
+.index-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: #0A0A0A;
+  flex-shrink: 0;
+}
+
+.index-num.dim {
+  background: rgba(255,255,255,0.08);
+  color: #909088;
+}
+
+.index-text { flex: 1; }
+
+.index-main {
+  font-size: 16px;
+  font-weight: 700;
+  color: #F0F0EC;
+  margin-bottom: 3px;
+  letter-spacing: -0.01em;
+}
+
+.index-sub {
+  font-size: 12px;
+  color: #909088;
+  line-height: 1.5;
+}
+
+.index-career-map {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 24px;
+  border-left: 2px solid var(--border);
+}
+
+.icm-era {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  color: #888880;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.icm-card {
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.icm-card.gold-card {
+  border-color: rgba(212,197,132,0.3);
+  background: rgba(212,197,132,0.04);
+}
+
+.icm-card::before {
+  display: none;
+}
+
+.icm-role {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.icm-card:not(.gold-card) .icm-role {
+  color: #C0C0B8;
+}
+
+.icm-company {
+  font-size: 12px;
+  color: #888880;
+}
+
+.icm-arrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  margin-bottom: 2px;
+  font-size: 12px;
+  color: #707068;
+  font-family: var(--mono);
+}
+
+.icm-arrow::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  width: 16px;
+  height: 1px;
+  background: rgba(212,197,132,0.3);
+}
+
+.icm-arrow-detail {
+  font-size: 11px;
+  color: #B0B0A8;
+}
+
+@media (max-width: 768px) {
+  .cf-page { padding: 60px 24px; }
+  .cfs-wrap { grid-template-columns: 1fr; }
+  .cfs-banner { flex-direction: row; overflow-x: auto; }
+  .cfs-banner-item { min-width: 160px; }
+  .its-me-wrap { grid-template-columns: 1fr; }
+  .workability-grid { grid-template-columns: 1fr; }
+  .index-wrap { grid-template-columns: 1fr; }
+  .cfd-company-wrap { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- ── CAREER FLOW 섹션 시작 ── -->
+<div id="career-flow">
+
+<!-- ① IT'S ME 장표 -->
+<div class="cf-page" id="cf-itsme">
+  <div class="its-me-wrap">
+    <div class="its-me-photo-block">
+      <div class="its-me-bg-shape"></div>
+      <!-- 사진 placeholder: 실제 사진으로 교체 -->
+      <div style="position:absolute; top:10px; left:10px; width:180px; height:220px; background:#1A1A1A; border:1px dashed #484848; display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:10px; color:#606060; text-align:center; line-height:1.5;">프로필<br>사진<br>교체</div>
+      <div class="its-me-text">IT'S ME</div>
+      <div class="its-me-contact">
+        TEL : 010.6299.9384<br>
+        E-mail : 920803hj@naver.com
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="workability-grid">
+    <!-- 왼쪽 -->
+    <div>
+      <div class="wb-section" style="margin-bottom: 28px;">
+        <div class="wb-label"><div class="wb-check"></div> Handling Data</div>
+        <div class="wb-items">SNS Social Big Data / Consumer Survey Data / Retail Data</div>
+      </div>
+      <div class="wb-section" style="margin-bottom: 28px;">
+        <div class="wb-label"><div class="wb-check"></div> Tool</div>
+        <div style="padding-left: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; font-size: 13px; color: #B0B0A8;">
+          <span>Excel <span style="color:#888880; margin-left:8px;">상</span></span>
+          <span>Text Solution <span style="color:#888880; margin-left:8px;">상</span></span>
+          <span>PowerPoint <span style="color:#888880; margin-left:8px;">상</span></span>
+          <span>Photoshop <span style="color:#888880; margin-left:8px;">상</span></span>
+          <span>Figma <span style="color:#888880; margin-left:8px;">중</span></span>
+          <span>Notion <span style="color:#888880; margin-left:8px;">중</span></span>
+          <span>Cursor AI &amp; Claude Code <span style="color:#888880; margin-left:8px;">중</span></span>
+          <span>SPSS <span style="color:#888880; margin-left:8px;">활용가능</span></span>
+          <span>SQL <span style="color:#888880; margin-left:8px;">활용가능</span></span>
+          <span>R <span style="color:#888880; margin-left:8px;">활용가능</span></span>
+          <span>Python <span style="color:#888880; margin-left:8px;">활용가능</span></span>
+          <span>D3 <span style="color:#888880; margin-left:8px;">활용가능</span></span>
+          <span>Tableau <span style="color:#888880; margin-left:8px;">활용가능</span></span>
+        </div>
+      </div>
+      <div class="wb-section">
+        <div class="wb-label"><div class="wb-check"></div> Consulting Field</div>
+        <div class="wb-items">Finance / Beauty / Food / Outdoor / Electronics / Furniture<br>/ Consumer Goods / Governments …</div>
+      </div>
+    </div>
+    <!-- 오른쪽 -->
+    <div>
+      <div class="wb-section" style="margin-bottom: 28px;">
+        <div class="wb-label"><div class="wb-check"></div> Certification</div>
+        <div style="padding-left: 28px;">
+          <div class="wb-cert-row"><span class="wb-cert-name">정보처리기사</span><span class="wb-cert-org">– 산업인력공단</span><span class="wb-cert-year">(2025)</span></div>
+          <div class="wb-cert-row"><span class="wb-cert-name">SQLD (SQL개발자)</span><span class="wb-cert-org">– 한국데이터산업진흥원</span><span class="wb-cert-year">(2023)</span></div>
+          <div class="wb-cert-row"><span class="wb-cert-name">Tableau Desktop Specialist</span><span class="wb-cert-org">– Tableau</span><span class="wb-cert-year">(2023)</span></div>
+          <div class="wb-cert-row"><span class="wb-cert-name">GoogleAnalytics</span><span class="wb-cert-org">– Google</span><span class="wb-cert-year">(2018)</span></div>
+          <div class="wb-cert-row"><span class="wb-cert-name">사회조사분석사</span><span class="wb-cert-org">– 통계청</span><span class="wb-cert-year">(2017)</span></div>
+          <div class="wb-cert-row"><span class="wb-cert-name">ADSP (데이터분석준전문가)</span><span class="wb-cert-org">– 한국데이터산업진흥원</span><span class="wb-cert-year">(2016)</span></div>
+          <div class="wb-cert-row"><span class="wb-cert-name">경영빅데이터분석사</span><span class="wb-cert-org">– 한국경제</span><span class="wb-cert-year">(2015)</span></div>
+          <div class="wb-cert-row"><span class="wb-cert-name">국제광고인자격증 (IAA)</span><span class="wb-cert-org">– 한국방송광고진흥공사</span><span class="wb-cert-year">(2015)</span></div>
+        </div>
+      </div>
+      <div class="wb-section">
+        <div class="wb-label" style="color: #888880; font-size: 13px;">etc. INTEREST</div>
+        <div style="display: flex; gap: 32px; padding-left: 28px; font-size: 12px; color: #888880; margin-top: 8px;">
+          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(212,197,132,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">✍</div>Writing Essay<br>& Poetry</div>
+          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(212,197,132,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🔍</div>Researching<br>& Exploring</div>
+          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(212,197,132,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🚴</div>Riding Bicycle<br>& Running</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ② Career Flow Summary 장표 -->
+<div class="cf-page" id="cf-summary">
+  <h2 class="cf-title">Career Flow Summary</h2>
+
+  <!-- 전체를 하나의 SVG로 — PPT 구조 완전 재현 -->
+  <div style="overflow-x: auto; width: 100%;">
+    <svg viewBox="0 -30 1060 660" xmlns="http://www.w3.org/2000/svg" style="width:100%; min-width:760px; height:auto; display:block;">
+
+      <defs>
+        <!-- 빗금 패턴: 분석가+광고 구간 체크무늬 -->
+        <pattern id="cfs-diag" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="10" stroke="rgba(140,100,0,0.3)" stroke-width="4"/>
+        </pattern>
+      </defs>
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- 연도 레이블 (이탤릭, 좌측) -->
+      <!-- ════════════════════════════════════════ -->
+      <text x="0" y="52" fill="#909088" font-family="Georgia,serif" font-style="italic" font-size="15">2025 ~</text>
+      <text x="0" y="250" fill="#909088" font-family="Georgia,serif" font-style="italic" font-size="15">2015 ~ 2023</text>
+      <text x="0" y="470" fill="#909088" font-family="Georgia,serif" font-style="italic" font-size="15">2015 ~ 2018</text>
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- 왼쪽 배너 리본 -->
+      <!-- 구조: 분석가 도형(큰 것) 안에 광고 도형이 들어있음 -->
+      <!-- PPT 원본: 세로로 이어지는 하나의 리본, 위로 갈수록 진해짐 -->
+      <!-- ════════════════════════════════════════ -->
+
+      <!-- [A] 분석가+광고 통합 구간: y=195~610 (연한 골드 + 빗금) -->
+      <rect x="100" y="195" width="160" height="415" fill="#EDD97A"/>
+      <rect x="100" y="195" width="160" height="415" fill="url(#cfs-diag)" opacity="0.5"/>
+
+      <!-- [B] 광고 구간: 분석가 도형 안에 포함됨을 표현 — 톤다운된 실선 -->
+      <rect x="106" y="436" width="148" height="176" fill="rgba(255,210,80,0.08)" stroke="rgba(200,170,60,0.55)" stroke-width="1.2" rx="3"/>
+
+      <!-- [C] PO 구간: y=0~193 (진한 골드 단색 — 가장 상위) -->
+      <rect x="100" y="0" width="160" height="193" fill="#D4B84A"/>
+
+      <!-- 배너 상단 — 위를 향하는 화살촉 (현재/최신 방향) -->
+      <polygon points="100,0 260,0 180,-22" fill="#D4B84A"/>
+
+      <!-- 구간 경계선 -->
+      <line x1="100" y1="193" x2="260" y2="193" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+      <!-- 광고/분석가 내부 경계 -->
+      <line x1="108" y1="438" x2="252" y2="438" stroke="rgba(255,220,100,0.6)" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+      <!-- 역할 텍스트 (배너 위에 배치) -->
+      <!-- PO -->
+      <text x="180" y="78" fill="#1A0E00" font-family="Pretendard,sans-serif" font-size="14" font-weight="800" text-anchor="middle">UX/UI Planner &amp;</text>
+      <text x="180" y="97" fill="#1A0E00" font-family="Pretendard,sans-serif" font-size="14" font-weight="800" text-anchor="middle">Project Owner</text>
+      <!-- 분석가 (광고 위쪽 구간) -->
+      <text x="180" y="316" fill="#1A1000" font-family="Pretendard,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Data Analyst /</text>
+      <text x="180" y="334" fill="#1A1000" font-family="Pretendard,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Business Analyst</text>
+      <!-- 광고 (분석가 도형 안쪽 하단) -->
+      <text x="180" y="505" fill="#2A1800" font-family="Pretendard,sans-serif" font-size="12" font-weight="700" text-anchor="middle">Advertising</text>
+      <text x="180" y="521" fill="#2A1800" font-family="Pretendard,sans-serif" font-size="12" font-weight="700" text-anchor="middle">Planner (AE, AP)</text>
+
+      <!-- 배너 → 회사 타원 화살표 (점선) -->
+      <!-- PO -->
+      <line x1="260" y1="96" x2="296" y2="96" stroke="#A08840" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="293,93 300,96 293,99" fill="#A08840"/>
+      <!-- 분석가 -->
+      <line x1="260" y1="310" x2="296" y2="310" stroke="#808060" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="293,307 300,310 293,313" fill="#808060"/>
+      <!-- 광고 -->
+      <line x1="260" y1="510" x2="296" y2="510" stroke="#706050" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="293,507 300,510 293,513" fill="#706050"/>
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- 중간: 회사 타원 카드 — 윤곽선 강화 -->
+      <!-- ════════════════════════════════════════ -->
+
+      <!-- PO 타원 (뉴엔AI) — 골드 윤곽선 강화 -->
+      <rect x="300" y="52" width="220" height="88" rx="44" ry="44" fill="rgba(212,185,74,0.12)" stroke="#D4C584" stroke-width="2"/>
+      <text x="410" y="84" fill="#D4C584" font-family="Pretendard,sans-serif" font-size="14" font-weight="700" text-anchor="middle">뉴엔AI (IT 회사)</text>
+      <text x="410" y="104" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">빅데이터 분석 플랫폼 시각화 기획 및 플랫폼 운영</text>
+      <text x="410" y="122" fill="#707068" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">• 뉴엔AI (대리~) 2025~</text>
+
+      <!-- 분석가 타원 — 윤곽선 강화 -->
+      <rect x="300" y="265" width="220" height="92" rx="46" ry="46" fill="rgba(255,255,255,0.05)" stroke="rgba(200,200,180,0.6)" stroke-width="2"/>
+      <text x="410" y="297" fill="#C0C0B8" font-family="Pretendard,sans-serif" font-size="13" font-weight="700" text-anchor="middle">와이즈넛, 코난테크놀로지</text>
+      <text x="410" y="313" fill="#909088" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">데이터 기반 정책·마케팅 분석</text>
+      <text x="410" y="330" fill="#686860" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">• 코난테크놀로지 (대리~과장) 2019~2023</text>
+      <text x="410" y="345" fill="#686860" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">• 와이즈넛 (사원) 2019</text>
+
+      <!-- 광고 타원 — 텍스트 타원 안으로 조정 -->
+      <rect x="300" y="464" width="220" height="100" rx="50" ry="50" fill="rgba(255,255,255,0.04)" stroke="rgba(180,180,160,0.5)" stroke-width="2"/>
+      <text x="410" y="496" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700" text-anchor="middle">대홍기획, 코마코</text>
+      <text x="410" y="512" fill="#808078" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">종합광고대행사 · 광고/마케팅 전략</text>
+      <text x="410" y="528" fill="#585850" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">코마코 2015~2018 / 대홍기획 2015</text>
+
+      <!-- 타원 → 업무설명 화살표 -->
+      <!-- PO -->
+      <line x1="520" y1="96" x2="556" y2="96" stroke="#606050" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="553,93 560,96 553,99" fill="#606050"/>
+      <!-- 분석가 -->
+      <line x1="520" y1="310" x2="556" y2="310" stroke="#505048" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="553,307 560,310 553,313" fill="#505048"/>
+      <!-- 광고 → 분석가 업무 박스 연결 (꺾인 선) -->
+      <line x1="520" y1="514" x2="544" y2="514" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="544" y1="514" x2="544" y2="435" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="541,438 544,431 547,438" fill="#404038"/>
+
+      <!-- ════════════════════════════════════════ -->
+      <!-- 오른쪽: 업무 설명 텍스트 — 박스로 구분 -->
+      <!-- ════════════════════════════════════════ -->
+
+      <!-- PO 업무 설명 박스 -->
+      <rect x="560" y="36" width="490" height="155" fill="rgba(212,197,132,0.05)" stroke="rgba(212,197,132,0.25)" stroke-width="1"/>
+      <!-- PO 업무 설명 (이상한 line 제거) -->
+      <text x="574" y="60" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약</text>
+      <text x="574" y="80" fill="#D4C584" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">자사 소셜 빅데이터 플랫폼(Quettai, QuettaDex 등) 화면 기획 및 운영</text>
+      <text x="574" y="100" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 데이터분석 /Admin/통합 페이지 기획, 정책 수립 및 자동화 기능 설계</text>
+      <text x="574" y="116" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 개발/디자인팀간 협의 및 조율</text>
+      <text x="574" y="132" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– AI Query Builder / Taxonomy Builder 프롬프트 엔지니어링</text>
+      <text x="574" y="148" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– MCP 기반 AI Agent 서비스 기획 및 과금 정책 설계</text>
+
+      <!-- 분석가+광고 통합 업무 설명 박스 -->
+      <rect x="560" y="215" width="490" height="285" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <!-- 분석가 업무 설명 -->
+      <text x="574" y="238" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (데이터 분석가 · 광고 기획자)</text>
+      <text x="574" y="260" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">기업 클라이언트</text>
+      <text x="574" y="278" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 금융, 뷰티, 식품, 아웃도어, 가전, 가구, 생활용품 등 다양한 산업군의</text>
+      <text x="574" y="294" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   데이터 분석 기반 광고/마케팅 전략 수립 및 분석 시스템 기획</text>
+      <text x="574" y="316" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">공공기관 클라이언트</text>
+      <text x="574" y="334" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 청와대, 대통령실, 중앙부처(기재부/교육부/문체부), 지자체(서울시/부산시/성남시)</text>
+      <text x="574" y="350" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   등 정책 반응 및 시민 인식 데이터 분석 기반 홍보/정책 방향 제안 및 모니터링</text>
+      <text x="574" y="372" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">트렌드 분석</text>
+      <text x="574" y="390" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 서울대 「트렌드 코리아 2021~2022」 발간 데이터 분석 지원</text>
+      <!-- 광고 업무 구분선 -->
+      <line x1="574" y1="408" x2="1040" y2="408" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="574" y="428" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">광고/마케팅 캠페인 집행</text>
+      <text x="574" y="446" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 아모레퍼시픽·한국야쿠르트·동국제약·K2·수협은행 등 30개+ 캠페인 집행 및 운영</text>
+      <text x="574" y="462" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 소비자 조사·소셜 빅데이터 기반 브랜드 전략 수립 · 20개+ 산업군 경험</text>
+
+    </svg>
+  </div>
+</div>
+
+<!-- ③ Career Flow Detail 장표 -->
+<div class="cf-page" id="cf-detail">
+  <h2 class="cf-title">Career Flow Detail</h2>
+
+  <div style="position: relative; padding-left: 32px;">
+    <div style="position:absolute; left:4px; top:0; bottom:0; width:2px; background: linear-gradient(to bottom, var(--gold) 0%, rgba(212,197,132,0.2) 100%);"></div>
+
+    <!-- 뉴엔AI (2025~) -->
+    <div class="cfd-section" id="cf-neuen">
+      <div class="cfd-role-badge">
+        <span class="cfd-badge">UX/UI Planner &amp; Project Owner</span>
+        <span class="cfd-role-desc">AI플랫폼 사업부 AI센터 소속, AI큐레이션팀 PO(Platform Operation) – 빅데이터 분석 플랫폼 기획 및 플랫폼 운영 담당</span>
+      </div>
+      <div class="cfd-company-wrap" style="border-top-color: rgba(212,197,132,0.3);">
+        <div class="cfd-company-left">
+          <div class="cfd-dot"></div>
+          <div class="cfd-company-label">(IT 회사 / 대리 ~)</div>
+          <div class="cfd-company-name">뉴엔 AI</div>
+          <div class="cfd-company-year" style="font-size:52px;">2025</div>
+          <div style="font-size:36px; color:rgba(212,197,132,0.15); font-family:Georgia,serif; font-style:italic; line-height:1;">/</div>
+          <div style="font-size:36px; color:rgba(212,197,132,0.15); font-family:Georgia,serif; font-style:italic; line-height:1;">ing</div>
+        </div>
+        <ul class="cfd-items">
+          <li>(2026.06~) [AI 인프라] MCP 기반 소셜 데이터 중심 신규 AI Agent 서비스 기획 → 진행 중</li>
+          <li>(2026.01~2026.06) [Quetta Dex] 데이터 분석 사용자 커스텀 대시보드 기획 및 차트별 상세 정책 설계 → 1차 런칭 완료</li>
+          <li>(2025.12~2026.05) [공통] 공식 브랜드 페이지 및 솔루션 통합 브릿지 페이지 신규 기획 → 런칭 완료</li>
+          <li>(2025.08~2026.01) [AI 인프라] 분류체계 자동 완성(Taxonomy Builder) 기능 화면 기획 및 프롬프트 설계 → 개발 완료</li>
+          <li>(2025.08~2026.01) [AI 인프라] 쿼리 자동완성(AI Query Builder) 기능 화면 기획 및 프롬프트 설계 → 개발 완료</li>
+          <li>(2025.07~2025.08) [Quettai] 언론 분석(기사·댓글) 기능 신규 기획 → 1차 런칭 완료</li>
+          <li>(2025.07~2025.07) [Quettai] 글로벌화 대응 및 데이터 표준화 영문화 작업 → 완료</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 코난테크놀로지 (2019~2023) -->
+    <div class="cfd-section" id="cf-konan">
+      <div class="cfd-role-badge">
+        <span class="cfd-badge dim">Data Analyst / Business Analyst</span>
+        <span class="cfd-role-desc">데이터사이언티스트부서 소속, 데이터 분석팀 – 소셜 빅데이터 분석, 정책/마케팅 전략 컨설팅, 분석 시스템 기획</span>
+      </div>
+      <div class="cfd-company-wrap">
+        <div class="cfd-company-left">
+          <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
+          <div class="cfd-company-label">(IT 회사 / 대리~과장)</div>
+          <div class="cfd-company-name dim">코난테크놀로지</div>
+          <div class="cfd-company-year dim" style="font-size:40px;">2019</div>
+          <div style="font-size:28px; color:rgba(255,255,255,0.06); font-family:Georgia,serif; font-style:italic; line-height:1;">/</div>
+          <div class="cfd-company-year dim" style="font-size:40px;">2023</div>
+        </div>
+        <ul class="cfd-items">
+          <li>(2022.11~2023.05) 대통령실, 빅데이터 정기 분석 보고서(일일/주간/월간/이슈) 작성 및 모니터링 시스템 기획</li>
+          <li>(2021.05~2023.05) 서울대트렌드센터(김난도 교수), '트렌드코리아2022' '트렌드코리아2023' 소셜 빅데이터 분석 발간 지원</li>
+          <li>(2021.03.01~2023.05) 통일부, 서울시청, 부산시청, 성남시청 소셜 빅데이터 정기 분석 보고서 및 모니터링 시스템 기획</li>
+          <li>(2021.08~2021.10) 한국경제신문, 국비무료 '빅데이터 전략 마에스트로 과정' 멘토링 교육 활동</li>
+          <li>(2020.08~2020.10) 한국지능정보사회진흥원, 2020 중소기업 빅데이터 분석 및 활용 지원사업 → <strong style="color:var(--gold);">NIA 빅데이터 활용 우수사례 선정</strong></li>
+          <li>(2019.12~2023.05) 하이브 소셜 버즈 모니터링 툴 디버깅 및 품질관리</li>
+          <li>(2019.10~2019.12) 프로스포츠협회 MZ세대 온라인 콘텐츠 소비 특성과 프로스포츠 분석</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 와이즈넛 (2018~2019) -->
+    <div class="cfd-section" id="cf-wisenut">
+      <div class="cfd-role-badge">
+        <span class="cfd-badge dim">Data Analyst / Business Analyst</span>
+        <span class="cfd-role-desc">데이터컨설팅 부서 소속, 데이터 분석팀 – 소셜 리스닝 기반 소비자 분석 및 마케팅 전략 도출</span>
+      </div>
+      <div class="cfd-company-wrap">
+        <div class="cfd-company-left">
+          <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
+          <div class="cfd-company-label">(IT 회사 / 사원)</div>
+          <div class="cfd-company-name dim">와이즈넛</div>
+          <div class="cfd-company-year dim" style="font-size:52px;">2019</div>
+        </div>
+        <ul class="cfd-items">
+          <li>2019.02 구글 – Embrain을 위한 소셜 리스닝 제안서 작성</li>
+          <li>2019.01 FILA korea 소셜 빅데이터 분석 보고서</li>
+          <li>2019.01 기획재정부 2019 정책방향 수립을 위한 소셜 빅데이터 보고서</li>
+          <li>2019.01 소셜 빅데이터 분석을 통한 erom+ 트렌드 조사, 신제품 조사, Frame 개발/제안</li>
+          <li>2018.12 한샘 성파문 사건에 대한 소셜 빅데이터 분석/제언</li>
+          <li>2018.12 내부 시스템 개선을 위한 감성어(emotion functions) 지식체계 구축</li>
+          <li>2018.11 무선청소기 다이슨 제품 소셜 빅데이터 여론 분석</li>
+          <li>2018.10 [현대자동차×이노션] 대형 SUV / 외산차 대응 차종 온라인 여론 분석 보고서</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 코마코 (2015~2018) -->
+    <div class="cfd-section" id="cf-komaco">
+      <div class="cfd-role-badge">
+        <span class="cfd-badge dim">Advertising Planner (AE, AP)</span>
+        <span class="cfd-badge dim" style="margin-left:4px;">Data Analyst / Business Analyst</span>
+        <span class="cfd-role-desc">브랜딩연구소 부서 소속, 광고 기획자/AP(Account Planner)/AE – 데이터 분석 기반 소비자 인사이트 도출 및 광고·마케팅 전략 제안</span>
+      </div>
+      <div class="cfd-company-wrap">
+        <div class="cfd-company-left">
+          <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
+          <div class="cfd-company-label">(종합광고대행사 / 사원)</div>
+          <div class="cfd-company-name dim">코마코</div>
+          <div class="cfd-company-year dim" style="font-size:40px;">2015</div>
+          <div style="font-size:28px; color:rgba(255,255,255,0.06); font-family:Georgia,serif; font-style:italic; line-height:1;">/</div>
+          <div class="cfd-company-year dim" style="font-size:40px;">2018</div>
+        </div>
+        <ul class="cfd-items">
+          <li>2018.07 아모레퍼시픽 프리메라 IMC 캠페인</li>
+          <li>2018.06 아모레퍼시픽 려 자양윤모 IMC 캠페인</li>
+          <li>2017.09 한국야쿠르트, 갱년기 인식에 대한 빅데이터 분석</li>
+          <li>2017.06 한국야쿠르트, 커피와 콜드브루에 대한 빅데이터 분석</li>
+          <li>2017.04 더불어 민주당 경쟁 입찰 참여 및 일부 수주</li>
+          <li>2017.02 한국야쿠르트 잇츠온제품 브랜드 개발 전략 방향 및 컨셉 도출</li>
+          <li>2016.09 K2 아웃도어 / 수협은행 경쟁입찰 참여 및 수주</li>
+          <li>2016.08 동국제약 인사돌+ 허가 변경에 따른 리포지셔닝 전략 제언</li>
+          <li style="color:#888880;">… (및 다수)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 대홍기획 (2015 인턴) -->
+    <div class="cfd-section" id="cf-daehong">
+      <div class="cfd-role-badge">
+        <span class="cfd-badge dim">Advertising Planner (AE, AP)</span>
+        <span class="cfd-role-desc">스페이스마케팅팀 인턴 – 소셜 데이터 기반 공공 제안 프로젝트 참여</span>
+      </div>
+      <div class="cfd-company-wrap">
+        <div class="cfd-company-left">
+          <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
+          <div class="cfd-company-label">(종합광고대행사 / 인턴)</div>
+          <div class="cfd-company-name dim">대홍기획</div>
+          <div class="cfd-company-year dim" style="font-size:52px;">2015</div>
+        </div>
+        <ul class="cfd-items">
+          <li>2015.06 한국마사회 렛츠런파크 빛축제 제안서 기획 — SNS 부정 여론 분석 기반 관광 콘텐츠 전략 제안 · 수주 기여</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ④ Experienced Brand 장표 -->
+<div class="cf-page" id="cf-brand">
+  <div class="brand-wall-wrap">
+    <div class="brand-wall-title"><span>/</span> EXPERIENCED BRAND <span>/</span></div>
+
+    <div class="brand-logo-row">
+      <span class="brand-logo-item">🏛 대한민국대통령실</span>
+      <span class="brand-logo-item">🏛 청와대</span>
+      <span class="brand-logo-item">🎓 서울대학교</span>
+      <span class="brand-logo-item"><strong>MBC</strong></span>
+      <span class="brand-logo-item">한국경제</span>
+    </div>
+    <div class="brand-logo-row">
+      <span class="brand-logo-item"><strong>KT&G</strong></span>
+      <span class="brand-logo-item">paldo</span>
+      <span class="brand-logo-item">hy 한국야쿠르트</span>
+      <span class="brand-logo-item">정식품</span>
+      <span class="brand-logo-item">erom</span>
+      <span class="brand-logo-item">Mom's Touch</span>
+      <span class="brand-logo-item">Auntie Anne's</span>
+    </div>
+    <div class="brand-logo-row">
+      <span class="brand-logo-item">HANSSEM</span>
+      <span class="brand-logo-item">SLEEP&SLEEP</span>
+      <span class="brand-logo-item">에몬스가구</span>
+      <span class="brand-logo-item">잘풀리는집</span>
+      <span class="brand-logo-item"><strong>dyson</strong></span>
+      <span class="brand-logo-item"><strong>HYUNDAI</strong></span>
+    </div>
+    <div class="brand-logo-row">
+      <span class="brand-logo-item">Cigna 라이나생명</span>
+      <span class="brand-logo-item">MERITZ 메리츠화재</span>
+      <span class="brand-logo-item">Sh 수협은행</span>
+      <span class="brand-logo-item">한국수출입은행</span>
+      <span class="brand-logo-item">KB손해보험</span>
+    </div>
+    <div class="brand-logo-row">
+      <span class="brand-logo-item">AMOREPACIFIC GROUP</span>
+      <span class="brand-logo-item">+ETUDE HOUSE</span>
+      <span class="brand-logo-item">primera</span>
+      <span class="brand-logo-item"><strong>K2</strong></span>
+      <span class="brand-logo-item"><strong>FILA</strong></span>
+    </div>
+    <div class="brand-logo-row">
+      <span class="brand-logo-item">동국제약</span>
+      <span class="brand-logo-item">현대엘리베이터</span>
+      <span class="brand-logo-item"><strong>Google</strong></span>
+    </div>
+    <div class="brand-logo-row">
+      <span class="brand-logo-item">🏛 통일부</span>
+      <span class="brand-logo-item">🏛 교육부</span>
+      <span class="brand-logo-item">🏛 문화체육관광부</span>
+      <span class="brand-logo-item">🏛 기획재정부</span>
+    </div>
+    <div class="brand-logo-row">
+      <span class="brand-logo-item">🏛 부산광역시</span>
+      <span class="brand-logo-item">🏛 서울특별시</span>
+      <span class="brand-logo-item">🏛 성남시</span>
+      <span class="brand-logo-item">더불어민주당</span>
+      <span class="brand-logo-item">초록우산어린이재단</span>
+      <span class="brand-logo-item">한국마사회</span>
+    </div>
+    <div class="brand-logo-row">
+      <span class="brand-logo-item">KPSA 한국프로스포츠협회</span>
+      <span class="brand-logo-item">한우자조금관리위원회</span>
+      <span class="brand-logo-item">NIA 한국지능정보사회진흥원</span>
+      <span class="brand-logo-item">한국언론진흥재단</span>
+    </div>
+  </div>
+</div>
+
+<!-- ⑤ INDEX 장표 -->
+<div class="cf-page" id="cf-index">
+  <div style="margin-bottom: 48px;">
+    <span style="font-size: clamp(36px, 6vw, 72px); font-weight: 900; letter-spacing: -0.02em; color: #F0F0EC;">INDEX</span>
+    <span style="font-size: 16px; color: #888880; margin-left: 16px; font-family: var(--mono);">(최근순)</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 3fr 40px 2fr; grid-template-rows: auto auto; gap: 24px 0;">
+
+    <!-- 행1 왼쪽: 1~5 목록 (골드 배경) -->
+    <div style="grid-column:1; grid-row:1;
+      background: rgba(212,197,122,0.07);
+      border: 1px solid rgba(212,197,122,0.3);
+      padding: 20px;">
+      <div style="font-family:var(--mono); font-size:10px; color:var(--gold); letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">뉴엔AI · 2025– · 프로젝트 단위</div>
+      <ul class="index-list" style="margin: 0;">
+        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p1','projects-body','projects-toggle-icon')">
+          <div class="index-num">1</div>
+          <div class="index-text">
+            <div class="index-main">MCP 기반 AI Agent 서비스 기획 <span style="font-size:12px; color:#7FBF7F; margin-left:6px;">↗</span></div>
+            <div class="index-sub" style="color:#7FBF7F;">2026.06~ · MCP × 외부 LLM 실시간 연동 · Agent 라인업 설계 (진행 중)</div>
+          </div>
+        </li>
+        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p2','projects-body','projects-toggle-icon')">
+          <div class="index-num">2</div>
+          <div class="index-text">
+            <div class="index-main">Quetta Dex 커스텀 대시보드 기획 <span style="font-size:12px; color:var(--gold-dim); margin-left:6px;">↗</span></div>
+            <div class="index-sub">2026.01–06 · 데이터 기반 대시보드 시각화 설계 및 UI 인터페이스 구조 설계</div>
+          </div>
+        </li>
+        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p3','projects-body','projects-toggle-icon')">
+          <div class="index-num">3</div>
+          <div class="index-text">
+            <div class="index-main">Quetta 브랜드 페이지 + 브릿지 페이지 기획 <span style="font-size:12px; color:var(--gold-dim); margin-left:6px;">↗</span></div>
+            <div class="index-sub">2025.12–2026.05 · 제품 라인업 재정의 + 넛지 전략 기반 유료 전환 파이프라인</div>
+          </div>
+        </li>
+        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p4','projects-body','projects-toggle-icon')">
+          <div class="index-num">4</div>
+          <div class="index-text">
+            <div class="index-main">AI Query Builder + Taxonomy Builder 기획 <span style="font-size:12px; color:var(--gold-dim); margin-left:6px;">↗</span></div>
+            <div class="index-sub">2025.08–2026.01 · LLM 기반 자동화 기획 + 시스템 프롬프트 엔지니어링</div>
+          </div>
+        </li>
+        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p5','projects-body','projects-toggle-icon')">
+          <div class="index-num">5</div>
+          <div class="index-text">
+            <div class="index-main">Quettai 언론 분석 기능 기획 <span style="font-size:12px; color:var(--gold-dim); margin-left:6px;">↗</span></div>
+            <div class="index-sub">2025.07–08 · 기술 제약 대응 조율 + 언론사·기자 단위 타겟팅 설계</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 행1 가운데: 화살표 -->
+    <div style="grid-column:2; grid-row:1; display:flex; align-items:center; justify-content:center;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+        <div style="width:1px; flex:1; background: linear-gradient(to bottom, transparent, rgba(212,197,132,0.5));"></div>
+        <div style="font-size:18px; color:rgba(212,197,132,0.7); line-height:1;">→</div>
+        <div style="width:1px; flex:1; background: linear-gradient(to top, transparent, rgba(212,197,132,0.5));"></div>
+      </div>
+    </div>
+
+    <!-- 행1 오른쪽: 1~5 커리어 (골드 배경 동일) -->
+    <div style="grid-column:3; grid-row:1;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;">
+      <div style="font-family:var(--mono); font-size:10px; color:#888880; letter-spacing:0.1em; margin-bottom:16px; opacity:0.8;">해당 커리어 기간</div>
+      <div class="icm-era">2025 ~</div>
+      <div class="icm-card gold-card">
+        <div class="icm-role">UX/UI Planner &amp; Project Owner</div>
+        <div class="icm-company">뉴엔AI (IT 회사) · 빅데이터 분석 플랫폼 시각화 기획 및 플랫폼 운영</div>
+      </div>
+      <div style="padding: 6px 0 0 12px; font-size:11px; color:#888880; font-family:var(--mono);">• 뉴엔AI (대리~) 2025~</div>
+    </div>
+
+    <!-- 행2 왼쪽: 6~8 목록 (회색 배경) -->
+    <div style="grid-column:1; grid-row:2;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;">
+      <div style="font-family:var(--mono); font-size:10px; color:#909088; letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">2015–2023 · Before PO · 회사별</div>
+      <ul class="index-list" style="margin: 0;">
+        <li onclick="goTo('exp-konan','beforepo-body','beforepo-toggle-icon')">
+          <div class="index-num dim">6</div>
+          <div class="index-text">
+            <div class="index-main" style="color:#C0C0B8;">코난테크놀로지 <span style="font-size:12px; color:#909088; margin-left:6px;">↗</span></div>
+            <div class="index-sub">데이터 분석가 · 대통령실/서울대/지자체 · 2019–2023</div>
+          </div>
+        </li>
+        <li onclick="goTo('exp-wisenut','beforepo-body','beforepo-toggle-icon')">
+          <div class="index-num dim">7</div>
+          <div class="index-text">
+            <div class="index-main" style="color:#C0C0B8;">와이즈넛 <span style="font-size:12px; color:#909088; margin-left:6px;">↗</span></div>
+            <div class="index-sub">데이터 분석가 · 현대자동차/다이슨/기획재정부 · 2019</div>
+          </div>
+        </li>
+        <li onclick="goTo('exp-komaco','beforepo-body','beforepo-toggle-icon')">
+          <div class="index-num dim">8</div>
+          <div class="index-text">
+            <div class="index-main" style="color:#C0C0B8;">코마코 · 대홍기획 <span style="font-size:12px; color:#909088; margin-left:6px;">↗</span></div>
+            <div class="index-sub">AE/AP · 아모레퍼시픽/한국야쿠르트/동국제약 등 · 2015–2018</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 행2 가운데: 화살표 -->
+    <div style="grid-column:2; grid-row:2; display:flex; align-items:center; justify-content:center;">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+        <div style="width:1px; flex:1; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.2));"></div>
+        <div style="font-size:18px; color:rgba(255,255,255,0.3); line-height:1;">→</div>
+        <div style="width:1px; flex:1; background: linear-gradient(to top, transparent, rgba(255,255,255,0.2));"></div>
+      </div>
+    </div>
+
+    <!-- 행2 오른쪽: 6~8 커리어 (회색 배경 동일) -->
+    <div style="grid-column:3; grid-row:2;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;">
+      <div style="font-family:var(--mono); font-size:10px; color:#909088; letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">해당 커리어 기간</div>
+
+      <div class="icm-era">2015 ~ 2023</div>
+      <div class="icm-card">
+        <div class="icm-role">Data Analyst / Business Analyst</div>
+        <div class="icm-company">와이즈넛·코난테크놀로지 (IT회사) · 데이터 기반 정책·마케팅 분석</div>
+      </div>
+      <div style="padding: 6px 0 0 12px; font-size:11px; color:#707068; font-family:var(--mono); line-height:1.8;">• 코난테크놀로지 (대리~과장) 2019~2023<br>• 와이즈넛 (사원) 2019</div>
+
+      <div style="height: 20px;"></div>
+
+      <div class="icm-era">2015 ~ 2018</div>
+      <div class="icm-card">
+        <div class="icm-role">Advertising Planner (AE, AP)</div>
+        <div class="icm-company">대홍기획, 코마코 (종합광고대행사) · 마케팅/광고 전략 및 캠페인 운영</div>
+      </div>
+      <div style="padding: 6px 0 0 12px; font-size:11px; color:#707068; font-family:var(--mono); line-height:1.8;">• 코마코 (사원) 2015~2018<br>• 대홍기획 (인턴) 2015</div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /career-flow -->
+
+<!-- ── 커리어 스토리 흐름 인트로 ── -->
+<div style="background: #1A1A18; padding: 28px 48px; text-align:center;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;">
+    <span style="font-family:var(--mono); font-size:12px; color:#C0BCB0; font-weight:700; letter-spacing:0.08em;">BEFORE PO</span>
+    <span style="color:rgba(255,255,255,0.55); font-size:13px;">2015–2023</span>
+    <span style="color:rgba(255,255,255,0.6); font-size:14px;">→</span>
+    <span style="font-family:var(--mono); font-size:12px; color:#D8D2BE; font-weight:700; letter-spacing:0.08em;">CAREER BRIDGE</span>
+    <span style="color:rgba(255,255,255,0.55); font-size:13px;">2023–2025</span>
+    <span style="color:rgba(255,255,255,0.6); font-size:14px;">→</span>
+    <span style="font-family:var(--mono); font-size:12px; color:#E8D9A0; font-weight:700; letter-spacing:0.08em;">AFTER PO</span>
+    <span style="color:rgba(255,255,255,0.55); font-size:13px;">2025~</span>
+  </div>
+  <div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px;">아래로 스크롤하면 프로젝트 상세 내용을 최신순으로 만나보실 수 있습니다</div>
+</div>
+
+<!-- ── PROJECTS (라이트 테마) ── -->
+<div style="background: #F8F7F4; border-top: 4px solid #C8B97A;">
+
+<!-- Projects 접힘 토글 헤더 -->
+<div id="projects-toggle" onclick="toggleSection('projects-body', 'projects-toggle-icon')"
+  style="max-width:1200px; margin:0 auto; padding:0 48px; cursor:pointer; user-select:none;">
+
+  <!-- After PO 라벨 + 구분선 -->
+  <div style="display:flex; align-items:center; gap:16px; padding-top:36px; padding-bottom:20px; border-bottom:2px solid #C8B97A;">
+    <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#C8B97A; letter-spacing:0.14em; background:rgba(200,185,122,0.12); padding:4px 12px; border-radius:3px;">AFTER PO</div>
+    <div style="font-family:var(--mono); font-size:11px; color:#A89B62; letter-spacing:0.06em;">NewenAI &nbsp;·&nbsp; 2025 ~</div>
+  </div>
+
+  <!-- 메인 콘텐츠 -->
+  <div style="display:flex; align-items:flex-start; justify-content:space-between; padding:24px 0 32px; gap:32px;">
+    <div style="flex:1;">
+      <h2 style="font-size:clamp(20px,2.5vw,26px); font-weight:700; color:#1A1A18; letter-spacing:-0.02em; margin-bottom:8px;">PO로서 기획한 빅데이터 분석 플랫폼 프로젝트</h2>
+      <p style="font-size:14px; color:#666660; margin-bottom:20px; line-height:1.6;">소셜 빅데이터 분석 플랫폼의 UI/UX 기획부터 AI 서비스 설계, 과금 정책까지 End-to-End로 담당</p>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#7FBF7F; margin-right:10px;">01</span>
+          <strong>MCP 기반 AI Agent 서비스 기획</strong>
+          <span style="color:#7FBF7F; margin-left:8px; font-size:12px;">2026.06~ 진행 중</span>
+        </div>
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#A89B62; margin-right:10px;">02</span>
+          <strong>커스텀 대시보드 기획</strong>
+          <span style="color:#909088; margin-left:8px; font-size:12px;">2026.01–06</span>
+        </div>
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#A89B62; margin-right:10px;">03</span>
+          <strong>브랜드/브릿지 페이지 기획</strong>
+          <span style="color:#909088; margin-left:8px; font-size:12px;">2025.12–2026.05</span>
+        </div>
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#A89B62; margin-right:10px;">04</span>
+          <strong>AI Query Builder + Taxonomy Builder 기획</strong>
+          <span style="color:#909088; margin-left:8px; font-size:12px;">2025.08–2026.01</span>
+        </div>
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#A89B62; margin-right:10px;">05</span>
+          <strong>Quettai 언론 분석 기능 기획</strong>
+          <span style="color:#909088; margin-left:8px; font-size:12px;">2025.07–08</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:8px; padding-top:4px; flex-shrink:0;">
+      <div id="projects-toggle-icon" style="width:40px; height:40px; border-radius:50%; border:2px solid #C8B97A; display:flex; align-items:center; justify-content:center; font-size:22px; color:#C8B97A; font-weight:300; transition:all 0.25s;">＋</div>
+      <div class="toggle-hint" style="font-family:var(--mono); font-size:9px; color:#A89B62; letter-spacing:0.06em; text-align:center;">펼쳐보기 ↓</div>
+    </div>
+  </div>
+</div>
+
+<div id="projects-body" style="display:none;">
+<style>
+/* ── 프로젝트 아코디언 ── */
+.proj-accordion {
+  border: 1px solid #E0DDD6;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  transition: box-shadow 0.2s;
+}
+.proj-accordion.open {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.proj-acc-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  background: #FAFAF8;
+  user-select: none;
+  border-bottom: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+.proj-acc-header:hover {
+  background: #F5F3EF;
+}
+.proj-accordion.open .proj-acc-header {
+  border-bottom-color: #E0DDD6;
+  background: #F8F6F2;
+}
+.proj-acc-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #A89B62;
+  min-width: 24px;
+  font-weight: 600;
+}
+.proj-acc-title {
+  flex: 1;
+}
+.proj-acc-title strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A18;
+  margin-bottom: 2px;
+}
+.proj-acc-title span {
+  font-size: 12px;
+  color: #909088;
+}
+.proj-acc-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.proj-acc-toggle {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #C8B97A;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: #A89B62; font-weight: 300;
+  transition: all 0.2s; flex-shrink: 0;
+}
+.proj-accordion.open .proj-acc-toggle {
+  background: #C8B97A;
+  color: #fff;
+}
+.proj-acc-body {
+  display: none;
+  padding: 24px;
+  background: #fff;
+}
+.proj-accordion.open .proj-acc-body {
+  display: block;
+}
+
+/* before-po 타임라인 아이템 구분 강화 */
+.timeline-item {
+  background: rgba(255,255,255,0.5);
+  border: 1px solid #D8D4CC;
+  border-radius: 6px;
+  padding: 28px 28px 28px 52px;
+  margin-bottom: 12px;
+}
+.timeline-item::before {
+  left: 20px;
+}
+
+/* 모두펼치기 버튼 */
+.expand-all-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #8A7B40;
+  border: 1px solid #C8B97A;
+  background: transparent;
+  padding: 5px 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+  transition: all 0.15s;
+  margin-bottom: 20px;
+  animation: idlePulseBtn 2.4s ease-in-out infinite;
+}
+.expand-all-btn:hover {
+  background: rgba(200,185,122,0.16);
+  color: #6A5D30;
+  border-color: #A89B62;
+  transform: scale(1.04);
+  animation: none;
+  box-shadow: 0 0 0 5px rgba(200,185,122,0.18);
+}
+@keyframes idlePulseBtn {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200,185,122,0.22); }
+  50% { box-shadow: 0 0 0 5px rgba(200,185,122,0); }
+}
+
+/* 2depth(프로젝트 아코디언) [+] 버튼: hover/헤더 hover 시 깜빡임 강조 */
+.proj-acc-header:hover .proj-acc-toggle {
+  animation: togglePulseGold 0.9s ease infinite;
+  background: rgba(200,185,122,0.15);
+  border-color: #A89B62;
+  transform: scale(1.1);
+}
+@keyframes togglePulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200,185,122,0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(200,185,122,0); }
+}
+
+/* 3depth(Before PO 회사) [+] 버튼: hover 시 깜빡임 강조 */
+.bp-acc-header:hover .bp-acc-toggle {
+  animation: togglePulseGray 0.9s ease infinite;
+  background: rgba(176,168,138,0.18);
+  border-color: #948A6E;
+  transform: scale(1.1);
+}
+@keyframes togglePulseGray {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(176,168,138,0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(176,168,138,0); }
+}
+</style>
+
+<section id="projects" class="light-section" style="background: transparent; border-top: 1px solid #E0DDD6; max-width: 1200px; margin: 0 auto; padding: 0 48px 80px;">
+  <div style="padding-top:32px; display:flex; align-items:center; justify-content:flex-end;">
+    <button class="expand-all-btn" id="projects-expand-all" onclick="expandAllProjects()">모두 펼치기 ↓</button>
+  </div>
+
+    <div class="proj-accordion" id="p1">
+    <div class="proj-acc-header" onclick="toggleProject(this)">
+      <div class="proj-acc-num">01</div>
+      <div class="proj-acc-title">
+        <strong>MCP 기반 AI Agent 서비스 기획</strong>
+        <span>2026.06~ 진행 중 &nbsp;·&nbsp; <span class="project-status status-ongoing" style="font-size:10px; padding:2px 8px;">기획 진행 중</span></span>
+      </div>
+      <div class="proj-acc-toggle">＋</div>
+    </div>
+    <div class="proj-acc-body">
+    <!-- P5: MCP AI Agent -->
+  <div class="project-block">
+    <div class="project-meta">
+      <span class="project-index">01</span>
+      <span class="project-status status-ongoing">기획 진행 중</span>
+    </div>
+    <h3 class="project-headline">MCP 기반 AI Agent 서비스 기획</h3>
+    <p class="project-subhead">소셜 데이터 × 외부 LLM — MCP 인프라 위에 올라가는 신규 AI Agent 서비스 기획 · 2026.06–현재</p>
+
+    <div class="slides">
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 01</span>
+          <span class="slide-title">서비스 컨셉 & MCP 인프라 구조</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">소셜 데이터 × 외부 LLM의 실시간 연결 — 기획자가 설계하는 AI Agent 서비스 레이어</p>
+
+            <!-- MCP 구조 SVG -->
+            <div class="diagram-wrap">
+              <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="200" fill="#0F0F0F"/>
+                <!-- 레이어 4개 -->
+                <rect x="20" y="20" width="720" height="38" fill="rgba(200,185,122,0.08)" stroke="#C8B97A" stroke-width="0.5"/>
+                <text x="40" y="33" fill="#C8B97A" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">SERVICE LAYER</text>
+                <text x="40" y="50" fill="#F5F5F0" font-family="Pretendard,sans-serif" font-size="13" font-weight="600">사용자 인터랙션 화면 + Agent 라인업</text>
+                <text x="680" y="43" fill="#8A7D52" font-family="JetBrains Mono,monospace" font-size="9" text-anchor="end">기획자 담당</text>
+
+                <rect x="20" y="62" width="720" height="38" fill="rgba(127,127,127,0.05)" stroke="#333" stroke-width="0.5"/>
+                <text x="40" y="75" fill="#606060" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">AI LAYER</text>
+                <text x="40" y="92" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">외부 LLM + 비즈니스 목적별 특화 프롬프트</text>
+
+                <rect x="20" y="104" width="720" height="38" fill="rgba(127,127,127,0.05)" stroke="#333" stroke-width="0.5"/>
+                <text x="40" y="117" fill="#606060" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">INTEGRATION LAYER</text>
+                <text x="40" y="134" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">MCP 기반 데이터 연동 엔진 (빅데이터팀 구축)</text>
+
+                <rect x="20" y="146" width="720" height="38" fill="rgba(127,127,127,0.05)" stroke="#333" stroke-width="0.5"/>
+                <text x="40" y="159" fill="#606060" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">DATA LAYER</text>
+                <text x="40" y="176" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">사내 소셜 빅데이터 플랫폼 (SNS·뉴스·커뮤니티 수십억 건)</text>
+              </svg>
+            </div>
+
+            <table class="content-table">
+              <tr><td>기간</td><td>2026.06 ~ 현재 · 기획 및 프롬프트 최적화 진행 중</td></tr>
+              <tr><td>역할</td><td>서비스 컨셉 설계 · 화면 인터랙션 기획 · 과금 정책 설계 · MCP Tools 특화 프롬프트 작성</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 02</span>
+          <span class="slide-title">Agent 라인업 & 비즈니스 설계</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">트렌드 분석, 위기 감지, 신제품 분석 — 마케팅 도메인 지식으로 설계한 Agent 라인업</p>
+
+            <!-- Agent 카드 SVG -->
+            <div class="diagram-wrap">
+              <svg viewBox="0 0 760 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="140" fill="#0F0F0F"/>
+                <!-- Agent 1 -->
+                <rect x="10" y="20" width="228" height="100" fill="none" stroke="#C8B97A" stroke-width="0.5"/>
+                <text x="124" y="48" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">트렌드 분석</text>
+                <text x="124" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">마케터·기획자</text>
+                <text x="124" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">소셜 트렌드 변화 실시간</text>
+                <text x="124" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">분석·리포트 자동 생성</text>
+                <!-- Agent 2 -->
+                <rect x="266" y="20" width="228" height="100" fill="none" stroke="#8A3A3A" stroke-width="0.5"/>
+                <text x="380" y="48" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">위기 감지</text>
+                <text x="380" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">브랜드 담당자·PR팀</text>
+                <text x="380" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">부정 언급 급증 감지</text>
+                <text x="380" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">위기 징후 조기 경보</text>
+                <!-- Agent 3 -->
+                <rect x="522" y="20" width="228" height="100" fill="none" stroke="#4A6A4A" stroke-width="0.5"/>
+                <text x="636" y="48" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">신제품 분석</text>
+                <text x="636" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">리서처·전략기획</text>
+                <text x="636" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">출시 전후 소비자 반응</text>
+                <text x="636" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">경쟁사 비교 자동 분석</text>
+              </svg>
+            </div>
+
+            <table class="content-table">
+              <tr><td>Agent 컨셉 정의</td><td>마케팅 도메인 8년 지식 + 소셜 분석 노하우를 기반으로 각 Agent의 목적·기능 범위 정의</td></tr>
+              <tr><td>과금 정책</td><td>Agent별 데이터 호출 건수 기반 · 호출 복잡도에 따라 단가 차등 · 시장성 검토 후 포지셔닝 기반 가격 설계</td></tr>
+              <tr><td>프롬프트 설계</td><td>MCP Tools 특화 시스템 프롬프트 작성 · 현업 분석가 수준의 인사이트 출력을 위한 튜닝 진행 중</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /P5 -->
+    </div><!-- /proj-acc-body -->
+  </div><!-- /proj-accordion -->
+    <div class="proj-accordion" id="p2">
+    <div class="proj-acc-header" onclick="toggleProject(this)">
+      <div class="proj-acc-num">02</div>
+      <div class="proj-acc-title">
+        <strong>Quetta Dex 커스텀 대시보드 기획</strong>
+        <span>2026.01–06 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:10px; padding:2px 8px;">1차 런칭 완료</span></span>
+      </div>
+      <div class="proj-acc-toggle">＋</div>
+    </div>
+    <div class="proj-acc-body">
+    <!-- P1: Quetta Dex 대시보드 -->
+  <div class="project-block">
+    <div class="project-meta">
+      <span class="project-index">02</span>
+      <span class="project-status status-done">1차 런칭 완료</span>
+    </div>
+    <h3 class="project-headline">Quetta Dex 커스텀 대시보드 기획</h3>
+    <p class="project-subhead">소셜 빅데이터 분석가가 직접 만드는 대시보드 — B2B SaaS 분석 플랫폼의 시각화 스튜디오 기획 · 2026.01–06</p>
+
+    <div class="slides">
+
+      <!-- S1 -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 01</span>
+          <span class="slide-title">프로젝트 개요</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <div class="img-placeholder tall">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">위젯 다수 배치된 대시보드 전경 캡처</span>
+              <span class="img-placeholder-label">막대·라인·워드클라우드·지표카드 등 다양한 위젯이 한 화면에 보이는 상태</span>
+            </div>
+            <p class="slide-headline">기존 플랫폼은 고정 화면 — 분석가마다 다른 니즈를 수용할 수 없었다</p>
+            <table class="content-table">
+              <tr><th>구분</th><th>문제</th><th>해결 방향</th></tr>
+              <tr><td>화면 구조</td><td>고정된 분석 화면 → 사용자 맞춤 조합 불가</td><td>위젯 기반 드래그&드롭 커스텀 대시보드</td></tr>
+              <tr><td>데이터 구조</td><td>차트 유형마다 Dimension/Metric 조합이 달라 단순 BI 툴 방식 적용 불가</td><td>차트별 데이터 매핑 가이드 직접 설계</td></tr>
+              <tr><td>협업 환경</td><td>다수 사용자 동시 편집 시 정책 부재</td><td>RBAC 4단계 + 동시성 정책 수립</td></tr>
+            </table>
+            <div class="sub-headline">기획 범위</div>
+            <table class="content-table">
+              <tr><td>제품 위치</td><td>Quetta Dex > 대시보드 > 대시보드 스튜디오</td></tr>
+              <tr><td>기간</td><td>2026.01 ~ 2026.06 (1차 런칭 완료 / 2차 개발 진행 중)</td></tr>
+              <tr><td>역할</td><td>단독 기획 · 개발팀 협업 · 화면 기획서 v2.4까지 직접 작성 (130p+)</td></tr>
+              <tr><td>산출물</td><td>화면 기획서 · RBAC 정책 명세 · 차트별 데이터 매핑 가이드</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- S2 -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 02</span>
+          <span class="slide-title">서비스 구조 & 핵심 정책</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">대시보드 → 캔버스 → 위젯의 3계층 구조 — 전체 라이프사이클을 처음부터 설계</p>
+
+            <!-- 3계층 SVG 다이어그램 -->
+            <div class="diagram-wrap">
+              <svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect x="0" y="0" width="760" height="180" fill="#0F0F0F"/>
+                <!-- 대시보드 -->
+                <rect x="20" y="40" width="200" height="100" fill="none" stroke="#C8B97A" stroke-width="1"/>
+                <text x="120" y="72" fill="#C8B97A" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">DASHBOARD</text>
+                <text x="120" y="92" fill="#F5F5F0" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">대시보드</text>
+                <text x="120" y="112" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">최상위 작업 단위</text>
+                <text x="120" y="128" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">생성·공유·초대·삭제</text>
+                <!-- 화살표 -->
+                <line x1="220" y1="90" x2="268" y2="90" stroke="#2A2A2A" stroke-width="1"/>
+                <polygon points="268,86 278,90 268,94" fill="#2A2A2A"/>
+                <!-- 캔버스 -->
+                <rect x="280" y="40" width="200" height="100" fill="none" stroke="#8A7D52" stroke-width="1"/>
+                <text x="380" y="72" fill="#8A7D52" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">CANVAS</text>
+                <text x="380" y="92" fill="#F5F5F0" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">캔버스</text>
+                <text x="380" y="112" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">12grid 기반 작업 공간</text>
+                <text x="380" y="128" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">순서 변경·최대 생성 수 제한</text>
+                <!-- 화살표 -->
+                <line x1="480" y1="90" x2="528" y2="90" stroke="#2A2A2A" stroke-width="1"/>
+                <polygon points="528,86 538,90 528,94" fill="#2A2A2A"/>
+                <!-- 위젯 -->
+                <rect x="540" y="40" width="200" height="100" fill="none" stroke="#606060" stroke-width="1"/>
+                <text x="640" y="72" fill="#606060" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">WIDGET</text>
+                <text x="640" y="92" fill="#F5F5F0" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">위젯</text>
+                <text x="640" y="112" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">비주얼(차트 50종+) / 텍스트</text>
+                <text x="640" y="128" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">데이터 매핑 · 퀵버튼 권한 노출</text>
+              </svg>
+            </div>
+
+            <div class="img-row two">
+              <div class="img-placeholder medium">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">LNB 캔버스 목록 화면</span>
+              </div>
+              <div class="img-placeholder medium">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">RBAC 권한별 기능 매트릭스 표 (기획서 11p)</span>
+              </div>
+            </div>
+
+            <div class="sub-headline">기획한 주요 정책 항목</div>
+            <table class="content-table">
+              <tr><td>RBAC 4단계</td><td>조회자·분석자·편집자·관리자별 기능 접근 매트릭스 — 기능별 활성화/비활성화 분기 전체 명세화</td></tr>
+              <tr><td>편집 모드 관리</td><td>편집 시작·중단·비정상 종료 시 권한 반환 정책 · 편집 중 삭제 불가 조건</td></tr>
+              <tr><td>필터 우선순위</td><td>전역 필터 vs. 위젯 개별 필터 충돌 처리 로직 · 조기화 로직 설계</td></tr>
+              <tr><td>공유 정책</td><td>로그인 없는 읽기 전용 공개 URL 공유 방식 (기존 로그인 기반에서 전환 기획)</td></tr>
+              <tr><td>초대 시스템</td><td>사내 임직원 검색 → 확인 컨펌 → 시스템 자동 메일 발송 · 신규 초대 시 조회자 자동 부여</td></tr>
+              <tr><td>데이터 요약 패널</td><td>데이터셋 수집 건수·기간·채널 즉시 확인 사이드 패널 · 진입 방식 2가지 (LNB 클릭 / 위젯 정보 버튼)</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- S3 -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 03</span>
+          <span class="slide-title">차트 50종 데이터 매핑 설계</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">차트마다 데이터 구조가 다르다 — 기획자가 백엔드 스키마를 직접 읽고 매핑 가이드를 만든 이유</p>
+
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">차트 카탈로그 전체 화면</span>
+                <span class="img-placeholder-label">위젯 추가 화면에서 차트 아이콘이 카테고리별 나열된 상태</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">비주얼 설정 팝업</span>
+                <span class="img-placeholder-label">Dimension / Breakdown / Metric 드롭다운 펼쳐진 상태</span>
+              </div>
+            </div>
+
+            <table class="content-table">
+              <tr><th>구분</th><th>내용</th></tr>
+              <tr><td>상황</td><td>비주얼 위젯 차트 유형 50종+ (지표카드·테이블·막대·라인·원형·워드클라우드 등 7개 카테고리)</td></tr>
+              <tr><td>문제</td><td>차트 유형별 Dimension/Breakdown/Metric 선택 가능 조합이 전부 다름 → 구두 요청으로 개발 구현 불가</td></tr>
+              <tr><td>추가 난점</td><td>리스트형 문자열(🏷️ 키워드형)은 시계열 차트 불가 / 날짜형(📅)은 Breakdown 불가 등 데이터 특징별 제약 존재</td></tr>
+            </table>
+
+            <div class="sub-headline">내가 한 것</div>
+            <table class="content-table">
+              <tr><td>데이터 특징 분류</td><td>범주형·날짜형·수치형·문자열·리스트형 5종으로 분류, 아이콘 표식 체계 수립 (드롭다운 전반에 적용)</td></tr>
+              <tr><td>차트별 매핑 가이드</td><td>50종 각 차트마다 선택 가능한 Dimension/Breakdown/Metric 조합 명세화 — 개발팀과 기준 합의 후 구현</td></tr>
+              <tr><td>예외 케이스 설계</td><td>Other 처리 / 비교기간 적용 불가 조건 / 보조축 설정 규칙 / 차트 변환 시 데이터 초기화 정책</td></tr>
+              <tr><td>지표 테이블 재설계</td><td>자유도 과다 문제 → 목적별 Fixed 테이블 8종으로 대체 (채널 시계열·채널 감성·연관어 시계열 등)</td></tr>
+            </table>
+
+            <div class="tag-row">
+              <span class="capability-tag">백엔드 스키마 이해</span>
+              <span class="capability-tag">개발 명세 직접 작성</span>
+              <span class="capability-tag">예외 케이스 선제 설계</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S4 -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 04</span>
+          <span class="slide-title">협업·공유·UX 세부 설계</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">혼자 쓰는 툴이 아니다 — 다수 사용자 협업 환경을 위한 정책 설계</p>
+
+            <div class="img-row two">
+              <div class="img-placeholder medium">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">초대하기 팝업 화면</span>
+                <span class="img-placeholder-label">좌측 멤버 검색 + 우측 초대 구성원 영역</span>
+              </div>
+              <div class="img-placeholder medium">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">공유 및 권한 설정 통합 팝업</span>
+                <span class="img-placeholder-label">권한 변경 드롭다운이 보이는 상태</span>
+              </div>
+            </div>
+
+            <div class="sub-headline">① 초대 & 권한 관리</div>
+            <table class="content-table">
+              <tr><td>초대 프로세스</td><td>사내 임직원 검색 → 초대 구성원 선택 → 확인 컨펌 → 시스템 초대 메일 자동 발송</td></tr>
+              <tr><td>초기 권한</td><td>신규 초대 대상은 자동으로 조회자(Viewer) 권한 부여</td></tr>
+              <tr><td>권한 변경</td><td>변경 즉시 DB 반영 · 변경·삭제 시 각각 컨펌창 노출</td></tr>
+              <tr><td>권한 이전</td><td>관리자가 본인 권한을 관리자 이하로 낮출 경우 전체 대시보드 목록으로 강제 이동</td></tr>
+              <tr><td>중복 방지</td><td>이미 접근 권한 보유 중인 사용자는 초대 대상 리스트에서 제외</td></tr>
+            </table>
+
+            <div class="sub-headline">② 공유 정책</div>
+            <table class="content-table">
+              <tr><td>공유 방식</td><td>로그인 없이 접근 가능한 읽기 전용 공개 URL 방식 (기존 로그인 기반에서 전환 기획)</td></tr>
+              <tr><td>보안 설정</td><td>보안 설정 변경 시 컨펌창 노출 · 유효기간 표시 영역 별도 제공</td></tr>
+            </table>
+
+            <div class="sub-headline">③ 스타일 커스텀 & Undo/Redo</div>
+            <table class="content-table">
+              <tr><td>글꼴 정책</td><td>대시보드당 1개 글꼴만 적용 · LNB 전역 설정에서만 제어 / 텍스트 위젯 내 굵게·기울임은 개별 허용</td></tr>
+              <tr><td>색상 정책</td><td>시스템 자동 배색 (Quettai 고유색 + 랜덤) · 위젯 단위 배경색·윤곽선 색 개별 변경 가능</td></tr>
+              <tr><td>스택 적립 기준</td><td>드롭 완료·리사이즈 완료·필터 변경·스타일 변경 시 적립 / 드래그·리사이즈 중간 동작은 미적립</td></tr>
+              <tr><td>미저장 이탈</td><td>변경사항 있는 상태에서 이탈 시 컨펌창 노출 · 비정상 종료 시 편집 권한 자동 반환</td></tr>
+            </table>
+
+            <div class="img-placeholder short">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">LNB 스타일 커스텀 패널 (글꼴·색상 설정이 열린 상태)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /slides -->
+  </div><!-- /project-block P1 -->
+    </div><!-- /proj-acc-body -->
+  </div><!-- /proj-accordion -->
+    <div class="proj-accordion" id="p3">
+    <div class="proj-acc-header" onclick="toggleProject(this)">
+      <div class="proj-acc-num">03</div>
+      <div class="proj-acc-title">
+        <strong>Quetta 브랜드 페이지 + 브릿지 페이지 기획</strong>
+        <span>2025.12–2026.05 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:10px; padding:2px 8px;">런칭 완료</span></span>
+      </div>
+      <div class="proj-acc-toggle">＋</div>
+    </div>
+    <div class="proj-acc-body">
+    <!-- P3: 브랜드/브릿지 페이지 -->
+  <div class="project-block">
+    <div class="project-meta">
+      <span class="project-index">03</span>
+      <span class="project-status status-done">런칭 완료</span>
+    </div>
+    <h3 class="project-headline">Quetta 브랜드 페이지 + 브릿지 페이지 기획</h3>
+    <p class="project-subhead">흩어진 솔루션을 하나로 — 브랜드 페이지와 브릿지 페이지, 두 개의 관문 기획 · 2025.12–2026.05</p>
+
+    <div class="slides">
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 01</span>
+          <span class="slide-title">프로젝트 개요</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">quettai.com 브랜드 페이지 메인</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">브릿지 페이지 솔루션 목록 화면</span>
+              </div>
+            </div>
+            <table class="content-table">
+              <tr><th>구분</th><th>브랜드 페이지</th><th>브릿지 페이지</th></tr>
+              <tr><td>접근</td><td>로그인 불필요 (오픈형)</td><td>로그인 후 진입</td></tr>
+              <tr><td>대상</td><td>잠재 고객</td><td>기존 계약 사용자</td></tr>
+              <tr><td>목적</td><td>브랜드 인지 + 유료 전환 유도</td><td>솔루션 탐색 + 미이용 제품 넛지</td></tr>
+              <tr><td>런칭</td><td>2026.05</td><td>2025.12</td></tr>
+            </table>
+            <table class="content-table">
+              <tr><td>기간</td><td>2025.12 ~ 2026.05 · 최종 런칭 완료</td></tr>
+              <tr><td>역할</td><td>단독 기획 · UI/UX 설계 · 전 제품 마케팅 카피 전담 작성</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 02</span>
+          <span class="slide-title">브랜드 페이지 — 구조 & 카피 전략</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">잠재 고객이 처음 만나는 Quetta — IA 설계부터 마케팅 카피까지 단독 기획</p>
+            <div class="img-row two">
+              <div class="img-placeholder medium">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">솔루션 라인업 섹션 (제품별 카피가 보이는 화면)</span>
+              </div>
+              <div class="img-placeholder medium">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">하단 CTA 영역 (무료체험·문의 버튼 배치)</span>
+              </div>
+            </div>
+            <table class="content-table">
+              <tr><td>히어로 섹션</td><td>제품 핵심 가치 한 줄 소구 + CTA 버튼</td></tr>
+              <tr><td>솔루션 라인업</td><td>Quettai·Quetta Dex 등 제품별 핵심 기능 소개 및 차별점</td></tr>
+              <tr><td>소셜 프루프</td><td>주요 클라이언트·수상 이력 등 신뢰 요소</td></tr>
+              <tr><td>마케팅 카피</td><td>5개 제품 소구 문구 전담 작성 — 기능 나열이 아닌 베네핏 언어로 전환</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 03</span>
+          <span class="slide-title">브릿지 페이지 — 넛지 전략 & UX 설계</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">로그인 후 첫 화면 — 미이용 솔루션을 자연스럽게 탐색하게 만드는 넛지 설계</p>
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">브릿지 페이지 전체 화면</span>
+                <span class="img-placeholder-label">솔루션 카드가 나열된 상태</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">미이용 솔루션 영역 클로즈업</span>
+                <span class="img-placeholder-label">잠금 상태 + 무료 체험 버튼</span>
+              </div>
+            </div>
+            <table class="content-table">
+              <tr><td>미이용 솔루션 노출</td><td>계약하지 않은 솔루션도 화면에 노출 · 잠금 상태로 존재감 유지</td></tr>
+              <tr><td>무료 체험 CTA</td><td>미이용 솔루션 영역에 '무료 체험 신청' 버튼 전략적 배치</td></tr>
+              <tr><td>자연스러운 탐색 유도</td><td>버튼 강요 없이 UI 흐름상 자연스럽게 눈이 가도록 레이아웃 설계</td></tr>
+              <tr><td>전환 파이프라인</td><td>탐색 → 무료 체험 → 유료 전환으로 이어지는 단계별 경로 설계</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /P3 -->
+    </div><!-- /proj-acc-body -->
+  </div><!-- /proj-accordion -->
+    <div class="proj-accordion" id="p4">
+    <div class="proj-acc-header" onclick="toggleProject(this)">
+      <div class="proj-acc-num">04</div>
+      <div class="proj-acc-title">
+        <strong>AI Query Builder + Taxonomy Builder 기획</strong>
+        <span>2025.08–2026.01 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:10px; padding:2px 8px;">개발 완료</span></span>
+      </div>
+      <div class="proj-acc-toggle">＋</div>
+    </div>
+    <div class="proj-acc-body">
+    <!-- P2: AI Query Builder + Taxonomy Builder -->
+  <div class="project-block">
+    <div class="project-meta">
+      <span class="project-index">04</span>
+      <span class="project-status status-done">개발 완료</span>
+    </div>
+    <h3 class="project-headline">AI Query Builder + Taxonomy Builder 기획</h3>
+    <p class="project-subhead">"분석 목적만 입력하세요" — 8년치 분석 노하우를 AI로 자동화한 두 기능의 기획과 프롬프트 설계 · 2025.08–2026.01</p>
+
+    <div class="slides">
+
+      <!-- S1 -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 01</span>
+          <span class="slide-title">프로젝트 개요</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <div class="img-row two">
+              <div class="img-placeholder medium">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">AI Query Builder 팝업 화면</span>
+                <span class="img-placeholder-label">검색 목적·대상 입력된 상태</span>
+              </div>
+              <div class="img-placeholder medium">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">Taxonomy Builder 분류체계 표 화면</span>
+                <span class="img-placeholder-label">4-Depth 항목이 펼쳐진 상태</span>
+              </div>
+            </div>
+            <table class="content-table">
+              <tr><th>구분</th><th>AI Query Builder</th><th>Taxonomy Builder</th></tr>
+              <tr><td>문제</td><td>불리언 검색 쿼리식 작성은 고난도 전문 작업 → 신규 사용자 진입 장벽 높음</td><td>분류체계 수립은 분석가 수년치 노하우 필요 → 자동화 불가 영역으로 방치</td></tr>
+              <tr><td>해결</td><td>목적·대상·부가설명 입력 → AI가 Boolean 쿼리식 자동 생성</td><td>채팅형 UI로 AI와 대화 → 4-Depth 분류체계 자동 수립</td></tr>
+              <tr><td>산출물</td><td>OR/AND/NOT/인접조건(~) 기반 정교한 검색 쿼리식</td><td>폴더·카테고리·키워드 매핑 구조 (40종+)</td></tr>
+            </table>
+            <table class="content-table">
+              <tr><td>기간</td><td>2025.08 ~ 2026.01 · 개발 완료</td></tr>
+              <tr><td>역할</td><td>단독 기획 · 화면 설계 · 시스템 프롬프트 직접 작성 및 튜닝</td></tr>
+              <tr><td>차별점</td><td>UI 기획자가 프롬프트 엔지니어링까지 담당 — AI팀에 위임하지 않음</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- S2 -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 02</span>
+          <span class="slide-title">AI Query Builder 화면 & 인터랙션</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">검색 목적 3종 분기 × 입력 조건 2개 — 단순해 보이는 UI 뒤의 정밀한 설계</p>
+
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">입력 완료 상태</span>
+                <span class="img-placeholder-label">검색 목적·대상 입력 + 생성 버튼 활성화</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">쿼리 생성 완료 상태</span>
+                <span class="img-placeholder-label">결과창에 Boolean 쿼리식 노출 + 적용 버튼 활성화</span>
+              </div>
+            </div>
+
+            <div class="sub-headline">사용자 입력 구조</div>
+            <table class="content-table">
+              <tr><th>입력 항목</th><th>형식</th><th>설계 포인트</th></tr>
+              <tr><td>검색 목적</td><td>라디오 버튼 (브랜드/캠페인/일반)</td><td>목적 변경 시 하단 플레이스홀더 즉시 자동 변경 · 기입력 텍스트 유지</td></tr>
+              <tr><td>검색 대상</td><td>텍스트 입력 (필수)</td><td>1글자 이상 입력 시 '생성' 버튼 활성화</td></tr>
+              <tr><td>부가 설명</td><td>텍스트 입력 (선택 · 100자)</td><td>100자 초과 시 경고 + 생성 버튼 비활성화</td></tr>
+            </table>
+
+            <div class="sub-headline">실제 생성된 쿼리식 구조 예시</div>
+            <div class="code-block">( ("한국 뷰티 트렌드"~5) OR ("K뷰티 트렌드"~5) OR ("한국 화장품 트렌드"~5) )
+AND ( "소비자 트렌드" OR "화장품 시장" OR "비건 뷰티" OR "이너뷰티 트렌드" )
+NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
+
+            <div class="sub-headline">인터랙션 플로우</div>
+            <table class="content-table">
+              <tr><td>① 입력 완료</td><td>검색 목적 선택 + 검색 대상 입력 → '키워드룰 생성' 버튼 활성화</td></tr>
+              <tr><td>② AI 생성</td><td>Boolean 쿼리식 생성 (최대 1,000자) · 결과창은 읽기 전용</td></tr>
+              <tr><td>③ 결과 확인</td><td>생성된 쿼리식 노출 → '적용' 버튼 활성화</td></tr>
+              <tr><td>④ 적용</td><td>팝업 닫힘 + 상위 키워드룰 설정 팝업 쿼리 탭에 자동 입력 · 사용자 추가 수정 가능</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- S3 -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 03</span>
+          <span class="slide-title">Taxonomy Builder 화면 & 인터랙션</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">채팅으로 설계하고, 표로 검토하고, 확정하면 시스템에 반영 — 3단계 분류체계 생성 플로우</p>
+
+            <div class="img-row three">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">① 채팅 진행 중 화면</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">② 4-Depth 분류체계 표 미리보기</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">③ LNB 반영중 배지 화면</span>
+              </div>
+            </div>
+
+            <table class="content-table">
+              <tr><th>단계</th><th>화면</th><th>핵심 설계</th></tr>
+              <tr><td>① 설계 채팅</td><td>대화형 채팅 UI</td><td>AI와 질의응답으로 분석 의도 구체화 · 생성 완료 시 입력창 자동 비활성화 · 완료 세션 재진입 시 Read-only</td></tr>
+              <tr><td>② 미리보기 & 편집</td><td>4-Depth 인터랙티브 표</td><td>셀 클릭 → 즉시 편집 / 행 삭제 / Undo/Redo 지원 · 미저장 이탈 시 컨펌창</td></tr>
+              <tr><td>③ 최종 확정</td><td>컨펌 팝업 → 배치</td><td>1회성 반영 (중복 방지) · 반영 중 항목 비활성화 · 완료/오류 실시간 배지 전환</td></tr>
+            </table>
+
+            <div class="sub-headline">분류체계 출력 예시 (로봇청소기 브랜드 성능 평가)</div>
+            <div class="code-block">청소성능 > 흡입청소 > 바닥흡입력 > 카펫 흡입 성능 > [키워드...]
+청소성능 > 물걸레 청소 > 걸레 방식 > 진동 물걸레 성능 > [키워드...]
+내비게이션 > 장애물 회피 > 인식 성능 > 반려동물 배설물 회피 > [키워드...]</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S4 -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 04</span>
+          <span class="slide-title">프롬프트 엔지니어링 — 기획자가 직접 설계한 이유</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">UI 설계로 끝나지 않았다 — System Prompt부터 출력 형식까지 기획자가 직접 작성하고 튜닝</p>
+
+            <div class="img-placeholder medium">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">System Prompt 텍스트 일부 캡처</span>
+              <span class="img-placeholder-label">LLM 프롬프트 기획서의 핵심 규칙 부분 — 규칙이 빽빽하게 적혀있다는 게 보이는 정도</span>
+            </div>
+
+            <div class="sub-headline">왜 기획자가 직접 했나</div>
+            <table class="content-table">
+              <tr><td>도메인 지식 필요</td><td>소셜 데이터 분석 8년 실무 → "올바른 Boolean 쿼리식"의 기준을 기획자가 가장 잘 앎</td></tr>
+              <tr><td>규칙 복잡도</td><td>OR/AND/NOT/인접조건(~) 사용 기준, 제품명 고유성 판별, 브랜드 AND 금지 조건 등 세부 규칙 정형화 필요</td></tr>
+              <tr><td>출력 정합성</td><td>AI 출력이 플랫폼 내부 마스터 테이블 구조를 벗어나지 않아야 함</td></tr>
+            </table>
+
+            <div class="sub-headline">System Prompt 설계 핵심 내용</div>
+            <table class="content-table">
+              <tr><td>리서치 분야 분기</td><td>브랜드·캠페인·일반 3종 분야별 검색 목적 및 확장 키워드 풀 별도 정의</td></tr>
+              <tr><td>제품명 고유성 판별</td><td>고유 제품명(아이오닉5)은 브랜드 AND 금지 / 일반명사형 제품명(너구리)은 브랜드 AND 필수</td></tr>
+              <tr><td>시리즈 확장 금지</td><td>복합형 입력(현대 아이오닉5) 시 후속 모델(아이오닉6·7) 포함 절대 금지</td></tr>
+              <tr><td>NOT 조건 자동 확장</td><td>사행성·채용·부동산·스팸 키워드 의미군 자동 확장 (캠페인 분야는 광고·이벤트 제외 안 함)</td></tr>
+              <tr><td>출력 형식 강제</td><td>Boolean Query 외 설명·주석 출력 절대 금지 명시</td></tr>
+              <tr><td>인접조건(~) 가이드</td><td>사용 가능 케이스 vs 금지 케이스 명확히 구분하여 할루시네이션 방지</td></tr>
+            </table>
+
+            <div class="tag-row">
+              <span class="capability-tag">AI 서비스 End-to-End 기획</span>
+              <span class="capability-tag">프롬프트 엔지니어링</span>
+              <span class="capability-tag">도메인 지식 기반 품질 관리</span>
+              <span class="capability-tag">복잡한 규칙 체계 설계</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /P2 -->
+    </div><!-- /proj-acc-body -->
+  </div><!-- /proj-accordion -->
+    <div class="proj-accordion" id="p5">
+    <div class="proj-acc-header" onclick="toggleProject(this)">
+      <div class="proj-acc-num">05</div>
+      <div class="proj-acc-title">
+        <strong>Quettai 언론 분석 기능 기획</strong>
+        <span>2025.07–08 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:10px; padding:2px 8px;">1차 런칭 완료</span></span>
+      </div>
+      <div class="proj-acc-toggle">＋</div>
+    </div>
+    <div class="proj-acc-body">
+    <!-- P4: 언론 분석 -->
+  <div class="project-block">
+    <div class="project-meta">
+      <span class="project-index">05</span>
+      <span class="project-status status-done">1차 런칭 완료</span>
+    </div>
+    <h3 class="project-headline">Quettai 언론 분석 기능 기획</h3>
+    <p class="project-subhead">뉴스 본문과 댓글을 함께 읽는다 — 플랫폼 내 부재했던 언론 분석 기능 신규 기획 · 2025.07–08</p>
+
+    <div class="slides">
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 01</span>
+          <span class="slide-title">프로젝트 개요</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <div class="img-placeholder tall">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">언론 분석 메인 화면 — 기사 목록 + 여론 트렌드 차트가 함께 보이는 상태</span>
+            </div>
+            <table class="content-table">
+              <tr><td>문제</td><td>기존 Quettai는 SNS·커뮤니티 중심 → 언론(기사·댓글) 데이터 분석 환경 전무</td></tr>
+              <tr><td>방향</td><td>기사 단위 여론 흐름 + 댓글 감성 반응을 한 화면에서 분석</td></tr>
+              <tr><td>기간</td><td>2025.07 ~ 2025.08 · 1차 런칭 완료</td></tr>
+              <tr><td>역할</td><td>단독 기획 · 화면 설계 · 기술 제약 대응 프로세스 조율</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 02</span>
+          <span class="slide-title">핵심 의사결정 — 기술 제약 대응</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">전수 분석은 불가능했다 — 서버 부하 한계를 기획으로 풀어낸 샘플링 프로세스 설계</p>
+
+            <!-- 플로우 SVG -->
+            <div class="diagram-wrap">
+              <svg viewBox="0 0 760 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="120" fill="#0F0F0F"/>
+                <rect x="10" y="30" width="160" height="60" fill="none" stroke="#333" stroke-width="1"/>
+                <text x="90" y="55" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">전수 댓글 분석</text>
+                <text x="90" y="72" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">시도</text>
+                <line x1="170" y1="60" x2="200" y2="60" stroke="#333" stroke-width="1"/>
+                <polygon points="200,56 210,60 200,64" fill="#333"/>
+                <rect x="210" y="30" width="160" height="60" fill="none" stroke="#8A3A3A" stroke-width="1"/>
+                <text x="290" y="55" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">서버 부하 급증</text>
+                <text x="290" y="72" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">API 호출 한계</text>
+                <line x1="370" y1="60" x2="400" y2="60" stroke="#333" stroke-width="1"/>
+                <polygon points="400,56 410,60 400,64" fill="#333"/>
+                <rect x="410" y="30" width="160" height="60" fill="none" stroke="#4A6A4A" stroke-width="1"/>
+                <text x="490" y="48" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">샘플링 프로세스</text>
+                <text x="490" y="65" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">핵심 기사 100개</text>
+                <text x="490" y="82" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">기획자 제안</text>
+                <line x1="570" y1="60" x2="600" y2="60" stroke="#333" stroke-width="1"/>
+                <polygon points="600,56 610,60 600,64" fill="#333"/>
+                <rect x="610" y="30" width="140" height="60" fill="none" stroke="#C8B97A" stroke-width="1"/>
+                <text x="680" y="55" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">안정성 + 유의미한</text>
+                <text x="680" y="72" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">분석 동시 달성</text>
+              </svg>
+            </div>
+
+            <table class="content-table">
+              <tr><td>문제</td><td>수집된 기사 전수 댓글 분석 시 서버 부하 급증 + API 호출 한계 → 개발팀 "전수 분석 불가" 통보</td></tr>
+              <tr><td>기획자 제안</td><td>핵심 기사 최대 100개로 분석 범위 제한 — 댓글 수·조회 수·언급량 기준 여론 영향력 높은 기사 우선 선별</td></tr>
+              <tr><td>사용자 경험</td><td>제한 조건을 사용자에게 명확히 안내 · 분석 대상 기사 수 화면에 노출</td></tr>
+              <tr><td>결과</td><td>시스템 안정성 확보 + 핵심 기사 중심의 유의미한 여론 분석 환경 동시 달성</td></tr>
+            </table>
+            <p class="body-text" style="color: var(--gold-dim); font-style: italic;">개발 제약을 단순히 수용하지 않고, 사용자 가치를 지키는 대안을 기획 레벨에서 설계했다</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 03</span>
+          <span class="slide-title">화면 설계 — 언론사·기자 단위 타겟팅</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">기사 단위를 넘어 — 언론사·기자 단위로 여론 반응을 추적하는 그룹 관리 UI 설계</p>
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">기사 목록 + 댓글 감성 분석 화면</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">언론사·기자 그룹 관리 UI</span>
+              </div>
+            </div>
+            <table class="content-table">
+              <tr><td>언론사·기자 그룹 관리</td><td>분석 대상 언론사를 사용자가 직접 그룹으로 묶어 관리 · 기자 단위 여론 반응 세밀 추적</td></tr>
+              <tr><td>댓글 감성 분석</td><td>긍·부정·중립 비율 · 주요 감성 키워드 추출</td></tr>
+              <tr><td>기사 목록</td><td>핵심 기사 최대 100개 · 댓글 수·감성 비율 등 요약 지표 함께 노출</td></tr>
+              <tr><td>트렌드 차트</td><td>기간별 언급량·감성 변화 추이 시각화</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /P4 -->
+    </div><!-- /proj-acc-body -->
+  </div><!-- /proj-accordion -->
+
+</section><!-- /projects -->
+</div><!-- /projects-body -->
+</div><!-- /light-wrapper projects -->
+
+<!-- ── BRIDGE: 인셋 카드형 ── -->
+<div id="bridge" style="background: #EDEAE4; padding: 0 48px;">
+  <!-- 인셋 카드 — 좌우 마진으로 "들여쓰기된 삽입 구간" -->
+  <div style="max-width: 1200px; margin: 0 auto; padding: 32px 0;">
+    <div style="
+      border-left: 3px solid #B0A88A;
+      background: rgba(255,255,255,0.65);
+      border-radius: 0 8px 8px 0;
+      padding: 28px 32px;
+      margin-left: 48px;
+      margin-right: 80px;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.06);
+      position: relative;
+    ">
+      <!-- 좌측 세로 라인의 상단 연결점 -->
+      <div style="position:absolute; left:-3px; top:-16px; width:3px; height:16px; background:linear-gradient(to bottom, transparent, #B0A88A);"></div>
+      <div style="position:absolute; left:-3px; bottom:-16px; width:3px; height:16px; background:linear-gradient(to bottom, #B0A88A, transparent);"></div>
+
+      <!-- 라벨 -->
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A8070; letter-spacing:0.14em; padding:3px 10px; border-radius:3px; border:1px solid #C4BFB4; background:rgba(255,255,255,0.8);">CAREER BRIDGE</div>
+        <span style="font-family:var(--mono); font-size:10px; color:#9A9088;">2023 ~ 2025</span>
+      </div>
+
+      <!-- 헤드카피 -->
+      <h2 style="font-size:clamp(18px,2vw,24px); font-weight:700; color:#5A5650; letter-spacing:-0.02em; margin-bottom:6px;">분석가에서 기획자로, 방향을 바꾼 2년</h2>
+      <p style="font-size:12px; color:#9A9088; margin-bottom:20px; font-family:var(--mono);">공백기를 자기계발과 사이드 프로젝트로 채우며 PO로의 전환을 준비했습니다.</p>
+
+      <!-- 본문 + CookMatch 카드 -->
+      <div style="display:flex; gap:28px; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:1; min-width:240px;">
+          <p style="font-size:13px; color:#6A6660; line-height:1.85; margin-bottom:10px;">
+            2023년 퇴사 후 유산과 임신을 겪으며 약 2년의 공백기를 보냈습니다. 그 시간 동안 멈추지 않고 정보처리기사·Tableau·SQLD 자격증을 취득하며 데이터 역량을 다졌고, 소셜 데이터 분석·크롤링 기술을 활용해 냉장고 재료 기반 레시피 추천 서비스 <strong style="color:#3A372F;">'CookMatch'</strong>를 기획부터 배포까지 직접 만들어봤습니다.
+          </p>
+          <p style="font-size:13px; color:#6A6660; line-height:1.85;">
+            분석가로 데이터를 다루는 일과, 그 데이터를 사용자가 쓰는 화면으로 만드는 일은 전혀 다른 영역이라는 걸 이 프로젝트를 통해 체감했고, 이 경험이 PO로의 전환을 결심하게 된 계기가 되었습니다.
+          </p>
+        </div>
+        <div style="width:220px; flex-shrink:0; border:1px solid #D4D0C8; border-radius:6px; padding:14px; background:rgba(255,255,255,0.9);">
+          <div style="font-size:10px; font-family:var(--mono); color:#9A9088; letter-spacing:0.06em; margin-bottom:6px;">SIDE PROJECT</div>
+          <div style="font-size:14px; font-weight:700; color:#2A2820; margin-bottom:4px;">CookMatch</div>
+          <div style="font-size:11px; color:#7A7068; line-height:1.6; margin-bottom:10px;">냉장고 속 재료 기반 레시피 추천 서비스<br>기획·디자인·개발 End-to-End 단독 수행</div>
+          <a href="https://refrigerator-code.vercel.app/" target="_blank" style="display:inline-flex; align-items:center; gap:5px; font-size:11px; font-family:var(--mono); color:#8A7B40; text-decoration:none; border-bottom:1px solid rgba(200,185,122,0.5); padding-bottom:1px;">
+            refrigerator-code.vercel.app ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── BEFORE PO (라이트 테마, 살짝 다른 배경) ── -->
+<div style="background: #E0DDD8;">
+
+<!-- Before PO 접힘 토글 헤더 -->
+<div id="beforepo-toggle" onclick="toggleSection('beforepo-body', 'beforepo-toggle-icon')"
+  style="max-width:1200px; margin:0 auto; padding:0 48px; cursor:pointer; user-select:none;">
+
+  <!-- Before PO 라벨 + 구분선 -->
+  <div style="display:flex; align-items:center; gap:16px; padding-top:48px; padding-bottom:20px; border-bottom:2px solid #B0A88A;">
+    <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#888078; letter-spacing:0.14em; background:rgba(180,170,140,0.15); padding:4px 12px; border-radius:3px;">BEFORE PO</div>
+    <div style="font-family:var(--mono); font-size:11px; color:#888078; letter-spacing:0.06em;">코난테크놀로지 · 와이즈넛 · 코마코 · 대홍기획 &nbsp;·&nbsp; 2015 ~ 2023</div>
+  </div>
+
+  <!-- 메인 콘텐츠 -->
+  <div style="display:flex; align-items:flex-start; justify-content:space-between; padding:24px 0 32px; gap:32px;">
+    <div style="flex:1;">
+      <h2 style="font-size:clamp(20px,2.5vw,26px); font-weight:700; color:#1A1A18; letter-spacing:-0.02em; margin-bottom:8px;">데이터 분석가이자 마케팅 전략가로 쌓은 도메인 기반</h2>
+      <p style="font-size:14px; color:#666660; margin-bottom:20px; line-height:1.6;">광고 대행사에서 소비자를 읽는 법을 배웠고, IT 기업에서 데이터로 증명하는 법을 익혔습니다.</p>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#888078; margin-right:10px;">2019–2023</span>
+          <strong>코난테크놀로지</strong>
+          <span style="color:#909088; margin-left:8px; font-size:12px;">데이터 분석가 경험 · 대통령실/지자체/서울대 트렌드코리아</span>
+        </div>
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#888078; margin-right:10px;">2019</span>
+          <strong>와이즈넛</strong>
+          <span style="color:#909088; margin-left:8px; font-size:12px;">데이터 분석가 경험 · 현대자동차/다이슨/기획재정부</span>
+        </div>
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#888078; margin-right:10px;">2015–2018</span>
+          <strong>코마코</strong>
+          <span style="color:#909088; margin-left:8px; font-size:12px;">AE/AP 경험 · 아모레퍼시픽/한국야쿠르트/동국제약 등</span>
+        </div>
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:10px; color:#888078; margin-right:10px;">2015</span>
+          <strong>대홍기획</strong>
+          <span style="color:#909088; margin-left:8px; font-size:12px;">AE 경험 (인턴) · 렛츠런파크 빛축제 수주 기여</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:8px; padding-top:4px; flex-shrink:0;">
+      <div id="beforepo-toggle-icon" style="width:40px; height:40px; border-radius:50%; border:2px solid #B0A88A; display:flex; align-items:center; justify-content:center; font-size:22px; color:#888078; font-weight:300; transition:all 0.25s;">＋</div>
+      <div class="toggle-hint" style="font-family:var(--mono); font-size:9px; color:#888078; letter-spacing:0.06em; text-align:center;">펼쳐보기 ↓</div>
+    </div>
+  </div>
+</div>
+
+<div id="beforepo-body" style="display:none;">
+<section id="before-po" class="light-section" style="background: transparent; border-top: 1px solid #D8D4CC; max-width: 1200px; margin: 0 auto; padding: 28px 48px 80px;">
+  <div class="section-header">
+    <span class="section-eyebrow">Before PO · 2015–2023</span>
+    <h2 class="section-title">데이터 분석가이자 마케팅 전략가로 쌓은 도메인 기반</h2>
+  </div>
+
+<style>
+.bp-accordion {
+  border: 1px solid #D4D0C8;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.6);
+}
+.bp-accordion.open {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: #fff;
+}
+.bp-acc-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  cursor: pointer;
+  background: transparent;
+  user-select: none;
+  border-bottom: 1px solid transparent;
+  transition: background 0.15s;
+}
+.bp-acc-header:hover { background: rgba(0,0,0,0.03); }
+.bp-accordion.open .bp-acc-header { border-bottom-color: #D4D0C8; }
+.bp-acc-period { font-family:var(--mono); font-size:10px; color:#888078; min-width:80px; }
+.bp-acc-title { flex:1; }
+.bp-acc-title strong { display:block; font-size:15px; font-weight:700; color:#1A1A18; margin-bottom:2px; }
+.bp-acc-title span { font-size:12px; color:#909088; }
+.bp-acc-toggle { width:26px; height:26px; border-radius:50%; border:1.5px solid #B0A88A; display:flex; align-items:center; justify-content:center; font-size:16px; color:#888078; transition:all 0.2s; flex-shrink:0; }
+.bp-accordion.open .bp-acc-toggle { background:#B0A88A; color:#fff; }
+.bp-acc-body { display:none; padding:24px 28px; }
+.bp-accordion.open .bp-acc-body { display:block; }
+</style>
+
+  <p class="body-text" style="margin-bottom: 32px; font-size: 16px; color:#444440; padding-top: 16px;">광고 대행사에서 소비자를 읽는 법을 배웠고, IT 기업에서 데이터로 증명하는 법을 익혔습니다. 지금 기획하는 모든 서비스의 판단 기준은 이 시절에 만들어졌습니다.</p>
+
+  <!-- 클라이언트 브랜드 월 -->
+  <div class="img-placeholder" style="height: 200px; margin-bottom: 32px;">
+    <span class="img-placeholder-icon">🖼</span>
+    <span class="img-placeholder-label">클라이언트 브랜드 월</span>
+    <span class="img-placeholder-label">대통령실·서울대·KT&G·하이브·현대자동차·아모레퍼시픽 등 40개+ 로고</span>
+  </div>
+
+  <div style="display:flex; justify-content:flex-end; margin-bottom:16px;">
+    <button class="expand-all-btn" id="beforepo-expand-all" onclick="expandAllBeforePo()">모두 펼치기 ↓</button>
+  </div>
+
+  <!-- 코난테크놀로지 -->
+  <div class="bp-accordion" id="exp-konan">
+    <div class="bp-acc-header" onclick="toggleBeforePo(this)">
+      <div class="bp-acc-period">2019–2023</div>
+      <div class="bp-acc-title">
+        <strong>코난테크놀로지</strong>
+        <span>데이터사이언티스트부서 · 데이터분석팀 대리~과장 · 3년 6개월</span>
+      </div>
+      <div class="bp-acc-toggle">＋</div>
+    </div>
+    <div class="bp-acc-body">
+      <div class="img-row two" style="margin-bottom: 20px;">
+        <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">트렌드코리아 2022·2023 책 표지</span></div>
+        <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">대표 분석 보고서 내지 (시각화 차트 풍부한 페이지)</span></div>
+      </div>
+      <table class="content-table" style="margin-bottom: 16px;">
+        <tr><th>주요 클라이언트</th><th>프로젝트 성격</th></tr>
+        <tr><td>대통령실</td><td>빅데이터 정기 분석 보고서 (일일·주간·월간·이슈) + 모니터링 시스템 기획</td></tr>
+        <tr><td>서울대 트렌드센터</td><td>트렌드코리아 2022·2023 소셜 빅데이터 분석 지원 (김난도 교수)</td></tr>
+        <tr><td>서울시·부산시·성남시·통일부·문체부</td><td>정기 분석 보고서 + 위기 알럿 시스템 기획 (5개 기관 동시 운영)</td></tr>
+        <tr><td>KT&G·하이브</td><td>소셜 버즈 모니터링 툴 기획·디버깅·품질관리</td></tr>
+        <tr><td>청와대·한국경제신문</td><td>빅데이터 분석 보고서 · 빅데이터 전략 마에스트로 과정 멘토링 교육 활동 (2021)</td></tr>
+        <tr><td>한국지능정보사회진흥원</td><td>2020 중소기업 빅데이터 분석 및 활용 지원사업 → NIA 빅데이터 활용 우수사례 선정</td></tr>
+      </table>
+      <table class="content-table" style="margin-bottom: 16px;">
+        <tr><td>감성 분석 고도화</td><td>뉴스 본문-댓글 의미 연결 기반 문맥 분석 도입 → 감성 주체 연결로 정확도 향상</td></tr>
+        <tr><td>위기 알럿 시스템</td><td>키워드 언급량 급등 감지 → 텔레그램 실시간 경고 시스템 설계</td></tr>
+        <tr><td>모니터링 UI 기획</td><td>클라이언트 맞춤형 소셜 리스닝 시스템 화면 설계 · 개발팀 직접 협업 시작</td></tr>
+      </table>
+      <p class="po-link">🏆 NIA 빅데이터 활용 우수사례 선정 (2020) — 소셜 분석 기반 신제품 전략 → 실제 매출 성과 달성</p>
+      <p class="po-link" style="margin-top: 8px; color: #8A7B40;">→ PO 전환점: 분석가로서 불편하다고 느꼈던 화면을, 직접 기획자로서 개선하기 시작한 전환점이었습니다.</p>
+    </div>
+  </div>
+
+  <!-- 와이즈넛 -->
+  <div class="bp-accordion" id="exp-wisenut">
+    <div class="bp-acc-header" onclick="toggleBeforePo(this)">
+      <div class="bp-acc-period">2018–2019</div>
+      <div class="bp-acc-title">
+        <strong>와이즈넛</strong>
+        <span>데이터컨설팅부서 · 데이터분석팀 사원 · 11개월</span>
+      </div>
+      <div class="bp-acc-toggle">＋</div>
+    </div>
+    <div class="bp-acc-body">
+      <div class="img-placeholder medium" style="margin-bottom: 20px;">
+        <span class="img-placeholder-icon">🖼</span>
+        <span class="img-placeholder-label">대표 분석 보고서 표지 (현대자동차·다이슨·기획재정부 등)</span>
+      </div>
+      <table class="content-table" style="margin-bottom: 16px;">
+        <tr><th>주요 클라이언트</th><th>프로젝트 성격</th></tr>
+        <tr><td>현대자동차 × 이노션</td><td>외산차 대응·대형 SUV 온라인 여론 분석 보고서 작성</td></tr>
+        <tr><td>다이슨코리아</td><td>무선청소기 신제품 소셜 빅데이터 여론 분석</td></tr>
+        <tr><td>기획재정부</td><td>2019 정책방향 수립을 위한 소셜 빅데이터 보고서</td></tr>
+        <tr><td>FILA Korea</td><td>소셜 빅데이터 분석 보고서</td></tr>
+        <tr><td>구글코리아 – Embrain</td><td>소셜 리스닝 제안서 작성</td></tr>
+        <tr><td>농림부</td><td>소셜 모니터링 보고서</td></tr>
+      </table>
+      <table class="content-table">
+        <tr><td>핵심 경험</td><td>레더링 분석·C-D 맵 등 정성 방법론 도입 · 내부 시스템 감성어(emotion functions) 지식체계 구축 참여 · 시스템 운영 및 분석 설계 직접 참여</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 코마코 -->
+  <div class="bp-accordion" id="exp-komaco">
+    <div class="bp-acc-header" onclick="toggleBeforePo(this)">
+      <div class="bp-acc-period">2015–2018</div>
+      <div class="bp-acc-title">
+        <strong>코마코 (종합광고대행사)</strong>
+        <span>브랜딩연구소 · Account Planner 사원 · 2년 7개월</span>
+      </div>
+      <div class="bp-acc-toggle">＋</div>
+    </div>
+    <div class="bp-acc-body">
+      <div class="img-row two" style="margin-bottom: 20px;">
+        <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">대표 클라이언트 보고서 표지 2~3장 (한국야쿠르트·아모레퍼시픽 등)</span></div>
+        <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Brand Activation Matrix 다이어그램</span></div>
+      </div>
+      <table class="content-table" style="margin-bottom: 16px;">
+        <tr><th>주요 클라이언트</th><th>프로젝트 성격</th></tr>
+        <tr><td>한국야쿠르트</td><td>잇츠온 브랜드 개발 전략 방향 및 컨셉 도출 · 빅데이터 트렌드/발효 분석 다수</td></tr>
+        <tr><td>아모레퍼시픽</td><td>려 자양윤모 IMC 캠페인 · 프리메라 IMC 캠페인 (2018)</td></tr>
+        <tr><td>동국제약</td><td>인사돌+ 허가 변경에 따른 리포지셔닝 전략 제언 · Annual Tracking Survey 소비자 조사 참여</td></tr>
+        <tr><td>K2 아웃도어 · 수협은행</td><td>경쟁입찰 참여 및 수주</td></tr>
+        <tr><td>더불어민주당</td><td>경쟁입찰 참여 및 일부 수주 (2017)</td></tr>
+        <tr><td>팔도 · 에몬스 · 경호나이스</td><td>브랜드 전략 및 빅데이터 분석 기반 마케팅 제안 다수</td></tr>
+      </table>
+      <div class="framework-wrap" style="margin-bottom:16px;">
+        <p class="framework-label">자체 개발 분석 프레임워크 (7종) — 소셜 빅데이터 기반 마케팅 인사이트 도출 방법론</p>
+        <div class="tags">
+          <span class="tag">Trend Speed</span><span class="tag">Group Cycle Matrix</span>
+          <span class="tag">Rank Cross Zone</span><span class="tag">CL Value</span>
+          <span class="tag">Trend Cycle Matrix</span><span class="tag">Buzz Norm</span>
+          <span class="tag">Brand Activation Matrix</span>
+        </div>
+      </div>
+      <p class="po-link">🏆 크리에이티브 아레나 파이널 평가 점수 1위 (2015, 대학생) — 삼성 제일기획 주관 · 300팀 서바이벌 · 코엑스 무대 PT · <em>취업 전 재학 중 수상</em></p>
+    </div>
+  </div>
+
+  <!-- 대홍기획 -->
+  <div class="bp-accordion">
+    <div class="bp-acc-header" onclick="toggleBeforePo(this)">
+      <div class="bp-acc-period">2015</div>
+      <div class="bp-acc-title">
+        <strong>롯데 대홍기획</strong>
+        <span>스페이스마케팅팀 인턴 · 4개월</span>
+      </div>
+      <div class="bp-acc-toggle">＋</div>
+    </div>
+    <div class="bp-acc-body">
+      <div class="img-placeholder medium" style="margin-bottom:16px;">
+        <span class="img-placeholder-icon">🖼</span>
+        <span class="img-placeholder-label">렛츠런파크 빛축제 제안서 관련 이미지</span>
+      </div>
+      <table class="content-table">
+        <tr><td>프로젝트</td><td>한국마사회 렛츠런파크 빛축제 제안서 기획 — SNS 부정 여론 분석 기반 관광 콘텐츠 전략 제안 · 수주 기여</td></tr>
+        <tr><td>역할</td><td>BTL 마케팅 부서 소속 · 스페이스 마케팅 · 광고 기획/AE(Account Executive) · 소셜 데이터 기반 공공 제안 프로젝트 참여</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+</div><!-- /beforepo-body -->
+</div><!-- /light-wrapper before-po -->
+<section id="contact" style="max-width: 1200px; text-align: center;">
+  <div class="contact-headline">함께 만들어가고 싶습니다.</div>
+  <p class="contact-sub">데이터 플랫폼 · AI 서비스 · B2B SaaS —<br>데이터를 서비스로 만드는 PO가 필요하시다면 연락 주세요.</p>
+  <div style="display:flex; align-items:center; justify-content:center; gap:24px; margin-top:32px; flex-wrap:wrap;">
+    <div style="font-family:var(--mono); font-size:15px; color:var(--text-secondary);">
+      ✉ &nbsp;<span style="color:var(--text-primary);">920803hj@naver.com</span>
+    </div>
+    <div style="color:rgba(255,255,255,0.2); font-size:18px;">|</div>
+    <div style="font-family:var(--mono); font-size:15px; color:var(--text-secondary);">
+      ☎ &nbsp;<span style="color:var(--text-primary);">010-6299-9384</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span class="footer-text">© 2026 Na Hyejin · Product Owner Portfolio</span>
+  <span class="footer-text">마케팅 전략 수립과 빅데이터 분석 경험을 바탕으로, 데이터 플랫폼 비즈니스를 기획하는 8년차 PO</span>
+</footer>
+
+<style>
+/* ── 플로팅 네비게이터 ── */
+#float-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  z-index: 9999;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(10,10,10,0.72);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 14px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.6);
+}
+
+.fn-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 0 14px;
+}
+
+.fn-section + .fn-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+/* 하위 항목 기본 숨김 — 활성 그룹에만 표시 */
+.fn-sub {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.2s ease;
+  pointer-events: none;
+}
+
+.fn-section.fn-active .fn-sub {
+  max-height: 40px;
+  opacity: 1;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  pointer-events: auto;
+}
+
+/* 그룹 라벨 — 항상 보임, 활성 시 더 밝게 */
+.fn-group-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.06em;
+  padding: 5px 0 5px 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.fn-section.fn-active .fn-group-label {
+  color: rgba(255,255,255,0.92);
+}
+
+.fn-group-label .fn-period {
+  display: block;
+  font-size: 9px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1px;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+
+.fn-section.fn-active .fn-group-label .fn-period {
+  color: rgba(255,255,255,0.55);
+}
+
+/* 항목 — 한 단계 들여쓰기 */
+.fn-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px 4px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.fn-item:hover { background: rgba(255,255,255,0.07); }
+
+.fn-item.active { background: rgba(212,197,132,0.16); }
+
+.fn-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.22);
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.fn-dot.gold { background: rgba(212,197,132,0.45); }
+
+.fn-item.active .fn-dot,
+.fn-item.active .fn-dot.gold {
+  background: var(--gold);
+  transform: scale(1.6);
+}
+
+.fn-item:hover .fn-dot { background: rgba(255,255,255,0.65); }
+
+.fn-text {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.42);
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.fn-item.active .fn-text {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.fn-item:hover .fn-text { color: rgba(255,255,255,0.88); }
+
+/* 슬라이드 카드 접힘/펼침 */
+.slide-card .slide-content { display: none; }
+.slide-card.open .slide-content {
+  display: block;
+  animation: slideDown 0.2s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) { #float-nav { display: none; } }
+
+/* goTo 이동 시 펄스 하이라이트 - 제거 */
+.goto-flash {
+  /* 비활성화 */
+}
+</style>
+
+<!-- 플로팅 네비게이터 위치 삭제 (body 끝으로 이동) -->
+<script>
+// ── 프로젝트 1depth 아코디언 (하나씩 열기, 나머지 닫기) ──
+function toggleProject(header) {
+  var acc = header.parentElement;
+  var isOpen = acc.classList.contains('open');
+  // 모든 프로젝트 닫기
+  document.querySelectorAll('.proj-accordion').forEach(function(a) {
+    a.classList.remove('open');
+    var t = a.querySelector('.proj-acc-toggle');
+    if (t) t.textContent = '＋';
+  });
+  // 클릭한 것만 열기 (이미 열려있으면 닫힌 상태 유지)
+  if (!isOpen) {
+    acc.classList.add('open');
+    var toggle = header.querySelector('.proj-acc-toggle');
+    if (toggle) toggle.textContent = '－';
+  }
+}
+
+// ── 모두 펼치기/접기 ──
+var _projectsAllOpen = false;
+function expandAllProjects() {
+  _projectsAllOpen = !_projectsAllOpen;
+  var btn = document.getElementById('projects-expand-all');
+  var accs = document.querySelectorAll('.proj-accordion');
+  if (_projectsAllOpen) {
+    accs.forEach(function(a) {
+      a.classList.add('open');
+      var t = a.querySelector('.proj-acc-toggle');
+      if (t) t.textContent = '－';
+    });
+    if (btn) btn.textContent = '모두 접기 ↑';
+  } else {
+    accs.forEach(function(a) {
+      a.classList.remove('open');
+      var t = a.querySelector('.proj-acc-toggle');
+      if (t) t.textContent = '＋';
+    });
+    if (btn) btn.textContent = '모두 펼치기 ↓';
+  }
+}
+
+var _beforepoAllOpen = false;
+function expandAllBeforePo() {
+  _beforepoAllOpen = !_beforepoAllOpen;
+  var btn = document.getElementById('beforepo-expand-all');
+  var items = document.querySelectorAll('.bp-accordion');
+  if (_beforepoAllOpen) {
+    items.forEach(function(a) {
+      a.classList.add('open');
+      var t = a.querySelector('.bp-acc-toggle');
+      if (t) t.textContent = '－';
+    });
+    if (btn) btn.textContent = '모두 접기 ↑';
+  } else {
+    items.forEach(function(a) {
+      a.classList.remove('open');
+      var t = a.querySelector('.bp-acc-toggle');
+      if (t) t.textContent = '＋';
+    });
+    if (btn) btn.textContent = '모두 펼치기 ↓';
+  }
+}
+
+function toggleBeforePo(header) {
+  var acc = header.parentElement;
+  var isOpen = acc.classList.contains('open');
+  document.querySelectorAll('.bp-accordion').forEach(function(a) {
+    a.classList.remove('open');
+    var t = a.querySelector('.bp-acc-toggle');
+    if (t) t.textContent = '＋';
+  });
+  if (!isOpen) {
+    acc.classList.add('open');
+    var toggle = header.querySelector('.bp-acc-toggle');
+    if (toggle) toggle.textContent = '－';
+  }
+}
+
+// ── 섹션 접힘/펼침 ──
+function toggleSection(bodyId, iconId) {
+  var body = document.getElementById(bodyId);
+  var icon = document.getElementById(iconId);
+  if (!body || !icon) return;
+  var isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  icon.textContent = isOpen ? '＋' : '－';
+  if (!isOpen) setTimeout(updateActive, 80);
+}
+
+// ── 섹션 강제 펼침 ──
+function expandSection(bodyId, iconId) {
+  var body = document.getElementById(bodyId);
+  var icon = document.getElementById(iconId);
+  if (body && body.style.display === 'none') {
+    body.style.display = 'block';
+    if (icon) icon.textContent = '－';
+  }
+}
+
+// ── 앵커 이동: 1depth + 2depth 모두 펼친 후 스크롤 + 하이라이트 ──
+function goTo(targetId, bodyId, iconId) {
+  if (bodyId) expandSection(bodyId, iconId);
+
+  var delay = bodyId ? 150 : 0;
+
+  setTimeout(function() {
+    var el = document.getElementById(targetId);
+    if (!el) return;
+
+    // 2depth 아코디언(.proj-accordion 또는 .bp-accordion) 자체이거나 그 내부 요소인 경우 펼치기
+    var acc = el.closest ? el.closest('.proj-accordion, .bp-accordion') : null;
+    if (acc && !acc.classList.contains('open')) {
+      var header = acc.querySelector('.proj-acc-header, .bp-acc-header');
+      if (header) {
+        if (acc.classList.contains('proj-accordion')) toggleProject(header);
+        else toggleBeforePo(header);
+      }
+    }
+
+    setTimeout(function() {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // 하이라이트 펄스 효과
+      el.classList.add('goto-flash');
+      setTimeout(function() { el.classList.remove('goto-flash'); }, 1400);
+    }, acc ? 100 : 0);
+
+  }, delay);
+}
+
+function toggleSlide(header) {
+  const card = header.parentElement;
+  card.classList.toggle('open');
+}
+
+// ── 최초: 각 프로젝트 첫 번째 슬라이드만 열기 ──
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.slides').forEach(slides => {
+    const first = slides.querySelector('.slide-card');
+    if (first) first.classList.add('open');
+  });
+});
+
+// (project-block id 부여 불필요 — proj-accordion에 이미 p1~p5 정적 id 존재, 중복 방지)
+
+// ── 플로팅 네비게이터 세로 중앙 고정 ──
+function positionFloatNav() {
+  const nav = document.getElementById('float-nav');
+  if (!nav) return;
+  const navH = nav.offsetHeight;
+  const winH = window.innerHeight;
+  const top = Math.max(70, Math.round((winH - navH) / 2));
+  nav.style.top = top + 'px';
+}
+window.addEventListener('load', positionFloatNav);
+window.addEventListener('resize', positionFloatNav);
+setTimeout(positionFloatNav, 100);
+setTimeout(positionFloatNav, 500);
+
+// (p1~p5는 이미 proj-accordion에 정적 id로 부여되어 있어 별도 JS 불필요)
+
+// ── 플로팅 네비게이터 활성 상태 ──
+var fnSectionIds = [
+  'cf-itsme', 'cf-summary', 'cf-detail', 'cf-brand', 'cf-index',
+  'projects-toggle', 'p1', 'p2', 'p3', 'p4', 'p5', 'bridge',
+  'beforepo-toggle', 'exp-konan', 'exp-wisenut', 'exp-komaco', 'contact'
+];
+
+function getEffectiveTop(id) {
+  var el = document.getElementById(id);
+  if (!el) return null;
+
+  // 보이는 요소면 그대로
+  if (el.offsetParent !== null) {
+    return el.getBoundingClientRect().top;
+  }
+
+  // 숨겨진 요소 — 보이는 조상 중 가장 가까운 것의 top 반환
+  var parent = el.parentElement;
+  while (parent && parent !== document.body) {
+    if (parent.offsetParent !== null && getComputedStyle(parent).display !== 'none') {
+      return parent.getBoundingClientRect().top;
+    }
+    parent = parent.parentElement;
+  }
+  return null;
+}
+
+function updateActive() {
+  var threshold = window.innerHeight * 0.4;
+  var current = fnSectionIds[0];
+  var bestTop = -Infinity;
+
+  // 페이지 맨 아래 도달 시 contact 강제 활성화
+  var atBottom = (window.innerHeight + window.scrollY) >= (document.body.scrollHeight - 2);
+
+  if (atBottom) {
+    current = 'contact';
+  } else {
+    for (var i = 0; i < fnSectionIds.length; i++) {
+      var top = getEffectiveTop(fnSectionIds[i]);
+      if (top === null) continue;
+      if (top <= threshold && top > bestTop) {
+        bestTop = top;
+        current = fnSectionIds[i];
+      }
+    }
+  }
+
+  document.querySelectorAll('.fn-item[data-section]').forEach(function(item) {
+    var sec = item.getAttribute('data-section');
+    item.classList.toggle('active', sec === current);
+  });
+
+  // 활성 그룹 판단 — 현재 섹션이 속한 그룹에 fn-active 부여
+  var groupMap = {
+    'cf-itsme': 'career', 'cf-summary': 'career', 'cf-detail': 'career', 'cf-brand': 'career',
+    'cf-index': 'index',
+    'projects-toggle': 'afterpo', 'p1': 'afterpo', 'p2': 'afterpo', 'p3': 'afterpo', 'p4': 'afterpo', 'p5': 'afterpo',
+    'bridge': 'bridge',
+    'beforepo-toggle': 'beforepo', 'exp-konan': 'beforepo', 'exp-wisenut': 'beforepo', 'exp-komaco': 'beforepo',
+    'contact': 'contact'
+  };
+  var activeGroup = groupMap[current] || '';
+  var prevGroup = document.getElementById('float-nav').getAttribute('data-active-group') || '';
+
+  document.querySelectorAll('#float-nav .fn-section').forEach(function(section) {
+    var g = section.getAttribute('data-group');
+    section.classList.toggle('fn-active', g === activeGroup);
+  });
+
+  // 그룹 바뀌면 네비 위치 재계산
+  if (activeGroup !== prevGroup) {
+    document.getElementById('float-nav').setAttribute('data-active-group', activeGroup);
+    setTimeout(positionFloatNav, 280);
+  }
+}
+
+var _rafPending = false;
+function onScrollUpdate() {
+  if (_rafPending) return;
+  _rafPending = true;
+  requestAnimationFrame(function() {
+    updateActive();
+    _rafPending = false;
+  });
+}
+window.addEventListener('scroll', onScrollUpdate, { passive: true });
+window.addEventListener('load', function() {
+  positionFloatNav();
+  updateActive();
+});
+setTimeout(updateActive, 300);
+setTimeout(updateActive, 800);
+
+// ── 스크롤 fade-in ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+</script>
+
+<!-- ── 플로팅 네비게이터 ── -->
+<nav id="float-nav">
+
+  <!-- Career Flow -->
+  <div class="fn-section" data-group="career">
+    <div class="fn-group-label fn-item" data-section="cf-itsme"
+      style="cursor:pointer;" onclick="goTo('cf-itsme',null,null)">
+      CAREER FLOW
+    </div>
+    <a class="fn-item fn-sub" data-group="career" href="#cf-itsme" data-section="cf-itsme">
+      <div class="fn-dot"></div>
+      <span class="fn-text">IT'S ME</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="career" href="#cf-summary" data-section="cf-summary">
+      <div class="fn-dot"></div>
+      <span class="fn-text">Career Summary</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="career" href="#cf-detail" data-section="cf-detail">
+      <div class="fn-dot"></div>
+      <span class="fn-text">Career Detail</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="career" href="#cf-brand" data-section="cf-brand">
+      <div class="fn-dot"></div>
+      <span class="fn-text">Experienced Brand</span>
+    </a>
+  </div>
+
+  <!-- INDEX -->
+  <div class="fn-section" data-group="index">
+    <div class="fn-group-label fn-item" data-section="cf-index"
+      style="cursor:pointer;" onclick="goTo('cf-index',null,null)">
+      INDEX
+    </div>
+    <a class="fn-item fn-sub" data-group="index" href="#cf-index" data-section="cf-index">
+      <div class="fn-dot"></div>
+      <span class="fn-text">프로젝트 목차</span>
+    </a>
+  </div>
+
+  <!-- After PO -->
+  <div class="fn-section" data-group="afterpo">
+    <div class="fn-group-label fn-item" data-section="projects-toggle"
+      style="cursor:pointer;" onclick="goTo('projects-toggle',null,null)">
+      AFTER PO<br>
+      <span class="fn-period">2025~ing · NewenAI</span>
+    </div>
+    <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p1','projects-body','projects-toggle-icon')" data-section="p1">
+      <div class="fn-dot gold"></div>
+      <span class="fn-text">01 · AI Agent 기획</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p2','projects-body','projects-toggle-icon')" data-section="p2">
+      <div class="fn-dot gold"></div>
+      <span class="fn-text">02 · 대시보드 기획</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p3','projects-body','projects-toggle-icon')" data-section="p3">
+      <div class="fn-dot gold"></div>
+      <span class="fn-text">03 · 브랜드/브릿지 기획</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p4','projects-body','projects-toggle-icon')" data-section="p4">
+      <div class="fn-dot gold"></div>
+      <span class="fn-text">04 · AI Builder 기획</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p5','projects-body','projects-toggle-icon')" data-section="p5">
+      <div class="fn-dot gold"></div>
+      <span class="fn-text">05 · 언론 분석 기획</span>
+    </a>
+  </div>
+
+  <!-- Career Bridge -->
+  <div class="fn-section" data-group="bridge">
+    <div class="fn-group-label fn-item" data-section="bridge"
+      style="cursor:pointer;" onclick="goTo('bridge',null,null)">
+      CAREER BRIDGE<br>
+      <span class="fn-period">2023~2025</span>
+    </div>
+    <a class="fn-item fn-sub" data-group="bridge" href="javascript:void(0)" onclick="goTo('bridge',null,null)" data-section="bridge">
+      <div class="fn-dot"></div>
+      <span class="fn-text">CookMatch</span>
+    </a>
+  </div>
+
+  <!-- Before PO -->
+  <div class="fn-section" data-group="beforepo">
+    <div class="fn-group-label fn-item" data-section="beforepo-toggle"
+      style="cursor:pointer;" onclick="goTo('beforepo-toggle','beforepo-body','beforepo-toggle-icon')">
+      BEFORE PO<br>
+      <span class="fn-period">2015~2023</span>
+    </div>
+    <a class="fn-item fn-sub" data-group="beforepo" href="javascript:void(0)" onclick="goTo('exp-konan','beforepo-body','beforepo-toggle-icon')" data-section="exp-konan">
+      <div class="fn-dot"></div>
+      <span class="fn-text">코난테크놀로지</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="beforepo" href="javascript:void(0)" onclick="goTo('exp-wisenut','beforepo-body','beforepo-toggle-icon')" data-section="exp-wisenut">
+      <div class="fn-dot"></div>
+      <span class="fn-text">와이즈넛</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="beforepo" href="javascript:void(0)" onclick="goTo('exp-komaco','beforepo-body','beforepo-toggle-icon')" data-section="exp-komaco">
+      <div class="fn-dot"></div>
+      <span class="fn-text">코마코</span>
+    </a>
+  </div>
+
+  <!-- Contact -->
+  <div class="fn-section" data-group="contact">
+    <div class="fn-group-label fn-item" data-section="contact"
+      style="cursor:pointer;" onclick="goTo('contact',null,null)">
+      CONTACT
+    </div>
+    <a class="fn-item fn-sub" data-group="contact" href="#contact" data-section="contact">
+      <div class="fn-dot"></div>
+      <span class="fn-text">연락하기</span>
+    </a>
+  </div>
+
+</nav>
+
+</body>
+</html>
