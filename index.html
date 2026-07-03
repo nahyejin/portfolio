@@ -1656,7 +1656,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .cf-page { padding: 60px 24px; }
+  /* ── 전체 공통 ── */
+  .cf-page { padding: 40px 20px; }
   .cfs-wrap { grid-template-columns: 1fr; }
   .cfs-banner { flex-direction: row; overflow-x: auto; }
   .cfs-banner-item { min-width: 160px; }
@@ -1664,6 +1665,103 @@ footer {
   .workability-grid { grid-template-columns: 1fr; }
   .index-wrap { grid-template-columns: 1fr; }
   .cfd-company-wrap { grid-template-columns: 1fr; }
+
+  /* ── HERO ── */
+  .hero { padding: 100px 24px 60px; }
+  .hero-name { font-size: clamp(40px, 12vw, 72px); }
+  .hero-title { font-size: 14px; }
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .hero-cta { flex-direction: column; gap: 12px; }
+  .hero-cta a { text-align: center; }
+
+  /* ── GNB ── */
+  nav.site-nav { padding: 16px 20px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 11px; }
+
+  /* ── Career Flow Summary SVG ── */
+  .cfs-svg-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cfs-svg-wrap svg {
+    min-width: 760px;
+  }
+  .cfs-svg-hint {
+    display: block;
+  }
+
+  /* ── Career Flow Detail ── */
+  .cfd-section { padding-left: 0; }
+  .cfd-role-badge { flex-wrap: wrap; }
+  .cfd-badge { font-size: 11px; padding: 4px 8px; }
+  .cfd-company-name { font-size: 20px; }
+  .cfd-company-year { font-size: 28px !important; }
+  .cfd-items li { font-size: 12px; }
+
+  /* ── INDEX ── */
+  #cf-index .index-wrap,
+  div[style*="grid-template-columns: 3fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  .index-num { width: 32px; height: 32px; font-size: 12px; }
+  .index-main { font-size: 14px; }
+
+  /* ── Projects 토글 헤더 ── */
+  #projects-toggle, #beforepo-toggle {
+    padding: 0 20px !important;
+  }
+  #projects-toggle > div:first-child,
+  #beforepo-toggle > div:first-child {
+    flex: 1;
+  }
+
+  /* ── Projects 섹션 ── */
+  #projects { padding: 0 20px 60px !important; }
+  .proj-acc-header { padding: 16px; gap: 10px; }
+  .proj-acc-title strong { font-size: 14px; }
+  .slide-card-header { padding: 14px 16px; }
+  .slide-title { font-size: 13px; }
+  .slide-content { padding: 16px; }
+  .content-table { font-size: 12px; }
+  .content-table th, .content-table td { padding: 8px 10px; }
+  .img-row.two { grid-template-columns: 1fr !important; }
+
+  /* ── Career Bridge ── */
+  #bridge > div > div {
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    padding: 20px !important;
+  }
+  #bridge .cookMatch-card {
+    width: 100% !important;
+  }
+
+  /* ── Before PO ── */
+  #before-po { padding: 20px 20px 60px !important; }
+  .bp-acc-header { padding: 14px 16px; gap: 10px; }
+  .bp-acc-period { min-width: 60px; font-size: 9px; }
+  .bp-acc-title strong { font-size: 14px; }
+  .bp-acc-body { padding: 16px; }
+
+  /* ── Contact ── */
+  #contact { padding: 60px 24px !important; }
+  .contact-headline { font-size: clamp(24px, 8vw, 40px); }
+
+  /* ── 인트로 바 ── */
+  div[style*="BEFORE PO * 2015"] { padding: 20px 16px !important; }
+}
+
+/* SVG 스크롤 힌트 — 기본 숨김, 모바일만 표시 */
+.cfs-svg-hint {
+  display: none;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  padding: 8px 0 4px;
 }
 </style>
 
@@ -1747,9 +1845,10 @@ footer {
 <div class="cf-page" id="cf-summary">
   <h2 class="cf-title">Career Flow Summary</h2>
 
+  <div class="cfs-svg-hint">← 좌우로 스크롤하여 전체 내용을 확인하세요 →</div>
   <!-- 전체를 하나의 SVG로 — PPT 구조 완전 재현 -->
-  <div style="overflow-x: auto; width: 100%;">
-    <svg viewBox="0 -30 1060 660" xmlns="http://www.w3.org/2000/svg" style="width:100%; min-width:760px; height:auto; display:block;">
+  <div class="cfs-svg-wrap" style="overflow-x: auto; width: 100%;">
+    <svg viewBox="0 -30 1060 700" xmlns="http://www.w3.org/2000/svg" style="width:100%; min-width:760px; height:auto; display:block;">
 
       <defs>
         <!-- 빗금 패턴: 분석가+광고 구간 체크무늬 -->
@@ -1841,10 +1940,9 @@ footer {
       <!-- 분석가 -->
       <line x1="520" y1="310" x2="556" y2="310" stroke="#505048" stroke-width="1" stroke-dasharray="3,2"/>
       <polygon points="553,307 560,310 553,313" fill="#505048"/>
-      <!-- 광고 → 분석가 업무 박스 연결 (꺾인 선) -->
-      <line x1="520" y1="514" x2="544" y2="514" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
-      <line x1="544" y1="514" x2="544" y2="435" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
-      <polygon points="541,438 544,431 547,438" fill="#404038"/>
+      <!-- 광고 타원 → 업무 박스 직선 -->
+      <line x1="520" y1="514" x2="556" y2="514" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="553,511 560,514 553,517" fill="#404038"/>
 
       <!-- ════════════════════════════════════════ -->
       <!-- 오른쪽: 업무 설명 텍스트 — 박스로 구분 -->
@@ -1852,7 +1950,6 @@ footer {
 
       <!-- PO 업무 설명 박스 -->
       <rect x="560" y="36" width="490" height="155" fill="rgba(212,197,132,0.05)" stroke="rgba(212,197,132,0.25)" stroke-width="1"/>
-      <!-- PO 업무 설명 (이상한 line 제거) -->
       <text x="574" y="60" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약</text>
       <text x="574" y="80" fill="#D4C584" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">자사 소셜 빅데이터 플랫폼(Quettai, QuettaDex 등) 화면 기획 및 운영</text>
       <text x="574" y="100" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 데이터분석 /Admin/통합 페이지 기획, 정책 수립 및 자동화 기능 설계</text>
@@ -1860,10 +1957,9 @@ footer {
       <text x="574" y="132" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– AI Query Builder / Taxonomy Builder 프롬프트 엔지니어링</text>
       <text x="574" y="148" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– MCP 기반 AI Agent 서비스 기획 및 과금 정책 설계</text>
 
-      <!-- 분석가+광고 통합 업무 설명 박스 -->
-      <rect x="560" y="215" width="490" height="285" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-      <!-- 분석가 업무 설명 -->
-      <text x="574" y="238" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (데이터 분석가 · 광고 기획자)</text>
+      <!-- 분석가 업무 설명 박스 (y=215~435) -->
+      <rect x="560" y="215" width="490" height="220" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="574" y="238" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (데이터 분석가)</text>
       <text x="574" y="260" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">기업 클라이언트</text>
       <text x="574" y="278" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 금융, 뷰티, 식품, 아웃도어, 가전, 가구, 생활용품 등 다양한 산업군의</text>
       <text x="574" y="294" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   데이터 분석 기반 광고/마케팅 전략 수립 및 분석 시스템 기획</text>
@@ -1872,11 +1968,13 @@ footer {
       <text x="574" y="350" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   등 정책 반응 및 시민 인식 데이터 분석 기반 홍보/정책 방향 제안 및 모니터링</text>
       <text x="574" y="372" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">트렌드 분석</text>
       <text x="574" y="390" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 서울대 「트렌드 코리아 2021~2022」 발간 데이터 분석 지원</text>
-      <!-- 광고 업무 구분선 -->
-      <line x1="574" y1="408" x2="1040" y2="408" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-      <text x="574" y="428" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">광고/마케팅 캠페인 집행</text>
-      <text x="574" y="446" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 아모레퍼시픽·한국야쿠르트·동국제약·K2·수협은행 등 30개+ 캠페인 집행 및 운영</text>
-      <text x="574" y="462" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 소비자 조사·소셜 빅데이터 기반 브랜드 전략 수립 · 20개+ 산업군 경험</text>
+
+      <!-- 광고 업무 설명 박스 (광고 타원과 같은 높이 y=455) -->
+      <rect x="560" y="455" width="490" height="110" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="574" y="476" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (광고 기획자)</text>
+      <text x="574" y="498" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">광고/마케팅 캠페인 집행</text>
+      <text x="574" y="516" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 아모레퍼시픽·한국야쿠르트·동국제약·K2·수협은행 등 30개+ 캠페인 집행 및 운영</text>
+      <text x="574" y="532" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 소비자 조사·소셜 빅데이터 기반 브랜드 전략 수립 · 20개+ 산업군 경험</text>
 
     </svg>
   </div>
