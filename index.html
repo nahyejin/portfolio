@@ -860,6 +860,39 @@ section {
   margin-bottom: 10px;
 }
 
+/* 프레임워크 버튼 */
+.fw-btn {
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.fw-btn:hover {
+  background: rgba(200,185,122,0.25) !important;
+  color: #5A4A20 !important;
+}
+.fw-btn.active {
+  background: rgba(200,185,122,0.35) !important;
+  color: #3A2A10 !important;
+  border-color: #C8B97A !important;
+}
+.fw-detail {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #D8D4CC;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #444440;
+  line-height: 1.7;
+}
+.fw-detail strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A18;
+  margin-bottom: 8px;
+}
+.fw-detail p { margin: 0 0 12px; }
+
 /* ── CONTACT ── */
 #contact {
   border-top: 1px solid var(--border);
@@ -1773,8 +1806,7 @@ footer {
   <div class="its-me-wrap">
     <div class="its-me-photo-block">
       <div class="its-me-bg-shape"></div>
-      <!-- 사진 placeholder: 실제 사진으로 교체 -->
-      <div style="position:absolute; top:10px; left:10px; width:180px; height:220px; background:#1A1A1A; border:1px dashed #484848; display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:10px; color:#606060; text-align:center; line-height:1.5;">프로필<br>사진<br>교체</div>
+      <img src="assets/images/itsme_profile.jpg" alt="나혜진 프로필" style="position:absolute; top:10px; left:10px; width:180px; height:220px; object-fit:cover; object-position:center top; border:1px solid #333;">
       <div class="its-me-text">IT'S ME</div>
       <div class="its-me-contact">
         TEL : 010.6299.9384<br>
@@ -1933,48 +1965,63 @@ footer {
       <text x="410" y="512" fill="#808078" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">종합광고대행사 · 광고/마케팅 전략</text>
       <text x="410" y="528" fill="#585850" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">코마코 2015~2018 / 대홍기획 2015</text>
 
-      <!-- 타원 → 업무설명 화살표 -->
-      <!-- PO -->
+      <!-- 타원 → 업무설명 화살표 (꺾이는 L자형) -->
+      <!-- PO → PO박스 (수평 직선 그대로) -->
       <line x1="520" y1="96" x2="556" y2="96" stroke="#606050" stroke-width="1" stroke-dasharray="3,2"/>
       <polygon points="553,93 560,96 553,99" fill="#606050"/>
-      <!-- 분석가 -->
-      <line x1="520" y1="310" x2="556" y2="310" stroke="#505048" stroke-width="1" stroke-dasharray="3,2"/>
-      <polygon points="553,307 560,310 553,313" fill="#505048"/>
-      <!-- 광고 타원 → 업무 박스 직선 -->
-      <line x1="520" y1="514" x2="556" y2="514" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
-      <polygon points="553,511 560,514 553,517" fill="#404038"/>
+
+      <!-- 코난/와이즈넛 타원(y=310) → 통합박스 중단(y=310→y=310, x=520→538→538→560) -->
+      <!-- 수평으로 나가다가 꺾여서 내려온 뒤 다시 수평으로 박스 진입 -->
+      <line x1="520" y1="310" x2="538" y2="310" stroke="#505048" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="538" y1="310" x2="538" y2="370" stroke="#505048" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="538" y1="370" x2="556" y2="370" stroke="#505048" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="553,367 560,370 553,373" fill="#505048"/>
+
+      <!-- 코마코/대홍기획 타원(y=514) → 통합박스 하단(y=470) -->
+      <line x1="520" y1="514" x2="538" y2="514" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="538" y1="514" x2="538" y2="419" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="538" y1="419" x2="556" y2="419" stroke="#404038" stroke-width="1" stroke-dasharray="3,2"/>
+      <polygon points="553,416 560,419 553,422" fill="#404038"/>
 
       <!-- ════════════════════════════════════════ -->
-      <!-- 오른쪽: 업무 설명 텍스트 — 박스로 구분 -->
+      <!-- 오른쪽: 업무 설명 텍스트 — 2개 박스 -->
       <!-- ════════════════════════════════════════ -->
 
-      <!-- PO 업무 설명 박스 -->
-      <rect x="560" y="36" width="490" height="155" fill="rgba(212,197,132,0.05)" stroke="rgba(212,197,132,0.25)" stroke-width="1"/>
-      <text x="574" y="60" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약</text>
-      <text x="574" y="80" fill="#D4C584" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">자사 소셜 빅데이터 플랫폼(Quettai, QuettaDex 등) 화면 기획 및 운영</text>
-      <text x="574" y="100" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 데이터분석 /Admin/통합 페이지 기획, 정책 수립 및 자동화 기능 설계</text>
-      <text x="574" y="116" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 개발/디자인팀간 협의 및 조율</text>
-      <text x="574" y="132" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– AI Query Builder / Taxonomy Builder 프롬프트 엔지니어링</text>
-      <text x="574" y="148" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– MCP 기반 AI Agent 서비스 기획 및 과금 정책 설계</text>
+      <!-- PO 업무 설명 박스 — 텍스트에 딱 맞게 -->
+      <rect x="560" y="36" width="490" height="158" fill="rgba(212,197,132,0.05)" stroke="rgba(212,197,132,0.25)" stroke-width="1"/>
+      <text x="574" y="56" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (뉴엔AI)</text>
+      <text x="574" y="74" fill="#D4C584" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">자사 SaaS 소셜 빅데이터 플랫폼 기획 및 운영 업무 담당</text>
+      <text x="574" y="92" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 사용자 맞춤형 데이터 분석 대시보드 설계</text>
+      <text x="574" y="108" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– AI 자동화 기능 기획 (AI Query Builder / Taxonomy Builder)</text>
+      <text x="574" y="124" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– MCP 기반 AI Agent 서비스 기획 · 시스템 프롬프트 튜닝 · 데이터 흐름 및 연동 구조 설계 · 과금 정책 설계</text>
+      <text x="574" y="140" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 제품별 카피 · 상품 소개 페이지 · 브랜드/브릿지 페이지 등 기획</text>
+      <text x="574" y="156" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– Admin 페이지 운영 관리 및 내부 정책 기획</text>
 
-      <!-- 분석가 업무 설명 박스 (y=215~435) -->
-      <rect x="560" y="215" width="490" height="220" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-      <text x="574" y="238" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (데이터 분석가)</text>
-      <text x="574" y="260" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">기업 클라이언트</text>
-      <text x="574" y="278" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 금융, 뷰티, 식품, 아웃도어, 가전, 가구, 생활용품 등 다양한 산업군의</text>
-      <text x="574" y="294" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   데이터 분석 기반 광고/마케팅 전략 수립 및 분석 시스템 기획</text>
-      <text x="574" y="316" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">공공기관 클라이언트</text>
-      <text x="574" y="334" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 청와대, 대통령실, 중앙부처(기재부/교육부/문체부), 지자체(서울시/부산시/성남시)</text>
-      <text x="574" y="350" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   등 정책 반응 및 시민 인식 데이터 분석 기반 홍보/정책 방향 제안 및 모니터링</text>
-      <text x="574" y="372" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">트렌드 분석</text>
-      <text x="574" y="390" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 서울대 「트렌드 코리아 2021~2022」 발간 데이터 분석 지원</text>
+      <!-- 분석가+광고 하나의 통합 박스 (y=220~540) -->
+      <rect x="560" y="220" width="490" height="320" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="574" y="238" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (코난테크놀로지 · 와이즈넛 · 코마코 · 대홍기획)</text>
 
-      <!-- 광고 업무 설명 박스 (광고 타원과 같은 높이 y=455) -->
-      <rect x="560" y="455" width="490" height="110" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-      <text x="574" y="476" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (광고 기획자)</text>
-      <text x="574" y="498" fill="#C8C8C2" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">광고/마케팅 캠페인 집행</text>
-      <text x="574" y="516" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 아모레퍼시픽·한국야쿠르트·동국제약·K2·수협은행 등 30개+ 캠페인 집행 및 운영</text>
-      <text x="574" y="532" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 소비자 조사·소셜 빅데이터 기반 브랜드 전략 수립 · 20개+ 산업군 경험</text>
+      <!-- 기업 클라이언트 -->
+      <text x="574" y="258" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">기업 클라이언트</text>
+      <text x="590" y="274" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 금융, 뷰티, 식품, 아웃도어, 가전, 가구, 생활용품 등 다양한 산업군의</text>
+      <text x="590" y="289" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   데이터 분석 기반 광고/마케팅 전략 수립 및 분석 시스템 기획</text>
+
+      <!-- 공공기관 클라이언트 -->
+      <text x="574" y="309" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">공공기관 클라이언트</text>
+      <text x="590" y="325" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 청와대, 대통령실, 중앙부처(기재부/교육부/문체부), 지자체(서울시/부산시/성남시)</text>
+      <text x="590" y="340" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   등 정책 반응 및 시민 인식 데이터 분석 기반 홍보/정책 방향 제안 및 모니터링</text>
+
+      <!-- 트렌드 분석 -->
+      <text x="574" y="360" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">트렌드 분석</text>
+      <text x="590" y="375" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 서울대 「트렌드 코리아 2021~2022」 발간 데이터 분석 지원</text>
+
+      <!-- 구분선 -->
+      <line x1="574" y1="393" x2="1040" y2="393" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+      <!-- 광고/마케팅 — 같은 박스 안 하단 -->
+      <text x="574" y="411" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">광고/마케팅 캠페인 집행</text>
+      <text x="590" y="427" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 아모레퍼시픽·한국야쿠르트·동국제약·K2·수협은행 등 30개+ 캠페인 집행 및 운영</text>
+      <text x="590" y="443" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 소비자 조사·소셜 빅데이터 기반 브랜드 전략 수립 · 20개+ 산업군 경험</text>
 
     </svg>
   </div>
@@ -1989,15 +2036,15 @@ footer {
 
     <!-- 뉴엔AI (2025~) -->
     <div class="cfd-section" id="cf-neuen">
-      <div class="cfd-role-badge">
-        <span class="cfd-badge">UX/UI Planner &amp; Project Owner</span>
-        <span class="cfd-role-desc">AI플랫폼 사업부 AI센터 소속, AI큐레이션팀 PO(Platform Operation) – 빅데이터 분석 플랫폼 기획 및 플랫폼 운영 담당</span>
-      </div>
       <div class="cfd-company-wrap" style="border-top-color: rgba(212,197,132,0.3);">
         <div class="cfd-company-left">
           <div class="cfd-dot"></div>
           <div class="cfd-company-label">(IT 회사 / 대리 ~)</div>
           <div class="cfd-company-name">뉴엔 AI</div>
+          <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
+            <span class="cfd-badge">UX/UI Planner &amp; Project Owner</span>
+            <span class="cfd-role-desc" style="margin-left:0;">AI플랫폼 사업부 AI센터 소속, AI큐레이션팀 PO(Platform Operation) – 빅데이터 분석 플랫폼 기획 및 플랫폼 운영 담당</span>
+          </div>
           <div class="cfd-company-year" style="font-size:52px;">2025</div>
           <div style="font-size:36px; color:rgba(212,197,132,0.15); font-family:Georgia,serif; font-style:italic; line-height:1;">/</div>
           <div style="font-size:36px; color:rgba(212,197,132,0.15); font-family:Georgia,serif; font-style:italic; line-height:1;">ing</div>
@@ -2016,102 +2063,137 @@ footer {
 
     <!-- 코난테크놀로지 (2019~2023) -->
     <div class="cfd-section" id="cf-konan">
-      <div class="cfd-role-badge">
-        <span class="cfd-badge dim">Data Analyst / Business Analyst</span>
-        <span class="cfd-role-desc">데이터사이언티스트부서 소속, 데이터 분석팀 – 소셜 빅데이터 분석, 정책/마케팅 전략 컨설팅, 분석 시스템 기획</span>
-      </div>
       <div class="cfd-company-wrap">
         <div class="cfd-company-left">
           <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
           <div class="cfd-company-label">(IT 회사 / 대리~과장)</div>
           <div class="cfd-company-name dim">코난테크놀로지</div>
+          <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
+            <span class="cfd-badge dim">Data Analyst / Business Analyst</span>
+            <span class="cfd-role-desc" style="margin-left:0;">데이터사이언티스트부서 소속, 데이터 분석팀 – 소셜 빅데이터 분석, 정책/마케팅 전략 컨설팅, 분석 시스템 기획</span>
+          </div>
           <div class="cfd-company-year dim" style="font-size:40px;">2019</div>
           <div style="font-size:28px; color:rgba(255,255,255,0.06); font-family:Georgia,serif; font-style:italic; line-height:1;">/</div>
           <div class="cfd-company-year dim" style="font-size:40px;">2023</div>
         </div>
         <ul class="cfd-items">
-          <li>(2022.11~2023.05) 대통령실, 빅데이터 정기 분석 보고서(일일/주간/월간/이슈) 작성 및 모니터링 시스템 기획</li>
-          <li>(2021.05~2023.05) 서울대트렌드센터(김난도 교수), '트렌드코리아2022' '트렌드코리아2023' 소셜 빅데이터 분석 발간 지원</li>
-          <li>(2021.03.01~2023.05) 통일부, 서울시청, 부산시청, 성남시청 소셜 빅데이터 정기 분석 보고서 및 모니터링 시스템 기획</li>
-          <li>(2021.08~2021.10) 한국경제신문, 국비무료 '빅데이터 전략 마에스트로 과정' 멘토링 교육 활동</li>
-          <li>(2020.08~2020.10) 한국지능정보사회진흥원, 2020 중소기업 빅데이터 분석 및 활용 지원사업 → <strong style="color:var(--gold);">NIA 빅데이터 활용 우수사례 선정</strong></li>
-          <li>(2019.12~2023.05) 하이브 소셜 버즈 모니터링 툴 디버깅 및 품질관리</li>
-          <li>(2019.10~2019.12) 프로스포츠협회 MZ세대 온라인 콘텐츠 소비 특성과 프로스포츠 분석</li>
+          <li>(2022.11~2023.05) 대통령실 · 빅데이터 정기 분석 보고서(일일/주간/월간/이슈) 및 모니터링·위기 얼럿 시스템 기획</li>
+          <li>(2021.10) 교육부 · 포용국가 사회정책에 대한 소셜 빅데이터 국민 여론 분석</li>
+          <li>(2021.05~2023.05) 서울대트렌드센터(김난도 교수) · 「트렌드코리아2022」「트렌드코리아2023」 소셜 빅데이터 분석 발간 지원</li>
+          <li>(2021.10~2021.12) 청와대 · 부동산 현안 시민 반응 SNS 빅데이터 분석</li>
+          <li>(2021.03~2023.05) 통일부 · 소셜 빅데이터 정기 분석 보고서(일일/주간/월간/이슈) 및 모니터링·위기 얼럿 시스템 기획</li>
+          <li>(2021.03~2023.05) 서울시청 · 소셜 빅데이터 정기 분석 보고서(일일/주간/이슈) 및 모니터링·위기 얼럿 시스템 기획</li>
+          <li>(2021.03~2023.05) 성남시청 · 소셜 빅데이터 정기 분석 보고서(일일/주간/이슈) 및 모니터링·위기 얼럿 시스템 기획</li>
+          <li>(2020.08~2020.10) 한국지능정보사회진흥원 · 2020 중소기업 빅데이터 활용 지원사업 → <strong style="color:var(--gold);">NIA 빅데이터 활용 우수사례 선정</strong></li>
+          <li>(2020.08~2020.10) 한국경제신문 · 「빅데이터 전략 마에스트로 과정」 멘토링 교육 활동</li>
+          <li>(2020.03~2022) 부산시청 · 소셜 빅데이터 정기 분석 보고서(일일/주간/월간/이슈) 및 모니터링 시스템 기획</li>
+          <li>(2020.01~2020.12) 문화체육관광부 · 소셜 빅데이터 정기 분석 보고서(일일/주간/월간/이슈) 및 모니터링 시스템 기획</li>
+          <li>(2020.01~) KT&G · SNS 빅데이터 분석 모니터링 시스템 기획</li>
+          <li>(2019.10~2019.12) 프로스포츠협회 · MZ세대 온라인 콘텐츠 소비 특성 분석</li>
+          <li>(2019.12~2023.05) 하이브 · 소셜 버즈 모니터링 툴 디버깅 및 품질관리</li>
         </ul>
       </div>
     </div>
 
     <!-- 와이즈넛 (2018~2019) -->
     <div class="cfd-section" id="cf-wisenut">
-      <div class="cfd-role-badge">
-        <span class="cfd-badge dim">Data Analyst / Business Analyst</span>
-        <span class="cfd-role-desc">데이터컨설팅 부서 소속, 데이터 분석팀 – 소셜 리스닝 기반 소비자 분석 및 마케팅 전략 도출</span>
-      </div>
       <div class="cfd-company-wrap">
         <div class="cfd-company-left">
           <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
           <div class="cfd-company-label">(IT 회사 / 사원)</div>
           <div class="cfd-company-name dim">와이즈넛</div>
+          <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
+            <span class="cfd-badge dim">Data Analyst / Business Analyst</span>
+            <span class="cfd-role-desc" style="margin-left:0;">데이터컨설팅 부서 소속, 데이터 분석팀 – 소셜 리스닝 기반 소비자 분석 및 마케팅 전략 도출</span>
+          </div>
           <div class="cfd-company-year dim" style="font-size:52px;">2019</div>
         </div>
         <ul class="cfd-items">
-          <li>2019.02 구글 – Embrain을 위한 소셜 리스닝 제안서 작성</li>
-          <li>2019.01 FILA korea 소셜 빅데이터 분석 보고서</li>
-          <li>2019.01 기획재정부 2019 정책방향 수립을 위한 소셜 빅데이터 보고서</li>
-          <li>2019.01 소셜 빅데이터 분석을 통한 erom+ 트렌드 조사, 신제품 조사, Frame 개발/제안</li>
-          <li>2018.12 한샘 성파문 사건에 대한 소셜 빅데이터 분석/제언</li>
+          <li>2019.02 구글 – Embrain · 소셜 리스닝 제안서 작성</li>
+          <li>2019.01 기획재정부 · 2019 정책방향 수립을 위한 소셜 빅데이터 보고서</li>
+          <li>2019.01 FILA Korea · 소셜 빅데이터 분석 보고서</li>
+          <li>2019.01 erom+ · 트렌드 조사, 신제품 조사, Frame 개발/제안</li>
           <li>2018.12 내부 시스템 개선을 위한 감성어(emotion functions) 지식체계 구축</li>
-          <li>2018.11 무선청소기 다이슨 제품 소셜 빅데이터 여론 분석</li>
-          <li>2018.10 [현대자동차×이노션] 대형 SUV / 외산차 대응 차종 온라인 여론 분석 보고서</li>
+          <li>2018.11 다이슨코리아 · 무선청소기 신제품 소셜 빅데이터 여론 분석</li>
+          <li>2018.10 현대자동차×이노션 · 대형 SUV / 외산차 대응 차종 온라인 여론 분석 보고서</li>
+          <li>2018.10 농림부 · 소셜 모니터링 보고서</li>
         </ul>
       </div>
     </div>
 
     <!-- 코마코 (2015~2018) -->
     <div class="cfd-section" id="cf-komaco">
-      <div class="cfd-role-badge">
-        <span class="cfd-badge dim">Advertising Planner (AE, AP)</span>
-        <span class="cfd-badge dim" style="margin-left:4px;">Data Analyst / Business Analyst</span>
-        <span class="cfd-role-desc">브랜딩연구소 부서 소속, 광고 기획자/AP(Account Planner)/AE – 데이터 분석 기반 소비자 인사이트 도출 및 광고·마케팅 전략 제안</span>
-      </div>
       <div class="cfd-company-wrap">
         <div class="cfd-company-left">
           <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
           <div class="cfd-company-label">(종합광고대행사 / 사원)</div>
           <div class="cfd-company-name dim">코마코</div>
+          <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
+            <div style="display:flex; gap:4px; flex-wrap:wrap;">
+              <span class="cfd-badge dim">Advertising Planner (AE, AP)</span>
+              <span class="cfd-badge dim">Data Analyst / Business Analyst</span>
+            </div>
+            <span class="cfd-role-desc" style="margin-left:0;">브랜딩연구소 부서 소속, 광고 기획자/AP(Account Planner)/AE – 데이터 분석 기반 소비자 인사이트 도출 및 광고·마케팅 전략 제안</span>
+          </div>
           <div class="cfd-company-year dim" style="font-size:40px;">2015</div>
           <div style="font-size:28px; color:rgba(255,255,255,0.06); font-family:Georgia,serif; font-style:italic; line-height:1;">/</div>
           <div class="cfd-company-year dim" style="font-size:40px;">2018</div>
         </div>
         <ul class="cfd-items">
-          <li>2018.07 아모레퍼시픽 프리메라 IMC 캠페인</li>
-          <li>2018.06 아모레퍼시픽 려 자양윤모 IMC 캠페인</li>
-          <li>2017.09 한국야쿠르트, 갱년기 인식에 대한 빅데이터 분석</li>
-          <li>2017.06 한국야쿠르트, 커피와 콜드브루에 대한 빅데이터 분석</li>
-          <li>2017.04 더불어 민주당 경쟁 입찰 참여 및 일부 수주</li>
-          <li>2017.02 한국야쿠르트 잇츠온제품 브랜드 개발 전략 방향 및 컨셉 도출</li>
-          <li>2016.09 K2 아웃도어 / 수협은행 경쟁입찰 참여 및 수주</li>
-          <li>2016.08 동국제약 인사돌+ 허가 변경에 따른 리포지셔닝 전략 제언</li>
-          <li style="color:#888880;">… (및 다수)</li>
+          <li>2018.07 아모레퍼시픽 · 프리메라 IMC 캠페인</li>
+          <li>2018.06 아모레퍼시픽 · 려 자양윤모 IMC 캠페인</li>
+          <li>2018.03 팔도 · 비빔면 신규 광고 제작 및 매체 대행</li>
+          <li>2018.02 수협은행 · 2018 커뮤니케이션 전략 방향 제안</li>
+          <li>2018.01 메리츠 · 라디오 광고 대행</li>
+          <li>2017.12 맘스터치 · 화덕피자 빅데이터 분석</li>
+          <li>2017.12 팔도 · 신규 라면 제품 컨셉 전략</li>
+          <li>2017.12 한국야쿠르트 · 어린이 음료 뽀로로 활성화 방안 전략</li>
+          <li>2017.10 인사돌·훼라민큐 · Annual Tracking Survey 소비자 조사 참여</li>
+          <li>2017.09 한국야쿠르트 · 커피와 콜드브루 빅데이터 분석</li>
+          <li>2017.09 한국야쿠르트 · 갱년기 인식 빅데이터 분석</li>
+          <li>2017.08 이브자리 · 숙면과 침구 브랜드 빅데이터 분석</li>
+          <li>2017.06 열린사이버대학교 · 인지도 조사 참여</li>
+          <li>2017.04 더불어민주당 · 경쟁 입찰 참여 및 일부 수주</li>
+          <li>2017.03 아이더 · 아웃도어 트렌드 빅데이터 분석</li>
+          <li>2017.03 한국야쿠르트 · 발효유 트렌드 빅데이터 분석</li>
+          <li>2017.02 수협은행 · 광고효과 조사</li>
+          <li>2017.02 한국야쿠르트 · 잇츠온 브랜드 개발 전략 방향 및 컨셉 도출</li>
+          <li>2016.12 팔도 · 비빔면 커뮤니케이션 전략</li>
+          <li>2016.12 에몬스 · 에뉴얼 커뮤니케이션 전략 보고</li>
+          <li>2016.11 쿠퍼스·세븐 · 빅데이터 분석</li>
+          <li>2016.11 팔도 · 뽀로로·비락식혜 브랜드 활성화 방안 전략 제언</li>
+          <li>2016.10 인사돌·훼라민큐 · Annual Tracking Survey 소비자 조사 참여</li>
+          <li>2016.10 동국제약 · 인사돌+ 허가 변경에 따른 소셜데이터 트렌드 분석</li>
+          <li>2016.09 K2 아웃도어 · 경쟁입찰 참여 및 수주</li>
+          <li>2016.09 수협은행 · 경쟁입찰 참여 및 수주</li>
+          <li>2016.08 팔도 · 라면 트렌드 빅데이터 분석</li>
+          <li>2016.08 동국제약 · 인사돌+ 허가 변경에 따른 리포지셔닝 전략 제언</li>
+          <li>2016.07 팔도 · 탄탄면 런칭 컨셉 방향성 전략</li>
+          <li>2016.07 한국야쿠르트 · 콜드브루 브랜드 확장에 따른 브랜드 네이밍</li>
+          <li>2016.04 에몬스 · 신혼가구 트렌드 빅데이터 분석</li>
+          <li>2016.02 청호나이스 · 경쟁 입찰 참여</li>
+          <li>2016.01 맘스터치 · 브랜드 관리 방향 제언</li>
+          <li>2016.01 헬리코박터 윌 · 커뮤니케이션 전략</li>
+          <li>2015.11 초정탄산수 · 경쟁 입찰 참여</li>
         </ul>
       </div>
     </div>
 
     <!-- 대홍기획 (2015 인턴) -->
     <div class="cfd-section" id="cf-daehong">
-      <div class="cfd-role-badge">
-        <span class="cfd-badge dim">Advertising Planner (AE, AP)</span>
-        <span class="cfd-role-desc">스페이스마케팅팀 인턴 – 소셜 데이터 기반 공공 제안 프로젝트 참여</span>
-      </div>
       <div class="cfd-company-wrap">
         <div class="cfd-company-left">
           <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
           <div class="cfd-company-label">(종합광고대행사 / 인턴)</div>
           <div class="cfd-company-name dim">대홍기획</div>
+          <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
+            <span class="cfd-badge dim">Advertising Planner (AE, AP)</span>
+            <span class="cfd-role-desc" style="margin-left:0;">스페이스마케팅팀 인턴 – 소셜 데이터 기반 공공 제안 프로젝트 참여</span>
+          </div>
           <div class="cfd-company-year dim" style="font-size:52px;">2015</div>
         </div>
         <ul class="cfd-items">
-          <li>2015.06 한국마사회 렛츠런파크 빛축제 제안서 기획 — SNS 부정 여론 분석 기반 관광 콘텐츠 전략 제안 · 수주 기여</li>
+          <li>2015.06 한국마사회 · 렛츠런파크 빛축제 개발 사업 경쟁 입찰 참여 및 수주 — SNS 부정 여론 분석 기반 관광 콘텐츠 전략 제안</li>
         </ul>
       </div>
     </div>
@@ -2659,6 +2741,7 @@ footer {
       </div>
     </div>
   </div><!-- /P5 -->
+      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ MCP 기반 외부 LLM 연동이라는 기술적 미지의 영역에서, 기획자로서 서비스 구조를 먼저 설계하고 개발팀과 함께 가능성을 검증해나가는 과정을 진행 중입니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p2">
@@ -2885,6 +2968,7 @@ footer {
 
     </div><!-- /slides -->
   </div><!-- /project-block P1 -->
+      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 약 50종의 시각화 위젯과 RBAC 인프라를 기획하며, 데이터 분석가 출신으로서 "사용자가 실제로 필요한 차트"와 "개발이 가능한 구조" 사이의 균형점을 찾는 데 집중했습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p3">
@@ -3001,6 +3085,7 @@ footer {
       </div>
     </div>
   </div><!-- /P3 -->
+      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 브랜드 페이지는 단순 소개가 아닌 "유료 전환 퍼널"로 설계했습니다. 솔루션별 브릿지 페이지를 통해 무료 사용자가 자연스럽게 유료로 넘어오는 구조를 기획한 첫 번째 경험이었습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p4">
@@ -3195,6 +3280,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 
     </div>
   </div><!-- /P2 -->
+      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 데이터 분석가 시절 직접 쿼리를 짜며 불편함을 느꼈던 경험이, 비전문가도 쓸 수 있는 AI 자동완성 기능 기획의 출발점이 되었습니다. 프롬프트 설계부터 화면 기획까지 End-to-End로 담당했습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p5">
@@ -3316,6 +3402,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       </div>
     </div>
   </div><!-- /P4 -->
+      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 개발팀의 기술적 제약(크롤링 불가 언론사 대응)을 조율하며 기획자가 기술 현실을 수용하면서도 사용자 가치를 지키는 방식을 고민했습니다. 언론사·기자 단위 타겟팅 구조는 소셜 분석 경험이 직접 설계에 반영된 사례입니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
 
@@ -3507,7 +3594,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         <tr><td>모니터링 UI 기획</td><td>클라이언트 맞춤형 소셜 리스닝 시스템 화면 설계 · 개발팀 직접 협업 시작</td></tr>
       </table>
       <p class="po-link">🏆 NIA 빅데이터 활용 우수사례 선정 (2020) — 소셜 분석 기반 신제품 전략 → 실제 매출 성과 달성</p>
-      <p class="po-link" style="margin-top: 8px; color: #8A7B40;">→ PO 전환점: 분석가로서 불편하다고 느꼈던 화면을, 직접 기획자로서 개선하기 시작한 전환점이었습니다.</p>
+      <p class="po-link" style="margin-top: 8px; color: #8A7B40;">→ 광고 대행사에서 마케팅 전략만 짜다가, IT 회사에서 처음으로 데이터 분석 시스템 화면을 직접 설계하고 개발팀과 협업하며 서비스 기획의 맛을 보게 된 시점이었습니다.</p>
     </div>
   </div>
 
@@ -3538,6 +3625,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       <table class="content-table">
         <tr><td>핵심 경험</td><td>레더링 분석·C-D 맵 등 정성 방법론 도입 · 내부 시스템 감성어(emotion functions) 지식체계 구축 참여 · 시스템 운영 및 분석 설계 직접 참여</td></tr>
       </table>
+      <p class="po-link" style="margin-top:12px; color:#8A7B40;">→ 코마코에서의 광고 기획 경험을 IT 데이터 분석 환경으로 처음 확장한 시점. 정성적 소비자 인사이트를 데이터로 검증하는 방법론을 체계적으로 습득했으며, 이 경험이 이후 코난테크놀로지에서 분석 시스템을 기획하는 기반이 되었습니다.</p>
     </div>
   </div>
 
@@ -3558,23 +3646,73 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       </div>
       <table class="content-table" style="margin-bottom: 16px;">
         <tr><th>주요 클라이언트</th><th>프로젝트 성격</th></tr>
-        <tr><td>한국야쿠르트</td><td>잇츠온 브랜드 개발 전략 방향 및 컨셉 도출 · 빅데이터 트렌드/발효 분석 다수</td></tr>
-        <tr><td>아모레퍼시픽</td><td>려 자양윤모 IMC 캠페인 · 프리메라 IMC 캠페인 (2018)</td></tr>
-        <tr><td>동국제약</td><td>인사돌+ 허가 변경에 따른 리포지셔닝 전략 제언 · Annual Tracking Survey 소비자 조사 참여</td></tr>
-        <tr><td>K2 아웃도어 · 수협은행</td><td>경쟁입찰 참여 및 수주</td></tr>
-        <tr><td>더불어민주당</td><td>경쟁입찰 참여 및 일부 수주 (2017)</td></tr>
-        <tr><td>팔도 · 에몬스 · 경호나이스</td><td>브랜드 전략 및 빅데이터 분석 기반 마케팅 제안 다수</td></tr>
+        <tr><td>한국야쿠르트</td><td>잇츠온 브랜드 개발 전략 방향 및 컨셉 도출 · 소셜 빅데이터 트렌드/발효 분석 · 소비자 인식 조사 기반 포지셔닝 전략 수립</td></tr>
+        <tr><td>아모레퍼시픽</td><td>려 자양윤모 IMC 캠페인 기획 · 프리메라 IMC 캠페인 기획 (2018) · 브랜드 퍼스널리티 재정립 방향 제안</td></tr>
+        <tr><td>동국제약</td><td>인사돌+ 허가 변경에 따른 리포지셔닝 전략 제언 · Annual Tracking Survey 소비자 조사 설계 및 결과 분석</td></tr>
+        <tr><td>K2 아웃도어</td><td>아웃도어 시장 트렌드 분석 기반 브랜드 전략 제안 · 경쟁입찰 수주</td></tr>
+        <tr><td>수협은행</td><td>브랜드 인지도 제고 캠페인 전략 · 경쟁입찰 수주</td></tr>
+        <tr><td>더불어민주당</td><td>정당 이미지 전략 및 디지털 마케팅 방향 제안 · 경쟁입찰 일부 수주 (2017)</td></tr>
+        <tr><td>팔도</td><td>비빔면·왕뚜껑 등 브랜드 리뉴얼 전략 · 소셜 버즈 기반 소비자 인식 분석</td></tr>
+        <tr><td>에몬스가구</td><td>가구 브랜드 포지셔닝 전략 · 소셜 빅데이터 기반 인테리어 트렌드 분석</td></tr>
+        <tr><td>경호나이스</td><td>보안 서비스 브랜드 전략 · 타깃 소비자 분석 및 마케팅 방향 제안</td></tr>
+        <tr><td>현대자동차 × 이노션</td><td>SUV 신차 런칭 디지털 캠페인 기획 지원 · 온라인 여론 사전 분석</td></tr>
+        <tr><td>빙그레 · CJ제일제당 · 롯데칠성</td><td>식음료 브랜드 마케팅 전략 수립 · 소셜 트렌드 기반 신제품 컨셉 도출</td></tr>
       </table>
+
+      <!-- 자체 개발 프레임워크 7종 — 클릭 버튼형 -->
       <div class="framework-wrap" style="margin-bottom:16px;">
         <p class="framework-label">자체 개발 분석 프레임워크 (7종) — 소셜 빅데이터 기반 마케팅 인사이트 도출 방법론</p>
-        <div class="tags">
-          <span class="tag">Trend Speed</span><span class="tag">Group Cycle Matrix</span>
-          <span class="tag">Rank Cross Zone</span><span class="tag">CL Value</span>
-          <span class="tag">Trend Cycle Matrix</span><span class="tag">Buzz Norm</span>
-          <span class="tag">Brand Activation Matrix</span>
+        <p style="font-size:12px; color:#909088; margin-bottom:12px;">클릭하면 개요를 확인할 수 있습니다</p>
+        <div class="tags" id="framework-tags">
+          <span class="tag fw-btn" onclick="toggleFramework('trend-speed')">Trend Speed</span>
+          <span class="tag fw-btn" onclick="toggleFramework('group-cycle')">Group Cycle Matrix</span>
+          <span class="tag fw-btn" onclick="toggleFramework('rank-cross')">Rank Cross Zone</span>
+          <span class="tag fw-btn" onclick="toggleFramework('cl-value')">CL Value</span>
+          <span class="tag fw-btn" onclick="toggleFramework('trend-cycle')">Trend Cycle Matrix</span>
+          <span class="tag fw-btn" onclick="toggleFramework('buzz-norm')">Buzz Norm</span>
+          <span class="tag fw-btn" onclick="toggleFramework('brand-activation')">Brand Activation Matrix</span>
+        </div>
+
+        <!-- 각 프레임워크 상세 -->
+        <div id="trend-speed" class="fw-detail" style="display:none;">
+          <strong>Trend Speed</strong>
+          <p>특정 키워드·이슈의 소셜 언급량 변화 속도를 측정하는 프레임워크. 언급량의 증가 기울기와 확산 속도를 수치화하여 트렌드의 "폭발성"과 "지속성"을 구분 분석. 신제품 런칭 타이밍 및 이슈 대응 시점 판단에 활용.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Trend Speed 도식</span></div>
+        </div>
+        <div id="group-cycle" class="fw-detail" style="display:none;">
+          <strong>Group Cycle Matrix</strong>
+          <p>소비자 집단(연령·성별·관심사)별 트렌드 수용 사이클을 매핑하는 프레임워크. 얼리어답터 → 메인스트림 → 레이트 매조리티 진입 시점을 그룹별로 시각화하여 타깃 마케팅 타이밍 전략 수립에 활용.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Group Cycle Matrix 도식</span></div>
+        </div>
+        <div id="rank-cross" class="fw-detail" style="display:none;">
+          <strong>Rank Cross Zone</strong>
+          <p>브랜드/키워드의 언급량 순위 변화와 감성 변화를 교차 분석하는 프레임워크. 4분면 매트릭스로 "상승하는 긍정", "하락하는 부정" 등 12가지 상태 구분. 경쟁 브랜드 포지션 비교 및 캠페인 효과 측정에 활용.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Rank Cross Zone 4분면 매트릭스</span></div>
+        </div>
+        <div id="cl-value" class="fw-detail" style="display:none;">
+          <strong>CL Value (Consumer Language Value)</strong>
+          <p>소비자가 실제로 사용하는 언어(소셜 텍스트)에서 브랜드 핵심 가치와의 연관도를 수치화하는 프레임워크. 브랜드가 의도한 메시지와 소비자가 실제로 인식하는 메시지 간의 간극 측정. 브랜드 커뮤니케이션 전략 재정립에 활용.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">CL Value 분석 예시</span></div>
+        </div>
+        <div id="trend-cycle" class="fw-detail" style="display:none;">
+          <strong>Trend Cycle Matrix</strong>
+          <p>트렌드의 생애주기(등장 → 성장 → 정점 → 쇠퇴)를 소셜 데이터로 실시간 추적하는 프레임워크. 계절성·이벤트성·구조적 트렌드를 유형별로 구분하여 마케팅 개입 시점 최적화. 신제품 개발 및 캠페인 기획 타이밍 의사결정에 활용.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Trend Cycle Matrix 도식</span></div>
+        </div>
+        <div id="buzz-norm" class="fw-detail" style="display:none;">
+          <strong>Buzz Norm</strong>
+          <p>동종 업계 평균 소셜 언급량 대비 특정 브랜드의 버즈량을 정규화(Normalization)하는 프레임워크. 절대적 수치가 아닌 업계 기준값 대비 상대적 위치를 파악하여 마케팅 투자 대비 효율(ROI) 측정의 기준선으로 활용.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Buzz Norm 비교 차트</span></div>
+        </div>
+        <div id="brand-activation" class="fw-detail" style="display:none;">
+          <strong>Brand Activation Matrix</strong>
+          <p>브랜드 활성화 수준을 인지(Awareness) · 관심(Interest) · 경험(Experience) · 옹호(Advocacy) 4단계로 측정하고, 각 단계별 소셜 버즈 비중을 시각화하는 프레임워크. 브랜드 건강도 진단 및 단계별 마케팅 전략 방향 설정에 활용.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Brand Activation Matrix 4단계 다이어그램</span></div>
         </div>
       </div>
-      <p class="po-link">🏆 크리에이티브 아레나 파이널 평가 점수 1위 (2015, 대학생) — 삼성 제일기획 주관 · 300팀 서바이벌 · 코엑스 무대 PT · <em>취업 전 재학 중 수상</em></p>
+
+      <!-- 크리에이티브 아레나는 대학생 시절 수상이므로 대홍기획 섹션으로 이동 -->
+      <p class="po-link" style="margin-top:12px; color:#8A7B40;">→ 식품·뷰티·금융·아웃도어·가구 등 20개+ 산업군에 걸쳐 소비자 데이터 기반 마케팅 전략을 수립하며 도메인 지식의 폭을 넓혔습니다. 이 시기 개발한 7종의 자체 분석 프레임워크는 이후 IT 회사에서 분석 시스템을 기획하는 데 직접 활용되었습니다.</p>
     </div>
   </div>
 
@@ -3593,10 +3731,15 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         <span class="img-placeholder-icon">🖼</span>
         <span class="img-placeholder-label">렛츠런파크 빛축제 제안서 관련 이미지</span>
       </div>
-      <table class="content-table">
+      <table class="content-table" style="margin-bottom:12px;">
         <tr><td>프로젝트</td><td>한국마사회 렛츠런파크 빛축제 제안서 기획 — SNS 부정 여론 분석 기반 관광 콘텐츠 전략 제안 · 수주 기여</td></tr>
         <tr><td>역할</td><td>BTL 마케팅 부서 소속 · 스페이스 마케팅 · 광고 기획/AE(Account Executive) · 소셜 데이터 기반 공공 제안 프로젝트 참여</td></tr>
       </table>
+      <p class="po-link" style="color:#8A7B40;">→ 광고/마케팅 업계 첫 경험. 소셜 데이터를 실무에 처음 적용해보며 데이터 기반 전략 수립의 가능성을 체감한 시점이었습니다.</p>
+      <div style="background:rgba(200,185,122,0.06); border-left:3px solid rgba(200,185,122,0.3); padding:10px 14px; border-radius:0 4px 4px 0; margin-top:12px;">
+        <div style="font-size:10px; font-family:var(--mono); color:#9A9088; margin-bottom:4px;">대학생 시절 수상 (취업 전 재학 중)</div>
+        <p class="po-link" style="margin:0;">🏆 크리에이티브 아레나 파이널 평가 점수 1위 (2015) — 삼성 제일기획 주관 · 300팀 서바이벌 · 코엑스 무대 PT</p>
+      </div>
     </div>
   </div>
 </section>
@@ -3909,6 +4052,21 @@ function goTo(targetId, bodyId, iconId) {
 function toggleSlide(header) {
   const card = header.parentElement;
   card.classList.toggle('open');
+}
+
+// ── 프레임워크 버튼 토글 ──
+function toggleFramework(id) {
+  var detail = document.getElementById(id);
+  if (!detail) return;
+  var isOpen = detail.style.display === 'block';
+  document.querySelectorAll('.fw-detail').forEach(function(d) { d.style.display = 'none'; });
+  document.querySelectorAll('.fw-btn').forEach(function(b) { b.classList.remove('active'); });
+  if (!isOpen) {
+    detail.style.display = 'block';
+    document.querySelectorAll('.fw-btn').forEach(function(b) {
+      if ((b.getAttribute('onclick') || '').includes(id)) b.classList.add('active');
+    });
+  }
 }
 
 // ── 최초: 각 프로젝트 첫 번째 슬라이드만 열기 ──
