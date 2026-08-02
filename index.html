@@ -3300,7 +3300,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       <span class="project-status status-done">1차 런칭 완료</span>
     </div>
     <h3 class="project-headline">Quettai 언론 분석 기능 기획</h3>
-    <p class="project-subhead">뉴스 본문과 댓글을 함께 읽는다 — 플랫폼 내 부재했던 언론 분석 기능 신규 기획 · 2025.07–08</p>
+    <p class="project-subhead">기존 플랫폼에 없던 언론 분석 기능 신규 기획 — 뉴스 기사 및 댓글 기반의 여론 흐름을 정량적으로 파악할 수 있는 분석 환경 구축 · 2025.07–08</p>
 
     <div class="slides">
       <div class="slide-card">
@@ -3313,13 +3313,14 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
           <div class="slide-inner">
             <div class="img-placeholder tall">
               <span class="img-placeholder-icon">🖼</span>
-              <span class="img-placeholder-label">언론 분석 메인 화면 — 기사 목록 + 여론 트렌드 차트가 함께 보이는 상태</span>
+              <span class="img-placeholder-label">언론 분석 메인 화면 — 기사 목록 + 여론 트렌드 차트</span>
             </div>
             <table class="content-table">
-              <tr><td>문제</td><td>기존 Quettai는 SNS·커뮤니티 중심 → 언론(기사·댓글) 데이터 분석 환경 전무</td></tr>
-              <tr><td>방향</td><td>기사 단위 여론 흐름 + 댓글 감성 반응을 한 화면에서 분석</td></tr>
+              <tr><td>기획 배경</td><td>기존 Quettai는 SNS·커뮤니티 중심 → 언론(기사·댓글) 데이터 분석 환경 전무. 뉴스 기사 및 댓글 기반 여론 흐름을 정량적으로 파악할 수 있는 기능 신규 기획</td></tr>
+              <tr><td>주요 역할</td><td>기획서 작성 (언론분석 메뉴 구조 및 전체 화면 흐름 기획 / 신규 페이지 운영 정책 수립 / 주요 분석 차트 및 필터 구조 정의 / 인터랙션 설계 및 상세 동작 정의서 작성) + 개발팀·디자인팀·백엔드팀 협의·의견 조율</td></tr>
+              <tr><td>협의 대상</td><td>AI사업부 총괄 이사 → 연구개발 전무 → 디자인팀, 프론트엔드 개발팀, 빅데이터 관리팀 등 다양한 팀과 기능별 조율 진행</td></tr>
+              <tr><td>주요 활용 변수</td><td>뉴스 기사 본문, 댓글 수, 공감 수 등 메타데이터를 기준으로 뉴스그룹·언론사 단위 분류 및 필터 설계에 적용</td></tr>
               <tr><td>기간</td><td>2025.07 ~ 2025.08 · 1차 런칭 완료</td></tr>
-              <tr><td>역할</td><td>단독 기획 · 화면 설계 · 기술 제약 대응 프로세스 조율</td></tr>
             </table>
           </div>
         </div>
@@ -3333,41 +3334,53 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         </div>
         <div class="slide-content">
           <div class="slide-inner">
-            <p class="slide-headline">전수 분석은 불가능했다 — 서버 부하 한계를 기획으로 풀어낸 샘플링 프로세스 설계</p>
+            <p class="slide-headline">전수 분석 불가 — API 호출 구조 한계를 기획으로 풀어낸 샘플링 프로세스 설계</p>
 
             <!-- 플로우 SVG -->
             <div class="diagram-wrap">
-              <svg viewBox="0 0 760 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-                <rect width="760" height="120" fill="#0F0F0F"/>
-                <rect x="10" y="30" width="160" height="60" fill="none" stroke="#333" stroke-width="1"/>
-                <text x="90" y="55" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">전수 댓글 분석</text>
-                <text x="90" y="72" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">시도</text>
-                <line x1="170" y1="60" x2="200" y2="60" stroke="#333" stroke-width="1"/>
-                <polygon points="200,56 210,60 200,64" fill="#333"/>
-                <rect x="210" y="30" width="160" height="60" fill="none" stroke="#8A3A3A" stroke-width="1"/>
-                <text x="290" y="55" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">서버 부하 급증</text>
-                <text x="290" y="72" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">API 호출 한계</text>
-                <line x1="370" y1="60" x2="400" y2="60" stroke="#333" stroke-width="1"/>
-                <polygon points="400,56 410,60 400,64" fill="#333"/>
-                <rect x="410" y="30" width="160" height="60" fill="none" stroke="#4A6A4A" stroke-width="1"/>
-                <text x="490" y="48" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">샘플링 프로세스</text>
-                <text x="490" y="65" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">핵심 기사 100개</text>
-                <text x="490" y="82" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">기획자 제안</text>
-                <line x1="570" y1="60" x2="600" y2="60" stroke="#333" stroke-width="1"/>
-                <polygon points="600,56 610,60 600,64" fill="#333"/>
-                <rect x="610" y="30" width="140" height="60" fill="none" stroke="#C8B97A" stroke-width="1"/>
-                <text x="680" y="55" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">안정성 + 유의미한</text>
-                <text x="680" y="72" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle">분석 동시 달성</text>
+              <svg viewBox="0 0 760 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="140" fill="#0F0F0F"/>
+                <!-- 문제 -->
+                <rect x="10" y="20" width="160" height="100" fill="none" stroke="#8A3A3A" stroke-width="1"/>
+                <text x="90" y="48" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">전수 댓글 분석 시도</text>
+                <text x="90" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">기사 1개 ID 하위에</text>
+                <text x="90" y="80" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">댓글이 종속 →</text>
+                <text x="90" y="94" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">기사 수만큼 API 호출</text>
+                <text x="90" y="108" fill="#8A3A3A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">폭발적 증가</text>
+                <!-- 화살표 -->
+                <line x1="170" y1="70" x2="200" y2="70" stroke="#444" stroke-width="1"/>
+                <polygon points="200,66 210,70 200,74" fill="#444"/>
+                <!-- 개발팀 통보 -->
+                <rect x="210" y="20" width="150" height="100" fill="none" stroke="#5A3A3A" stroke-width="1"/>
+                <text x="285" y="60" fill="#A06060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">개발팀</text>
+                <text x="285" y="78" fill="#A06060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">"전수 분석 불가"</text>
+                <text x="285" y="96" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">서버 부하 급증 통보</text>
+                <!-- 화살표 -->
+                <line x1="360" y1="70" x2="390" y2="70" stroke="#444" stroke-width="1"/>
+                <polygon points="390,66 400,70 390,74" fill="#444"/>
+                <!-- 기획 대안 -->
+                <rect x="400" y="20" width="155" height="100" fill="none" stroke="#4A6A4A" stroke-width="1"/>
+                <text x="477" y="48" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">기획자 대안 제시</text>
+                <text x="477" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">핵심 기사 최대 100개</text>
+                <text x="477" y="80" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">여론 영향력 기준 선별</text>
+                <text x="477" y="96" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">(댓글수·조회수·언급량)</text>
+                <!-- 화살표 -->
+                <line x1="555" y1="70" x2="585" y2="70" stroke="#444" stroke-width="1"/>
+                <polygon points="585,66 595,70 585,74" fill="#444"/>
+                <!-- 결과 -->
+                <rect x="595" y="20" width="155" height="100" fill="none" stroke="#C8B97A" stroke-width="1"/>
+                <text x="672" y="55" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">안정성 + 유의미한</text>
+                <text x="672" y="72" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">분석 동시 달성</text>
               </svg>
             </div>
 
             <table class="content-table">
-              <tr><td>문제</td><td>수집된 기사 전수 댓글 분석 시 서버 부하 급증 + API 호출 한계 → 개발팀 "전수 분석 불가" 통보</td></tr>
-              <tr><td>기획자 제안</td><td>핵심 기사 최대 100개로 분석 범위 제한 — 댓글 수·조회 수·언급량 기준 여론 영향력 높은 기사 우선 선별</td></tr>
-              <tr><td>사용자 경험</td><td>제한 조건을 사용자에게 명확히 안내 · 분석 대상 기사 수 화면에 노출</td></tr>
+              <tr><td>문제 구조</td><td>기사 1개의 ID 하위에 댓글이 종속되는 구조 → 댓글 전수 분석 시 기사 수만큼 API 호출이 폭발적으로 증가 → 서버 부하 한계 도달</td></tr>
+              <tr><td>개발팀 통보</td><td>"전수 분석 불가" — 기술적으로 모든 기사의 댓글을 동시에 호출하는 것은 현재 인프라에서 불가</td></tr>
+              <tr><td>기획 대안</td><td>분석 대상 기사를 최대 100개로 제한 · 댓글 수·조회 수·언급량 기준으로 여론 영향력 높은 기사를 우선 선별하는 방식 설계</td></tr>
+              <tr><td>사용자 처리</td><td>제한 조건을 화면에 명확히 안내 · 분석 대상 기사 수 노출로 투명성 확보</td></tr>
               <tr><td>결과</td><td>시스템 안정성 확보 + 핵심 기사 중심의 유의미한 여론 분석 환경 동시 달성</td></tr>
             </table>
-            <p class="body-text" style="color: var(--gold-dim); font-style: italic;">개발 제약을 단순히 수용하지 않고, 사용자 가치를 지키는 대안을 기획 레벨에서 설계했다</p>
           </div>
         </div>
       </div>
@@ -3392,7 +3405,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
               </div>
             </div>
             <table class="content-table">
-              <tr><td>언론사·기자 그룹 관리</td><td>분석 대상 언론사를 사용자가 직접 그룹으로 묶어 관리 · 기자 단위 여론 반응 세밀 추적</td></tr>
+              <tr><td>언론사·기자 그룹 관리</td><td>분석 대상 언론사를 사용자가 직접 그룹으로 생성·수정·관리 · 기자 단위 여론 반응 세밀 추적 가능 · 그룹 단위 심층 연계 분석</td></tr>
               <tr><td>댓글 감성 분석</td><td>긍·부정·중립 비율 · 주요 감성 키워드 추출</td></tr>
               <tr><td>기사 목록</td><td>핵심 기사 최대 100개 · 댓글 수·감성 비율 등 요약 지표 함께 노출</td></tr>
               <tr><td>트렌드 차트</td><td>기간별 언급량·감성 변화 추이 시각화</td></tr>
@@ -3402,7 +3415,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       </div>
     </div>
   </div><!-- /P4 -->
-      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 개발팀의 기술적 제약(크롤링 불가 언론사 대응)을 조율하며 기획자가 기술 현실을 수용하면서도 사용자 가치를 지키는 방식을 고민했습니다. 언론사·기자 단위 타겟팅 구조는 소셜 분석 경험이 직접 설계에 반영된 사례입니다.</p>
+      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 개발팀의 기술적 제약(크롤링 불가 언론사 대응)을 조율하며, 기술 현실과 사용자 가치 사이의 균형점을 기획 레벨에서 찾은 프로젝트. 언론사·기자 단위 타겟팅 구조는 소셜 분석 경험이 설계에 직접 반영된 사례.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
 
@@ -3445,7 +3458,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
             2023년 퇴사 후 유산과 임신을 겪으며 약 2년의 공백기를 보냈습니다. 그 시간 동안 멈추지 않고 정보처리기사·Tableau·SQLD 자격증을 취득하며 데이터 역량을 다졌고, 소셜 데이터 분석·크롤링 기술을 활용해 냉장고 재료 기반 레시피 추천 서비스 <strong style="color:#3A372F;">'CookMatch'</strong>를 기획부터 배포까지 직접 만들어봤습니다.
           </p>
           <p style="font-size:13px; color:#6A6660; line-height:1.85;">
-            분석가로 데이터를 다루는 일과, 그 데이터를 사용자가 쓰는 화면으로 만드는 일은 전혀 다른 영역이라는 걸 이 프로젝트를 통해 체감했고, 이 경험이 PO로의 전환을 결심하게 된 계기가 되었습니다.
+            분석가로 데이터를 다루는 일과, 그 데이터를 사용자가 쓰는 화면으로 만드는 일은 전혀 다른 영역임을 이 프로젝트를 통해 체감했습니다. 이 경험이 PO로의 전환을 결심하게 된 계기였습니다.
           </p>
         </div>
         <div style="width:220px; flex-shrink:0; border:1px solid #D4D0C8; border-radius:6px; padding:14px; background:rgba(255,255,255,0.9);">
@@ -3594,7 +3607,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         <tr><td>모니터링 UI 기획</td><td>클라이언트 맞춤형 소셜 리스닝 시스템 화면 설계 · 개발팀 직접 협업 시작</td></tr>
       </table>
       <p class="po-link">🏆 NIA 빅데이터 활용 우수사례 선정 (2020) — 소셜 분석 기반 신제품 전략 → 실제 매출 성과 달성</p>
-      <p class="po-link" style="margin-top: 8px; color: #8A7B40;">→ 광고 대행사에서 마케팅 전략만 짜다가, IT 회사에서 처음으로 데이터 분석 시스템 화면을 직접 설계하고 개발팀과 협업하며 서비스 기획의 맛을 보게 된 시점이었습니다.</p>
+      <p class="po-link" style="margin-top: 8px; color: #8A7B40;">→ 광고 대행사에서 마케팅 전략을 담당하다가, IT 회사에서 처음으로 데이터 분석 시스템 화면을 직접 설계하고 개발팀과 협업한 시점. 서비스 기획으로의 관심이 본격화된 계기였습니다.</p>
     </div>
   </div>
 
@@ -3625,7 +3638,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       <table class="content-table">
         <tr><td>핵심 경험</td><td>레더링 분석·C-D 맵 등 정성 방법론 도입 · 내부 시스템 감성어(emotion functions) 지식체계 구축 참여 · 시스템 운영 및 분석 설계 직접 참여</td></tr>
       </table>
-      <p class="po-link" style="margin-top:12px; color:#8A7B40;">→ 코마코에서의 광고 기획 경험을 IT 데이터 분석 환경으로 처음 확장한 시점. 정성적 소비자 인사이트를 데이터로 검증하는 방법론을 체계적으로 습득했으며, 이 경험이 이후 코난테크놀로지에서 분석 시스템을 기획하는 기반이 되었습니다.</p>
+      <p class="po-link" style="margin-top:12px; color:#8A7B40;">→ 코마코에서의 광고 기획 경험을 IT 데이터 분석 환경으로 처음 확장한 시점. 정성적 소비자 인사이트를 데이터로 검증하는 방법론을 체계적으로 습득했으며, 이후 코난테크놀로지에서 분석 시스템을 기획하는 기반이 됨.</p>
     </div>
   </div>
 
@@ -3712,7 +3725,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       </div>
 
       <!-- 크리에이티브 아레나는 대학생 시절 수상이므로 대홍기획 섹션으로 이동 -->
-      <p class="po-link" style="margin-top:12px; color:#8A7B40;">→ 식품·뷰티·금융·아웃도어·가구 등 20개+ 산업군에 걸쳐 소비자 데이터 기반 마케팅 전략을 수립하며 도메인 지식의 폭을 넓혔습니다. 이 시기 개발한 7종의 자체 분석 프레임워크는 이후 IT 회사에서 분석 시스템을 기획하는 데 직접 활용되었습니다.</p>
+      <p class="po-link" style="margin-top:12px; color:#8A7B40;">→ 식품·뷰티·금융·아웃도어·가구 등 20개+ 산업군에 걸쳐 소비자 데이터 기반 마케팅 전략 수립. 이 시기 개발한 7종의 자체 분석 프레임워크는 이후 IT 회사에서 분석 시스템 기획에 직접 활용됨.</p>
     </div>
   </div>
 
@@ -3727,15 +3740,29 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       <div class="bp-acc-toggle">＋</div>
     </div>
     <div class="bp-acc-body">
-      <div class="img-placeholder medium" style="margin-bottom:16px;">
-        <span class="img-placeholder-icon">🖼</span>
-        <span class="img-placeholder-label">렛츠런파크 빛축제 제안서 관련 이미지</span>
+
+      <!-- 프로젝트 개요 -->
+      <div style="margin-bottom:16px;">
+        <div style="font-family:var(--mono); font-size:10px; color:#888078; letter-spacing:0.1em; margin-bottom:6px;">PROJECT · 2015</div>
+        <div style="font-size:15px; font-weight:700; color:#1A1A18; margin-bottom:4px;">한국마사회 렛츠런파크 빛축제 경쟁 PT · 수주</div>
+        <div style="font-size:12px; color:#888880;">BTL 마케팅 · 스페이스 마케팅 · Brand Strategy · Space Strategy · Contents Idea</div>
       </div>
-      <table class="content-table" style="margin-bottom:12px;">
-        <tr><td>프로젝트</td><td>한국마사회 렛츠런파크 빛축제 제안서 기획 — SNS 부정 여론 분석 기반 관광 콘텐츠 전략 제안 · 수주 기여</td></tr>
-        <tr><td>역할</td><td>BTL 마케팅 부서 소속 · 스페이스 마케팅 · 광고 기획/AE(Account Executive) · 소셜 데이터 기반 공공 제안 프로젝트 참여</td></tr>
+
+      <!-- 이미지 -->
+      <img src="assets/images/대홍기획-빛축제.png" alt="렛츠런파크 빛축제" style="width:100%; border-radius:4px; display:block; margin-bottom:16px; object-fit:cover;">
+
+      <!-- 배경 및 접근 -->
+      <table class="content-table" style="margin-bottom:14px;">
+        <tr><td style="width:80px;">배경</td><td>경마 = 도박이라는 부정적 인식이 강하게 자리잡아 렛츠런파크의 이미지 또한 부정적으로 형성된 상황. 이미지 개선을 위한 '빛축제 조성 사업' 경쟁 PT 참여</td></tr>
+        <tr><td>분석 접근</td><td>부산 지역은 관광 명소로서의 인지도는 높지만 야간에 즐길 장소가 부족하다는 SNS 빅데이터 분석 결과를 근거로 제안서 작성</td></tr>
+        <tr><td>제안 방향</td><td>산책로·포토존 등 소비자 취향을 반영한 공간 기획 제안 · 취식 공간과 휴식 공간 부족에 대한 소비자 의견 수렴 반영</td></tr>
+        <tr><td>역할</td><td>Brand Strategy · Space Strategy · Contents Idea 담당 · 대규모 경쟁 PT 과정에서 협업 업체와의 관계 관리 및 업무 노하우 습득</td></tr>
+        <tr><td>결과</td><td>수주 기여 · 2018년 7만 5천명 방문</td></tr>
       </table>
-      <p class="po-link" style="color:#8A7B40;">→ 광고/마케팅 업계 첫 경험. 소셜 데이터를 실무에 처음 적용해보며 데이터 기반 전략 수립의 가능성을 체감한 시점이었습니다.</p>
+
+      <p class="po-link" style="color:#8A7B40;">→ 광고/마케팅 업계 첫 경험. 소셜 데이터를 실무에 처음 적용하며 데이터 기반 전략 수립의 가능성을 체감한 시점.</p>
+
+      <!-- 수상 -->
       <div style="background:rgba(200,185,122,0.06); border-left:3px solid rgba(200,185,122,0.3); padding:10px 14px; border-radius:0 4px 4px 0; margin-top:12px;">
         <div style="font-size:10px; font-family:var(--mono); color:#9A9088; margin-bottom:4px;">대학생 시절 수상 (취업 전 재학 중)</div>
         <p class="po-link" style="margin:0;">🏆 크리에이티브 아레나 파이널 평가 점수 1위 (2015) — 삼성 제일기획 주관 · 300팀 서바이벌 · 코엑스 무대 PT</p>
