@@ -860,8 +860,55 @@ section {
   margin-bottom: 10px;
 }
 
-/* 프레임워크 버튼 */
-.fw-btn {
+/* 프레임워크 아코디언 (B/C/D 섹션) */
+.fw-acc {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.fw-acc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
+}
+.fw-acc-header:hover {
+  background: rgba(255,255,255,0.04);
+}
+.fw-acc-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #C8C8C2;
+  flex: 1;
+}
+.fw-acc-meta {
+  font-size: 11px;
+  color: #606058;
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+.fw-acc-toggle {
+  font-size: 16px;
+  color: #606058;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+.fw-acc.open .fw-acc-toggle {
+  transform: rotate(45deg);
+  color: #C8B97A;
+}
+.fw-acc-body {
+  display: none;
+  padding: 0 16px 14px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.fw-acc.open .fw-acc-body {
+  display: block;
+}
   cursor: pointer;
   transition: all 0.15s;
 }
@@ -3653,30 +3700,12 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       <div class="bp-acc-toggle">＋</div>
     </div>
     <div class="bp-acc-body">
-      <div class="img-row two" style="margin-bottom: 20px;">
-        <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">대표 클라이언트 보고서 표지 2~3장 (한국야쿠르트·아모레퍼시픽 등)</span></div>
-        <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Brand Activation Matrix 다이어그램</span></div>
-      </div>
-      <table class="content-table" style="margin-bottom: 16px;">
-        <tr><th>주요 클라이언트</th><th>프로젝트 성격</th></tr>
-        <tr><td>한국야쿠르트</td><td>잇츠온 브랜드 개발 전략 방향 및 컨셉 도출 · 소셜 빅데이터 트렌드/발효 분석 · 소비자 인식 조사 기반 포지셔닝 전략 수립</td></tr>
-        <tr><td>아모레퍼시픽</td><td>려 자양윤모 IMC 캠페인 기획 · 프리메라 IMC 캠페인 기획 (2018) · 브랜드 퍼스널리티 재정립 방향 제안</td></tr>
-        <tr><td>동국제약</td><td>인사돌+ 허가 변경에 따른 리포지셔닝 전략 제언 · Annual Tracking Survey 소비자 조사 설계 및 결과 분석</td></tr>
-        <tr><td>K2 아웃도어</td><td>아웃도어 시장 트렌드 분석 기반 브랜드 전략 제안 · 경쟁입찰 수주</td></tr>
-        <tr><td>수협은행</td><td>브랜드 인지도 제고 캠페인 전략 · 경쟁입찰 수주</td></tr>
-        <tr><td>더불어민주당</td><td>정당 이미지 전략 및 디지털 마케팅 방향 제안 · 경쟁입찰 일부 수주 (2017)</td></tr>
-        <tr><td>팔도</td><td>비빔면·왕뚜껑 등 브랜드 리뉴얼 전략 · 소셜 버즈 기반 소비자 인식 분석</td></tr>
-        <tr><td>에몬스가구</td><td>가구 브랜드 포지셔닝 전략 · 소셜 빅데이터 기반 인테리어 트렌드 분석</td></tr>
-        <tr><td>경호나이스</td><td>보안 서비스 브랜드 전략 · 타깃 소비자 분석 및 마케팅 방향 제안</td></tr>
-        <tr><td>현대자동차 × 이노션</td><td>SUV 신차 런칭 디지털 캠페인 기획 지원 · 온라인 여론 사전 분석</td></tr>
-        <tr><td>빙그레 · CJ제일제당 · 롯데칠성</td><td>식음료 브랜드 마케팅 전략 수립 · 소셜 트렌드 기반 신제품 컨셉 도출</td></tr>
-      </table>
 
-      <!-- 자체 개발 프레임워크 7종 — 클릭 버튼형 -->
-      <div class="framework-wrap" style="margin-bottom:16px;">
-        <p class="framework-label">자체 개발 분석 프레임워크 (7종) — 소셜 빅데이터 기반 마케팅 인사이트 도출 방법론</p>
-        <p style="font-size:12px; color:#909088; margin-bottom:12px;">클릭하면 개요를 확인할 수 있습니다</p>
-        <div class="tags" id="framework-tags">
+      <!-- ── 섹션 A: 자체 분석 프레임워크 ── -->
+      <div style="margin-bottom:28px;">
+        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A7B40; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(200,185,122,0.2);">SECTION A · 자체 개발 분석 프레임워크 (7종)</div>
+        <p style="font-size:12px; color:#909088; margin-bottom:12px;">소셜 빅데이터 기반 마케팅 인사이트 도출 방법론 — 고객사 제안 경쟁력 강화를 위해 자체 개발. 클릭하면 개요를 확인할 수 있습니다.</p>
+        <div class="tags">
           <span class="tag fw-btn" onclick="toggleFramework('trend-speed')">Trend Speed</span>
           <span class="tag fw-btn" onclick="toggleFramework('group-cycle')">Group Cycle Matrix</span>
           <span class="tag fw-btn" onclick="toggleFramework('rank-cross')">Rank Cross Zone</span>
@@ -3685,47 +3714,494 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
           <span class="tag fw-btn" onclick="toggleFramework('buzz-norm')">Buzz Norm</span>
           <span class="tag fw-btn" onclick="toggleFramework('brand-activation')">Brand Activation Matrix</span>
         </div>
-
-        <!-- 각 프레임워크 상세 -->
         <div id="trend-speed" class="fw-detail" style="display:none;">
           <strong>Trend Speed</strong>
-          <p>특정 키워드·이슈의 소셜 언급량 변화 속도를 측정하는 프레임워크. 언급량의 증가 기울기와 확산 속도를 수치화하여 트렌드의 "폭발성"과 "지속성"을 구분 분석. 신제품 런칭 타이밍 및 이슈 대응 시점 판단에 활용.</p>
-          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Trend Speed 도식</span></div>
+          <p>목적: 연관어 변화로 산업별 트렌드 변화 속도를 측정하여 마케팅 전략과 신제품 출시 주기 최적화.</p>
+          <p>방법: 소셜 데이터에서 카테고리 대표 키워드의 연관어 변화를 추적, 시간별 변화량을 0~100 지수로 수치화.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Trend Speed 예시 분석 이미지</span></div>
         </div>
         <div id="group-cycle" class="fw-detail" style="display:none;">
           <strong>Group Cycle Matrix</strong>
-          <p>소비자 집단(연령·성별·관심사)별 트렌드 수용 사이클을 매핑하는 프레임워크. 얼리어답터 → 메인스트림 → 레이트 매조리티 진입 시점을 그룹별로 시각화하여 타깃 마케팅 타이밍 전략 수립에 활용.</p>
+          <p>목적: 초기 수용자(FG)와 후기 다수자(SG)로 그룹화하여 향후 시장 트렌드 예측.</p>
+          <p>방법: FG(전문 커뮤니티·뉴스)와 SG(SNS 전반)의 버즈 생성 패턴을 2×2 매트릭스로 분석 — 잠재/성장/포화/소멸 트렌드 4분면 진단.</p>
           <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Group Cycle Matrix 도식</span></div>
         </div>
         <div id="rank-cross" class="fw-detail" style="display:none;">
-          <strong>Rank Cross Zone</strong>
-          <p>브랜드/키워드의 언급량 순위 변화와 감성 변화를 교차 분석하는 프레임워크. 4분면 매트릭스로 "상승하는 긍정", "하락하는 부정" 등 12가지 상태 구분. 경쟁 브랜드 포지션 비교 및 캠페인 효과 측정에 활용.</p>
-          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Rank Cross Zone 4분면 매트릭스</span></div>
+          <strong>Rank Cross Zone (RCM)</strong>
+          <p>목적: 카테고리 전체와 주요 브랜드의 연관어 비교를 통해 브랜드별 강·약점 및 차별점 파악.</p>
+          <p>방법: 연관어 순위 비교로 6개 Zone 분류 — Green(핫 트렌드) / Blue(브랜드 우위) / Red(브랜드 열위) / Yellow(취약 연관어) / Purple(차별 연관어) / White.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Rank Cross Zone 6분면 매트릭스</span></div>
         </div>
         <div id="cl-value" class="fw-detail" style="display:none;">
-          <strong>CL Value (Consumer Language Value)</strong>
-          <p>소비자가 실제로 사용하는 언어(소셜 텍스트)에서 브랜드 핵심 가치와의 연관도를 수치화하는 프레임워크. 브랜드가 의도한 메시지와 소비자가 실제로 인식하는 메시지 간의 간극 측정. 브랜드 커뮤니케이션 전략 재정립에 활용.</p>
+          <strong>CL Value (Core Linkword Value)</strong>
+          <p>목적: 5개년간 상위 50위 핵심 연관어(CL)의 연평균 순위를 1~100점으로 지수화, 중요도를 객관적으로 평가.</p>
+          <p>방법: 연도별 데이터 볼륨 차이를 보정하여 동일 기준 비교 → 단기 노이즈 제거, 장기적 중요도와 일관성 반영.</p>
           <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">CL Value 분석 예시</span></div>
         </div>
         <div id="trend-cycle" class="fw-detail" style="display:none;">
           <strong>Trend Cycle Matrix</strong>
-          <p>트렌드의 생애주기(등장 → 성장 → 정점 → 쇠퇴)를 소셜 데이터로 실시간 추적하는 프레임워크. 계절성·이벤트성·구조적 트렌드를 유형별로 구분하여 마케팅 개입 시점 최적화. 신제품 개발 및 캠페인 기획 타이밍 의사결정에 활용.</p>
+          <p>목적: 중분류 연관어 수 증감률(X축)과 CL-Value 증감률(Y축) 교차 분석으로 향후 트렌드 경향성 예측.</p>
+          <p>방법: 잠재/집중/확산/분산 4분면으로 카테고리 성장 가능성 진단.</p>
           <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Trend Cycle Matrix 도식</span></div>
         </div>
         <div id="buzz-norm" class="fw-detail" style="display:none;">
           <strong>Buzz Norm</strong>
-          <p>동종 업계 평균 소셜 언급량 대비 특정 브랜드의 버즈량을 정규화(Normalization)하는 프레임워크. 절대적 수치가 아닌 업계 기준값 대비 상대적 위치를 파악하여 마케팅 투자 대비 효율(ROI) 측정의 기준선으로 활용.</p>
+          <p>목적: 카테고리 브랜드들의 3개년 연평균 버즈량(Size)과 증감률(Change)로 브랜드 상대적 활성화 수준 비교.</p>
+          <p>방법: Size Buzz Norm × Change Buzz Norm 교차 분석 → 잠재/주목/유망/관망 4분면으로 포지셔닝 진단.</p>
           <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Buzz Norm 비교 차트</span></div>
         </div>
         <div id="brand-activation" class="fw-detail" style="display:none;">
           <strong>Brand Activation Matrix</strong>
-          <p>브랜드 활성화 수준을 인지(Awareness) · 관심(Interest) · 경험(Experience) · 옹호(Advocacy) 4단계로 측정하고, 각 단계별 소셜 버즈 비중을 시각화하는 프레임워크. 브랜드 건강도 진단 및 단계별 마케팅 전략 방향 설정에 활용.</p>
-          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Brand Activation Matrix 4단계 다이어그램</span></div>
+          <p>목적: 카테고리 내 브랜드 상대적 위치 진단 및 전략적 실행 방안 도출.</p>
+          <p>방법: Size/Change Buzz Norm을 기준으로 분면을 나눠 브랜드 버즈 활성화 수준 체계적 진단 → 잠재/주목/유망/관망 시각화.</p>
+          <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">Brand Activation Matrix 4분면 예시</span></div>
         </div>
       </div>
 
-      <!-- 크리에이티브 아레나는 대학생 시절 수상이므로 대홍기획 섹션으로 이동 -->
-      <p class="po-link" style="margin-top:12px; color:#8A7B40;">→ 식품·뷰티·금융·아웃도어·가구 등 20개+ 산업군에 걸쳐 소비자 데이터 기반 마케팅 전략 수립. 이 시기 개발한 7종의 자체 분석 프레임워크는 이후 IT 회사에서 분석 시스템 기획에 직접 활용됨.</p>
+      <!-- ── 섹션 B: 클라이언트 분석 보고서 ── -->
+      <div style="margin-bottom:28px;">
+        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A7B40; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(200,185,122,0.2);">SECTION B · 클라이언트 프로젝트 — 소셜·소비자 분석 보고서</div>
+        <p style="font-size:12px; color:#909088; margin-bottom:12px;">클릭하면 상세 내용을 확인할 수 있습니다.</p>
+
+        <!-- B-01 맘스터치 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">맘스터치 화덕피자 신사업 컨셉 수립</span>
+            <span class="fw-acc-meta">2017 · SNS 약 1,000만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>맘스터치 신사업(붐바타 – 화덕피자 브랜드)의 시장 가능성과 소비자 요구를 분석하여 매장 내 신규 상품 확장 방향 제시</td></tr>
+              <tr><td>배경</td><td>화덕피자는 기존 피자 시장에서 프리미엄 카테고리로 자리잡으며, 소비자의 점심·간편식 선호 증가 트렌드 형성</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 1,000만건 / 주요 키워드: 화덕, 피자, 화덕피자, 붐바타, 서브웨이</td></tr>
+              <tr><td>사용 도구</td><td>Excel · PowerPoint · ㈜와이즈넛 D-MAP 분석 솔루션</td></tr>
+            </table>
+            <p style="font-size:12px; font-weight:700; color:#C8C8C2; margin-bottom:8px;">핵심 분석 결과</p>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>T.P.O 분석 ①</td><td>화덕피자는 '점심'과 '간편식' 상황에서 높은 선호도 · 일반 피자는 '저녁'과 조합이 높게 나타남</td></tr>
+              <tr><td>T.P.O 분석 ②</td><td>화덕피자는 보완재로 '샐러드'와의 조합이 강하게 나타남 · 일반 피자는 '치킨'과 조합 높음</td></tr>
+              <tr><td>결론 및 제안</td><td>점심 시장 확장을 위해 건강한 이미지 강조 신규 제품 라인 + 프리미엄 브랜드 포지셔닝 전략 제안 / 화덕피자 외 점심용 '샌드위치 중심 라인' 추가 / 화덕피자와 곁들일 '샐러드' 제품 다양화</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">맘스터치 T.P.O 분석 차트 + 연관어 비교표</span></div>
+          </div>
+        </div>
+
+        <!-- B-02 동국제약 훼라민큐 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">동국제약 훼라민큐 갱년기 트렌드 분석</span>
+            <span class="fw-acc-meta">2017 · SNS 약 11만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>백수오궁 광고 캠페인 효과 분석 — 광고의 기대 효과와 실질적 영향을 정량·정성적으로 평가</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 11만건 / 주요 키워드: 갱년기+백수오</td></tr>
+              <tr><td>사용 도구</td><td>Excel · PowerPoint · 다음소프트 소셜매트릭스</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과 ①</td><td>광고 진행 중 백수오 효능/안정성 관련 버즈 96.9% 증가 (광고 전 194건 → 광고 중 382건)</td></tr>
+              <tr><td>분석 결과 ②</td><td>백수오 효능과 안정성에 대한 '신뢰' 평판이 광고 후 92% 증가, 광고 후에도 88% 수준 유지</td></tr>
+              <tr><td>결론</td><td>광고가 백수오의 효능과 안정성에 대한 신뢰 제고에 기여했음을 데이터로 입증</td></tr>
+              <tr><td>결과물</td><td>'서양승마' 컨셉의 TVCF 제작에 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">동국제약 훼라민큐 광고 효과 분석 차트</span></div>
+          </div>
+        </div>
+
+        <!-- B-03 슬립앤슬립 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">슬립앤슬립 숙면/침구 트렌드 분석</span>
+            <span class="fw-acc-meta">2017 · SNS 약 70만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>슬립앤슬립(S&S)의 브랜드 이미지 차별화와 매력도 제고를 위한 방안 마련</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 70만건 / 주요 키워드: 슬립앤슬립, 이브자리, 알레르망</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과</td><td>S&S의 차별적 USP → '체형'·'건강한'·'도움되다' / 이브자리 → '편안한' / 알레르망 → '부드러운'</td></tr>
+              <tr><td>결론</td><td>'체형과 건강'을 중심으로 소비자와의 연관성을 강화하여 브랜드 매력도를 높이는 방향 제안</td></tr>
+              <tr><td>결과물</td><td>'자면서 건강해지세요, 숙면타퍼 G2' 카피 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">슬립앤슬립 브랜드 USP 비교 분석표</span></div>
+          </div>
+        </div>
+
+        <!-- B-04 팔도 라면 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">팔도 라면 트렌드 분석</span>
+            <span class="fw-acc-meta">2016 · SNS 약 100만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>라면 시장의 최신 트렌드 파악 및 제품 기획·마케팅 방향성 제시</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 100만건 / 주요 키워드: 라면, 왕뚜껑</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과 ①</td><td>'속성/사리'에 관한 연관어 비중이 최근 높게 증가, 사리에 대한 관심 증가 포착</td></tr>
+              <tr><td>분석 결과 ②</td><td>왕뚜껑의 차별적 USP → '면(쫄깃한 면발)'과 '광고·모델'</td></tr>
+              <tr><td>결과물</td><td>라면업계 최초 제면용 '탕종분' 활용 봉지 왕뚜껑 출시 / 기생충·스카이캐슬 패러디 TVCF 집행</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">라면 vs 왕뚜껑 연관어 비교 분석표</span></div>
+          </div>
+        </div>
+
+        <!-- B-05 현대엘리베이터 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">현대엘리베이터 광고 효과 조사</span>
+            <span class="fw-acc-meta">2019 · 소비자 서베이 (온라인 설문)</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>4차 산업 기술력·미래 비전 강조 TVCF 광고 효과 분석 및 차기 광고 제작 준비</td></tr>
+              <tr><td>사용 데이터</td><td>소비자 조사 데이터 (TVCF 평가, 온라인 설문)</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과</td><td>광고 시청 전후 브랜드 호감도 43.2% → 66.0% (22.8%p↑) / 광고 만족도 5.4점 (업계 평균 4.8점)</td></tr>
+              <tr><td>긍정 요소</td><td>첨단 기술력·미래지향적 비전·광고 연출에 대한 소비자 긍정 반응</td></tr>
+              <tr><td>보완 요소</td><td>전문 용어가 어렵다는 의견 / 현재 적용 사례 부족 지적</td></tr>
+              <tr><td>결과물</td><td>19년도 기업 PR 캠페인 2위 달성 / '전에 없던 세상이 함께 타고 있다' TVCF 제작</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">현대엘리베이터 광고 시청 전후 호감도 비교 차트</span></div>
+          </div>
+        </div>
+
+        <!-- B-06 한국야쿠르트 윌 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">한국야쿠르트 윌 TV광고 효과 분석</span>
+            <span class="fw-acc-meta">2017 · SNS 약 2,000건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>헬리코박터 프로젝트 윌 TV 광고 캠페인 소비자 반응 및 광고 효과 정량·정성 평가</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 2,000건 / 주요 키워드: 헬리코박터 프로젝트 윌, 윌+α</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과</td><td>캠페인 이전 대비 버즈량 101% 증가 / 긍정율 16년 대비 11%p 상승</td></tr>
+              <tr><td>연관어 변화</td><td>전년 대비 '저지방'·'블랙커런트' 감소, '유산균'·'위암'·'헬리코박터균' 등 기능성 관련 연관어 증가</td></tr>
+              <tr><td>결과물</td><td>기능성 관련 키워드를 강조한 '윌을 넘어서다' TVCF 제작</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">한국야쿠르트 윌 광고 전후 버즈량·감성 변화 차트</span></div>
+          </div>
+        </div>
+
+        <!-- B-07 쿠퍼스 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">쿠퍼스 광고 효과 분석</span>
+            <span class="fw-acc-meta">2018 · SNS 약 100만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>간 건강·피로회복 소비자 니즈 평가 및 쿠퍼스의 커뮤니케이션 전략 방향 탐색</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 100만건 / 주요 키워드: 간건강, 피로회복, 쿠퍼스, 박카스, 비타500, 우루사, 아로나민골드, 헛개컨디션</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과</td><td>다중대응일치분석 결과 쿠퍼스는 경쟁 브랜드 대비 '간 건강' 차별적 우위 보유 / 박카스·비타500·아로나민골드는 '피로회복' 중심 경쟁</td></tr>
+              <tr><td>결과물</td><td>'이 중에 안 힘든 사람 없다' 슬로건 TVCF 제작</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">쿠퍼스 경쟁 브랜드 포지셔닝 분석 차트</span></div>
+          </div>
+        </div>
+
+        <!-- B-08 동국제약 매입/판매량 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">동국제약 매입/판매량 예측 및 광고 상관관계 분석</span>
+            <span class="fw-acc-meta">2015~18 · POS DATA 362개 약국</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>매입량·판매량·재고량 데이터 분석으로 유통 구조 최적화 및 광고 효과와의 상관관계 파악</td></tr>
+              <tr><td>사용 데이터</td><td>면접원 방문 후 1:1 개별 면접 및 POS DATA 수집 (층화 비례 표본 추출법, 전국 362개 소매 약국)</td></tr>
+              <tr><td>사용 도구</td><td>Excel · PowerPoint · Nielsen Solution</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과 ①</td><td>매월 판매량·매입량·재고량 데이터 연계 분석으로 다음달 매입량 예측 → 약국 유통 구조 개선</td></tr>
+              <tr><td>분석 결과 ②</td><td>광고 집행 이후 판매량 상관관계 분석으로 광고 효과 정량화</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- B-09 한국야쿠르트 V-FOOD -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">한국야쿠르트 V-FOOD 브랜드 가치 조사</span>
+            <span class="fw-acc-meta">2016 · with 브랜드앤컴퍼니</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>V-FOOD 브랜드 현재 위상 파악 및 브랜드 Revitalization 전략 방향 제안</td></tr>
+              <tr><td>방법</td><td>소비자 서베이 조사 발주 · Research Proposal Writing · Analysis Frame Design 담당</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- B-10 아모레퍼시픽 려 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">아모레퍼시픽 려 광고 제작을 위한 샴푸 시장 조사</span>
+            <span class="fw-acc-meta">2018 · with 칸타코리아</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>려 제품 광고 제작을 위한 샴푸 시장 소비자 조사</td></tr>
+              <tr><td>방법</td><td>소비자 서베이 조사 발주 · Research Proposal Writing · Analysis Frame Design 담당</td></tr>
+              <tr><td>결과물</td><td>'탈모증상케어, 이제 과학적으로' 광고 제작에 반영</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /SECTION B -->
+
+      <!-- ── 섹션 C: 전략 제안 컨설팅 ── -->
+      <div style="margin-bottom:28px;">
+        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A7B40; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(200,185,122,0.2);">SECTION C · 클라이언트 프로젝트 — 브랜드·마케팅 전략 제안 컨설팅</div>
+        <p style="font-size:12px; color:#909088; margin-bottom:12px;">클릭하면 상세 내용을 확인할 수 있습니다.</p>
+
+        <!-- C-01 맘스터치 브랜딩 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">맘스터치 브랜드 관리 방향 제언</span>
+            <span class="fw-acc-meta">2016 · Branding Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>3위 브랜드 맘스터치가 1~2위(맥도날드·롯데리아)와 경쟁하기 위한 장기적 브랜드 방향성 필요</td></tr>
+              <tr><td>제안 방향</td><td>타 브랜드 대비 차별적 이미지가 강력하지 않은 소비자 인식 → '수제버거'로의 소구 방향 수립</td></tr>
+              <tr><td>브랜드 설계</td><td>Brand Vision '정성 어린 한 끼로 최고의 제품 제공' / Brand Essence '지켜주고 싶은 마음' / Slogan 'Heart is always Here MoM's Touch' / 브랜드 심볼·징글 제작 및 제품 아키텍처 개발</td></tr>
+              <tr><td>결과물</td><td>'묵직한 버거' TVCF 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">맘스터치 브랜드 전략 제안 주요 장표</span></div>
+          </div>
+        </div>
+
+        <!-- C-02 동국제약 인사돌 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">동국제약 인사돌 리포지셔닝 전략 제언</span>
+            <span class="fw-acc-meta">2016 · Branding Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>허가 변경에 따라 포지셔닝 재정립 필요 — 기존 '잇몸 치료제' 이미지에서 전환 요구</td></tr>
+              <tr><td>전략 방향</td><td>'잇몸 치료제' → '잇몸 관리제의 잇몸약'으로 이미지 전환 · 보조치료제 명시하면서도 일반의약품 지위 유지 · 안전성 강조로 신뢰도 확보</td></tr>
+              <tr><td>결과물</td><td>'잇몸에도 나이가 있습니다. 사랑으로 챙겨보세요' TVCF 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">동국제약 인사돌 리포지셔닝 전략 주요 장표</span></div>
+          </div>
+        </div>
+
+        <!-- C-03 수협은행 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">수협은행 브랜드 관리 방향 제언</span>
+            <span class="fw-acc-meta">2017 · Branding Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>수협은행은 '은행'으로서의 인식이 저조하며 브랜드 인지도도 낮음 · '어민 전용 은행' 이미지 탈피가 선행 과제</td></tr>
+              <tr><td>전략 방향</td><td>경쟁 은행과의 직접 경쟁보다 '시중은행'으로서의 이미지 확보를 선행 목표로 설정 · '국민 누구나, 전국 어디서나 이용 가능' 메시지 강조</td></tr>
+              <tr><td>결과물</td><td>'새로운 은행' TVCF 반영</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- C-04 팔도 비락식혜 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">팔도 비락식혜 브랜드 활성화 및 신제품 개발 전략</span>
+            <span class="fw-acc-meta">2017 · Branding + Communication Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>전통음료 시장 성장 둔화 · 매출 정체 상태 · '건강음료' 컨셉과 단맛 강한 식혜의 인지 부조화 존재</td></tr>
+              <tr><td>인사이트</td><td>'전통음료'에 대한 뚜렷한 음용 T.P.O 부족 발견 → 단맛이 필요한 상황(업무 시간·기상 시간·숙취 후)을 광고 소재로 활용해 음용 시점 제시</td></tr>
+              <tr><td>결과물</td><td>팔도×마블 '업무시간'·'기상시간' 편 광고 반영 / '비락 헛개 식혜' 신제품 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">팔도 비락식혜 브랜드 전략 주요 장표</span></div>
+          </div>
+        </div>
+
+        <!-- C-05 팔도 비빔면 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">팔도 비빔면 커뮤니케이션 방향성 정립</span>
+            <span class="fw-acc-meta">2018 · Branding + Communication + Contents Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>비국물 라면 시장 경쟁 심화 · 소비자 수요 전환 필요 시점</td></tr>
+              <tr><td>전략 방향</td><td>비빔면 시장 대표성을 넘어 비국물면 카테고리 전반에서 리더십 확립 목표 · 새로운 소비자층 확보 및 시장 전체 성장 전략</td></tr>
+              <tr><td>결과물</td><td>'누가 비벼도 맛있다' TVCF 반영</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- C-06 K2 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">K2 신성장 동력 모색 전략</span>
+            <span class="fw-acc-meta">2016 · Branding Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>아웃도어가 생활 패션으로 역할 확장되며 일반 스포츠·SPA 브랜드와 경쟁 심화 · K2만의 차별화 포지셔닝 필요</td></tr>
+              <tr><td>전략 방향</td><td>단순 패션 이상의 기술·기능 중심 패션 소구 · 가장 험하고 힘든 상황에서도 신체를 보호하는 기술/기능 강조 커뮤니케이션</td></tr>
+              <tr><td>결과물</td><td>'Protection For all' TVCF 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">K2 신성장 동력 전략 주요 장표</span></div>
+          </div>
+        </div>
+
+      </div><!-- /SECTION C -->
+
+      <!-- ── 섹션 D: 캠페인 실무 집행 ── -->
+      <div style="margin-bottom:20px;">
+        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A7B40; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(200,185,122,0.2);">SECTION D · ATL·BTL 광고 캠페인 실무 운영</div>
+        <p style="font-size:12px; color:#909088; margin-bottom:12px;">클릭하면 상세 내용을 확인할 수 있습니다.</p>
+
+        <!-- D-01 현대엘리베이터 캠페인 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">현대엘리베이터 기업 PR 캠페인</span>
+            <span class="fw-acc-meta">2019</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'전에 없던 세상이 함께 타고 있다. LEADING TOMORROW' 편 제작 및 집행</td></tr>
+              <tr><td>목표</td><td>현대엘리베이터의 4차 산업 기술력 및 미래 비전 캠페인 전개</td></tr>
+              <tr><td>결과</td><td>19년도 기업 PR 캠페인 2위 달성 / 광고 시청 후 기업 호감도 43.2% → 66.0%</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">현대엘리베이터 TVCF 크리에이티브</span></div>
+          </div>
+        </div>
+
+        <!-- D-02 라이나생명 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">라이나생명 퍼펙트케어 암보험 다이렉트</span>
+            <span class="fw-acc-meta">2019</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'장성규, 보험회사를 가다' 편 제작 및 집행</td></tr>
+              <tr><td>배경</td><td>기존 보험 광고의 낮은 열독률과 바이럴 소재 부족 문제 해결 필요</td></tr>
+              <tr><td>전략</td><td>유튜브 '워크맨'으로 주목받던 장성규 모델 기용 → 신선한 접근법과 화제성 확보</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">라이나생명 유튜브 캠페인 크리에이티브</span></div>
+          </div>
+        </div>
+
+        <!-- D-03 팔도 비빔면 SHELL WE -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">팔도 비빔면 SHELL WE 비빔 캠페인</span>
+            <span class="fw-acc-meta">2018</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'Shell We 비빔?' 편 제작 및 집행</td></tr>
+              <tr><td>배경</td><td>비빔면 꽃 한정판 출시 · 둥지냉면·함흥비빔면 등 경쟁사 신제품 공세 속 리딩 브랜드 위상 강화 필요</td></tr>
+              <tr><td>전략</td><td>탱고 소재를 활용해 Fashionable/Fun 톤앤매너 기반 캠페인 · '맛이란 말이 필요 없이 느껴져야 하는 것' 메인 메시지</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">팔도 비빔면 SHELL WE 비빔 TVCF 크리에이티브</span></div>
+          </div>
+        </div>
+
+        <!-- D-04 아모레퍼시픽 프리메라 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">아모레퍼시픽 프리메라 와일드씨드세럼</span>
+            <span class="fw-acc-meta">2018</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'시들지 않는 탄력을 얻다. 킹콩세럼' 편 · 유튜브·잡지·신문 광고 제작 및 집행</td></tr>
+              <tr><td>전략</td><td>'킹콩 세럼' 슬로건을 활용하여 브랜드 인지도 상승 유도</td></tr>
+              <tr><td>담당 역할</td><td>Branding Strategy · Copyrighting/Naming · Media Planning · 영상 제작 준비</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">프리메라 킹콩세럼 유튜브·인쇄 광고 크리에이티브</span></div>
+          </div>
+        </div>
+
+        <!-- D-05 아모레퍼시픽 려 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">아모레퍼시픽 려 자양윤모</span>
+            <span class="fw-acc-meta">2018</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'있을 때 잘하겠습니다. 탈모 증상 케어 샴푸 려 자양윤모' TVCF 제작 및 집행</td></tr>
+              <tr><td>배경</td><td>려 자양윤모 판매량 둔화 지속 · 브랜드 리프레쉬 필요</td></tr>
+              <tr><td>전략</td><td>박서준 모델을 활용, '있을 때 잘하자'는 위트 있는 메시지 전달</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">려 자양윤모 TVCF 크리에이티브</span></div>
+          </div>
+        </div>
+
+        <!-- D-06 초록우산 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">초록우산 어린이재단 놀이환경 개선 제안</span>
+            <span class="fw-acc-meta">2018</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>슬로건</td><td>'놀아도 괜찮아'</td></tr>
+              <tr><td>핵심 아이디어</td><td>FB·인스타그램의 음소거 재생 특성을 활용 → 영상 이미지와 실제 사운드를 다르게 연출 → '아이의 마음은 주의 깊게 듣지 않으면 들리지 않는다'는 메시지 전달</td></tr>
+              <tr><td>특이사항</td><td>전략 부서(AP) 재직 중 카피라이터 역할 수행 · 제작팀 CD로부터 카피라이터 스카우트 제안을 받을 만큼 높은 평가 · 비록 실주했지만 개인적으로 의미 있는 프로젝트</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">초록우산 '놀아도 괜찮아' 스토리보드</span></div>
+          </div>
+        </div>
+
+        <!-- D-07 저출산고령사회위원회 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">저출산고령사회위원회 아동돌봄 정책성과 홍보영상</span>
+            <span class="fw-acc-meta">2019</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>아동돌봄 정책 1년간 성과 홍보 영상 제작</td></tr>
+              <tr><td>방식</td><td>정책에 대한 시민 인터뷰 영상 중심 콘텐츠 구성</td></tr>
+              <tr><td>담당 역할</td><td>영상 제작 실무 참여 (preparation for filming)</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /SECTION D -->
+
+      <p class="po-link" style="margin-top:4px; color:#8A7B40;">→ 식품·뷰티·금융·아웃도어·가구 등 20개+ 산업군에 걸쳐 소비자 데이터 기반 마케팅 전략 수립. 이 시기 개발한 7종의 자체 분석 프레임워크는 이후 IT 회사에서 분석 시스템 기획에 직접 활용됨.</p>
     </div>
   </div>
 
@@ -4079,6 +4555,21 @@ function goTo(targetId, bodyId, iconId) {
 function toggleSlide(header) {
   const card = header.parentElement;
   card.classList.toggle('open');
+}
+
+// ── 프레임워크 아코디언 (B/C/D 섹션) — 하나만 열림 ──
+function toggleFwAcc(header) {
+  var item = header.parentElement;
+  var section = item.parentElement;
+  var isOpen = item.classList.contains('open');
+  // 같은 섹션 내 모두 닫기
+  section.querySelectorAll('.fw-acc').forEach(function(acc) {
+    acc.classList.remove('open');
+  });
+  // 클릭한 것이 닫혀있었으면 열기
+  if (!isOpen) {
+    item.classList.add('open');
+  }
 }
 
 // ── 프레임워크 버튼 토글 ──
