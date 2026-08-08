@@ -4429,17 +4429,25 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 function toggleProject(header) {
   var acc = header.parentElement;
   var isOpen = acc.classList.contains('open');
-  // 모든 프로젝트 닫기
+  // 모든 프로젝트 닫기 + 내부 하위(슬라이드) 초기화
   document.querySelectorAll('.proj-accordion').forEach(function(a) {
     a.classList.remove('open');
     var t = a.querySelector('.proj-acc-toggle');
     if (t) t.textContent = '＋';
+    a.querySelectorAll('.slide-card.open').forEach(function(c){ c.classList.remove('open'); });
   });
-  // 클릭한 것만 열기 (이미 열려있으면 닫힌 상태 유지)
+  // 클릭한 것만 열기 (첫 슬라이드는 자동으로 열지 않고 깜빡임으로 안내)
   if (!isOpen) {
     acc.classList.add('open');
     var toggle = header.querySelector('.proj-acc-toggle');
     if (toggle) toggle.textContent = '－';
+    var first = acc.querySelector('.slide-card');
+    if (first) {
+      first.classList.remove('blink-hint');
+      void first.offsetWidth;
+      first.classList.add('blink-hint');
+      setTimeout(function(){ first.classList.remove('blink-hint'); }, 1600);
+    }
   }
 }
 
@@ -4495,6 +4503,7 @@ function toggleBeforePo(header) {
     a.classList.remove('open');
     var t = a.querySelector('.bp-acc-toggle');
     if (t) t.textContent = '＋';
+    a.querySelectorAll('.fw-acc.open').forEach(function(f){ f.classList.remove('open'); });
   });
   if (!isOpen) {
     acc.classList.add('open');
@@ -4598,7 +4607,6 @@ function toggleFramework(id) {
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.slides').forEach(slides => {
     const first = slides.querySelector('.slide-card');
-    if (first) first.classList.add('open');
   });
 });
 
@@ -4875,6 +4883,9 @@ document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
 .fw-btn { cursor:pointer !important; transition:all 0.15s !important; }
 .fw-btn:hover { background:#23262C !important; color:#FFFFFF !important; border-color:#23262C !important; }
 .fw-btn.active { background:rgba(35,38,44,0.10) !important; color:#23262C !important; border-color:#23262C !important; }
+/* 상위 열 때 첫 하위 슬라이드 테두리 깜빡임 (선택 유도) */
+@keyframes blinkHint { 0%,100% { border-color:#E3E5E9; } 50% { border-color:#23262C; } }
+.slide-card.blink-hint { animation: blinkHint 0.5s ease-in-out 3 !important; }
 </style>
 
 </body>
