@@ -4509,6 +4509,13 @@ function toggleBeforePo(header) {
     acc.classList.add('open');
     var toggle = header.querySelector('.bp-acc-toggle');
     if (toggle) toggle.textContent = '－';
+    var firstHint = acc.querySelector('.fw-btn, .fw-acc');
+    if (firstHint) {
+      firstHint.classList.remove('blink-hint');
+      void firstHint.offsetWidth;
+      firstHint.classList.add('blink-hint');
+      setTimeout(function(){ firstHint.classList.remove('blink-hint'); }, 1600);
+    }
   }
 }
 
@@ -4883,9 +4890,9 @@ document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
 .fw-btn { cursor:pointer !important; transition:all 0.15s !important; }
 .fw-btn:hover { background:#23262C !important; color:#FFFFFF !important; border-color:#23262C !important; }
 .fw-btn.active { background:rgba(35,38,44,0.10) !important; color:#23262C !important; border-color:#23262C !important; }
-/* 상위 열 때 첫 하위 슬라이드 테두리 깜빡임 (선택 유도) */
-@keyframes blinkHint { 0%,100% { border-color:#E3E5E9; } 50% { border-color:#23262C; } }
-.slide-card.blink-hint { animation: blinkHint 0.5s ease-in-out 3 !important; }
+/* 상위 열 때 첫 하위 요소 아웃라인 깜빡임 (선택 유도) — 슬라이드/버튼/항목 공통 */
+@keyframes blinkHint { 0%,100% { outline-color:transparent; } 50% { outline-color:#23262C; } }
+.blink-hint { outline:2px solid transparent; outline-offset:1px; animation:blinkHint 0.5s ease-in-out 3 !important; }
 </style>
 
 </body>
