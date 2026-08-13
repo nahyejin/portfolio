@@ -822,13 +822,14 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: var(--mono);
-  font-size: 11px;
+  font-family: var(--sans);
+  font-size: 13px;
   color: var(--gold);
   margin-top: 12px;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border: 1px solid var(--gold-dim);
-  letter-spacing: 0.06em;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
 }
 
 /* 클라이언트 브랜드 월 */
@@ -1053,7 +1054,7 @@ footer {
 <section id="hero" style="max-width:1200px;">
   <p class="hero-eyebrow fade-up fade-up-1">Product Owner · Data Platform Planner</p>
   <h1 class="hero-name fade-up fade-up-2">나혜진<span>.</span></h1>
-  <p class="hero-title fade-up fade-up-3">
+  <p class="hero-subtitle fade-up fade-up-3" style="font-size:clamp(13px,1.6vw,16px); font-weight:400; color:rgba(255,255,255,0.5); margin-bottom:20px; max-width:640px; line-height:1.6;">
     뷰티·금융·식품·공공·패션·가전 등 20개+ 산업군에 걸친<br>
     마케팅 전략 수립과 빅데이터 분석 경험을 바탕으로,<br>
     데이터 플랫폼 비즈니스를 기획하는 8년차 PO
@@ -1076,7 +1077,7 @@ footer {
       <span class="stat-label">광고/마케팅 캠페인 집행·운영 경험</span>
     </div>
   </div>
-  <p class="fade-up fade-up-4" style="font-size:14px; color:rgba(255,255,255,0.55); margin-top:18px; line-height:1.7; letter-spacing:-0.01em;">광고 전략가의 시장 감각 × 데이터 분석가의 논리 × 서비스 기획자의 구조 설계<br>— 하나의 제품에 세 가지 시선을 동시에 적용합니다.</p>
+  <p class="hero-tagline fade-up fade-up-4" style="font-size:clamp(16px,2.2vw,22px); font-weight:500; color:rgba(255,255,255,0.85); margin-top:24px; margin-bottom:36px; max-width:700px; line-height:1.65; letter-spacing:-0.01em;">광고 전략가의 시장 감각 × 데이터 분석가의 논리 × 서비스 기획자의 구조 설계<br><span style="color:rgba(255,255,255,0.55);">—</span> 하나의 제품에 세 가지 시선을 동시에 적용합니다.</p>
   <div class="hero-cta fade-up fade-up-4">
     <a href="#cf-index" class="btn-primary">프로젝트 보기 →</a>
     <a href="javascript:void(0)" onclick="document.getElementById('contact-modal').style.display='flex'" class="btn-secondary">연락하기</a>
@@ -1626,6 +1627,31 @@ footer {
 @keyframes idlePulse {
   0%, 100% { box-shadow: none; }
   50% { box-shadow: none; }
+}
+
+/* 스크롤 가이드 깜빡임 */
+.scroll-guide-blink {
+  animation: guideBlink 1.2s ease-in-out 3;
+}
+@keyframes guideBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* 토글 헤더 스크롤 시 깜빡여서 클릭 가능 인지 */
+@keyframes toggleHeaderBlink {
+  0% { background: transparent; }
+  30% { background: rgba(245,197,24,0.18); }
+  60% { background: transparent; }
+  100% { background: transparent; }
+}
+#projects-toggle.scroll-blink { animation: toggleHeaderBlink 0.8s ease 3; }
+#beforepo-toggle.scroll-blink { animation: toggleHeaderBlinkGray 0.8s ease 3; }
+@keyframes toggleHeaderBlinkGray {
+  0% { background: transparent; }
+  30% { background: rgba(110,114,122,0.15); }
+  60% { background: transparent; }
+  100% { background: transparent; }
 }
 
 .index-num {
@@ -2491,7 +2517,7 @@ footer {
     <span style="font-family:var(--mono); font-size:12px; color:#F7DE7A; font-weight:700; letter-spacing:0.08em;">AFTER PO</span>
     <span style="color:rgba(255,255,255,0.55); font-size:13px;">2025~</span>
   </div>
-  <div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px;">아래로 스크롤하면 프로젝트 상세 내용을 최신순으로 만나보실 수 있습니다</div>
+  <div class="scroll-guide-blink" style="font-size:15px; color:rgba(255,255,255,0.85); margin-top:14px; font-weight:500; letter-spacing:-0.01em;">아래 프로젝트 항목을 클릭하면, 최신순으로 상세 내용을 펼쳐볼 수 있습니다 ↓</div>
 </div>
 
 <!-- ── PROJECTS (라이트 테마) ── -->
@@ -4984,6 +5010,21 @@ function toggleSection(bodyId, iconId) {
   var isOpen = body.style.display !== 'none';
   body.style.display = isOpen ? 'none' : 'block';
   icon.textContent = isOpen ? '＋' : '－';
+  if (isOpen) {
+    // 닫힐 때: 하위 아코디언 모두 닫기
+    body.querySelectorAll('.proj-accordion.open').forEach(function(a) {
+      a.classList.remove('open');
+      var t = a.querySelector('.proj-acc-toggle'); if (t) t.textContent = '＋';
+      a.querySelectorAll('.slide-card.open').forEach(function(s) { s.classList.remove('open'); });
+    });
+    body.querySelectorAll('.bp-accordion.open').forEach(function(a) {
+      a.classList.remove('open');
+      var t = a.querySelector('.bp-acc-toggle'); if (t) t.textContent = '＋';
+      a.querySelectorAll('.fw-acc.open').forEach(function(f){ f.classList.remove('open'); });
+      a.querySelectorAll('.fw-detail').forEach(function(d){ d.style.display='none'; });
+      a.querySelectorAll('.fw-btn.active').forEach(function(b){ b.classList.remove('active'); });
+    });
+  }
   if (!isOpen) {
     setTimeout(updateActive, 80);
     var firstAcc = body.querySelector('.proj-accordion, .bp-accordion');
@@ -5211,6 +5252,30 @@ document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
+
+// ── 토글 헤더 스크롤 도달 시 3회 깜빡임 ──
+(function() {
+  var blinkTargets = ['projects-toggle', 'beforepo-toggle'];
+  var blinkObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        // 이미 열려있으면 깜빡이지 않음
+        var bodyId = el.id === 'projects-toggle' ? 'projects-body' : 'beforepo-body';
+        var body = document.getElementById(bodyId);
+        if (body && body.style.display !== 'none') return;
+        el.classList.remove('scroll-blink');
+        void el.offsetWidth;
+        el.classList.add('scroll-blink');
+        setTimeout(function() { el.classList.remove('scroll-blink'); }, 2600);
+      }
+    });
+  }, { threshold: 0.5 });
+  blinkTargets.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) blinkObserver.observe(el);
+  });
+})();
 </script>
 
 <!-- ── 플로팅 네비게이터 ── -->
