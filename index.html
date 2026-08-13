@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=1200">
 <title>나혜진 — Product Owner Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -10,13 +10,13 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 :root {
-  --bg: #0A0A0A;
-  --bg-card: #141414;
-  --bg-card-hover: #1A1A1A;
-  --border: #3A3A3A;
-  --border-light: #484848;
-  --gold: #D4C584;
-  --gold-dim: #A89B62;
+  --bg: #23262C;
+  --bg-card: #2A2D34;
+  --bg-card-hover: #34373F;
+  --border: #3E424B;
+  --border-light: #4C505A;
+  --gold: #F5C518;
+  --gold-dim: #C9A227;
   --text-primary: #F8F8F4;
   --text-secondary: #C8C8C2;
   --text-muted: #888880;
@@ -35,6 +35,8 @@ body {
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* ── NAVIGATION ── */
@@ -46,7 +48,7 @@ nav.site-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(10,10,10,0.92);
+  background: rgba(35,38,44,0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -163,7 +165,7 @@ nav.site-nav {
   gap: 8px;
   padding: 14px 28px;
   background: var(--gold);
-  color: #0A0A0A;
+  color: #23262C;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
@@ -284,7 +286,7 @@ section {
 /* ── PROJECTS ── */
 #projects {
   border-top: 4px solid var(--gold);
-  background: #F8F7F4;
+  background: #FFFFFF;
   max-width: 100%;
   padding: 80px 0;
 }
@@ -299,15 +301,15 @@ section {
 
 /* 라이트 테마 오버라이드 — projects + before-po */
 .light-section {
-  background: #F8F7F4;
+  background: #FFFFFF;
 }
 
 .light-section .section-header {
-  border-bottom-color: #D8D4CC;
+  border-bottom-color: #D6D9DE;
 }
 
 .light-section .section-eyebrow {
-  color: #8A7B40;
+  color: #23262C;
 }
 
 .light-section .section-title {
@@ -323,13 +325,13 @@ section {
 }
 
 .light-section .project-index {
-  color: #8A7B40;
+  color: #23262C;
 }
 
 .light-section .status-done {
   background: rgba(138,123,64,0.08);
-  color: #6A5D30;
-  border-color: #B0A060;
+  color: #2E3138;
+  border-color: #4C505A;
 }
 
 .light-section .status-ongoing {
@@ -340,21 +342,21 @@ section {
 
 .light-section .slide-card {
   background: #FFFFFF;
-  border-color: #E0DDD6;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  border-color: #E3E5E9;
+  box-shadow: none;
 }
 
 .light-section .slide-card:hover {
-  border-color: #C8B97A;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-color: #23262C;
+  box-shadow: none;
 }
 
 .light-section .slide-card-header {
-  background: #FAFAF8;
+  background: #F7F8FA;
 }
 
 .light-section .slide-num {
-  color: #A89B62;
+  color: #6E727A;
 }
 
 .light-section .slide-title {
@@ -366,36 +368,36 @@ section {
 }
 
 .light-section .slide-card.open .slide-toggle {
-  color: #8A7B40;
+  color: #23262C;
 }
 
 .light-section .slide-content {
-  border-top-color: #E8E4DC;
+  border-top-color: #E6E8EC;
 }
 
 .light-section .slide-headline {
-  color: #8A7B40;
-  border-bottom-color: #E8E4DC;
+  color: #23262C;
+  border-bottom-color: #E6E8EC;
 }
 
 .light-section .sub-headline {
-  color: #6A5D30;
+  color: #2E3138;
 }
 
 .light-section .content-table th {
-  background: #F0EDE6;
+  background: #EDEFF2;
   color: #666660;
-  border-color: #E0DDD6;
+  border-color: #E3E5E9;
 }
 
 .light-section .content-table td {
   color: #333330;
-  border-color: #E0DDD6;
+  border-color: #E3E5E9;
 }
 
 .light-section .content-table td:first-child {
   color: #1A1A18;
-  background: #F8F6F2;
+  background: #F1F3F6;
 }
 
 .light-section .content-table tr:hover td {
@@ -403,7 +405,7 @@ section {
 }
 
 .light-section .content-table tr:hover td:first-child {
-  background: #F0EDE6;
+  background: #EDEFF2;
 }
 
 .light-section .body-text {
@@ -411,19 +413,19 @@ section {
 }
 
 .light-section .capability-tag {
-  border-color: #B0A060;
-  color: #6A5D30;
+  border-color: #4C505A;
+  color: #2E3138;
 }
 
 .light-section .code-block {
-  background: #F0EDE6;
-  border-color: #D8D4CC;
+  background: #EDEFF2;
+  border-color: #D6D9DE;
   color: #2A6A2A;
 }
 
 .light-section .img-placeholder {
-  background: #F0EDE6;
-  border-color: #C8C4BC;
+  background: #EDEFF2;
+  border-color: #C6C9CE;
   color: #888880;
 }
 
@@ -433,7 +435,7 @@ section {
 }
 
 .light-section .project-block {
-  border-bottom: 1px solid #E0DDD6;
+  border-bottom: 1px solid #E3E5E9;
   padding-bottom: 80px;
   margin-bottom: 80px;
 }
@@ -444,20 +446,20 @@ section {
 
 /* before-po 섹션도 라이트 */
 .light-section#before-po .timeline-item::before {
-  background: #E0DDD8;
+  background: #FFFFFF;
 }
 
 .light-section .timeline::before {
-  background: #D8D4CC;
+  background: #D6D9DE;
 }
 
 .light-section .timeline-item::before {
-  border-color: #8A7B40;
-  background: #F8F7F4;
+  border-color: #23262C;
+  background: #FFFFFF;
 }
 
 .light-section .timeline-period {
-  color: #8A7B40;
+  color: #23262C;
 }
 
 .light-section .timeline-company {
@@ -469,12 +471,12 @@ section {
 }
 
 .light-section .po-link {
-  color: #6A5D30;
-  border-color: #B0A060;
+  color: #2E3138;
+  border-color: #4C505A;
 }
 
 .light-section .brand-pill {
-  border-color: #D8D4CC;
+  border-color: #D6D9DE;
   color: #666660;
 }
 
@@ -483,13 +485,13 @@ section {
 }
 
 .light-section .tag {
-  border-color: #D8D4CC;
+  border-color: #D6D9DE;
   color: #555550;
 }
 
 .light-section .tag.gold {
-  border-color: #B0A060;
-  color: #6A5D30;
+  border-color: #4C505A;
+  color: #2E3138;
 }
 
 .project-block {
@@ -514,7 +516,7 @@ section {
 
 .project-status {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size:11px;
   padding: 3px 8px;
   letter-spacing: 0.08em;
 }
@@ -575,7 +577,7 @@ section {
 
 .slide-num {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size:11px;
   color: var(--gold-dim);
   letter-spacing: 0.08em;
   min-width: 52px;
@@ -617,8 +619,8 @@ section {
 /* 슬라이드 안의 이미지 플레이스홀더 */
 .img-placeholder {
   width: 100%;
-  background: #111;
-  border: 1px dashed #404040;
+  background: #1C1E24;
+  border: 1px dashed #4C505A;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -677,7 +679,7 @@ section {
   text-transform: uppercase;
   color: #B0B0A8;
   padding: 10px 16px;
-  background: #1A1A1A;
+  background: #34373F;
   border: 1px solid var(--border);
   font-weight: 500;
 }
@@ -696,7 +698,7 @@ section {
   font-weight: 600;
   white-space: nowrap;
   min-width: 140px;
-  background: #141414;
+  background: #2A2D34;
 }
 
 .content-table tr:hover td {
@@ -704,7 +706,7 @@ section {
 }
 
 .content-table tr:hover td:first-child {
-  background: #1A1A1A;
+  background: #34373F;
 }
 
 .sub-headline {
@@ -741,7 +743,7 @@ section {
 
 /* 코드 블록 (Boolean 쿼리 예시) */
 .code-block {
-  background: #0F0F0F;
+  background: #1C1E24;
   border: 1px solid var(--border-light);
   padding: 16px 20px;
   font-family: var(--mono);
@@ -853,30 +855,77 @@ section {
 
 .framework-label {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size:11px;
   color: var(--text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-/* 프레임워크 버튼 */
-.fw-btn {
+/* 프레임워크 아코디언 (B/C/D 섹션) */
+.fw-acc {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.fw-acc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
+}
+.fw-acc-header:hover {
+  background: rgba(255,255,255,0.04);
+}
+.fw-acc-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #C8C8C2;
+  flex: 1;
+}
+.fw-acc-meta {
+  font-size: 11px;
+  color: #606058;
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+.fw-acc-toggle {
+  font-size: 16px;
+  color: #606058;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+.fw-acc.open .fw-acc-toggle {
+  transform: rotate(45deg);
+  color: #EBCB3E;
+}
+.fw-acc-body {
+  display: none;
+  padding: 0 16px 14px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.fw-acc.open .fw-acc-body {
+  display: block;
+}
   cursor: pointer;
   transition: all 0.15s;
 }
 .fw-btn:hover {
-  background: rgba(200,185,122,0.25) !important;
+  background: rgba(245,197,24,0.25) !important;
   color: #5A4A20 !important;
 }
 .fw-btn.active {
-  background: rgba(200,185,122,0.35) !important;
+  background: rgba(245,197,24,0.35) !important;
   color: #3A2A10 !important;
-  border-color: #C8B97A !important;
+  border-color: #EBCB3E !important;
 }
 .fw-detail {
   background: rgba(255,255,255,0.8);
-  border: 1px solid #D8D4CC;
+  border: 1px solid #D6D9DE;
   border-radius: 6px;
   padding: 16px 20px;
   margin-top: 12px;
@@ -1035,7 +1084,7 @@ footer {
   <!-- 연락처 팝업 -->
   <div id="contact-modal" onclick="if(event.target===this)this.style.display='none'"
     style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:10000; align-items:center; justify-content:center; backdrop-filter:blur(4px);">
-    <div style="background:#141414; border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:48px 56px; text-align:center; position:relative; min-width:360px;">
+    <div style="background:#2A2D34; border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:48px 56px; text-align:center; position:relative; min-width:360px;">
       <button onclick="document.getElementById('contact-modal').style.display='none'"
         style="position:absolute; top:16px; right:20px; background:none; border:none; color:rgba(255,255,255,0.4); font-size:20px; cursor:pointer; line-height:1;">✕</button>
       <div style="font-family:var(--mono); font-size:11px; color:var(--gold); letter-spacing:0.1em; margin-bottom:24px;">CONTACT</div>
@@ -1197,7 +1246,7 @@ footer {
 }
 
 .cfs-banner-item.inactive {
-  background: rgba(212,197,132,0.18);
+  background: rgba(245,197,24,0.18);
   clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
 }
 
@@ -1217,7 +1266,7 @@ footer {
 .cfs-banner-role {
   font-size: 14px;
   font-weight: 800;
-  color: #0A0A0A;
+  color: #23262C;
   line-height: 1.3;
 }
 
@@ -1241,8 +1290,8 @@ footer {
 }
 
 .cfs-company-box {
-  background: rgba(212,197,132,0.1);
-  border: 1px solid rgba(212,197,132,0.3);
+  background: rgba(245,197,24,0.1);
+  border: 1px solid rgba(245,197,24,0.3);
   border-radius: 24px;
   padding: 14px 20px;
   text-align: center;
@@ -1282,14 +1331,14 @@ footer {
   display: flex;
   align-items: center;
   padding: 0 16px;
-  color: #484848;
+  color: #4C505A;
   font-size: 18px;
   align-self: center;
 }
 
 .cfs-desc-box {
   padding: 14px 20px;
-  border-left: 2px solid rgba(212,197,132,0.2);
+  border-left: 2px solid rgba(245,197,24,0.2);
 }
 
 .cfs-desc-box.dim {
@@ -1310,7 +1359,7 @@ footer {
   color: var(--gold);
   margin-bottom: 6px;
   text-decoration: underline;
-  text-decoration-color: rgba(212,197,132,0.4);
+  text-decoration-color: rgba(245,197,24,0.4);
 }
 
 .cfs-desc-text {
@@ -1344,7 +1393,7 @@ footer {
 }
 
 .cfd-badge.dim {
-  border-color: #484848;
+  border-color: #4C505A;
   color: #909088;
 }
 
@@ -1397,7 +1446,7 @@ footer {
 .cfd-company-year {
   font-size: 44px;
   font-weight: 900;
-  color: rgba(212,197,132,0.15);
+  color: rgba(245,197,24,0.15);
   line-height: 1;
   font-family: Georgia, serif;
   font-style: italic;
@@ -1416,7 +1465,7 @@ footer {
   border-radius: 50%;
   background: var(--gold);
   border: 2px solid var(--bg);
-  box-shadow: 0 0 0 1px var(--gold);
+  box-shadow: none;
 }
 
 .cfd-items {
@@ -1531,20 +1580,20 @@ footer {
   transition: background 0.2s;
 }
 #projects-toggle:hover, #beforepo-toggle:hover {
-  background: rgba(200,185,122,0.14);
+  background: rgba(245,197,24,0.14);
 }
 
 /* 펼치기 버튼(원형) hover 시 확대 + 진한 배경 */
 #projects-toggle:hover #projects-toggle-icon,
 #beforepo-toggle:hover #beforepo-toggle-icon {
   transform: scale(1.15);
-  background: #C8B97A;
+  background: #EBCB3E;
   color: #fff !important;
-  box-shadow: 0 0 0 6px rgba(200,185,122,0.18);
+  box-shadow: none;
 }
 #beforepo-toggle:hover #beforepo-toggle-icon {
-  background: #B0A88A;
-  box-shadow: 0 0 0 6px rgba(176,168,138,0.2);
+  background: #DBC55A;
+  box-shadow: none;
 }
 
 /* "펼쳐보기" 텍스트 hover 시 강조 + 살짝 bounce */
@@ -1553,12 +1602,12 @@ footer {
 }
 #projects-toggle:hover .toggle-hint {
   color: var(--gold) !important;
-  font-weight: 700;
+  font-weight: 500;
   animation: hintBounce 0.6s ease infinite;
 }
 #beforepo-toggle:hover .toggle-hint {
-  color: #8A7B40 !important;
-  font-weight: 700;
+  color: #C9A227 !important;
+  font-weight: 500;
   animation: hintBounce 0.6s ease infinite;
 }
 @keyframes hintBounce {
@@ -1574,8 +1623,8 @@ footer {
   animation: idlePulse 2.4s ease-in-out infinite;
 }
 @keyframes idlePulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(200,185,122,0.25); }
-  50% { box-shadow: 0 0 0 5px rgba(200,185,122,0); }
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: none; }
 }
 
 .index-num {
@@ -1588,7 +1637,7 @@ footer {
   justify-content: center;
   font-size: 16px;
   font-weight: 800;
-  color: #0A0A0A;
+  color: #23262C;
   flex-shrink: 0;
 }
 
@@ -1638,8 +1687,8 @@ footer {
 }
 
 .icm-card.gold-card {
-  border-color: rgba(212,197,132,0.3);
-  background: rgba(212,197,132,0.04);
+  border-color: rgba(245,197,24,0.3);
+  background: rgba(245,197,24,0.04);
 }
 
 .icm-card::before {
@@ -1680,7 +1729,7 @@ footer {
   top: 50%;
   width: 16px;
   height: 1px;
-  background: rgba(212,197,132,0.3);
+  background: rgba(245,197,24,0.3);
 }
 
 .icm-arrow-detail {
@@ -1775,7 +1824,7 @@ footer {
   /* ── Before PO ── */
   #before-po { padding: 20px 20px 60px !important; }
   .bp-acc-header { padding: 14px 16px; gap: 10px; }
-  .bp-acc-period { min-width: 60px; font-size: 9px; }
+  .bp-acc-period { min-width: 60px; font-size:11px; }
   .bp-acc-title strong { font-size: 14px; }
   .bp-acc-body { padding: 16px; }
 
@@ -1806,7 +1855,7 @@ footer {
   <div class="its-me-wrap">
     <div class="its-me-photo-block">
       <div class="its-me-bg-shape"></div>
-      <img src="assets/images/itsme_profile.jpg" alt="나혜진 프로필" style="position:absolute; top:10px; left:10px; width:180px; height:220px; object-fit:cover; object-position:center top; border:1px solid #333;">
+      <img src="assets/PF_images/itsme_profile.jpg" alt="나혜진 프로필" style="position:absolute; top:10px; left:10px; width:180px; height:220px; object-fit:cover; object-position:center top; border:1px solid #333;">
       <div class="its-me-text">IT'S ME</div>
       <div class="its-me-contact">
         TEL : 010.6299.9384<br>
@@ -1830,9 +1879,9 @@ footer {
           <span>Text Solution <span style="color:#888880; margin-left:8px;">상</span></span>
           <span>PowerPoint <span style="color:#888880; margin-left:8px;">상</span></span>
           <span>Photoshop <span style="color:#888880; margin-left:8px;">상</span></span>
-          <span>Figma <span style="color:#888880; margin-left:8px;">중</span></span>
+          <span>Figma <span style="color:#888880; margin-left:8px;">상</span></span>
           <span>Notion <span style="color:#888880; margin-left:8px;">중</span></span>
-          <span>Cursor AI &amp; Claude Code <span style="color:#888880; margin-left:8px;">중</span></span>
+          <span>Cursor AI &amp; Claude Code <span style="color:#888880; margin-left:8px;">상</span></span>
           <span>SPSS <span style="color:#888880; margin-left:8px;">활용가능</span></span>
           <span>SQL <span style="color:#888880; margin-left:8px;">활용가능</span></span>
           <span>R <span style="color:#888880; margin-left:8px;">활용가능</span></span>
@@ -1864,9 +1913,9 @@ footer {
       <div class="wb-section">
         <div class="wb-label" style="color: #888880; font-size: 13px;">etc. INTEREST</div>
         <div style="display: flex; gap: 32px; padding-left: 28px; font-size: 12px; color: #888880; margin-top: 8px;">
-          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(212,197,132,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">✍</div>Writing Essay<br>& Poetry</div>
-          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(212,197,132,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🔍</div>Researching<br>& Exploring</div>
-          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(212,197,132,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🚴</div>Riding Bicycle<br>& Running</div>
+          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(245,197,24,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">✍</div>Writing Essay<br>& Poetry</div>
+          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(245,197,24,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🔍</div>Researching<br>& Exploring</div>
+          <div style="text-align:center;"><div style="width:40px;height:40px;border-radius:50%;background:rgba(245,197,24,0.15);margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🚴</div>Riding Bicycle<br>& Running</div>
         </div>
       </div>
     </div>
@@ -1903,22 +1952,22 @@ footer {
       <!-- ════════════════════════════════════════ -->
 
       <!-- [A] 분석가+광고 통합 구간: y=195~610 (연한 골드 + 빗금) -->
-      <rect x="100" y="195" width="160" height="415" fill="#EDD97A"/>
+      <rect x="100" y="195" width="160" height="415" fill="#FADE5C"/>
       <rect x="100" y="195" width="160" height="415" fill="url(#cfs-diag)" opacity="0.5"/>
 
       <!-- [B] 광고 구간: 분석가 도형 안에 포함됨을 표현 — 톤다운된 실선 -->
-      <rect x="106" y="436" width="148" height="176" fill="rgba(255,210,80,0.08)" stroke="rgba(200,170,60,0.55)" stroke-width="1.2" rx="3"/>
+      <rect x="106" y="436" width="148" height="176" fill="rgba(250,222,92,0.08)" stroke="rgba(200,170,60,0.55)" stroke-width="1.2" rx="3"/>
 
       <!-- [C] PO 구간: y=0~193 (진한 골드 단색 — 가장 상위) -->
-      <rect x="100" y="0" width="160" height="193" fill="#D4B84A"/>
+      <rect x="100" y="0" width="160" height="193" fill="#F5C518"/>
 
       <!-- 배너 상단 — 위를 향하는 화살촉 (현재/최신 방향) -->
-      <polygon points="100,0 260,0 180,-22" fill="#D4B84A"/>
+      <polygon points="100,0 260,0 180,-22" fill="#F5C518"/>
 
       <!-- 구간 경계선 -->
       <line x1="100" y1="193" x2="260" y2="193" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
       <!-- 광고/분석가 내부 경계 -->
-      <line x1="108" y1="438" x2="252" y2="438" stroke="rgba(255,220,100,0.6)" stroke-width="1.5" stroke-dasharray="6,3"/>
+      <line x1="108" y1="438" x2="252" y2="438" stroke="rgba(250,222,92,0.6)" stroke-width="1.5" stroke-dasharray="6,3"/>
 
       <!-- 역할 텍스트 (배너 위에 배치) -->
       <!-- PO -->
@@ -1947,8 +1996,8 @@ footer {
       <!-- ════════════════════════════════════════ -->
 
       <!-- PO 타원 (뉴엔AI) — 골드 윤곽선 강화 -->
-      <rect x="300" y="52" width="220" height="88" rx="44" ry="44" fill="rgba(212,185,74,0.12)" stroke="#D4C584" stroke-width="2"/>
-      <text x="410" y="84" fill="#D4C584" font-family="Pretendard,sans-serif" font-size="14" font-weight="700" text-anchor="middle">뉴엔AI (IT 회사)</text>
+      <rect x="300" y="52" width="220" height="88" rx="44" ry="44" fill="rgba(245,197,24,0.12)" stroke="#F5C518" stroke-width="2"/>
+      <text x="410" y="84" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="14" font-weight="700" text-anchor="middle">뉴엔AI (IT 회사)</text>
       <text x="410" y="104" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">빅데이터 분석 플랫폼 시각화 기획 및 플랫폼 운영</text>
       <text x="410" y="122" fill="#707068" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">• 뉴엔AI (대리~) 2025~</text>
 
@@ -1957,7 +2006,7 @@ footer {
       <text x="410" y="297" fill="#C0C0B8" font-family="Pretendard,sans-serif" font-size="13" font-weight="700" text-anchor="middle">와이즈넛, 코난테크놀로지</text>
       <text x="410" y="313" fill="#909088" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">데이터 기반 정책·마케팅 분석</text>
       <text x="410" y="330" fill="#686860" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">• 코난테크놀로지 (대리~과장) 2019~2023</text>
-      <text x="410" y="345" fill="#686860" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">• 와이즈넛 (사원) 2019</text>
+      <text x="410" y="345" fill="#686860" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle">• 와이즈넛 (사원) 2018~2019</text>
 
       <!-- 광고 타원 — 텍스트 타원 안으로 조정 -->
       <rect x="300" y="464" width="220" height="100" rx="50" ry="50" fill="rgba(255,255,255,0.04)" stroke="rgba(180,180,160,0.5)" stroke-width="2"/>
@@ -1988,40 +2037,43 @@ footer {
       <!-- ════════════════════════════════════════ -->
 
       <!-- PO 업무 설명 박스 — 텍스트에 딱 맞게 -->
-      <rect x="560" y="36" width="490" height="158" fill="rgba(212,197,132,0.05)" stroke="rgba(212,197,132,0.25)" stroke-width="1"/>
+      <rect x="560" y="36" width="490" height="158" fill="rgba(245,197,24,0.05)" stroke="rgba(245,197,24,0.25)" stroke-width="1"/>
       <text x="574" y="56" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (뉴엔AI)</text>
-      <text x="574" y="74" fill="#D4C584" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">자사 SaaS 소셜 빅데이터 플랫폼 기획 및 운영 업무 담당</text>
-      <text x="574" y="92" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 사용자 맞춤형 데이터 분석 대시보드 설계</text>
+      <text x="574" y="74" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">자사 SaaS 소셜 빅데이터 플랫폼 기획 및 운영 업무 담당</text>
+      <text x="574" y="92" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– MCP 기반 AI Agent 서비스 기획 · 시스템 프롬프트 튜닝 · 데이터 흐름 및 연동 구조 설계</text>
       <text x="574" y="108" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– AI 자동화 기능 기획 (AI Query Builder / Taxonomy Builder)</text>
-      <text x="574" y="124" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– MCP 기반 AI Agent 서비스 기획 · 시스템 프롬프트 튜닝 · 데이터 흐름 및 연동 구조 설계 · 과금 정책 설계</text>
+      <text x="574" y="124" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 사용자 맞춤형 데이터 분석 대시보드 설계</text>
       <text x="574" y="140" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 제품별 카피 · 상품 소개 페이지 · 브랜드/브릿지 페이지 등 기획</text>
       <text x="574" y="156" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– Admin 페이지 운영 관리 및 내부 정책 기획</text>
 
       <!-- 분석가+광고 하나의 통합 박스 (y=220~540) -->
       <rect x="560" y="220" width="490" height="320" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
       <text x="574" y="238" fill="#909088" font-family="Pretendard,sans-serif" font-size="11">• 업무 범위 요약 (코난테크놀로지 · 와이즈넛 · 코마코 · 대홍기획)</text>
+      <text x="574" y="258" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">데이터 분석 기반 소비자 인사이트 도출 · 광고/마케팅 전략 및 분석 시스템 기획</text>
+      <text x="574" y="276" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 소셜 빅데이터 분석 · 정책/마케팅 전략 컨설팅 · 분석 시스템 기획</text>
+      <text x="574" y="292" fill="#B0B0A8" font-family="Pretendard,sans-serif" font-size="11">– 데이터 분석 기반 소비자 인사이트 도출 및 광고·마케팅 전략 제안</text>
 
       <!-- 기업 클라이언트 -->
-      <text x="574" y="258" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">기업 클라이언트</text>
-      <text x="590" y="274" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 금융, 뷰티, 식품, 아웃도어, 가전, 가구, 생활용품 등 다양한 산업군의</text>
-      <text x="590" y="289" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   데이터 분석 기반 광고/마케팅 전략 수립 및 분석 시스템 기획</text>
+      <text x="574" y="348" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">기업 클라이언트</text>
+      <text x="590" y="364" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 금융, 뷰티, 식품, 아웃도어, 가전, 가구, 생활용품 등 다양한 산업군의</text>
+      <text x="590" y="379" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   데이터 분석 기반 광고/마케팅 전략 수립 및 분석 시스템 기획</text>
 
       <!-- 공공기관 클라이언트 -->
-      <text x="574" y="309" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">공공기관 클라이언트</text>
-      <text x="590" y="325" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 청와대, 대통령실, 중앙부처(기재부/교육부/문체부), 지자체(서울시/부산시/성남시)</text>
-      <text x="590" y="340" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   등 정책 반응 및 시민 인식 데이터 분석 기반 홍보/정책 방향 제안 및 모니터링</text>
+      <text x="574" y="399" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">공공기관 클라이언트</text>
+      <text x="590" y="415" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 청와대, 대통령실, 중앙부처(기재부/교육부/문체부), 지자체(서울시/부산시/성남시)</text>
+      <text x="590" y="430" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">   등 정책 반응 및 시민 인식 데이터 분석 기반 홍보/정책 방향 제안 및 모니터링</text>
 
       <!-- 트렌드 분석 -->
-      <text x="574" y="360" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">트렌드 분석</text>
-      <text x="590" y="375" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 서울대 「트렌드 코리아 2021~2022」 발간 데이터 분석 지원</text>
+      <text x="574" y="450" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">트렌드 분석</text>
+      <text x="590" y="465" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 서울대 「트렌드 코리아 2021~2022」 발간 데이터 분석 지원</text>
 
       <!-- 구분선 -->
-      <line x1="574" y1="393" x2="1040" y2="393" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      
 
       <!-- 광고/마케팅 — 같은 박스 안 하단 -->
-      <text x="574" y="411" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">광고/마케팅 캠페인 집행</text>
-      <text x="590" y="427" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 아모레퍼시픽·한국야쿠르트·동국제약·K2·수협은행 등 30개+ 캠페인 집행 및 운영</text>
-      <text x="590" y="443" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 소비자 조사·소셜 빅데이터 기반 브랜드 전략 수립 · 20개+ 산업군 경험</text>
+      <text x="574" y="501" fill="#D0D0C8" font-family="Pretendard,sans-serif" font-size="12" font-weight="700">광고/마케팅 캠페인 집행</text>
+      <text x="590" y="517" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 아모레퍼시픽·한국야쿠르트·동국제약·K2·수협은행 등 30개+ 캠페인 집행 및 운영</text>
+      <text x="590" y="533" fill="#A0A098" font-family="Pretendard,sans-serif" font-size="11">– 소비자 조사·소셜 빅데이터 기반 브랜드 전략 수립 · 20개+ 산업군 경험</text>
 
     </svg>
   </div>
@@ -2032,11 +2084,11 @@ footer {
   <h2 class="cf-title">Career Flow Detail</h2>
 
   <div style="position: relative; padding-left: 32px;">
-    <div style="position:absolute; left:4px; top:0; bottom:0; width:2px; background: linear-gradient(to bottom, var(--gold) 0%, rgba(212,197,132,0.2) 100%);"></div>
+    <div style="position:absolute; left:4px; top:0; bottom:0; width:2px; background: linear-gradient(to bottom, var(--gold) 0%, rgba(245,197,24,0.2) 100%);"></div>
 
     <!-- 뉴엔AI (2025~) -->
     <div class="cfd-section" id="cf-neuen">
-      <div class="cfd-company-wrap" style="border-top-color: rgba(212,197,132,0.3);">
+      <div class="cfd-company-wrap" style="border-top-color: rgba(245,197,24,0.3);">
         <div class="cfd-company-left">
           <div class="cfd-dot"></div>
           <div class="cfd-company-label">(IT 회사 / 대리 ~)</div>
@@ -2046,10 +2098,11 @@ footer {
             <span class="cfd-role-desc" style="margin-left:0;">AI플랫폼 사업부 AI센터 소속, AI큐레이션팀 PO(Platform Operation) – 빅데이터 분석 플랫폼 기획 및 플랫폼 운영 담당</span>
           </div>
           <div class="cfd-company-year" style="font-size:52px;">2025</div>
-          <div style="font-size:36px; color:rgba(212,197,132,0.15); font-family:Georgia,serif; font-style:italic; line-height:1;">/</div>
-          <div style="font-size:36px; color:rgba(212,197,132,0.15); font-family:Georgia,serif; font-style:italic; line-height:1;">ing</div>
+          <div style="font-size:36px; color:rgba(245,197,24,0.15); font-family:Georgia,serif; font-style:italic; line-height:1;">/</div>
+          <div style="font-size:36px; color:rgba(245,197,24,0.15); font-family:Georgia,serif; font-style:italic; line-height:1;">ing</div>
         </div>
         <ul class="cfd-items">
+          <li>(2026.08~) [AI Agent 국책과제] 산자부 디자인테크 핵심기술 개발 사업 — '디자인 개선 전략' 에이전트 기획·개발 (개발 3직군과 동등 참여) → 진행 중</li>
           <li>(2026.06~) [AI 인프라] MCP 기반 소셜 데이터 중심 신규 AI Agent 서비스 기획 → 진행 중</li>
           <li>(2026.01~2026.06) [Quetta Dex] 데이터 분석 사용자 커스텀 대시보드 기획 및 차트별 상세 정책 설계 → 1차 런칭 완료</li>
           <li>(2025.12~2026.05) [공통] 공식 브랜드 페이지 및 솔루션 통합 브릿지 페이지 신규 기획 → 런칭 완료</li>
@@ -2065,7 +2118,7 @@ footer {
     <div class="cfd-section" id="cf-konan">
       <div class="cfd-company-wrap">
         <div class="cfd-company-left">
-          <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
+          <div class="cfd-dot" style="background:#C0C0B8; box-shadow: none;"></div>
           <div class="cfd-company-label">(IT 회사 / 대리~과장)</div>
           <div class="cfd-company-name dim">코난테크놀로지</div>
           <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
@@ -2099,7 +2152,7 @@ footer {
     <div class="cfd-section" id="cf-wisenut">
       <div class="cfd-company-wrap">
         <div class="cfd-company-left">
-          <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
+          <div class="cfd-dot" style="background:#C0C0B8; box-shadow: none;"></div>
           <div class="cfd-company-label">(IT 회사 / 사원)</div>
           <div class="cfd-company-name dim">와이즈넛</div>
           <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
@@ -2125,7 +2178,7 @@ footer {
     <div class="cfd-section" id="cf-komaco">
       <div class="cfd-company-wrap">
         <div class="cfd-company-left">
-          <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
+          <div class="cfd-dot" style="background:#C0C0B8; box-shadow: none;"></div>
           <div class="cfd-company-label">(종합광고대행사 / 사원)</div>
           <div class="cfd-company-name dim">코마코</div>
           <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
@@ -2183,7 +2236,7 @@ footer {
     <div class="cfd-section" id="cf-daehong">
       <div class="cfd-company-wrap">
         <div class="cfd-company-left">
-          <div class="cfd-dot" style="background:#C0C0B8; box-shadow:0 0 0 1px #C0C0B8;"></div>
+          <div class="cfd-dot" style="background:#C0C0B8; box-shadow: none;"></div>
           <div class="cfd-company-label">(종합광고대행사 / 인턴)</div>
           <div class="cfd-company-name dim">대홍기획</div>
           <div class="cfd-role-badge" style="margin-top:8px; margin-bottom:0; flex-direction:column; align-items:flex-start; gap:4px;">
@@ -2286,38 +2339,45 @@ footer {
       background: rgba(212,197,122,0.07);
       border: 1px solid rgba(212,197,122,0.3);
       padding: 20px;">
-      <div style="font-family:var(--mono); font-size:10px; color:var(--gold); letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">뉴엔AI · 2025– · 프로젝트 단위</div>
+      <div style="font-family:var(--mono); font-size:11px; color:var(--gold); letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">2025 - · After PO · 뉴엔AI 프로젝트별</div>
       <ul class="index-list" style="margin: 0;">
-        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p1','projects-body','projects-toggle-icon')">
+        <li style="border-bottom-color: rgba(245,197,24,0.15);" onclick="goTo('p-agent','projects-body','projects-toggle-icon')">
           <div class="index-num">1</div>
+          <div class="index-text">
+            <div class="index-main">AI Agent 국책과제 — '디자인 개선 전략' 에이전트 기획·개발 <span style="font-size:12px; color:#7FBF7F; margin-left:6px;">↗</span></div>
+            <div class="index-sub" style="color:#7FBF7F;">2026.08~ · 산자부 디자인테크 · 4인이 각자 에이전트 기획~개발 전담 (진행 중)</div>
+          </div>
+        </li>
+        <li style="border-bottom-color: rgba(245,197,24,0.15);" onclick="goTo('p1','projects-body','projects-toggle-icon')">
+          <div class="index-num">2</div>
           <div class="index-text">
             <div class="index-main">MCP 기반 AI Agent 서비스 기획 <span style="font-size:12px; color:#7FBF7F; margin-left:6px;">↗</span></div>
             <div class="index-sub" style="color:#7FBF7F;">2026.06~ · MCP × 외부 LLM 실시간 연동 · Agent 라인업 설계 (진행 중)</div>
           </div>
         </li>
-        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p2','projects-body','projects-toggle-icon')">
-          <div class="index-num">2</div>
+        <li style="border-bottom-color: rgba(245,197,24,0.15);" onclick="goTo('p2','projects-body','projects-toggle-icon')">
+          <div class="index-num">3</div>
           <div class="index-text">
             <div class="index-main">Quetta Dex 커스텀 대시보드 기획 <span style="font-size:12px; color:var(--gold-dim); margin-left:6px;">↗</span></div>
             <div class="index-sub">2026.01–06 · 데이터 기반 대시보드 시각화 설계 및 UI 인터페이스 구조 설계</div>
           </div>
         </li>
-        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p3','projects-body','projects-toggle-icon')">
-          <div class="index-num">3</div>
+        <li style="border-bottom-color: rgba(245,197,24,0.15);" onclick="goTo('p3','projects-body','projects-toggle-icon')">
+          <div class="index-num">4</div>
           <div class="index-text">
             <div class="index-main">Quetta 브랜드 페이지 + 브릿지 페이지 기획 <span style="font-size:12px; color:var(--gold-dim); margin-left:6px;">↗</span></div>
             <div class="index-sub">2025.12–2026.05 · 제품 라인업 재정의 + 넛지 전략 기반 유료 전환 파이프라인</div>
           </div>
         </li>
-        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p4','projects-body','projects-toggle-icon')">
-          <div class="index-num">4</div>
+        <li style="border-bottom-color: rgba(245,197,24,0.15);" onclick="goTo('p4','projects-body','projects-toggle-icon')">
+          <div class="index-num">5</div>
           <div class="index-text">
             <div class="index-main">AI Query Builder + Taxonomy Builder 기획 <span style="font-size:12px; color:var(--gold-dim); margin-left:6px;">↗</span></div>
             <div class="index-sub">2025.08–2026.01 · LLM 기반 자동화 기획 + 시스템 프롬프트 엔지니어링</div>
           </div>
         </li>
-        <li style="border-bottom-color: rgba(212,197,132,0.15);" onclick="goTo('p5','projects-body','projects-toggle-icon')">
-          <div class="index-num">5</div>
+        <li style="border-bottom-color: rgba(245,197,24,0.15);" onclick="goTo('p5','projects-body','projects-toggle-icon')">
+          <div class="index-num">6</div>
           <div class="index-text">
             <div class="index-main">Quettai 언론 분석 기능 기획 <span style="font-size:12px; color:var(--gold-dim); margin-left:6px;">↗</span></div>
             <div class="index-sub">2025.07–08 · 기술 제약 대응 조율 + 언론사·기자 단위 타겟팅 설계</div>
@@ -2329,9 +2389,9 @@ footer {
     <!-- 행1 가운데: 화살표 -->
     <div style="grid-column:2; grid-row:1; display:flex; align-items:center; justify-content:center;">
       <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
-        <div style="width:1px; flex:1; background: linear-gradient(to bottom, transparent, rgba(212,197,132,0.5));"></div>
-        <div style="font-size:18px; color:rgba(212,197,132,0.7); line-height:1;">→</div>
-        <div style="width:1px; flex:1; background: linear-gradient(to top, transparent, rgba(212,197,132,0.5));"></div>
+        <div style="width:1px; flex:1; background: linear-gradient(to bottom, transparent, rgba(245,197,24,0.5));"></div>
+        <div style="font-size:18px; color:rgba(245,197,24,0.7); line-height:1;">→</div>
+        <div style="width:1px; flex:1; background: linear-gradient(to top, transparent, rgba(245,197,24,0.5));"></div>
       </div>
     </div>
 
@@ -2340,7 +2400,7 @@ footer {
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(255,255,255,0.1);
       padding: 20px;">
-      <div style="font-family:var(--mono); font-size:10px; color:#888880; letter-spacing:0.1em; margin-bottom:16px; opacity:0.8;">해당 커리어 기간</div>
+      <div style="font-family:var(--mono); font-size:11px; color:#888880; letter-spacing:0.1em; margin-bottom:16px; opacity:0.8;">해당 커리어 기간</div>
       <div class="icm-era">2025 ~</div>
       <div class="icm-card gold-card">
         <div class="icm-role">UX/UI Planner &amp; Project Owner</div>
@@ -2354,7 +2414,7 @@ footer {
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.1);
       padding: 20px;">
-      <div style="font-family:var(--mono); font-size:10px; color:#909088; letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">2015–2023 · Before PO · 회사별</div>
+      <div style="font-family:var(--mono); font-size:11px; color:#909088; letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">2015–2023 · Before PO · 회사별</div>
       <ul class="index-list" style="margin: 0;">
         <li onclick="goTo('exp-konan','beforepo-body','beforepo-toggle-icon')">
           <div class="index-num dim">6</div>
@@ -2394,14 +2454,14 @@ footer {
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.1);
       padding: 20px;">
-      <div style="font-family:var(--mono); font-size:10px; color:#909088; letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">해당 커리어 기간</div>
+      <div style="font-family:var(--mono); font-size:11px; color:#909088; letter-spacing:0.1em; margin-bottom:16px; opacity:0.9;">해당 커리어 기간</div>
 
       <div class="icm-era">2015 ~ 2023</div>
       <div class="icm-card">
         <div class="icm-role">Data Analyst / Business Analyst</div>
         <div class="icm-company">와이즈넛·코난테크놀로지 (IT회사) · 데이터 기반 정책·마케팅 분석</div>
       </div>
-      <div style="padding: 6px 0 0 12px; font-size:11px; color:#707068; font-family:var(--mono); line-height:1.8;">• 코난테크놀로지 (대리~과장) 2019~2023<br>• 와이즈넛 (사원) 2019</div>
+      <div style="padding: 6px 0 0 12px; font-size:11px; color:#707068; font-family:var(--mono); line-height:1.8;">• 코난테크놀로지 (대리~과장) 2019~2023<br>• 와이즈넛 (사원) 2018~2019</div>
 
       <div style="height: 20px;"></div>
 
@@ -2421,67 +2481,72 @@ footer {
 <!-- ── 커리어 스토리 흐름 인트로 ── -->
 <div style="background: #1A1A18; padding: 28px 48px; text-align:center;">
   <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap;">
-    <span style="font-family:var(--mono); font-size:12px; color:#C0BCB0; font-weight:700; letter-spacing:0.08em;">BEFORE PO</span>
+    <span style="font-family:var(--mono); font-size:12px; color:#C0C3C8; font-weight:700; letter-spacing:0.08em;">BEFORE PO</span>
     <span style="color:rgba(255,255,255,0.55); font-size:13px;">2015–2023</span>
     <span style="color:rgba(255,255,255,0.6); font-size:14px;">→</span>
-    <span style="font-family:var(--mono); font-size:12px; color:#D8D2BE; font-weight:700; letter-spacing:0.08em;">CAREER BRIDGE</span>
+    <span style="font-family:var(--mono); font-size:12px; color:#D4D7DC; font-weight:700; letter-spacing:0.08em;">CAREER BRIDGE</span>
     <span style="color:rgba(255,255,255,0.55); font-size:13px;">2023–2025</span>
     <span style="color:rgba(255,255,255,0.6); font-size:14px;">→</span>
-    <span style="font-family:var(--mono); font-size:12px; color:#E8D9A0; font-weight:700; letter-spacing:0.08em;">AFTER PO</span>
+    <span style="font-family:var(--mono); font-size:12px; color:#F7DE7A; font-weight:700; letter-spacing:0.08em;">AFTER PO</span>
     <span style="color:rgba(255,255,255,0.55); font-size:13px;">2025~</span>
   </div>
   <div style="font-size:13px; color:rgba(255,255,255,0.7); margin-top:10px;">아래로 스크롤하면 프로젝트 상세 내용을 최신순으로 만나보실 수 있습니다</div>
 </div>
 
 <!-- ── PROJECTS (라이트 테마) ── -->
-<div style="background: #F8F7F4; border-top: 4px solid #C8B97A;">
+<div style="background: #FFFFFF; border-top: 4px solid #EBCB3E;">
 
 <!-- Projects 접힘 토글 헤더 -->
 <div id="projects-toggle" onclick="toggleSection('projects-body', 'projects-toggle-icon')"
   style="max-width:1200px; margin:0 auto; padding:0 48px; cursor:pointer; user-select:none;">
 
   <!-- After PO 라벨 + 구분선 -->
-  <div style="display:flex; align-items:center; gap:16px; padding-top:36px; padding-bottom:20px; border-bottom:2px solid #C8B97A;">
-    <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#C8B97A; letter-spacing:0.14em; background:rgba(200,185,122,0.12); padding:4px 12px; border-radius:3px;">AFTER PO</div>
-    <div style="font-family:var(--mono); font-size:11px; color:#A89B62; letter-spacing:0.06em;">NewenAI &nbsp;·&nbsp; 2025 ~</div>
+  <div style="display:flex; align-items:center; gap:16px; padding-top:36px; padding-bottom:20px; border-bottom:2px solid #EBCB3E;">
+    <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:#EBCB3E; letter-spacing:0.14em; background:rgba(245,197,24,0.12); padding:4px 12px; border-radius:3px;">AFTER PO</div>
+    <div style="font-family:var(--mono); font-size:11px; color:#C9A227; letter-spacing:0.06em;">NewenAI &nbsp;·&nbsp; 2025 ~</div>
   </div>
 
   <!-- 메인 콘텐츠 -->
   <div style="display:flex; align-items:flex-start; justify-content:space-between; padding:24px 0 32px; gap:32px;">
     <div style="flex:1;">
-      <h2 style="font-size:clamp(20px,2.5vw,26px); font-weight:700; color:#1A1A18; letter-spacing:-0.02em; margin-bottom:8px;">PO로서 기획한 빅데이터 분석 플랫폼 프로젝트</h2>
-      <p style="font-size:14px; color:#666660; margin-bottom:20px; line-height:1.6;">소셜 빅데이터 분석 플랫폼의 UI/UX 기획부터 AI 서비스 설계, 과금 정책까지 End-to-End로 담당</p>
+      <h2 style="font-size:clamp(20px,2.5vw,26px); font-weight:700; color:#1A1A18; letter-spacing:-0.02em; margin-bottom:8px;">기획부터 화면까지, 데이터로 설계하는 PO</h2>
+      <p style="font-size:14px; color:#666660; margin-bottom:20px; line-height:1.6;">데이터 구조와 활용을 이해하고, 개발·디자인 팀과 긴밀히 협업하며 소셜 빅데이터 분석 플랫폼의 UI/UX와 AI 서비스를 End-to-End로 설계합니다</p>
       <div style="display:flex; flex-direction:column; gap:6px;">
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#7FBF7F; margin-right:10px;">01</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#7FBF7F; margin-right:10px;">01</span>
+          <strong>AI Agent 국책과제 — '디자인 개선 전략' 에이전트 기획·개발</strong>
+          <span style="color:#7FBF7F; margin-left:8px; font-size:12px;">2026.08~ 진행 중</span>
+        </div>
+        <div style="font-size:13px; color:#444440;">
+          <span style="font-family:var(--mono); font-size:11px; color:#7FBF7F; margin-right:10px;">02</span>
           <strong>MCP 기반 AI Agent 서비스 기획</strong>
           <span style="color:#7FBF7F; margin-left:8px; font-size:12px;">2026.06~ 진행 중</span>
         </div>
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#A89B62; margin-right:10px;">02</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#C9A227; margin-right:10px;">03</span>
           <strong>커스텀 대시보드 기획</strong>
           <span style="color:#909088; margin-left:8px; font-size:12px;">2026.01–06</span>
         </div>
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#A89B62; margin-right:10px;">03</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#C9A227; margin-right:10px;">04</span>
           <strong>브랜드/브릿지 페이지 기획</strong>
           <span style="color:#909088; margin-left:8px; font-size:12px;">2025.12–2026.05</span>
         </div>
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#A89B62; margin-right:10px;">04</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#C9A227; margin-right:10px;">05</span>
           <strong>AI Query Builder + Taxonomy Builder 기획</strong>
           <span style="color:#909088; margin-left:8px; font-size:12px;">2025.08–2026.01</span>
         </div>
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#A89B62; margin-right:10px;">05</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#C9A227; margin-right:10px;">06</span>
           <strong>Quettai 언론 분석 기능 기획</strong>
           <span style="color:#909088; margin-left:8px; font-size:12px;">2025.07–08</span>
         </div>
       </div>
     </div>
     <div style="display:flex; flex-direction:column; align-items:center; gap:8px; padding-top:4px; flex-shrink:0;">
-      <div id="projects-toggle-icon" style="width:40px; height:40px; border-radius:50%; border:2px solid #C8B97A; display:flex; align-items:center; justify-content:center; font-size:22px; color:#C8B97A; font-weight:300; transition:all 0.25s;">＋</div>
-      <div class="toggle-hint" style="font-family:var(--mono); font-size:9px; color:#A89B62; letter-spacing:0.06em; text-align:center;">펼쳐보기 ↓</div>
+      <div id="projects-toggle-icon" style="width:40px; height:40px; border-radius:50%; border:2px solid #EBCB3E; display:flex; align-items:center; justify-content:center; font-size:22px; color:#EBCB3E; font-weight:300; transition:all 0.25s;">＋</div>
+      <div class="toggle-hint" style="font-family:var(--sans); font-size:11px; color:#C9A227; letter-spacing:0.06em; text-align:center;">펼쳐보기 ↓</div>
     </div>
   </div>
 </div>
@@ -2490,14 +2555,14 @@ footer {
 <style>
 /* ── 프로젝트 아코디언 ── */
 .proj-accordion {
-  border: 1px solid #E0DDD6;
+  border: 1px solid #E3E5E9;
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 8px;
   transition: box-shadow 0.2s;
 }
 .proj-accordion.open {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: none;
 }
 .proj-acc-header {
   display: flex;
@@ -2505,22 +2570,22 @@ footer {
   gap: 16px;
   padding: 20px 24px;
   cursor: pointer;
-  background: #FAFAF8;
+  background: #F7F8FA;
   user-select: none;
   border-bottom: 1px solid transparent;
   transition: background 0.15s, border-color 0.15s;
 }
 .proj-acc-header:hover {
-  background: #F5F3EF;
+  background: #F1F3F6;
 }
 .proj-accordion.open .proj-acc-header {
-  border-bottom-color: #E0DDD6;
-  background: #F8F6F2;
+  border-bottom-color: #E3E5E9;
+  background: #F1F3F6;
 }
 .proj-acc-num {
   font-family: var(--mono);
   font-size: 11px;
-  color: #A89B62;
+  color: #C9A227;
   min-width: 24px;
   font-weight: 600;
 }
@@ -2546,13 +2611,13 @@ footer {
 .proj-acc-toggle {
   width: 28px; height: 28px;
   border-radius: 50%;
-  border: 1.5px solid #C8B97A;
+  border: 1.5px solid #EBCB3E;
   display: flex; align-items: center; justify-content: center;
-  font-size: 18px; color: #A89B62; font-weight: 300;
+  font-size: 18px; color: #C9A227; font-weight: 300;
   transition: all 0.2s; flex-shrink: 0;
 }
 .proj-accordion.open .proj-acc-toggle {
-  background: #C8B97A;
+  background: #EBCB3E;
   color: #fff;
 }
 .proj-acc-body {
@@ -2567,7 +2632,7 @@ footer {
 /* before-po 타임라인 아이템 구분 강화 */
 .timeline-item {
   background: rgba(255,255,255,0.5);
-  border: 1px solid #D8D4CC;
+  border: 1px solid #D6D9DE;
   border-radius: 6px;
   padding: 28px 28px 28px 52px;
   margin-bottom: 12px;
@@ -2580,8 +2645,8 @@ footer {
 .expand-all-btn {
   font-family: var(--mono);
   font-size: 11px;
-  color: #8A7B40;
-  border: 1px solid #C8B97A;
+  color: #C9A227;
+  border: 1px solid #EBCB3E;
   background: transparent;
   padding: 5px 14px;
   cursor: pointer;
@@ -2592,54 +2657,113 @@ footer {
   animation: idlePulseBtn 2.4s ease-in-out infinite;
 }
 .expand-all-btn:hover {
-  background: rgba(200,185,122,0.16);
-  color: #6A5D30;
-  border-color: #A89B62;
+  background: rgba(245,197,24,0.16);
+  color: #A88418;
+  border-color: #C9A227;
   transform: scale(1.04);
   animation: none;
-  box-shadow: 0 0 0 5px rgba(200,185,122,0.18);
+  box-shadow: none;
 }
 @keyframes idlePulseBtn {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(200,185,122,0.22); }
-  50% { box-shadow: 0 0 0 5px rgba(200,185,122,0); }
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: none; }
 }
 
 /* 2depth(프로젝트 아코디언) [+] 버튼: hover/헤더 hover 시 깜빡임 강조 */
 .proj-acc-header:hover .proj-acc-toggle {
   animation: togglePulseGold 0.9s ease infinite;
-  background: rgba(200,185,122,0.15);
-  border-color: #A89B62;
+  background: rgba(245,197,24,0.15);
+  border-color: #C9A227;
   transform: scale(1.1);
 }
 @keyframes togglePulseGold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(200,185,122,0.5); }
-  50% { box-shadow: 0 0 0 6px rgba(200,185,122,0); }
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: none; }
 }
 
 /* 3depth(Before PO 회사) [+] 버튼: hover 시 깜빡임 강조 */
 .bp-acc-header:hover .bp-acc-toggle {
   animation: togglePulseGray 0.9s ease infinite;
   background: rgba(176,168,138,0.18);
-  border-color: #948A6E;
+  border-color: #C2A840;
   transform: scale(1.1);
 }
 @keyframes togglePulseGray {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(176,168,138,0.5); }
-  50% { box-shadow: 0 0 0 6px rgba(176,168,138,0); }
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: none; }
 }
 </style>
 
-<section id="projects" class="light-section" style="background: transparent; border-top: 1px solid #E0DDD6; max-width: 1200px; margin: 0 auto; padding: 0 48px 80px;">
+<section id="projects" class="light-section" style="background: transparent; border-top: 1px solid #E3E5E9; max-width: 1200px; margin: 0 auto; padding: 0 48px 80px;">
   <div style="padding-top:32px; display:flex; align-items:center; justify-content:flex-end;">
     <button class="expand-all-btn" id="projects-expand-all" onclick="expandAllProjects()">모두 펼치기 ↓</button>
   </div>
 
-    <div class="proj-accordion" id="p1">
+    <div class="proj-accordion" id="p-agent">
     <div class="proj-acc-header" onclick="toggleProject(this)">
       <div class="proj-acc-num">01</div>
       <div class="proj-acc-title">
+        <strong>AI Agent 국책과제 — '디자인 개선 전략' 에이전트 기획·개발</strong>
+        <span>2026.08~ 진행 중 &nbsp;·&nbsp; <span class="project-status status-ongoing" style="font-size:11px; padding:2px 8px;">기획·개발 진행 중</span></span>
+      </div>
+      <div class="proj-acc-toggle">＋</div>
+    </div>
+    <div class="proj-acc-body">
+  <div class="project-block" style="opacity:1; transform:translateY(0px);">
+    <div class="project-meta">
+      <span class="project-index">01</span>
+      <span class="project-status status-ongoing">기획·개발 진행 중</span>
+    </div>
+    <h3 class="project-headline">팀원 4인이 각자 1개 AI Agent를 기획부터 개발까지 동등하게 전담</h3>
+    <p class="project-subhead">산업통상자원부 디자인테크 핵심기술 개발 사업 · 뉴엔AI 참여 · 2026.08–현재</p>
+
+    <div class="slides">
+      <div class="slide-card open">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 01</span>
+          <span class="slide-title">과제 개요 &amp; 팀 구성</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">PO·프론트엔드·백엔드·빅데이터 4인이 각자 1개 에이전트를 기획~개발 동등 전담</p>
+            <table class="content-table">
+              <tbody><tr><td>과제</td><td>산업통상자원부 디자인테크 핵심기술 개발 사업 — 뉴엔AI가 '고객 Pain Points 분석 · UT 평가 설계 지원 · 디자인 개선 전략 도출' 3종 AI Agent 라이브러리를 개발</td></tr>
+              <tr><td>팀 구성</td><td><strong>부서 횡단 TFT</strong> — PO(나) + 프론트엔드 · 백엔드 · 빅데이터 개발자 = 4인. 각자 1개 에이전트를 <strong>기획부터 개발까지 동등하게 전담</strong> (기획 전담이 아닌 1/N 오너십)</td></tr>
+              <tr><td>담당 에이전트</td><td>'디자인 개선 전략 도출' AI Agent — 사용성 테스트 결과·인지 감성 특성 데이터를 디자인 니즈·개선점으로 매핑</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 02</span>
+          <span class="slide-title">적용 기술 &amp; 나의 역할</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">도메인 리서치·기획부터 직접 코드 작성까지 — AI Agent를 이해하며 만드는 PO</p>
+            <table class="content-table">
+              <tbody><tr><td>AI 기술</td><td>멀티모달 LLM 기반 Feature 추출 · 프롬프트 엔지니어링(CoT · RAG · 역할수행형 프롬프트) · AI Agent 기반 디자인 전략 수립</td></tr>
+              <tr><td>역할</td><td>사업계획서 도메인 리서치 · 기획 방향 설계 · 에이전트 로직 설계 · <strong>직접 코드 작성(개발 참여)</strong></td></tr>
+              <tr><td>진행 상태</td><td>도메인 분석·기획 완료(v4) · 에이전트 개발 진행 중</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <p class="po-link" style="margin-top:16px; padding:0 24px;">→ 기획자에서 한 걸음 더 — 개발 3직군과 동등하게 에이전트를 직접 만들며, AI Agent 기술을 몸으로 이해하는 PO로 확장하고 있습니다.</p>
+    </div>
+  </div>
+  <div class="proj-accordion" id="p1">
+    <div class="proj-acc-header" onclick="toggleProject(this)">
+      <div class="proj-acc-num">02</div>
+      <div class="proj-acc-title">
         <strong>MCP 기반 AI Agent 서비스 기획</strong>
-        <span>2026.06~ 진행 중 &nbsp;·&nbsp; <span class="project-status status-ongoing" style="font-size:10px; padding:2px 8px;">기획 진행 중</span></span>
+        <span>2026.06~ 진행 중 &nbsp;·&nbsp; <span class="project-status status-ongoing" style="font-size:11px; padding:2px 8px;">기획 진행 중</span></span>
       </div>
       <div class="proj-acc-toggle">＋</div>
     </div>
@@ -2647,7 +2771,7 @@ footer {
     <!-- P5: MCP AI Agent -->
   <div class="project-block">
     <div class="project-meta">
-      <span class="project-index">01</span>
+      <span class="project-index">02</span>
       <span class="project-status status-ongoing">기획 진행 중</span>
     </div>
     <h3 class="project-headline">MCP 기반 AI Agent 서비스 기획</h3>
@@ -2667,23 +2791,23 @@ footer {
             <!-- MCP 구조 SVG -->
             <div class="diagram-wrap">
               <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-                <rect width="760" height="200" fill="#0F0F0F"/>
+                <rect width="760" height="200" fill="#1C1E24"/>
                 <!-- 레이어 4개 -->
-                <rect x="20" y="20" width="720" height="38" fill="rgba(200,185,122,0.08)" stroke="#C8B97A" stroke-width="0.5"/>
-                <text x="40" y="33" fill="#C8B97A" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">SERVICE LAYER</text>
-                <text x="40" y="50" fill="#F5F5F0" font-family="Pretendard,sans-serif" font-size="13" font-weight="600">사용자 인터랙션 화면 + Agent 라인업</text>
-                <text x="680" y="43" fill="#8A7D52" font-family="JetBrains Mono,monospace" font-size="9" text-anchor="end">기획자 담당</text>
+                <rect x="20" y="20" width="720" height="38" fill="rgba(220,224,230,0.08)" stroke="#C4CAD1" stroke-width="0.5"/>
+                <text x="40" y="33" fill="#C4CAD1" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">SERVICE LAYER</text>
+                <text x="40" y="50" fill="#F6F7F9" font-family="Pretendard,sans-serif" font-size="13" font-weight="600">사용자 인터랙션 화면 + Agent 라인업</text>
+                <text x="680" y="43" fill="#9AA0A8" font-family="JetBrains Mono,monospace" font-size="9" text-anchor="end">기획자 담당</text>
 
-                <rect x="20" y="62" width="720" height="38" fill="rgba(127,127,127,0.05)" stroke="#333" stroke-width="0.5"/>
-                <text x="40" y="75" fill="#606060" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">AI LAYER</text>
+                <rect x="20" y="62" width="720" height="38" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.5"/>
+                <text x="40" y="75" fill="#9A9DA4" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">AI LAYER</text>
                 <text x="40" y="92" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">외부 LLM + 비즈니스 목적별 특화 프롬프트</text>
 
-                <rect x="20" y="104" width="720" height="38" fill="rgba(127,127,127,0.05)" stroke="#333" stroke-width="0.5"/>
-                <text x="40" y="117" fill="#606060" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">INTEGRATION LAYER</text>
+                <rect x="20" y="104" width="720" height="38" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.5"/>
+                <text x="40" y="117" fill="#9A9DA4" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">INTEGRATION LAYER</text>
                 <text x="40" y="134" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">MCP 기반 데이터 연동 엔진 (빅데이터팀 구축)</text>
 
-                <rect x="20" y="146" width="720" height="38" fill="rgba(127,127,127,0.05)" stroke="#333" stroke-width="0.5"/>
-                <text x="40" y="159" fill="#606060" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">DATA LAYER</text>
+                <rect x="20" y="146" width="720" height="38" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.5"/>
+                <text x="40" y="159" fill="#9A9DA4" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">DATA LAYER</text>
                 <text x="40" y="176" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">사내 소셜 빅데이터 플랫폼 (SNS·뉴스·커뮤니티 수십억 건)</text>
               </svg>
             </div>
@@ -2709,23 +2833,23 @@ footer {
             <!-- Agent 카드 SVG -->
             <div class="diagram-wrap">
               <svg viewBox="0 0 760 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-                <rect width="760" height="140" fill="#0F0F0F"/>
+                <rect width="760" height="140" fill="#1C1E24"/>
                 <!-- Agent 1 -->
-                <rect x="10" y="20" width="228" height="100" fill="none" stroke="#C8B97A" stroke-width="0.5"/>
-                <text x="124" y="48" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">트렌드 분석</text>
-                <text x="124" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">마케터·기획자</text>
+                <rect x="10" y="20" width="228" height="100" fill="none" stroke="#C4CAD1" stroke-width="0.5"/>
+                <text x="124" y="48" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">트렌드 분석</text>
+                <text x="124" y="66" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">마케터·기획자</text>
                 <text x="124" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">소셜 트렌드 변화 실시간</text>
                 <text x="124" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">분석·리포트 자동 생성</text>
                 <!-- Agent 2 -->
                 <rect x="266" y="20" width="228" height="100" fill="none" stroke="#8A3A3A" stroke-width="0.5"/>
                 <text x="380" y="48" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">위기 감지</text>
-                <text x="380" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">브랜드 담당자·PR팀</text>
+                <text x="380" y="66" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">브랜드 담당자·PR팀</text>
                 <text x="380" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">부정 언급 급증 감지</text>
                 <text x="380" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">위기 징후 조기 경보</text>
                 <!-- Agent 3 -->
                 <rect x="522" y="20" width="228" height="100" fill="none" stroke="#4A6A4A" stroke-width="0.5"/>
                 <text x="636" y="48" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">신제품 분석</text>
-                <text x="636" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">리서처·전략기획</text>
+                <text x="636" y="66" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">리서처·전략기획</text>
                 <text x="636" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">출시 전후 소비자 반응</text>
                 <text x="636" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">경쟁사 비교 자동 분석</text>
               </svg>
@@ -2741,15 +2865,15 @@ footer {
       </div>
     </div>
   </div><!-- /P5 -->
-      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ MCP 기반 외부 LLM 연동이라는 기술적 미지의 영역에서, 기획자로서 서비스 구조를 먼저 설계하고 개발팀과 함께 가능성을 검증해나가는 과정을 진행 중입니다.</p>
+      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ MCP 기반 외부 LLM 연동이라는 기술적 미지의 영역에서, 기획자로서 서비스 구조를 먼저 설계하고 개발팀과 함께 가능성을 검증해나가는 과정을 진행 중입니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p2">
     <div class="proj-acc-header" onclick="toggleProject(this)">
-      <div class="proj-acc-num">02</div>
+      <div class="proj-acc-num">03</div>
       <div class="proj-acc-title">
         <strong>Quetta Dex 커스텀 대시보드 기획</strong>
-        <span>2026.01–06 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:10px; padding:2px 8px;">1차 런칭 완료</span></span>
+        <span>2026.01–06 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:11px; padding:2px 8px;">1차 런칭 완료</span></span>
       </div>
       <div class="proj-acc-toggle">＋</div>
     </div>
@@ -2757,7 +2881,7 @@ footer {
     <!-- P1: Quetta Dex 대시보드 -->
   <div class="project-block">
     <div class="project-meta">
-      <span class="project-index">02</span>
+      <span class="project-index">03</span>
       <span class="project-status status-done">1차 런칭 완료</span>
     </div>
     <h3 class="project-headline">Quetta Dex 커스텀 대시보드 기획</h3>
@@ -2811,31 +2935,31 @@ footer {
             <!-- 3계층 SVG 다이어그램 -->
             <div class="diagram-wrap">
               <svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-                <rect x="0" y="0" width="760" height="180" fill="#0F0F0F"/>
+                <rect x="0" y="0" width="760" height="180" fill="#1C1E24"/>
                 <!-- 대시보드 -->
-                <rect x="20" y="40" width="200" height="100" fill="none" stroke="#C8B97A" stroke-width="1"/>
-                <text x="120" y="72" fill="#C8B97A" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">DASHBOARD</text>
-                <text x="120" y="92" fill="#F5F5F0" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">대시보드</text>
-                <text x="120" y="112" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">최상위 작업 단위</text>
-                <text x="120" y="128" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">생성·공유·초대·삭제</text>
+                <rect x="20" y="40" width="200" height="100" fill="none" stroke="#C4CAD1" stroke-width="1"/>
+                <text x="120" y="72" fill="#C4CAD1" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">DASHBOARD</text>
+                <text x="120" y="92" fill="#F6F7F9" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">대시보드</text>
+                <text x="120" y="112" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">최상위 작업 단위</text>
+                <text x="120" y="128" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">생성·공유·초대·삭제</text>
                 <!-- 화살표 -->
                 <line x1="220" y1="90" x2="268" y2="90" stroke="#2A2A2A" stroke-width="1"/>
                 <polygon points="268,86 278,90 268,94" fill="#2A2A2A"/>
                 <!-- 캔버스 -->
-                <rect x="280" y="40" width="200" height="100" fill="none" stroke="#8A7D52" stroke-width="1"/>
-                <text x="380" y="72" fill="#8A7D52" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">CANVAS</text>
-                <text x="380" y="92" fill="#F5F5F0" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">캔버스</text>
-                <text x="380" y="112" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">12grid 기반 작업 공간</text>
-                <text x="380" y="128" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">순서 변경·최대 생성 수 제한</text>
+                <rect x="280" y="40" width="200" height="100" fill="none" stroke="#9AA0A8" stroke-width="1"/>
+                <text x="380" y="72" fill="#9AA0A8" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">CANVAS</text>
+                <text x="380" y="92" fill="#F6F7F9" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">캔버스</text>
+                <text x="380" y="112" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">12grid 기반 작업 공간</text>
+                <text x="380" y="128" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">순서 변경·최대 생성 수 제한</text>
                 <!-- 화살표 -->
                 <line x1="480" y1="90" x2="528" y2="90" stroke="#2A2A2A" stroke-width="1"/>
                 <polygon points="528,86 538,90 528,94" fill="#2A2A2A"/>
                 <!-- 위젯 -->
-                <rect x="540" y="40" width="200" height="100" fill="none" stroke="#606060" stroke-width="1"/>
-                <text x="640" y="72" fill="#606060" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">WIDGET</text>
-                <text x="640" y="92" fill="#F5F5F0" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">위젯</text>
-                <text x="640" y="112" fill="#606060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">비주얼(차트 50종+) / 텍스트</text>
-                <text x="640" y="128" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">데이터 매핑 · 퀵버튼 권한 노출</text>
+                <rect x="540" y="40" width="200" height="100" fill="none" stroke="#9A9DA4" stroke-width="1"/>
+                <text x="640" y="72" fill="#9A9DA4" font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">WIDGET</text>
+                <text x="640" y="92" fill="#F6F7F9" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="600">위젯</text>
+                <text x="640" y="112" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">비주얼(차트 50종+) / 텍스트</text>
+                <text x="640" y="128" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">데이터 매핑 · 퀵버튼 권한 노출</text>
               </svg>
             </div>
 
@@ -2968,15 +3092,15 @@ footer {
 
     </div><!-- /slides -->
   </div><!-- /project-block P1 -->
-      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 약 50종의 시각화 위젯과 RBAC 인프라를 기획하며, 데이터 분석가 출신으로서 "사용자가 실제로 필요한 차트"와 "개발이 가능한 구조" 사이의 균형점을 찾는 데 집중했습니다.</p>
+      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 약 50종의 시각화 위젯과 RBAC 인프라를 기획하며, 데이터 분석가 출신으로서 "사용자가 실제로 필요한 차트"와 "개발이 가능한 구조" 사이의 균형점을 찾는 데 집중했습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p3">
     <div class="proj-acc-header" onclick="toggleProject(this)">
-      <div class="proj-acc-num">03</div>
+      <div class="proj-acc-num">04</div>
       <div class="proj-acc-title">
         <strong>Quetta 브랜드 페이지 + 브릿지 페이지 기획</strong>
-        <span>2025.12–2026.05 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:10px; padding:2px 8px;">런칭 완료</span></span>
+        <span>2025.12–2026.05 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:11px; padding:2px 8px;">런칭 완료</span></span>
       </div>
       <div class="proj-acc-toggle">＋</div>
     </div>
@@ -2984,7 +3108,7 @@ footer {
     <!-- P3: 브랜드/브릿지 페이지 -->
   <div class="project-block">
     <div class="project-meta">
-      <span class="project-index">03</span>
+      <span class="project-index">04</span>
       <span class="project-status status-done">런칭 완료</span>
     </div>
     <h3 class="project-headline">Quetta 브랜드 페이지 + 브릿지 페이지 기획</h3>
@@ -3085,15 +3209,15 @@ footer {
       </div>
     </div>
   </div><!-- /P3 -->
-      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 브랜드 페이지는 단순 소개가 아닌 "유료 전환 퍼널"로 설계했습니다. 솔루션별 브릿지 페이지를 통해 무료 사용자가 자연스럽게 유료로 넘어오는 구조를 기획한 첫 번째 경험이었습니다.</p>
+      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 브랜드 페이지는 단순 소개가 아닌 "유료 전환 퍼널"로 설계했습니다. 솔루션별 브릿지 페이지를 통해 무료 사용자가 자연스럽게 유료로 넘어오는 구조를 기획한 첫 번째 경험이었습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p4">
     <div class="proj-acc-header" onclick="toggleProject(this)">
-      <div class="proj-acc-num">04</div>
+      <div class="proj-acc-num">05</div>
       <div class="proj-acc-title">
         <strong>AI Query Builder + Taxonomy Builder 기획</strong>
-        <span>2025.08–2026.01 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:10px; padding:2px 8px;">개발 완료</span></span>
+        <span>2025.08–2026.01 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:11px; padding:2px 8px;">개발 완료</span></span>
       </div>
       <div class="proj-acc-toggle">＋</div>
     </div>
@@ -3101,7 +3225,7 @@ footer {
     <!-- P2: AI Query Builder + Taxonomy Builder -->
   <div class="project-block">
     <div class="project-meta">
-      <span class="project-index">04</span>
+      <span class="project-index">05</span>
       <span class="project-status status-done">개발 완료</span>
     </div>
     <h3 class="project-headline">AI Query Builder + Taxonomy Builder 기획</h3>
@@ -3280,15 +3404,15 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 
     </div>
   </div><!-- /P2 -->
-      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 데이터 분석가 시절 직접 쿼리를 짜며 불편함을 느꼈던 경험이, 비전문가도 쓸 수 있는 AI 자동완성 기능 기획의 출발점이 되었습니다. 프롬프트 설계부터 화면 기획까지 End-to-End로 담당했습니다.</p>
+      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 데이터 분석가 시절 직접 쿼리를 짜며 불편함을 느꼈던 경험이, 비전문가도 쓸 수 있는 AI 자동완성 기능 기획의 출발점이 되었습니다. 프롬프트 설계부터 화면 기획까지 End-to-End로 담당했습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p5">
     <div class="proj-acc-header" onclick="toggleProject(this)">
-      <div class="proj-acc-num">05</div>
+      <div class="proj-acc-num">06</div>
       <div class="proj-acc-title">
         <strong>Quettai 언론 분석 기능 기획</strong>
-        <span>2025.07–08 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:10px; padding:2px 8px;">1차 런칭 완료</span></span>
+        <span>2025.07–08 &nbsp;·&nbsp; <span class="project-status status-done" style="font-size:11px; padding:2px 8px;">1차 런칭 완료</span></span>
       </div>
       <div class="proj-acc-toggle">＋</div>
     </div>
@@ -3296,7 +3420,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
     <!-- P4: 언론 분석 -->
   <div class="project-block">
     <div class="project-meta">
-      <span class="project-index">05</span>
+      <span class="project-index">06</span>
       <span class="project-status status-done">1차 런칭 완료</span>
     </div>
     <h3 class="project-headline">Quettai 언론 분석 기능 기획</h3>
@@ -3339,13 +3463,13 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
             <!-- 플로우 SVG -->
             <div class="diagram-wrap">
               <svg viewBox="0 0 760 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-                <rect width="760" height="140" fill="#0F0F0F"/>
+                <rect width="760" height="140" fill="#1C1E24"/>
                 <!-- 문제 -->
                 <rect x="10" y="20" width="160" height="100" fill="none" stroke="#8A3A3A" stroke-width="1"/>
                 <text x="90" y="48" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">전수 댓글 분석 시도</text>
-                <text x="90" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">기사 1개 ID 하위에</text>
-                <text x="90" y="80" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">댓글이 종속 →</text>
-                <text x="90" y="94" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">기사 수만큼 API 호출</text>
+                <text x="90" y="66" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">기사 1개 ID 하위에</text>
+                <text x="90" y="80" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">댓글이 종속 →</text>
+                <text x="90" y="94" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">기사 수만큼 API 호출</text>
                 <text x="90" y="108" fill="#8A3A3A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">폭발적 증가</text>
                 <!-- 화살표 -->
                 <line x1="170" y1="70" x2="200" y2="70" stroke="#444" stroke-width="1"/>
@@ -3354,23 +3478,23 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
                 <rect x="210" y="20" width="150" height="100" fill="none" stroke="#5A3A3A" stroke-width="1"/>
                 <text x="285" y="60" fill="#A06060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">개발팀</text>
                 <text x="285" y="78" fill="#A06060" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">"전수 분석 불가"</text>
-                <text x="285" y="96" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">서버 부하 급증 통보</text>
+                <text x="285" y="96" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">서버 부하 급증 통보</text>
                 <!-- 화살표 -->
                 <line x1="360" y1="70" x2="390" y2="70" stroke="#444" stroke-width="1"/>
                 <polygon points="390,66 400,70 390,74" fill="#444"/>
                 <!-- 기획 대안 -->
                 <rect x="400" y="20" width="155" height="100" fill="none" stroke="#4A6A4A" stroke-width="1"/>
                 <text x="477" y="48" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">기획자 대안 제시</text>
-                <text x="477" y="66" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">핵심 기사 최대 100개</text>
-                <text x="477" y="80" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">여론 영향력 기준 선별</text>
-                <text x="477" y="96" fill="#606060" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">(댓글수·조회수·언급량)</text>
+                <text x="477" y="66" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">핵심 기사 최대 100개</text>
+                <text x="477" y="80" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">여론 영향력 기준 선별</text>
+                <text x="477" y="96" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">(댓글수·조회수·언급량)</text>
                 <!-- 화살표 -->
                 <line x1="555" y1="70" x2="585" y2="70" stroke="#444" stroke-width="1"/>
                 <polygon points="585,66 595,70 585,74" fill="#444"/>
                 <!-- 결과 -->
-                <rect x="595" y="20" width="155" height="100" fill="none" stroke="#C8B97A" stroke-width="1"/>
-                <text x="672" y="55" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">안정성 + 유의미한</text>
-                <text x="672" y="72" fill="#C8B97A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">분석 동시 달성</text>
+                <rect x="595" y="20" width="155" height="100" fill="none" stroke="#C4CAD1" stroke-width="1"/>
+                <text x="672" y="55" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">안정성 + 유의미한</text>
+                <text x="672" y="72" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">분석 동시 달성</text>
               </svg>
             </div>
 
@@ -3415,7 +3539,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       </div>
     </div>
   </div><!-- /P4 -->
-      <p class="po-link" style="margin-top:16px; color:#8A7B40; padding:0 24px;">→ 개발팀의 기술적 제약(크롤링 불가 언론사 대응)을 조율하며, 기술 현실과 사용자 가치 사이의 균형점을 기획 레벨에서 찾은 프로젝트. 언론사·기자 단위 타겟팅 구조는 소셜 분석 경험이 설계에 직접 반영된 사례.</p>
+      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 개발팀의 기술적 제약(크롤링 불가 언론사 대응)을 조율하며, 기술 현실과 사용자 가치 사이의 균형점을 기획 레벨에서 찾은 프로젝트. 언론사·기자 단위 타겟팅 구조는 소셜 분석 경험이 설계에 직접 반영된 사례.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
 
@@ -3424,27 +3548,27 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 </div><!-- /light-wrapper projects -->
 
 <!-- ── BRIDGE: 인셋 카드형 ── -->
-<div id="bridge" style="background: #EDEAE4; padding: 0 48px;">
+<div id="bridge" style="background: #EEF1F4; padding: 0 48px;">
   <!-- 인셋 카드 — 좌우 마진으로 "들여쓰기된 삽입 구간" -->
   <div style="max-width: 1200px; margin: 0 auto; padding: 32px 0;">
     <div style="
-      border-left: 3px solid #B0A88A;
+      border-left: 3px solid #6E727A;
       background: rgba(255,255,255,0.65);
       border-radius: 0 8px 8px 0;
       padding: 28px 32px;
       margin-left: 48px;
       margin-right: 80px;
-      box-shadow: 2px 2px 12px rgba(0,0,0,0.06);
+      box-shadow: none;
       position: relative;
     ">
       <!-- 좌측 세로 라인의 상단 연결점 -->
-      <div style="position:absolute; left:-3px; top:-16px; width:3px; height:16px; background:linear-gradient(to bottom, transparent, #B0A88A);"></div>
-      <div style="position:absolute; left:-3px; bottom:-16px; width:3px; height:16px; background:linear-gradient(to bottom, #B0A88A, transparent);"></div>
+      <div style="position:absolute; left:-3px; top:-16px; width:3px; height:16px; background:linear-gradient(to bottom, transparent, #6E727A);"></div>
+      <div style="position:absolute; left:-3px; bottom:-16px; width:3px; height:16px; background:linear-gradient(to bottom, #6E727A, transparent);"></div>
 
       <!-- 라벨 -->
       <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A8070; letter-spacing:0.14em; padding:3px 10px; border-radius:3px; border:1px solid #C4BFB4; background:rgba(255,255,255,0.8);">CAREER BRIDGE</div>
-        <span style="font-family:var(--mono); font-size:10px; color:#9A9088;">2023 ~ 2025</span>
+        <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:#5A5E66; letter-spacing:0.14em; padding:3px 10px; border-radius:3px; border:1px solid #C4C7CC; background:rgba(255,255,255,0.8);">CAREER BRIDGE</div>
+        <span style="font-family:var(--mono); font-size:11px; color:#9A9088;">2023 ~ 2025</span>
       </div>
 
       <!-- 헤드카피 -->
@@ -3461,11 +3585,11 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
             분석가로 데이터를 다루는 일과, 그 데이터를 사용자가 쓰는 화면으로 만드는 일은 전혀 다른 영역임을 이 프로젝트를 통해 체감했습니다. 이 경험이 PO로의 전환을 결심하게 된 계기였습니다.
           </p>
         </div>
-        <div style="width:220px; flex-shrink:0; border:1px solid #D4D0C8; border-radius:6px; padding:14px; background:rgba(255,255,255,0.9);">
-          <div style="font-size:10px; font-family:var(--mono); color:#9A9088; letter-spacing:0.06em; margin-bottom:6px;">SIDE PROJECT</div>
+        <div style="width:220px; flex-shrink:0; border:1px solid #D2D5DA; border-radius:6px; padding:14px; background:rgba(255,255,255,0.9);">
+          <div style="font-size:11px; font-family:var(--mono); color:#9A9088; letter-spacing:0.06em; margin-bottom:6px;">SIDE PROJECT</div>
           <div style="font-size:14px; font-weight:700; color:#2A2820; margin-bottom:4px;">CookMatch</div>
           <div style="font-size:11px; color:#7A7068; line-height:1.6; margin-bottom:10px;">냉장고 속 재료 기반 레시피 추천 서비스<br>기획·디자인·개발 End-to-End 단독 수행</div>
-          <a href="https://refrigerator-code.vercel.app/" target="_blank" style="display:inline-flex; align-items:center; gap:5px; font-size:11px; font-family:var(--mono); color:#8A7B40; text-decoration:none; border-bottom:1px solid rgba(200,185,122,0.5); padding-bottom:1px;">
+          <a href="https://refrigerator-code.vercel.app/" target="_blank" style="display:inline-flex; align-items:center; gap:5px; font-size:11px; font-family:var(--mono); color:#23262C; text-decoration:none; border-bottom:1px solid rgba(35,38,44,0.5); padding-bottom:1px;">
             refrigerator-code.vercel.app ↗
           </a>
         </div>
@@ -3475,15 +3599,15 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 </div>
 
 <!-- ── BEFORE PO (라이트 테마, 살짝 다른 배경) ── -->
-<div style="background: #E0DDD8;">
+<div style="background: #FFFFFF;">
 
 <!-- Before PO 접힘 토글 헤더 -->
 <div id="beforepo-toggle" onclick="toggleSection('beforepo-body', 'beforepo-toggle-icon')"
   style="max-width:1200px; margin:0 auto; padding:0 48px; cursor:pointer; user-select:none;">
 
   <!-- Before PO 라벨 + 구분선 -->
-  <div style="display:flex; align-items:center; gap:16px; padding-top:48px; padding-bottom:20px; border-bottom:2px solid #B0A88A;">
-    <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#888078; letter-spacing:0.14em; background:rgba(180,170,140,0.15); padding:4px 12px; border-radius:3px;">BEFORE PO</div>
+  <div style="display:flex; align-items:center; gap:16px; padding-top:48px; padding-bottom:20px; border-bottom:2px solid #6E727A;">
+    <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:#888078; letter-spacing:0.14em; background:rgba(120,124,132,0.15); padding:4px 12px; border-radius:3px;">BEFORE PO</div>
     <div style="font-family:var(--mono); font-size:11px; color:#888078; letter-spacing:0.06em;">코난테크놀로지 · 와이즈넛 · 코마코 · 대홍기획 &nbsp;·&nbsp; 2015 ~ 2023</div>
   </div>
 
@@ -3494,36 +3618,36 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       <p style="font-size:14px; color:#666660; margin-bottom:20px; line-height:1.6;">광고 대행사에서 소비자를 읽는 법을 배웠고, IT 기업에서 데이터로 증명하는 법을 익혔습니다.</p>
       <div style="display:flex; flex-direction:column; gap:6px;">
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#888078; margin-right:10px;">2019–2023</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#888078; margin-right:10px;">2019–2023</span>
           <strong>코난테크놀로지</strong>
           <span style="color:#909088; margin-left:8px; font-size:12px;">데이터 분석가 경험 · 대통령실/지자체/서울대 트렌드코리아</span>
         </div>
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#888078; margin-right:10px;">2019</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#888078; margin-right:10px;">2018–2019</span>
           <strong>와이즈넛</strong>
           <span style="color:#909088; margin-left:8px; font-size:12px;">데이터 분석가 경험 · 현대자동차/다이슨/기획재정부</span>
         </div>
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#888078; margin-right:10px;">2015–2018</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#888078; margin-right:10px;">2015–2018</span>
           <strong>코마코</strong>
           <span style="color:#909088; margin-left:8px; font-size:12px;">AE/AP 경험 · 아모레퍼시픽/한국야쿠르트/동국제약 등</span>
         </div>
         <div style="font-size:13px; color:#444440;">
-          <span style="font-family:var(--mono); font-size:10px; color:#888078; margin-right:10px;">2015</span>
+          <span style="font-family:var(--mono); font-size:11px; color:#888078; margin-right:10px;">2015</span>
           <strong>대홍기획</strong>
           <span style="color:#909088; margin-left:8px; font-size:12px;">AE 경험 (인턴) · 렛츠런파크 빛축제 수주 기여</span>
         </div>
       </div>
     </div>
     <div style="display:flex; flex-direction:column; align-items:center; gap:8px; padding-top:4px; flex-shrink:0;">
-      <div id="beforepo-toggle-icon" style="width:40px; height:40px; border-radius:50%; border:2px solid #B0A88A; display:flex; align-items:center; justify-content:center; font-size:22px; color:#888078; font-weight:300; transition:all 0.25s;">＋</div>
-      <div class="toggle-hint" style="font-family:var(--mono); font-size:9px; color:#888078; letter-spacing:0.06em; text-align:center;">펼쳐보기 ↓</div>
+      <div id="beforepo-toggle-icon" style="width:40px; height:40px; border-radius:50%; border:2px solid #6E727A; display:flex; align-items:center; justify-content:center; font-size:22px; color:#888078; font-weight:300; transition:all 0.25s;">＋</div>
+      <div class="toggle-hint" style="font-family:var(--sans); font-size:11px; color:#888078; letter-spacing:0.06em; text-align:center;">펼쳐보기 ↓</div>
     </div>
   </div>
 </div>
 
 <div id="beforepo-body" style="display:none;">
-<section id="before-po" class="light-section" style="background: transparent; border-top: 1px solid #D8D4CC; max-width: 1200px; margin: 0 auto; padding: 28px 48px 80px;">
+<section id="before-po" class="light-section" style="background: transparent; border-top: 1px solid #D6D9DE; max-width: 1200px; margin: 0 auto; padding: 28px 48px 80px;">
   <div class="section-header">
     <span class="section-eyebrow">Before PO · 2015–2023</span>
     <h2 class="section-title">데이터 분석가이자 마케팅 전략가로 쌓은 도메인 기반</h2>
@@ -3531,14 +3655,14 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 
 <style>
 .bp-accordion {
-  border: 1px solid #D4D0C8;
+  border: 1px solid #D2D5DA;
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 8px;
   background: rgba(255,255,255,0.6);
 }
 .bp-accordion.open {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: none;
   background: #fff;
 }
 .bp-acc-header {
@@ -3553,13 +3677,13 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
   transition: background 0.15s;
 }
 .bp-acc-header:hover { background: rgba(0,0,0,0.03); }
-.bp-accordion.open .bp-acc-header { border-bottom-color: #D4D0C8; }
-.bp-acc-period { font-family:var(--mono); font-size:10px; color:#888078; min-width:80px; }
+.bp-accordion.open .bp-acc-header { border-bottom-color: #D2D5DA; }
+.bp-acc-period { font-family:var(--mono); font-size:11px; color:#888078; min-width:80px; }
 .bp-acc-title { flex:1; }
 .bp-acc-title strong { display:block; font-size:15px; font-weight:700; color:#1A1A18; margin-bottom:2px; }
 .bp-acc-title span { font-size:12px; color:#909088; }
-.bp-acc-toggle { width:26px; height:26px; border-radius:50%; border:1.5px solid #B0A88A; display:flex; align-items:center; justify-content:center; font-size:16px; color:#888078; transition:all 0.2s; flex-shrink:0; }
-.bp-accordion.open .bp-acc-toggle { background:#B0A88A; color:#fff; }
+.bp-acc-toggle { width:26px; height:26px; border-radius:50%; border:1.5px solid #6E727A; display:flex; align-items:center; justify-content:center; font-size:16px; color:#888078; transition:all 0.2s; flex-shrink:0; }
+.bp-accordion.open .bp-acc-toggle { background:#6E727A; color:#fff; }
 .bp-acc-body { display:none; padding:24px 28px; }
 .bp-accordion.open .bp-acc-body { display:block; }
 </style>
@@ -3588,26 +3712,246 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       <div class="bp-acc-toggle">＋</div>
     </div>
     <div class="bp-acc-body">
-      <div class="img-row two" style="margin-bottom: 20px;">
-        <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">트렌드코리아 2022·2023 책 표지</span></div>
-        <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">대표 분석 보고서 내지 (시각화 차트 풍부한 페이지)</span></div>
+      <!-- 소셜 데이터 분석 프레임 개발 -->
+      <div style="margin-top:24px; margin-bottom:8px; font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">SOCIAL DATA 분석 프레임 개발 (~2023)</div>
+      <p style="font-size:12px; color:#909088; margin-bottom:12px;">자사 경쟁력 강화를 위해 개발한 SNS 빅데이터 분석 프레임. 클릭하면 개요를 확인할 수 있습니다.</p>
+      <div class="tags">
+        <span class="tag fw-btn" onclick="toggleFramework('konan-centrality')">중심성 분석</span>
+        <span class="tag fw-btn" onclick="toggleFramework('konan-policy-sense')">정책 체감도 분석</span>
+        <span class="tag fw-btn" onclick="toggleFramework('konan-policy-react')">현실 반영도·대응도·호응도</span>
+        <span class="tag fw-btn" onclick="toggleFramework('konan-seed')">성별/연령별 Seed 구분</span>
+        <span class="tag fw-btn" onclick="toggleFramework('konan-subject')">긍·부정 주체 매칭</span>
+        <span class="tag fw-btn" onclick="toggleFramework('konan-alert')">위기 알림 얼랏 시스템</span>
       </div>
-      <table class="content-table" style="margin-bottom: 16px;">
-        <tr><th>주요 클라이언트</th><th>프로젝트 성격</th></tr>
-        <tr><td>대통령실</td><td>빅데이터 정기 분석 보고서 (일일·주간·월간·이슈) + 모니터링 시스템 기획</td></tr>
-        <tr><td>서울대 트렌드센터</td><td>트렌드코리아 2022·2023 소셜 빅데이터 분석 지원 (김난도 교수)</td></tr>
-        <tr><td>서울시·부산시·성남시·통일부·문체부</td><td>정기 분석 보고서 + 위기 알럿 시스템 기획 (5개 기관 동시 운영)</td></tr>
-        <tr><td>KT&G·하이브</td><td>소셜 버즈 모니터링 툴 기획·디버깅·품질관리</td></tr>
-        <tr><td>청와대·한국경제신문</td><td>빅데이터 분석 보고서 · 빅데이터 전략 마에스트로 과정 멘토링 교육 활동 (2021)</td></tr>
-        <tr><td>한국지능정보사회진흥원</td><td>2020 중소기업 빅데이터 분석 및 활용 지원사업 → NIA 빅데이터 활용 우수사례 선정</td></tr>
-      </table>
-      <table class="content-table" style="margin-bottom: 16px;">
-        <tr><td>감성 분석 고도화</td><td>뉴스 본문-댓글 의미 연결 기반 문맥 분석 도입 → 감성 주체 연결로 정확도 향상</td></tr>
-        <tr><td>위기 알럿 시스템</td><td>키워드 언급량 급등 감지 → 텔레그램 실시간 경고 시스템 설계</td></tr>
-        <tr><td>모니터링 UI 기획</td><td>클라이언트 맞춤형 소셜 리스닝 시스템 화면 설계 · 개발팀 직접 협업 시작</td></tr>
-      </table>
+      <div id="konan-centrality" class="fw-detail" style="display:none;">
+        <strong>중심성 분석</strong>
+        <p>목적: 성장·신생 이슈 키워드 중 가장 중심적으로 언급되는 핵심 키워드를 식별해 주요 트렌드를 도출.</p>
+        <p>방법: 최근 1년 언급 증가율이 높은 키워드 간 연관성·중심성을 분석. 연관어 간 함께 언급된 문서 비율로 연관성을 계산하고, 각 키워드가 다른 키워드와 맺는 연관성 점수를 합산해 중심성 지수를 산출.</p>
+        <p>기대효과: 떠오르는 키워드 중 핵심 트렌드를 선도하는 단어를 도출해 전략적 마케팅·트렌드 분석에 활용.</p>
+        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">중심성·연관성 분석 예시 이미지</span></div>
+      </div>
+      <div id="konan-policy-sense" class="fw-detail" style="display:none;">
+        <strong>정책 체감도 분석</strong>
+        <p>목적: 정책 분야별 국민 체감도를 정량 분석해 핵심 정책을 파악하고 효율적 자원 배분·실행 전략을 수립.</p>
+        <p>방법: 언급량 TOP N 정책을 선정한 뒤 네이버 검색량과 SNS 언급량을 MIX(최댓값 100)해 수치화. 뉴스 원문을 제외해 국민 반응만 분석.</p>
+        <p>기대효과: 검색량과 SNS 언급량 차이를 보정해 정책 체감도를 통합 비교하고 국민 관심도·추세를 분석.</p>
+        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">정책 체감도 추이 예시 이미지</span></div>
+      </div>
+      <div id="konan-policy-react" class="fw-detail" style="display:none;">
+        <strong>정책 현실 반영도·대응도·호응도 분석</strong>
+        <p>목적: 국민 관심 이슈와 사회관계장관회의 주제 간 일치도를 높이고 대응 방안을 마련.</p>
+        <p>방법: 현실 반영도(안건-이슈 일치 개수 ÷ 총 안건 수), 대응도(이슈 발생~안건 반영까지 걸린 시간), 호응도(안건 통과 후 언급량 변화) 3개 지표로 상관관계를 분석.</p>
+        <p>기대효과: 정책이 국민 요구에 얼마나 부합하는지 평가하고 정책 개선 방향을 제시.</p>
+        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">반영도·대응도·호응도 분석 예시 이미지</span></div>
+      </div>
+      <div id="konan-seed" class="fw-detail" style="display:none;">
+        <strong>성별/연령별 Seed 구분 분석</strong>
+        <p>목적: 성별·연령별·지역별로 세분화된 데이터를 분석해 각 그룹의 특성과 니즈를 반영한 인사이트를 도출.</p>
+        <p>방법: 세대·성별·지역별로 많이 이용하는 대표 카페/커뮤니티를 Seed로 지정해 데이터를 수집(예: 2030 디시인사이드, 여성 맘스홀릭, 부산 중고나라).</p>
+        <p>기대효과: 그룹별 관심사와 주요 이슈를 반영해 타겟 마케팅 전략과 시장 니즈에 부합하는 실행 방안을 제시.</p>
+        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">세대·성별·지역 Seed 구분 예시 이미지</span></div>
+      </div>
+      <div id="konan-subject" class="fw-detail" style="display:none;">
+        <strong>긍·부정 분석 품질 개선 — 주체 매칭</strong>
+        <p>목적: 소셜 데이터 내 긍·부정 표현을 주체와 긴밀히 연결해 감성 분석 정확성과 신뢰도를 강화.</p>
+        <p>방법: ⓑ 주체 비하·긍정 명칭(예: 윤무능/어대윤)을 주체와 연결, ⓒ 뉴스 전문에서 주체·논조를 추출해 댓글과 매칭, ⓓ 주체별 긍·부정 결과를 대시보드에 반영.</p>
+        <p>기대효과: 주체가 명확하지 않은 문장에서도 평가 대상을 식별해 감성 분석의 신뢰성과 품질을 향상.</p>
+        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">주체별 긍·부정 대시보드 예시 이미지</span></div>
+      </div>
+      <div id="konan-alert" class="fw-detail" style="display:none;">
+        <strong>위기 알림 얼랏(Alert) 시스템</strong>
+        <p>목적: 고객사 관심 키워드의 부정 이슈·급상승 이슈를 실시간 탐지해 빠르게 대응하도록 얼랏을 발송.</p>
+        <p>방법: 뉴스·커뮤니티/SNS에서 키워드 데이터를 실시간 수집(10분~1시간). 부정 얼랏·급상승 얼랏·SNS 얼랏 조건 충족 시 텔레그램 API로 이슈 요약·통계를 발송.</p>
+        <p>기대효과: 부정·급상승 이슈를 신속히 파악해 효율적인 대응과 위기 관리를 지원.</p>
+        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">얼랏 발송 예시 이미지</span></div>
+      </div>
+      <!-- 클라이언트 분석 프로젝트 -->
+      <div style="margin-top:24px; margin-bottom:8px; font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">CLIENT PROJECT · 소셜·여론 분석 보고서</div>
+      <p style="font-size:12px; color:#909088; margin-bottom:12px;">기업·정부·공공기관 대상 소셜 빅데이터 분석 프로젝트. 클릭하면 상세 내용을 확인할 수 있습니다.</p>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">서울대 『트렌드 코리아』 2022~2023 저술 참여</span>
+          <span class="fw-acc-meta">2022~2023 · 서울대 소비트렌드분석센터</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>소비자 데이터 심층 분석으로 『트렌드 코리아』 도서 발간용 주요 트렌드 키워드 도출 및 사회·산업 변화 예측 기반 마련</td></tr><tr><td>사용 데이터</td><td>SNS 소셜 데이터(블로그·커뮤니티·카페·트위터) / 키워드: 코로나·보복소비·파이어족·PPL·MBTI·중고거래 등</td></tr><tr><td>주요 분석</td><td>텍스트 마이닝·연관어 분석으로 소비자 관심사·행동 패턴 심층 분석 (예: MZ세대 관심 '운동' 종목, 향후 뜨는 '기술' 키워드)</td></tr><tr><td>성과</td><td>『2022~2023 트렌드 코리아』 도서 발간에 데이터 분석으로 기여</td></tr><tr><td>회고</td><td>(Keep) 방대한 데이터를 체계적으로 분석 / (Problem) 주제별 심층 분석 한계 → 추가 구체화 필요</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">앤티앤스프레즐 신제품 개발 컨셉 제안</span>
+          <span class="fw-acc-meta">2020 · 한국지능정보사회진흥원(NIA) 주관</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>소셜 데이터 분석으로 신제품 기획 컨셉 제안 및 출시 성공 가능성 제고</td></tr><tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 100만 건 / 키워드: 디저트 등</td></tr><tr><td>주요 분석</td><td>디저트 고려 요소(메뉴·원재료·식감) 분류, 흑임자 긍정 관심 증가 및 꾸덕한 식감·치즈 연관성 발견, 2~4월 언급량 증가 확인</td></tr><tr><td>성과</td><td>'흑임자 크림치즈 스틱' 기획·홍보방향 도출 → 실제 출시 / 과기부·NIA 빅데이터 활용 우수 사례집 소개</td></tr><tr><td>회고</td><td>(Keep) 매출·소셜 데이터 결합으로 출시 시점 분석 / (Problem) 원재료 추출 과정 수정 시간 소요</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">잘풀리는집 미래생활 제품 리뷰 분석 보고서</span>
+          <span class="fw-acc-meta">2020 · 잘풀리는집</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>소비자 리뷰 데이터로 화장지 제품 강점·개선점 도출 및 브랜드 경쟁력 강화 전략 제안</td></tr><tr><td>사용 데이터</td><td>리뷰·평점 데이터 약 7만 건(지마켓·옥션·쿠팡·홈앤쇼핑)</td></tr><tr><td>주요 분석</td><td>주요 구매 고려 요인(KBF) 도출(향&gt;두께&gt;성분&gt;먼지&gt;길이&gt;촉감), 부정 요인(먼지·독한 향), 여성 고객 '먼지·향' 민감 확인</td></tr><tr><td>성과</td><td>먼지 발생 최소화·향 강도 조정·프리미엄 라인업 개선안 도출 → 홈페이지 리뉴얼 이벤트 성황 및 매출 증가</td></tr><tr><td>회고</td><td>(Keep) 리뷰 기반 명확한 개선 방향 도출 / (Problem) 경쟁사 강점에 대한 심층 분석 부족</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">KT&amp;G 신제품 반응 분석</span>
+          <span class="fw-acc-meta">2023 · KT&amp;G</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>릴 에이블·에임 제품군 온라인 반응 분석 및 신제품 출시·개선 방향 제안</td></tr><tr><td>사용 데이터</td><td>소셜 게시 데이터 약 3천 건(카페·트위터·커뮤니티·블로그) / 키워드: 릴 에이블·아이코스·글로</td></tr><tr><td>주요 분석</td><td>경쟁지수(아이코스&gt;글로), 릴 에이블 약점 '디자인·디스플레이(33.1%)', 에임 베이퍼 스틱 '맛이 인공적' 부정 혹평</td></tr><tr><td>성과</td><td>디자인·맛 개선 제안 → '릴 에이블 2.0' 디자인 변경 출시, 개선 베이퍼 스틱 2종 출시</td></tr><tr><td>회고</td><td>(Keep) 강점 강화·약점 개선 실질 제안 / (Problem) 타격감·멘솔 등 세부 요구사항 분석 부족</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">프로스포츠 MZ세대 온라인 콘텐츠 소비 분석</span>
+          <span class="fw-acc-meta">2020 · 한국프로스포츠협회(KPSA)</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>MZ세대 온라인 콘텐츠 소비 특성 이해로 프로스포츠 디지털 전략 수립 지원</td></tr><tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 332만 건(인스타그램·뉴스·유튜브·커뮤니티), 2018.1~2019.11</td></tr><tr><td>주요 분석</td><td>시간대별 소비 패턴 분석, 스포츠 콘텐츠 '게임·오디오' 비중 높음, 게임 성장 이유 'e스포츠 팬덤 문화' 도출</td></tr><tr><td>성과</td><td>선수 중심 '팬덤 강화' 전략·참여형 콘텐츠 방향 제시 / 협회 출판물 '소셜빅데이터 2019' 수록</td></tr><tr><td>회고</td><td>(Keep) 콘텐츠 소비 패턴·차별적 특징 도출 / (Problem) 일부 데이터의 세부 의미 반영 부족</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">MBC 2022 대통령선거 미래신호 분석</span>
+          <span class="fw-acc-meta">2021 · MBC</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>대선 당일 토론 주제·논의 방향 설정용 주요 이슈·여론 흐름 데이터 제공</td></tr><tr><td>사용 데이터</td><td>소셜 빅데이터 약 500만 건(트위터·카페·커뮤니티) / 키워드: 이재명·윤석열</td></tr><tr><td>주요 분석</td><td>후보별 관심 이슈 분포 — 이재명 급부상 이슈 '특검', 윤석열 급부상 이슈 '부산저축은행'</td></tr><tr><td>성과</td><td>중앙선거방송토론위원회 제20대 대선 후보자 토론회 분석 자료로 토론 주제에 활용</td></tr><tr><td>회고</td><td>(Keep) 토론 논의 방향과 연계한 시의적 자료 제공 / (Problem) 장기적 이슈 예측 미흡</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">청와대 부동산 현안 빅데이터 분석</span>
+          <span class="fw-acc-meta">2021 · 청와대</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>부동산 정책에 대한 시민 반응 분석으로 정책 방향성·개선 방안 도출</td></tr><tr><td>사용 데이터</td><td>SNS 소셜 데이터(네이버·다음 뉴스·댓글·커뮤니티·트위터) 총 34개 채널</td></tr><tr><td>주요 분석</td><td>정책별 언급량·증가율 2×2 매트릭스, 중점 관리 정책(종부세·대출규제·보유세·재산세·사전청약), 일반vs고관여 채널 비교, 사전청약 긍정 1위·재산세 긍정 최하위</td></tr><tr><td>성과</td><td>사전청약 활성화·재산세 이중과세 오해 해소 커뮤니케이션 제안 → 정책 의사결정 과정 기여</td></tr><tr><td>회고</td><td>(Keep) 일반·고관여 채널 분리 분석 / (Problem) 장기 효과 예측용 데이터 부족</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">교육부 포용국가 사회정책 국민 여론 분석</span>
+          <span class="fw-acc-meta">2021 · 교육부</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>포용국가 사회정책에 대한 시민 인식·관심사·개선 요구 분석으로 정책 방향성 제안</td></tr><tr><td>사용 데이터</td><td>SNS 비정형 텍스트 약 5,467만 건(뉴스·댓글·카페·트위터·블로그) / 키워드: 돌봄·배움·환경안전·건강·노후</td></tr><tr><td>주요 분석</td><td>긍정여론 분포(언급량×긍정률) 분석, 돌봄 분야 강점 '다문화 가족지원', 환경안전 분야 약점 '아동·여성 폭력 피해 보호·지원'</td></tr><tr><td>성과</td><td>아동·여성 폭력 법적 처벌 공청회·SNS 상담·원스톱 서비스 제안 → 정책 우선순위 설정 기여</td></tr><tr><td>회고</td><td>(Keep) 관심도·호감도 매트릭스 시각화 / (Problem) 신생 이슈 심층 분석 부족</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">KT&amp;G 소셜 모니터링 시스템 운영</span>
+          <span class="fw-acc-meta">2022~2023 · KT&amp;G</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>시스템 기획</td><td>데이터 수집 범위·키워드 분류·분석 항목·UI 설계·고객사 커뮤니케이션·정기 디버깅 (제품 속성별/브랜드별/경쟁사/키워드별/미래 흐름 분석)</td></tr><tr><td>위기 얼랏</td><td>SNS·언론에서 특정 키워드 급증·패턴 감지 시 텔레그램 실시간 알림 발송</td></tr><tr><td>분석 보고서</td><td>신제품 반응·경쟁사 제품 비교·CSR 활동 반응·언론 보도 현황 분석 (일간·주간·월간·연차)</td></tr><tr><td>Role</td><td>Research Proposal · Analysis Frame Design · Data Cleaning · Data Analysis · Report Writing · Presentation</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">통일부 소셜 모니터링 시스템 운영</span>
+          <span class="fw-acc-meta">2022~2023 · 통일부</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>시스템 기획</td><td>뉴스·이슈·정책별·도시별 모니터링, 언급량·긍부정·미래 흐름 분석 항목 수립 및 UI 설계</td></tr><tr><td>위기 얼랏</td><td>특정 키워드 급증·패턴 감지 시 텔레그램 실시간 알림 발송</td></tr><tr><td>분석 보고서</td><td>일일·주간·월간 리포트 — 통일·북한 관련 이슈에 대한 시민 여론 분석</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">서울시 소셜 모니터링 시스템 운영</span>
+          <span class="fw-acc-meta">2022~2023 · 서울시</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>시스템 기획</td><td>뉴스·이슈·정책별·도시별 모니터링, 언급량·긍부정·미래 흐름 분석 및 UI 설계</td></tr><tr><td>위기 얼랏</td><td>키워드 급증·패턴 감지 시 텔레그램 실시간 알림 발송</td></tr><tr><td>분석 보고서</td><td>서울시 정책·서울시장 관련 이슈 시민 여론 분석, 서울시 도시 브랜드 개편 빅데이터 분석, 명소 분석</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">부산시 소셜 모니터링 시스템 운영</span>
+          <span class="fw-acc-meta">2022~2023 · 부산시</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>시스템 기획</td><td>뉴스·이슈·정책별·도시별 모니터링, 언급량·긍부정·미래 흐름 분석 및 UI 설계</td></tr><tr><td>위기 얼랏</td><td>키워드 급증·패턴 감지 시 텔레그램 실시간 알림 발송</td></tr><tr><td>분석 보고서</td><td>부산시 정책·부산시장 관련 이슈 시민 여론 분석, 도시 관광 상품·축제·부산 캐릭터 반응 분석</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">성남시 소셜 모니터링 시스템 운영</span>
+          <span class="fw-acc-meta">2022~2023 · 성남시</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>시스템 기획</td><td>뉴스·이슈·정책별·브랜드별 모니터링, 언급량·긍부정·미래 흐름 분석 및 UI 설계</td></tr><tr><td>위기 얼랏</td><td>키워드 급증·패턴 감지 시 텔레그램 실시간 알림 발송</td></tr><tr><td>분석 보고서</td><td>성남시 정책·성남시장 관련 이슈 시민 여론 분석, 성남 산업 활성화 반응 분석</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
       <p class="po-link">🏆 NIA 빅데이터 활용 우수사례 선정 (2020) — 소셜 분석 기반 신제품 전략 → 실제 매출 성과 달성</p>
-      <p class="po-link" style="margin-top: 8px; color: #8A7B40;">→ 광고 대행사에서 마케팅 전략을 담당하다가, IT 회사에서 처음으로 데이터 분석 시스템 화면을 직접 설계하고 개발팀과 협업한 시점. 서비스 기획으로의 관심이 본격화된 계기였습니다.</p>
+      <p class="po-link" style="margin-top: 8px; color: #23262C;">→ 광고 대행사에서 마케팅 전략을 담당하다가, IT 회사에서 처음으로 데이터 분석 시스템 화면을 직접 설계하고 개발팀과 협업한 시점. 서비스 기획으로의 관심이 본격화된 계기였습니다.</p>
     </div>
   </div>
 
@@ -3622,23 +3966,146 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       <div class="bp-acc-toggle">＋</div>
     </div>
     <div class="bp-acc-body">
-      <div class="img-placeholder medium" style="margin-bottom: 20px;">
-        <span class="img-placeholder-icon">🖼</span>
-        <span class="img-placeholder-label">대표 분석 보고서 표지 (현대자동차·다이슨·기획재정부 등)</span>
+      <!-- 소셜 데이터 분석 프레임 개발 -->
+      <div style="margin-top:24px; margin-bottom:8px; font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">SOCIAL DATA 분석 프레임 개발 (~2018)</div>
+      <p style="font-size:12px; color:#909088; margin-bottom:12px;">자사 경쟁력 강화를 위해 개발한 SNS 빅데이터 분석 프레임. 클릭하면 개요를 확인할 수 있습니다.</p>
+      <div class="tags">
+        <span class="tag fw-btn" onclick="toggleFramework('wisenut-laddering')">레더링 분석 텍사노미</span>
+        <span class="tag fw-btn" onclick="toggleFramework('wisenut-cdmap')">C-D MAP (중심성·차별성)</span>
       </div>
-      <table class="content-table" style="margin-bottom: 16px;">
-        <tr><th>주요 클라이언트</th><th>프로젝트 성격</th></tr>
-        <tr><td>현대자동차 × 이노션</td><td>외산차 대응·대형 SUV 온라인 여론 분석 보고서 작성</td></tr>
-        <tr><td>다이슨코리아</td><td>무선청소기 신제품 소셜 빅데이터 여론 분석</td></tr>
-        <tr><td>기획재정부</td><td>2019 정책방향 수립을 위한 소셜 빅데이터 보고서</td></tr>
-        <tr><td>FILA Korea</td><td>소셜 빅데이터 분석 보고서</td></tr>
-        <tr><td>구글코리아 – Embrain</td><td>소셜 리스닝 제안서 작성</td></tr>
-        <tr><td>농림부</td><td>소셜 모니터링 보고서</td></tr>
-      </table>
-      <table class="content-table">
-        <tr><td>핵심 경험</td><td>레더링 분석·C-D 맵 등 정성 방법론 도입 · 내부 시스템 감성어(emotion functions) 지식체계 구축 참여 · 시스템 운영 및 분석 설계 직접 참여</td></tr>
-      </table>
-      <p class="po-link" style="margin-top:12px; color:#8A7B40;">→ 코마코에서의 광고 기획 경험을 IT 데이터 분석 환경으로 처음 확장한 시점. 정성적 소비자 인사이트를 데이터로 검증하는 방법론을 체계적으로 습득했으며, 이후 코난테크놀로지에서 분석 시스템을 기획하는 기반이 됨.</p>
+      <div id="wisenut-laddering" class="fw-detail" style="display:none;">
+        <strong>레더링 분석 방법론 텍사노미</strong>
+        <p>목적: 소비자 심층 데이터를 기반으로 제품의 속성과 관련된 소비자 가치를 체계적으로 분석해 마케팅 전략에 활용할 텍사노미 사전을 구축.</p>
+        <p>주요 전제: 레더링(Laddering) 기법으로 구매 행동을 속성(Attribute) → 혜택/결과(Consequence) → 가치(Value)로 계층 연결해 심층 분석. 속성이 제공하는 이점과 심리적·정서적 만족을 도출해 핵심 동기를 파악.</p>
+        <p>구축 방법: ① 속성 — 제품 고유의 물리적·기능적 특징 텍스트(예: 무설탕 음료) / ② 혜택·결과 — 소비자에게 제공하는 직·간접 이익 텍스트(예: 다이어트에 도움) / ③ 가치 — 최종 심리적·개인적 만족 텍스트(예: 자신감 있는 삶).</p>
+        <p>기대효과: 속성에서 가치로 이어지는 구조적 분석으로 소비자 내면의 욕구·동기를 파악하고 브랜드-소비자 간 정서적 유대감을 형성. 가치까지 연결되는 통찰로 정교한 마케팅·제품 개발 전략을 도출.</p>
+        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">레더링·HVM 소비자 가치단 계도 예시 이미지</span></div>
+      </div>
+      <div id="wisenut-cdmap" class="fw-detail" style="display:none;">
+        <strong>C-D MAP · 중심성(Centrality)–차별성(Distinctiveness) 맵</strong>
+        <p>목적: 브랜드를 중심성(시장 대표성)과 차별성(고유 특성)으로 평가해 포지셔닝과 전략을 수립.</p>
+        <p>주요 전제: 브랜드는 중심성과 차별성을 동시에 추구하며, C-D 맵은 매출·가격 등 사업 성과와 직접 연결되는 도구 (하버드비즈니스리뷰, 니라지 다와 교수).</p>
+        <p>분석 방법: 중심성(X축) — 자사 브랜드 화제어 Top100이 전체 브랜드 화제어 Top100에 포함되는 비율(시장 대표성). 차별성(Y축) — 전체 대비 자사에서만 나타나는 고유 화제어 Top100 개수 비율(경쟁사 대비 차별화).</p>
+        <p>4분면 해석: ① 열망 브랜드(중심성 高·차별성 高, 예: 벤츠·BMW) / ② 이례적 브랜드(중심성 低·차별성 高, 예: 테슬라·미니) / ③ 주변 브랜드(중심성 低·차별성 低, 예: 미쓰비시·마쓰다) / ④ 주류 브랜드(중심성 高·차별성 低, 예: 포드·쉐보레).</p>
+        <p>기대효과: 시장 내 위치를 파악하고 경쟁사 대비 전략적 강점·개선 방향을 도출해 브랜드 전략(광고·커뮤니케이션·포지셔닝)을 수립.</p>
+        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">C-D MAP 4분면 예시 이미지</span></div>
+      </div>
+      <!-- 클라이언트 분석 프로젝트 -->
+      <div style="margin-top:24px; margin-bottom:8px; font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">CLIENT PROJECT · 소셜·여론 분석 보고서</div>
+      <p style="font-size:12px; color:#909088; margin-bottom:12px;">기업·정부·공공기관 대상 소셜 빅데이터 분석 프로젝트. 클릭하면 상세 내용을 확인할 수 있습니다.</p>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">기획재정부 2019 정책방향 분석</span>
+          <span class="fw-acc-meta">2019 · 기획재정부</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>소셜 빅데이터로 국민 여론을 분석해 2019 기재부 주요 정책 분야에 대한 국민 관심·부정 인식 기반 정책 개선 방향 제안</td></tr><tr><td>사용 데이터</td><td>소셜 데이터(뉴스·블로그·카페) 약 357,770건, 2018.1~12 / 키워드: 일자리·사회안전망·경제활력·최저임금·소득주도성장</td></tr><tr><td>주요 분석</td><td>키워드 분류체계(대·중·소분류) 수립, 정책분야별 본문수vs댓글수 비교, 7개 정책 중 '최우선 관리 필요' 분야 '일자리 창출·삶의 질 개선' 도출, 일자리 세부 키워드로 '일자리·취업·최저임금 우선 검토' 제언</td></tr><tr><td>활용</td><td>'기획재정부 2019 주요 과제' 부총리 보고에 반영</td></tr><tr><td>회고</td><td>(Keep) 관심도(y)×부정률(x) 사분면 시각화 / (Problem) 키워드 빈도 중심, 맥락 설명 부족 → 구체 사례 제시 필요</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">Dyson Korea 경쟁구도 분석</span>
+          <span class="fw-acc-meta">2018 · 다이슨</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>소셜 빅데이터로 다이슨 무선청소기 시장 경쟁력을 분석하고 소비자 요구에 부합하는 개선 방향 제안</td></tr><tr><td>배경</td><td>프리미엄 이미지의 다이슨이 삼성·LG 등 경쟁 브랜드의 기술 발전·마케팅 강화로 소비자 관심이 분산되던 상황</td></tr><tr><td>사용 데이터</td><td>SNS 비정형 텍스트 약 61,893건(네이버·다음 블로그·커뮤니티) + 검색 데이터 / 키워드: 다이슨·LG무선청소기·삼성무선청소기</td></tr><tr><td>주요 분석</td><td>흡입력 이슈 감소·무게 이슈 증가(무게 호감도 다이슨 최고), 제품 구성 '스탠드형 거치대' 관심 최고(자사 미보유로 불편), 배터리 지속력 자사 열위, 국내 A/S센터 부재가 구매 이탈 요인</td></tr><tr><td>활용</td><td>'가벼운 무게' 소구 광고 집행, '고정형 스탠드 거치대' 제공, '신규 모델 배터리 개선', '직영 A/S센터 오픈(+72시간 내 수리)'</td></tr><tr><td>회고</td><td>(Keep) 검색·소셜 통합으로 행동·의견 파악 / (Problem) 국내 소비자 중심, 글로벌 시장 반영 부족</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">Erom — '면역력' 신제품 출시 소셜 빅데이터 분석</span>
+          <span class="fw-acc-meta">2019 · 이롬</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>면역력 관련 신제품 기획을 위한 소비자 행동·트렌드 도출, 시장 요구 반영 제품 개발 방향 제시</td></tr><tr><td>배경</td><td>건강기능식품 시장에서 면역력 강화 제품 성장세 반영, 자사 제품 경쟁력 강화</td></tr><tr><td>사용 데이터</td><td>SNS 비정형 텍스트 약 128만 건(네이버 블로그·카페·트위터) / 키워드: 면역력</td></tr><tr><td>주요 분석</td><td>면역력 데이터 분류(증상·원인 / KBF / TPO / 광고·프로모션), 언급량 증상·원인&gt;KBF&gt;TPO, KBF '성분·원료' 관심 최고, TPO '동반 인물'(자녀 위한 구매) 두드러짐, 원재료 '도라지'·제형 '스틱·파우치' 급증</td></tr><tr><td>성과</td><td>파우치형 '키즈10' 신제품 출시 (도라지 기반 EHF-365 농축액 함유)</td></tr><tr><td>회고</td><td>(Keep) 주요 소비 트렌드 발굴로 신제품 기획 직접 기여 / (Problem) 타깃 세분화 등 구체 실행 계획 부족</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">Erom — '생식' 신제품 출시 소셜 빅데이터 분석</span>
+          <span class="fw-acc-meta">2019 · 이롬</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>생식 관련 소셜 빅데이터 분석으로 이롬플러스 신제품 기획 방향성 도출, 소비자 니즈 반영 제품 개발 기여</td></tr><tr><td>배경</td><td>생식 시장의 웰빙 트렌드·간편 건강식 수요 증가로 새로운 제품 개발 필요</td></tr><tr><td>사용 데이터</td><td>SNS 비정형 텍스트 약 10만 건(네이버 블로그·카페·트위터) / 키워드: 생식</td></tr><tr><td>주요 분석</td><td>기대가치 체계별 항목 정의(사회적·생활적·감성적·기능적 가치), '생식' 관련 과거 '기능적 가치' → 최근 '생활적·사회적 가치' 증가, 세부 '웰니스'·'다이어트' 기대 상승, 이롬플러스 Coverage 고려 '다이어트' 제품 기획방향 수립</td></tr><tr><td>성과</td><td>'셀푸드 뷰티생식 24' 신제품 출시 (뷰티&amp;다이어트 강조, 패키지 디자인 강화)</td></tr><tr><td>회고</td><td>(Keep) 웰니스 트렌드·기대가치 데이터 결합으로 소비자 통찰 / (Problem) 가치체계 항목 유사·혼란 → 우선순위 조정·구체화 필요</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">한샘 광고 효과 조사</span>
+          <span class="fw-acc-meta">2018 · 한샘</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>광고 캠페인 '나는 엄마입니다' 시리즈 중심 SNS 빅데이터 분석으로 광고 효과 평가 및 소비자 인식 변화 파악</td></tr><tr><td>배경</td><td>성파문 사건 이후 브랜드 이미지 타격, 소비자 신뢰 회복 위해 감성적 공감 캠페인 '나는 엄마입니다' 런칭</td></tr><tr><td>사용 데이터</td><td>소셜 데이터(뉴스·블로그·카페) 약 5,857건(총 4주) / 키워드: 한샘</td></tr><tr><td>주요 분석</td><td>성파문 이후 불매운동 빠르게 확산(사건 보도 3일 후 반응 정점), 미혼모뿐 아니라 워킹맘·일반맘까지 공감한 1차 캠페인</td></tr><tr><td>활용</td><td>'나는 엄마입니다 미혼모편'(1차 캠페인), '워킹맘편'(2차 캠페인) 전개</td></tr><tr><td>회고</td><td>(Keep) SNS 빅데이터+광고 효과 데이터 결합 분석 / (Problem) 불매운동 이슈 추가 완화 전략 미흡</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">FILA 소비자 분석</span>
+          <span class="fw-acc-meta">2018 · FILA</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>SNS 빅데이터로 FILA 브랜드 소비자 인식·경쟁 구도 분석, 마케팅·광고 전략 수립 기여</td></tr><tr><td>배경</td><td>FILA 20대 중심 주요 소비자층 보유, 뉴발란스·퓨마 등 경쟁 브랜드와의 차별화·포지셔닝 강화 필요</td></tr><tr><td>사용 데이터</td><td>검색 데이터 + 소셜 게시 데이터(네이버·다음 블로그·카페) 약 4만 건 / 키워드: 필라·뉴발란스·퓨마·데상트·르꼬르·리복</td></tr><tr><td>주요 분석</td><td>주요 경쟁 브랜드(뉴발란스·퓨마·데상트), FILA 주 소비자층 20대 여성·10대 검색 증가, '20세 여자' 타겟 강점, 광고 언급 12월 2주차 상승, '가격 프로모션&gt;모델(김유정)&gt;콜라보&gt;PPL' 순 효과</td></tr><tr><td>성과</td><td>10대 타겟 신규 라인업 출시 ('링크 맥스·링크 플러스' 백팩)</td></tr><tr><td>회고</td><td>(Keep) 게시·검색 데이터 결합 타겟군 분석 / (Problem) 특정 시즌(연말) 치우침 → 연간 데이터로 확장 필요</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">현대자동차 SUV 온라인 여론 분석</span>
+          <span class="fw-acc-meta">2018 · 현대자동차 (with 이노션)</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>대형 SUV 시장 주요 차종(모하비·G4 렉스턴·포드 익스플로러) 소비자 인식·경쟁 구도 파악, 커뮤니케이션 전략 방향 도출</td></tr><tr><td>배경</td><td>대형 SUV 시장에서 공간 효율성·안전성이 주요 선택 요인으로 부각</td></tr><tr><td>사용 데이터</td><td>네이버 검색 데이터(7,290만 건) + 동호회·커뮤니티·블로그 게시(5만 건)</td></tr><tr><td>주요 분석</td><td>대형 SUV 전체 '공간 효율·안전성' 가족 지향형, 차종별 상이 — 익스플로러 '옵션 중시'·렉스턴 '경제 중시'·모하비 '자기 만족형(주행 성능)'. 익스플로러·렉스턴 안전 부정 높고, 기아 모하비 안전 부정 최저</td></tr><tr><td>결론</td><td>안전 강조·가족 보호 커뮤니케이션 필요, 모하비 USP '주행 성능' 부각으로 차별화 메시지 제안</td></tr><tr><td>회고</td><td>(Keep) 상품성-인식 연관성 분석 / (Problem) 타사 광고·커뮤니케이션 전략 미분석</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="fw-acc">
+        <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+          <span class="fw-acc-title">현대자동차 기업 브랜드 온라인 여론 분석 (BMW 화재 이후 G80 동향)</span>
+          <span class="fw-acc-meta">2018 · 현대자동차 (with 이노션)</span>
+          <span class="fw-acc-toggle">＋</span>
+        </div>
+        <div class="fw-acc-body">
+          <table class="content-table" style="margin-bottom:12px;"><tr><td>목적</td><td>현대자동차·제네시스 브랜드 온라인 여론 긍부정 요인 파악, 커뮤니케이션·마케팅 전략 인사이트 도출</td></tr><tr><td>배경</td><td>BMW 화재 부정 이슈 발생으로 현대차·제네시스 브랜드 이미지·경쟁력에 미친 영향 평가</td></tr><tr><td>사용 데이터</td><td>네이버 검색 데이터(3,000만 건) + 동호회·커뮤니티·블로그 게시(100만 건)</td></tr><tr><td>주요 분석</td><td>BMW 화재 이후 현대차·제네시스 긍정 여론 증가하나 일부 화재 부정 연관, G80은 국산차(K9·스팅어)와 경쟁 심화, 반사이익은 타 외산 브랜드가 수혜로 분석</td></tr><tr><td>결론</td><td>부정이슈 전이 시뮬레이션 및 초기 선제적 대응안(긴급 조치 매뉴얼) 구성 필요</td></tr><tr><td>회고</td><td>(Keep) 타사 부정이슈 중심 반사이익 체계 분석 / (Problem) 실행 가능 구체 방안(광고·채널 전략) 미흡</td></tr></table>
+          <div class="img-row two">
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 1</span></div>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">분석 예시 이미지 2</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="po-link" style="margin-top:12px; color:#23262C;">→ 코마코에서의 광고 기획 경험을 IT 데이터 분석 환경으로 처음 확장한 시점. 정성적 소비자 인사이트를 데이터로 검증하는 방법론을 체계적으로 습득했으며, 이후 코난테크놀로지에서 분석 시스템을 기획하는 기반이 됨.</p>
     </div>
   </div>
 
@@ -3656,7 +4123,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 
       <!-- ── 섹션 A: 자체 분석 프레임워크 ── -->
       <div style="margin-bottom:28px;">
-        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A7B40; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(200,185,122,0.2);">SECTION A · 자체 개발 분석 프레임워크 (7종)</div>
+        <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">SECTION A · 자체 개발 분석 프레임워크 (7종)</div>
         <p style="font-size:12px; color:#909088; margin-bottom:12px;">소셜 빅데이터 기반 마케팅 인사이트 도출 방법론 — 고객사 제안 경쟁력 강화를 위해 자체 개발. 클릭하면 개요를 확인할 수 있습니다.</p>
         <div class="tags">
           <span class="tag fw-btn" onclick="toggleFramework('trend-speed')">Trend Speed</span>
@@ -3713,118 +4180,452 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 
       <!-- ── 섹션 B: 클라이언트 분석 보고서 ── -->
       <div style="margin-bottom:28px;">
-        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A7B40; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(200,185,122,0.2);">SECTION B · 클라이언트 프로젝트 — 소셜·소비자 분석 보고서</div>
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">맘스터치 화덕피자 신사업 컨셉 수립 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2017 · SNS 약 1,000만건</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">T.P.O 분석 → 화덕피자는 '점심'·'간편식' 상황 선호도 높음, 보완재로 '샐러드' 조합 강함 → 점심 시장 확장을 위한 건강 이미지 강조 신규 라인 및 프리미엄 브랜드 포지셔닝 전략 제안. 샐러드 제품 다양화 및 샌드위치 중심 라인 추가 제안.</p>
+        <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">SECTION B · 클라이언트 프로젝트 — 소셜·소비자 분석 보고서</div>
+        <p style="font-size:12px; color:#909088; margin-bottom:12px;">클릭하면 상세 내용을 확인할 수 있습니다.</p>
+
+        <!-- B-01 맘스터치 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">맘스터치 화덕피자 신사업 컨셉 수립</span>
+            <span class="fw-acc-meta">2017 · SNS 약 1,000만건</span>
+            <span class="fw-acc-toggle">＋</span>
           </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">동국제약 훼라민큐 갱년기 트렌드 분석 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2017 · SNS 약 11만건</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">백수오궁 광고 캠페인 집행 전·중·후 소비자 반응 분석. 광고 중 백수오 효능/안정성 관련 버즈 96.9% 증가, 광고 후에도 신뢰 평판 88% 수준 유지 → '서양승마' 컨셉 TVCF 제작에 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">슬립앤슬립 숙면/침구 트렌드 분석 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2017 · SNS 약 70만건</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">침구 브랜드 3사(슬립앤슬립·이브자리·알레르망) USP 비교 분석. S&amp;S의 차별적 USP → '체형'·'건강한'·'도움되다' → '체형과 건강' 중심 브랜드 매력도 강화 방향 제안. 결과물: '자면서 건강해지세요, 숙면타퍼 G2' 카피 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">팔도 라면 트렌드 분석 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2016 · SNS 약 100만건</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">라면 시장 트렌드 및 왕뚜껑 USP 분석. '속성/사리'에 관한 소비자 관심 증가 포착, 왕뚜껑 차별적 USP로 '면(쫄깃한 면발)'과 '광고 모델' 도출. 결과물: 탕종분 면 강화 버전 봉지 왕뚜껑 출시, 기생충·스카이캐슬 패러디 TVCF 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">현대엘리베이터 광고 효과 조사 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2019 · 소비자 서베이</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">4차 산업 기술력·미래 비전 강조 TVCF 효과 측정. 광고 시청 전후 브랜드 호감도 43.2% → 66.0% (22.8%p↑), 광고 만족도 5.4점(업계 평균 4.8점). 19년도 기업 PR 캠페인 2위 달성.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">한국야쿠르트 윌 TV광고 효과 분석 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2017 · SNS 약 2,000건</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">캠페인 이전 대비 버즈량 101% 증가, 긍정율 11%p 상승. 기능성 관련 키워드(유산균·헬리코박터균) 부각 확인 → '윌을 넘어서다' TVCF 기능성 강조 방향에 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">쿠퍼스 광고 효과 분석 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2018 · SNS 약 100만건</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">다중대응일치분석 결과 쿠퍼스가 경쟁 브랜드 대비 '간 건강' 차별적 우위 보유 확인 → '이 중에 안 힘든 사람 없다' 슬로건 TVCF에 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">동국제약 매입/판매량 예측 및 광고 상관관계 분석 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2015~18 · POS DATA 362개 약국</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">매월 판매량·매입량·재고량 연계 분석으로 다음달 매입량 예측 → 약국 유통 구조 개선. 광고 집행 이후 판매량 상관관계 데이터로 광고 효과 정량화.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">한국야쿠르트 V-FOOD 브랜드 가치 조사 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2016 · with 브랜드앤컴퍼니</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">소비자 서베이 조사 발주를 통해 V-FOOD 브랜드 현재 위상 파악 및 브랜드 Revitalization 전략 방향 제안. Research Proposal Writing · Analysis Frame Design 담당.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">아모레퍼시픽 려 광고 제작을 위한 샴푸 시장 조사 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2018 · with 칸타코리아</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">려 제품 광고 제작을 위한 샴푸 시장 소비자 조사. Research Proposal Writing · Analysis Frame Design 담당. 결과물: '탈모증상케어, 이제 과학적으로' 광고 제작에 반영.</p>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>맘스터치 신사업(붐바타 – 화덕피자 브랜드)의 시장 가능성과 소비자 요구를 분석하여 매장 내 신규 상품 확장 방향 제시</td></tr>
+              <tr><td>배경</td><td>화덕피자는 기존 피자 시장에서 프리미엄 카테고리로 자리잡으며, 소비자의 점심·간편식 선호 증가 트렌드 형성</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 1,000만건 / 주요 키워드: 화덕, 피자, 화덕피자, 붐바타, 서브웨이</td></tr>
+              <tr><td>사용 도구</td><td>Excel · PowerPoint · ㈜와이즈넛 D-MAP 분석 솔루션</td></tr>
+            </table>
+            <p style="font-size:12px; font-weight:700; color:#C8C8C2; margin-bottom:8px;">핵심 분석 결과</p>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>T.P.O 분석 ①</td><td>화덕피자는 '점심'과 '간편식' 상황에서 높은 선호도 · 일반 피자는 '저녁'과 조합이 높게 나타남</td></tr>
+              <tr><td>T.P.O 분석 ②</td><td>화덕피자는 보완재로 '샐러드'와의 조합이 강하게 나타남 · 일반 피자는 '치킨'과 조합 높음</td></tr>
+              <tr><td>결론 및 제안</td><td>점심 시장 확장을 위해 건강한 이미지 강조 신규 제품 라인 + 프리미엄 브랜드 포지셔닝 전략 제안 / 화덕피자 외 점심용 '샌드위치 중심 라인' 추가 / 화덕피자와 곁들일 '샐러드' 제품 다양화</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">맘스터치 T.P.O 분석 차트 + 연관어 비교표</span></div>
           </div>
         </div>
-      </div>
+
+        <!-- B-02 동국제약 훼라민큐 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">동국제약 훼라민큐 갱년기 트렌드 분석</span>
+            <span class="fw-acc-meta">2017 · SNS 약 11만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>백수오궁 광고 캠페인 효과 분석 — 광고의 기대 효과와 실질적 영향을 정량·정성적으로 평가</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 11만건 / 주요 키워드: 갱년기+백수오</td></tr>
+              <tr><td>사용 도구</td><td>Excel · PowerPoint · 다음소프트 소셜매트릭스</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과 ①</td><td>광고 진행 중 백수오 효능/안정성 관련 버즈 96.9% 증가 (광고 전 194건 → 광고 중 382건)</td></tr>
+              <tr><td>분석 결과 ②</td><td>백수오 효능과 안정성에 대한 '신뢰' 평판이 광고 후 92% 증가, 광고 후에도 88% 수준 유지</td></tr>
+              <tr><td>결론</td><td>광고가 백수오의 효능과 안정성에 대한 신뢰 제고에 기여했음을 데이터로 입증</td></tr>
+              <tr><td>결과물</td><td>'서양승마' 컨셉의 TVCF 제작에 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">동국제약 훼라민큐 광고 효과 분석 차트</span></div>
+          </div>
+        </div>
+
+        <!-- B-03 슬립앤슬립 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">슬립앤슬립 숙면/침구 트렌드 분석</span>
+            <span class="fw-acc-meta">2017 · SNS 약 70만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>슬립앤슬립(S&S)의 브랜드 이미지 차별화와 매력도 제고를 위한 방안 마련</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 70만건 / 주요 키워드: 슬립앤슬립, 이브자리, 알레르망</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과</td><td>S&S의 차별적 USP → '체형'·'건강한'·'도움되다' / 이브자리 → '편안한' / 알레르망 → '부드러운'</td></tr>
+              <tr><td>결론</td><td>'체형과 건강'을 중심으로 소비자와의 연관성을 강화하여 브랜드 매력도를 높이는 방향 제안</td></tr>
+              <tr><td>결과물</td><td>'자면서 건강해지세요, 숙면타퍼 G2' 카피 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">슬립앤슬립 브랜드 USP 비교 분석표</span></div>
+          </div>
+        </div>
+
+        <!-- B-04 팔도 라면 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">팔도 라면 트렌드 분석</span>
+            <span class="fw-acc-meta">2016 · SNS 약 100만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>라면 시장의 최신 트렌드 파악 및 제품 기획·마케팅 방향성 제시</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 100만건 / 주요 키워드: 라면, 왕뚜껑</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과 ①</td><td>'속성/사리'에 관한 연관어 비중이 최근 높게 증가, 사리에 대한 관심 증가 포착</td></tr>
+              <tr><td>분석 결과 ②</td><td>왕뚜껑의 차별적 USP → '면(쫄깃한 면발)'과 '광고·모델'</td></tr>
+              <tr><td>결과물</td><td>라면업계 최초 제면용 '탕종분' 활용 봉지 왕뚜껑 출시 / 기생충·스카이캐슬 패러디 TVCF 집행</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">라면 vs 왕뚜껑 연관어 비교 분석표</span></div>
+          </div>
+        </div>
+
+        <!-- B-05 현대엘리베이터 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">현대엘리베이터 광고 효과 조사</span>
+            <span class="fw-acc-meta">2019 · 소비자 서베이 (온라인 설문)</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>4차 산업 기술력·미래 비전 강조 TVCF 광고 효과 분석 및 차기 광고 제작 준비</td></tr>
+              <tr><td>사용 데이터</td><td>소비자 조사 데이터 (TVCF 평가, 온라인 설문)</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과</td><td>광고 시청 전후 브랜드 호감도 43.2% → 66.0% (22.8%p↑) / 광고 만족도 5.4점 (업계 평균 4.8점)</td></tr>
+              <tr><td>긍정 요소</td><td>첨단 기술력·미래지향적 비전·광고 연출에 대한 소비자 긍정 반응</td></tr>
+              <tr><td>보완 요소</td><td>전문 용어가 어렵다는 의견 / 현재 적용 사례 부족 지적</td></tr>
+              <tr><td>결과물</td><td>19년도 기업 PR 캠페인 2위 달성 / '전에 없던 세상이 함께 타고 있다' TVCF 제작</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">현대엘리베이터 광고 시청 전후 호감도 비교 차트</span></div>
+          </div>
+        </div>
+
+        <!-- B-06 한국야쿠르트 윌 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">한국야쿠르트 윌 TV광고 효과 분석</span>
+            <span class="fw-acc-meta">2017 · SNS 약 2,000건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>헬리코박터 프로젝트 윌 TV 광고 캠페인 소비자 반응 및 광고 효과 정량·정성 평가</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 2,000건 / 주요 키워드: 헬리코박터 프로젝트 윌, 윌+α</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과</td><td>캠페인 이전 대비 버즈량 101% 증가 / 긍정율 16년 대비 11%p 상승</td></tr>
+              <tr><td>연관어 변화</td><td>전년 대비 '저지방'·'블랙커런트' 감소, '유산균'·'위암'·'헬리코박터균' 등 기능성 관련 연관어 증가</td></tr>
+              <tr><td>결과물</td><td>기능성 관련 키워드를 강조한 '윌을 넘어서다' TVCF 제작</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">한국야쿠르트 윌 광고 전후 버즈량·감성 변화 차트</span></div>
+          </div>
+        </div>
+
+        <!-- B-07 쿠퍼스 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">쿠퍼스 광고 효과 분석</span>
+            <span class="fw-acc-meta">2018 · SNS 약 100만건</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>간 건강·피로회복 소비자 니즈 평가 및 쿠퍼스의 커뮤니케이션 전략 방향 탐색</td></tr>
+              <tr><td>사용 데이터</td><td>SNS 소셜 데이터 약 100만건 / 주요 키워드: 간건강, 피로회복, 쿠퍼스, 박카스, 비타500, 우루사, 아로나민골드, 헛개컨디션</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과</td><td>다중대응일치분석 결과 쿠퍼스는 경쟁 브랜드 대비 '간 건강' 차별적 우위 보유 / 박카스·비타500·아로나민골드는 '피로회복' 중심 경쟁</td></tr>
+              <tr><td>결과물</td><td>'이 중에 안 힘든 사람 없다' 슬로건 TVCF 제작</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">쿠퍼스 경쟁 브랜드 포지셔닝 분석 차트</span></div>
+          </div>
+        </div>
+
+        <!-- B-08 동국제약 매입/판매량 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">동국제약 매입/판매량 예측 및 광고 상관관계 분석</span>
+            <span class="fw-acc-meta">2015~18 · POS DATA 362개 약국</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>매입량·판매량·재고량 데이터 분석으로 유통 구조 최적화 및 광고 효과와의 상관관계 파악</td></tr>
+              <tr><td>사용 데이터</td><td>면접원 방문 후 1:1 개별 면접 및 POS DATA 수집 (층화 비례 표본 추출법, 전국 362개 소매 약국)</td></tr>
+              <tr><td>사용 도구</td><td>Excel · PowerPoint · Nielsen Solution</td></tr>
+            </table>
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>분석 결과 ①</td><td>매월 판매량·매입량·재고량 데이터 연계 분석으로 다음달 매입량 예측 → 약국 유통 구조 개선</td></tr>
+              <tr><td>분석 결과 ②</td><td>광고 집행 이후 판매량 상관관계 분석으로 광고 효과 정량화</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- B-09 한국야쿠르트 V-FOOD -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">한국야쿠르트 V-FOOD 브랜드 가치 조사</span>
+            <span class="fw-acc-meta">2016 · with 브랜드앤컴퍼니</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>V-FOOD 브랜드 현재 위상 파악 및 브랜드 Revitalization 전략 방향 제안</td></tr>
+              <tr><td>방법</td><td>소비자 서베이 조사 발주 · Research Proposal Writing · Analysis Frame Design 담당</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- B-10 아모레퍼시픽 려 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">아모레퍼시픽 려 광고 제작을 위한 샴푸 시장 조사</span>
+            <span class="fw-acc-meta">2018 · with 칸타코리아</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>려 제품 광고 제작을 위한 샴푸 시장 소비자 조사</td></tr>
+              <tr><td>방법</td><td>소비자 서베이 조사 발주 · Research Proposal Writing · Analysis Frame Design 담당</td></tr>
+              <tr><td>결과물</td><td>'탈모증상케어, 이제 과학적으로' 광고 제작에 반영</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /SECTION B -->
 
       <!-- ── 섹션 C: 전략 제안 컨설팅 ── -->
       <div style="margin-bottom:28px;">
-        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A7B40; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(200,185,122,0.2);">SECTION C · 클라이언트 프로젝트 — 브랜드·마케팅 전략 제안 컨설팅</div>
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">맘스터치 브랜드 관리 방향 제언 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2016 · Branding Strategy</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">3위 브랜드 맘스터치의 장기 브랜드 방향성 제안. Brand Vision '정성 어린 한 끼로 최고의 제품 제공', Slogan 'Heart is always Here MoM's Touch' 수립. 결과물: '묵직한 버거' TVCF 반영.</p>
+        <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">SECTION C · 클라이언트 프로젝트 — 브랜드·마케팅 전략 제안 컨설팅</div>
+        <p style="font-size:12px; color:#909088; margin-bottom:12px;">클릭하면 상세 내용을 확인할 수 있습니다.</p>
+
+        <!-- C-01 맘스터치 브랜딩 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">맘스터치 브랜드 관리 방향 제언</span>
+            <span class="fw-acc-meta">2016 · Branding Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
           </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">동국제약 인사돌 리포지셔닝 전략 제언 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2016 · Branding Strategy</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">'잇몸 치료제'에서 '잇몸 관리제의 잇몸약'으로 이미지 전환 전략 수립. 보조치료제 명시하면서도 일반의약품 지위 유지, 안전성 강조 방향 리포지셔닝. 결과물: '잇몸에도 나이가 있습니다' TVCF 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">수협은행 브랜드 관리 방향 제언 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2017 · Branding Strategy</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">'어민 전용 은행' 이미지 탈피, 시중은행 포지셔닝 강화 전략 수립. '국민 누구나, 전국 어디서나 이용 가능' 메시지 방향 제안. 결과물: '새로운 은행' TVCF 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">팔도 비락식혜 브랜드 활성화 및 신제품 개발 전략 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2017 · Branding + Communication Strategy</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">'건강음료' 컨셉의 인지 부조화(단맛 강한 식혜) 문제 발견 → 단맛이 필요한 T.P.O(업무 시간·기상 시간·숙취 후)를 광고 소재로 활용해 음용 시점 제시. 결과물: 팔도×마블 업무시간/기상시간 편, 비락 헛개식혜 광고 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">팔도 비빔면 커뮤니케이션 방향성 정립 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2018 · Branding + Communication + Contents Strategy</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">비국물 라면 경쟁 심화 속 비빔면 카테고리 리더십 강화 전략. 비빔면 시장 대표성을 넘어 비국물면 카테고리 전반으로 리더십 확장 방향 제안. 결과물: '누가 비벼도 맛있다' TVCF 반영.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">K2 신성장 동력 모색 전략 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2016 · Branding Strategy</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">아웃도어 → 생활 패션으로 역할 확장되며 SPA 브랜드와 경쟁 심화된 상황에서 K2만의 차별화 포지셔닝 수립. 기술·기능 중심 패션 소구 방향 제안. 결과물: 'Protection For all' TVCF 반영.</p>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>3위 브랜드 맘스터치가 1~2위(맥도날드·롯데리아)와 경쟁하기 위한 장기적 브랜드 방향성 필요</td></tr>
+              <tr><td>제안 방향</td><td>타 브랜드 대비 차별적 이미지가 강력하지 않은 소비자 인식 → '수제버거'로의 소구 방향 수립</td></tr>
+              <tr><td>브랜드 설계</td><td>Brand Vision '정성 어린 한 끼로 최고의 제품 제공' / Brand Essence '지켜주고 싶은 마음' / Slogan 'Heart is always Here MoM's Touch' / 브랜드 심볼·징글 제작 및 제품 아키텍처 개발</td></tr>
+              <tr><td>결과물</td><td>'묵직한 버거' TVCF 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">맘스터치 브랜드 전략 제안 주요 장표</span></div>
           </div>
         </div>
-      </div>
+
+        <!-- C-02 동국제약 인사돌 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">동국제약 인사돌 리포지셔닝 전략 제언</span>
+            <span class="fw-acc-meta">2016 · Branding Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>허가 변경에 따라 포지셔닝 재정립 필요 — 기존 '잇몸 치료제' 이미지에서 전환 요구</td></tr>
+              <tr><td>전략 방향</td><td>'잇몸 치료제' → '잇몸 관리제의 잇몸약'으로 이미지 전환 · 보조치료제 명시하면서도 일반의약품 지위 유지 · 안전성 강조로 신뢰도 확보</td></tr>
+              <tr><td>결과물</td><td>'잇몸에도 나이가 있습니다. 사랑으로 챙겨보세요' TVCF 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">동국제약 인사돌 리포지셔닝 전략 주요 장표</span></div>
+          </div>
+        </div>
+
+        <!-- C-03 수협은행 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">수협은행 브랜드 관리 방향 제언</span>
+            <span class="fw-acc-meta">2017 · Branding Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>수협은행은 '은행'으로서의 인식이 저조하며 브랜드 인지도도 낮음 · '어민 전용 은행' 이미지 탈피가 선행 과제</td></tr>
+              <tr><td>전략 방향</td><td>경쟁 은행과의 직접 경쟁보다 '시중은행'으로서의 이미지 확보를 선행 목표로 설정 · '국민 누구나, 전국 어디서나 이용 가능' 메시지 강조</td></tr>
+              <tr><td>결과물</td><td>'새로운 은행' TVCF 반영</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- C-04 팔도 비락식혜 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">팔도 비락식혜 브랜드 활성화 및 신제품 개발 전략</span>
+            <span class="fw-acc-meta">2017 · Branding + Communication Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>전통음료 시장 성장 둔화 · 매출 정체 상태 · '건강음료' 컨셉과 단맛 강한 식혜의 인지 부조화 존재</td></tr>
+              <tr><td>인사이트</td><td>'전통음료'에 대한 뚜렷한 음용 T.P.O 부족 발견 → 단맛이 필요한 상황(업무 시간·기상 시간·숙취 후)을 광고 소재로 활용해 음용 시점 제시</td></tr>
+              <tr><td>결과물</td><td>팔도×마블 '업무시간'·'기상시간' 편 광고 반영 / '비락 헛개 식혜' 신제품 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">팔도 비락식혜 브랜드 전략 주요 장표</span></div>
+          </div>
+        </div>
+
+        <!-- C-05 팔도 비빔면 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">팔도 비빔면 커뮤니케이션 방향성 정립</span>
+            <span class="fw-acc-meta">2018 · Branding + Communication + Contents Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>비국물 라면 시장 경쟁 심화 · 소비자 수요 전환 필요 시점</td></tr>
+              <tr><td>전략 방향</td><td>비빔면 시장 대표성을 넘어 비국물면 카테고리 전반에서 리더십 확립 목표 · 새로운 소비자층 확보 및 시장 전체 성장 전략</td></tr>
+              <tr><td>결과물</td><td>'누가 비벼도 맛있다' TVCF 반영</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- C-06 K2 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">K2 신성장 동력 모색 전략</span>
+            <span class="fw-acc-meta">2016 · Branding Strategy</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경</td><td>아웃도어가 생활 패션으로 역할 확장되며 일반 스포츠·SPA 브랜드와 경쟁 심화 · K2만의 차별화 포지셔닝 필요</td></tr>
+              <tr><td>전략 방향</td><td>단순 패션 이상의 기술·기능 중심 패션 소구 · 가장 험하고 힘든 상황에서도 신체를 보호하는 기술/기능 강조 커뮤니케이션</td></tr>
+              <tr><td>결과물</td><td>'Protection For all' TVCF 반영</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">K2 신성장 동력 전략 주요 장표</span></div>
+          </div>
+        </div>
+
+      </div><!-- /SECTION C -->
 
       <!-- ── 섹션 D: 캠페인 실무 집행 ── -->
       <div style="margin-bottom:20px;">
-        <div style="font-family:var(--mono); font-size:10px; font-weight:700; color:#8A7B40; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(200,185,122,0.2);">SECTION D · ATL·BTL 광고 캠페인 실무 운영</div>
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">현대엘리베이터 기업 PR 캠페인 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2019</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">'전에 없던 세상이 함께 타고 있다. LEADING TOMORROW' 편 제작 및 집행. 결과: 19년도 기업 PR 캠페인 2위, 광고 시청 후 호감도 43.2% → 66.0%.</p>
+        <div style="font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">SECTION D · ATL·BTL 광고 캠페인 실무 운영</div>
+        <p style="font-size:12px; color:#909088; margin-bottom:12px;">클릭하면 상세 내용을 확인할 수 있습니다.</p>
+
+        <!-- D-01 현대엘리베이터 캠페인 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">현대엘리베이터 기업 PR 캠페인</span>
+            <span class="fw-acc-meta">2019</span>
+            <span class="fw-acc-toggle">＋</span>
           </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">라이나생명 퍼펙트케어 암보험 다이렉트 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2019</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">유튜브 '워크맨' 장성규 모델 활용. '장성규, 보험회사를 가다' 편 제작으로 기존 보험 광고의 낮은 바이럴성 문제 해결, 화제성 확보.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">팔도 비빔면 SHELL WE 비빔 캠페인 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2018</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">비빔면 꽃 한정판 출시 프로모션. 탱고 소재를 활용해 Fashionable/Fun 톤앤매너 기반 TVCF 제작 및 집행.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">아모레퍼시픽 프리메라 와일드씨드세럼 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2018</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">'킹콩 세럼' 캠페인. '시들지 않는 탄력을 얻다. 킹콩세럼' 편 유튜브·잡지·신문 광고 제작 및 집행. Branding Strategy · Copyrighting/Naming · Media Planning 담당.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">아모레퍼시픽 려 자양윤모 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2018</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">판매량 둔화 개선을 위한 브랜드 리프레쉬. 박서준 모델의 '있을 때 잘하겠습니다. 탈모 증상 케어 샴푸 려 자양윤모' TVCF 집행.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">초록우산 어린이재단 놀이환경 개선 제안 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2018</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">FB·인스타그램의 음소거 재생 특성을 활용해 영상 이미지와 실제 사운드를 다르게 연출하는 독창적 방식 제안. '놀아도 괜찮아' 슬로건 수립. AP 재직 중 제작팀 CD로부터 카피라이터 스카우트 제안을 받을 만큼 높은 평가.</p>
-          </div>
-          <div style="border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:14px 16px;">
-            <div style="font-size:13px; font-weight:700; color:#C8C8C2; margin-bottom:4px;">저출산고령사회위원회 아동돌봄 정책성과 홍보영상 <span style="font-size:11px; color:#606058; font-weight:400; font-family:var(--mono); margin-left:8px;">2019</span></div>
-            <p style="font-size:12px; color:#909088; line-height:1.7; margin:0;">아동돌봄 정책 1년간 성과 홍보 영상 제작. 시민 인터뷰 영상 중심 콘텐츠 구성, 영상 제작 실무 참여.</p>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'전에 없던 세상이 함께 타고 있다. LEADING TOMORROW' 편 제작 및 집행</td></tr>
+              <tr><td>목표</td><td>현대엘리베이터의 4차 산업 기술력 및 미래 비전 캠페인 전개</td></tr>
+              <tr><td>결과</td><td>19년도 기업 PR 캠페인 2위 달성 / 광고 시청 후 기업 호감도 43.2% → 66.0%</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">현대엘리베이터 TVCF 크리에이티브</span></div>
           </div>
         </div>
-      </div>
 
-      <p class="po-link" style="margin-top:4px; color:#8A7B40;">→ 식품·뷰티·금융·아웃도어·가구 등 20개+ 산업군에 걸쳐 소비자 데이터 기반 마케팅 전략 수립. 이 시기 개발한 7종의 자체 분석 프레임워크는 이후 IT 회사에서 분석 시스템 기획에 직접 활용됨.</p>
+        <!-- D-02 라이나생명 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">라이나생명 퍼펙트케어 암보험 다이렉트</span>
+            <span class="fw-acc-meta">2019</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'장성규, 보험회사를 가다' 편 제작 및 집행</td></tr>
+              <tr><td>배경</td><td>기존 보험 광고의 낮은 열독률과 바이럴 소재 부족 문제 해결 필요</td></tr>
+              <tr><td>전략</td><td>유튜브 '워크맨'으로 주목받던 장성규 모델 기용 → 신선한 접근법과 화제성 확보</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">라이나생명 유튜브 캠페인 크리에이티브</span></div>
+          </div>
+        </div>
+
+        <!-- D-03 팔도 비빔면 SHELL WE -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">팔도 비빔면 SHELL WE 비빔 캠페인</span>
+            <span class="fw-acc-meta">2018</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'Shell We 비빔?' 편 제작 및 집행</td></tr>
+              <tr><td>배경</td><td>비빔면 꽃 한정판 출시 · 둥지냉면·함흥비빔면 등 경쟁사 신제품 공세 속 리딩 브랜드 위상 강화 필요</td></tr>
+              <tr><td>전략</td><td>탱고 소재를 활용해 Fashionable/Fun 톤앤매너 기반 캠페인 · '맛이란 말이 필요 없이 느껴져야 하는 것' 메인 메시지</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">팔도 비빔면 SHELL WE 비빔 TVCF 크리에이티브</span></div>
+          </div>
+        </div>
+
+        <!-- D-04 아모레퍼시픽 프리메라 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">아모레퍼시픽 프리메라 와일드씨드세럼</span>
+            <span class="fw-acc-meta">2018</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'시들지 않는 탄력을 얻다. 킹콩세럼' 편 · 유튜브·잡지·신문 광고 제작 및 집행</td></tr>
+              <tr><td>전략</td><td>'킹콩 세럼' 슬로건을 활용하여 브랜드 인지도 상승 유도</td></tr>
+              <tr><td>담당 역할</td><td>Branding Strategy · Copyrighting/Naming · Media Planning · 영상 제작 준비</td></tr>
+            </table>
+            <div class="img-placeholder medium"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">프리메라 킹콩세럼 유튜브·인쇄 광고 크리에이티브</span></div>
+          </div>
+        </div>
+
+        <!-- D-05 아모레퍼시픽 려 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">아모레퍼시픽 려 자양윤모</span>
+            <span class="fw-acc-meta">2018</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>캠페인명</td><td>'있을 때 잘하겠습니다. 탈모 증상 케어 샴푸 려 자양윤모' 편 TVCF 제작 및 집행</td></tr>
+              <tr><td>배경</td><td>려 자양윤모 제품 판매량 둔화 상태가 지속되는 상황 · 브랜드 리프레쉬를 위해 '있을 때 잘하자' 캠페인 진행</td></tr>
+              <tr><td>전략 (Creative)</td><td>모델 박서준을 활용해 '있을 때 잘하자'는 위트 있는 메시지를 전달</td></tr>
+              <tr><td>역할(Role)</td><td>Branding Strategy · Executive (budget 등 집행 관리)</td></tr>
+            </table>
+            <img src="assets/PF_images/아모레퍼시픽_려_자양윤모.png" alt="려 자양윤모 TVCF 크리에이티브" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
+          </div>
+        </div>
+
+        <!-- D-06 초록우산 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">초록우산 어린이재단 놀이환경 개선 제안</span>
+            <span class="fw-acc-meta">2018</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>배경·과제</td><td>아이들의 놀이 환경이 점차 줄어드는 문제를 해결하기 위한 캠페인 제안 요청. '아이들의 놀 권리'의 중요성을 국민에게 효과적으로 알리는 캠페인 전략 수립</td></tr>
+              <tr><td>전략</td><td>기존의 정책 중심적 접근에서 벗어나, '아이의 입장'에서 어른들에게 놀 권리의 필요성을 소구하는 방향으로 전환</td></tr>
+              <tr><td>핵심 아이디어</td><td>페이스북·인스타그램 영상이 음소거 상태로 재생되는 특성을 활용 → 영상 이미지와 실제 사운드를 다르게 연출하는 독창적 방식. '아이의 마음은 주의 깊게 듣지 않으면 들리지 않는다'는 메시지 전달</td></tr>
+              <tr><td>슬로건</td><td><strong>'놀아도 괜찮아'</strong> — 메시지의 감성적 전달력을 높임</td></tr>
+              <tr><td>성과·의의</td><td>아이디어가 제작팀에서 채택 · 전략 부서(AP) 재직 중이었으나 카피라이터 역할을 수행해 CD 호평으로 본인 시안이 MAIN으로 집행 · 제작팀 CD로부터 카피라이터(CW) 스카우트 제안을 받을 만큼 긍정적 평가 · 광고 제작 첫 경험이라는 의미 있는 프로젝트</td></tr>
+              <tr><td>역할(Role)</td><td>Branding Strategy · Communication Strategy · Contents Idea · Copywriting/Naming</td></tr>
+            </table>
+            <img src="assets/PF_images/초록우산_어린이재단_놀이환경_개선_제안_참여.png" alt="초록우산 '놀아도 괜찮아' 스토리보드" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
+          </div>
+        </div>
+
+        <!-- D-07 저출산고령사회위원회 -->
+        <div class="fw-acc">
+          <div class="fw-acc-header" onclick="toggleFwAcc(this)">
+            <span class="fw-acc-title">저출산고령사회위원회 아동돌봄 정책성과 홍보영상</span>
+            <span class="fw-acc-meta">2019</span>
+            <span class="fw-acc-toggle">＋</span>
+          </div>
+          <div class="fw-acc-body">
+            <table class="content-table" style="margin-bottom:12px;">
+              <tr><td>목적</td><td>아동돌봄 정책 1년간 성과 홍보 영상 제작</td></tr>
+              <tr><td>방식</td><td>정책에 대한 시민 인터뷰 영상 중심 콘텐츠 구성</td></tr>
+              <tr><td>담당 역할</td><td>영상 제작 실무 참여 (preparation for filming)</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /SECTION D -->
+
+      <p class="po-link" style="margin-top:4px; color:#23262C;">→ 식품·뷰티·금융·아웃도어·가구 등 20개+ 산업군에 걸쳐 소비자 데이터 기반 마케팅 전략 수립. 이 시기 개발한 7종의 자체 분석 프레임워크는 이후 IT 회사에서 분석 시스템 기획에 직접 활용됨.</p>
     </div>
   </div>
 
@@ -3842,13 +4643,13 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 
       <!-- 프로젝트 개요 -->
       <div style="margin-bottom:16px;">
-        <div style="font-family:var(--mono); font-size:10px; color:#888078; letter-spacing:0.1em; margin-bottom:6px;">PROJECT · 2015</div>
+        <div style="font-family:var(--mono); font-size:11px; color:#888078; letter-spacing:0.1em; margin-bottom:6px;">PROJECT · 2015</div>
         <div style="font-size:15px; font-weight:700; color:#1A1A18; margin-bottom:4px;">한국마사회 렛츠런파크 빛축제 경쟁 PT · 수주</div>
         <div style="font-size:12px; color:#888880;">BTL 마케팅 · 스페이스 마케팅 · Brand Strategy · Space Strategy · Contents Idea</div>
       </div>
 
       <!-- 이미지 -->
-      <img src="assets/images/대홍기획-빛축제.png" alt="렛츠런파크 빛축제" style="width:100%; border-radius:4px; display:block; margin-bottom:16px; object-fit:cover;">
+      <img src="assets/PF_images/대홍기획-빛축제.png" alt="렛츠런파크 빛축제" style="width:100%; border-radius:4px; display:block; margin-bottom:16px; object-fit:cover;">
 
       <!-- 배경 및 접근 -->
       <table class="content-table" style="margin-bottom:14px;">
@@ -3859,11 +4660,11 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         <tr><td>결과</td><td>수주 기여 · 2018년 7만 5천명 방문</td></tr>
       </table>
 
-      <p class="po-link" style="color:#8A7B40;">→ 광고/마케팅 업계 첫 경험. 소셜 데이터를 실무에 처음 적용하며 데이터 기반 전략 수립의 가능성을 체감한 시점.</p>
+      <p class="po-link" style="color:#23262C;">→ 광고/마케팅 업계 첫 경험. 소셜 데이터를 실무에 처음 적용하며 데이터 기반 전략 수립의 가능성을 체감한 시점.</p>
 
       <!-- 수상 -->
-      <div style="background:rgba(200,185,122,0.06); border-left:3px solid rgba(200,185,122,0.3); padding:10px 14px; border-radius:0 4px 4px 0; margin-top:12px;">
-        <div style="font-size:10px; font-family:var(--mono); color:#9A9088; margin-bottom:4px;">대학생 시절 수상 (취업 전 재학 중)</div>
+      <div style="background:rgba(35,38,44,0.06); border-left:3px solid rgba(35,38,44,0.3); padding:10px 14px; border-radius:0 4px 4px 0; margin-top:12px;">
+        <div style="font-size:11px; font-family:var(--mono); color:#9A9088; margin-bottom:4px;">대학생 시절 수상 (취업 전 재학 중)</div>
         <p class="po-link" style="margin:0;">🏆 크리에이티브 아레나 파이널 평가 점수 1위 (2015) — 삼성 제일기획 주관 · 300팀 서바이벌 · 코엑스 무대 PT</p>
       </div>
     </div>
@@ -3902,13 +4703,13 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
   display: flex;
   flex-direction: column;
   gap: 0;
-  background: rgba(10,10,10,0.72);
+  background: rgba(35,38,44,0.72);
   border: 1px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 14px 0;
   border-radius: 8px;
-  box-shadow: 0 4px 28px rgba(0,0,0,0.6);
+  box-shadow: none;
 }
 
 .fn-section {
@@ -3963,7 +4764,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 
 .fn-group-label .fn-period {
   display: block;
-  font-size: 9px;
+  font-size:11px;
   font-weight: 400;
   color: rgba(255,255,255,0.35);
   margin-bottom: 1px;
@@ -4050,17 +4851,25 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
 function toggleProject(header) {
   var acc = header.parentElement;
   var isOpen = acc.classList.contains('open');
-  // 모든 프로젝트 닫기
+  // 모든 프로젝트 닫기 + 내부 하위(슬라이드) 초기화
   document.querySelectorAll('.proj-accordion').forEach(function(a) {
     a.classList.remove('open');
     var t = a.querySelector('.proj-acc-toggle');
     if (t) t.textContent = '＋';
+    a.querySelectorAll('.slide-card.open').forEach(function(c){ c.classList.remove('open'); });
   });
-  // 클릭한 것만 열기 (이미 열려있으면 닫힌 상태 유지)
+  // 클릭한 것만 열기 (첫 슬라이드는 자동으로 열지 않고 깜빡임으로 안내)
   if (!isOpen) {
     acc.classList.add('open');
     var toggle = header.querySelector('.proj-acc-toggle');
     if (toggle) toggle.textContent = '－';
+    var first = acc.querySelector('.slide-card');
+    if (first) {
+      first.classList.remove('blink-hint');
+      void first.offsetWidth;
+      first.classList.add('blink-hint');
+      setTimeout(function(){ first.classList.remove('blink-hint'); }, 1600);
+    }
   }
 }
 
@@ -4116,11 +4925,19 @@ function toggleBeforePo(header) {
     a.classList.remove('open');
     var t = a.querySelector('.bp-acc-toggle');
     if (t) t.textContent = '＋';
+    a.querySelectorAll('.fw-acc.open').forEach(function(f){ f.classList.remove('open'); }); a.querySelectorAll('.fw-detail').forEach(function(d){ d.style.display='none'; }); a.querySelectorAll('.fw-btn.active').forEach(function(b){ b.classList.remove('active'); });
   });
   if (!isOpen) {
     acc.classList.add('open');
     var toggle = header.querySelector('.bp-acc-toggle');
     if (toggle) toggle.textContent = '－';
+    var firstHint = acc.querySelector('.fw-btn, .fw-acc');
+    if (firstHint) {
+      firstHint.classList.remove('blink-hint');
+      void firstHint.offsetWidth;
+      firstHint.classList.add('blink-hint');
+      setTimeout(function(){ firstHint.classList.remove('blink-hint'); }, 1600);
+    }
   }
 }
 
@@ -4132,7 +4949,16 @@ function toggleSection(bodyId, iconId) {
   var isOpen = body.style.display !== 'none';
   body.style.display = isOpen ? 'none' : 'block';
   icon.textContent = isOpen ? '＋' : '－';
-  if (!isOpen) setTimeout(updateActive, 80);
+  if (!isOpen) {
+    setTimeout(updateActive, 80);
+    var firstAcc = body.querySelector('.proj-accordion, .bp-accordion');
+    if (firstAcc) {
+      firstAcc.classList.remove('blink-hint');
+      void firstAcc.offsetWidth;
+      firstAcc.classList.add('blink-hint');
+      setTimeout(function(){ firstAcc.classList.remove('blink-hint'); }, 1600);
+    }
+  }
 }
 
 // ── 섹션 강제 펼침 ──
@@ -4177,7 +5003,27 @@ function goTo(targetId, bodyId, iconId) {
 
 function toggleSlide(header) {
   const card = header.parentElement;
-  card.classList.toggle('open');
+  const container = card.parentElement;
+  const isOpen = card.classList.contains('open');
+  if (container) {
+    container.querySelectorAll(':scope > .slide-card').forEach(function(c) {
+      c.classList.remove('open');
+    });
+  }
+  if (!isOpen) card.classList.add('open');
+}
+
+// ── 프레임워크 아코디언 (B/C/D 섹션) — 하나만 열림 ──
+function toggleFwAcc(header) {
+  var item = header.parentElement;
+  var isOpen = item.classList.contains('open');
+  var scope = item.closest('.bp-acc-body') || item.parentElement;
+  scope.querySelectorAll('.fw-acc').forEach(function(acc) {
+    acc.classList.remove('open');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+  }
 }
 
 // ── 프레임워크 버튼 토글 ──
@@ -4199,7 +5045,6 @@ function toggleFramework(id) {
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.slides').forEach(slides => {
     const first = slides.querySelector('.slide-card');
-    if (first) first.classList.add('open');
   });
 });
 
@@ -4448,6 +5293,44 @@ document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
   </div>
 
 </nav>
+
+<style>
+/* ===== 하단 라이트 섹션: 청검정 모노톤 (펼침 강조, 그림자 없음) ===== */
+#before-po .fw-acc, .light-section .fw-acc { border:1px solid #E3E5E9; background:#FFFFFF; }
+#before-po .fw-acc-header:hover, .light-section .fw-acc-header:hover { background:#F4F6F9; }
+#before-po .fw-acc-title, .light-section .fw-acc-title { color:#2A2D34; }
+#before-po .fw-acc-meta, .light-section .fw-acc-meta { color:#9A9CA2; }
+#before-po .fw-acc-toggle, .light-section .fw-acc-toggle { color:#AEB0B6; }
+#before-po .fw-acc-body, .light-section .fw-acc-body { border-top:1px solid #EDEFF2; }
+.fw-acc.open { border-color:#23262C !important; border-left:4px solid #23262C !important; background:#F1F3F6 !important; }
+.fw-acc.open .fw-acc-header { background:#EAEDF1 !important; }
+.fw-acc.open .fw-acc-title { color:#1A1A18 !important; }
+.fw-acc.open .fw-acc-toggle { color:#23262C !important; }
+.proj-accordion.open { border-color:#23262C !important; border-left:4px solid #23262C !important; }
+.proj-accordion.open .proj-acc-toggle { background:#23262C !important; color:#fff !important; }
+/* proj 헤더 hover를 Before PO 헤더처럼 전체 회색으로 통일 (specificity 강제) */
+.proj-accordion .proj-acc-header { background:transparent !important; }
+.proj-accordion .proj-acc-header:hover,
+.proj-accordion.open .proj-acc-header:hover { background:rgba(0,0,0,0.045) !important; }
+.proj-accordion.open .proj-acc-header { background:transparent !important; border-bottom-color:#D6D9DE !important; }
+.bp-accordion.open { border-color:#23262C !important; border-left:4px solid #23262C !important; }
+.bp-accordion.open .bp-acc-header { background:#F1F3F6 !important; }
+/* proj-acc-header 회색 배경 제거 → Before PO 헤더처럼 흰색 통일 */
+.proj-acc-header { background:transparent !important; }
+.proj-acc-header:hover { background:rgba(0,0,0,0.03) !important; }
+.proj-accordion.open .proj-acc-header { background:transparent !important; border-bottom-color:#D6D9DE !important; }
+.slide-card.open { border-color:#23262C !important; border-left:3px solid #23262C !important; }
+/* 최상위 섹션(After PO/Before PO) 열림 시 좌측 청검정 바로 영역 지각 강화 */
+#projects-body, #beforepo-body { border-left:3px solid #23262C; padding-left:18px; margin-left:-21px; }
+.light-section .slide-card.open .slide-card-header { background:#F1F3F6 !important; }
+/* 프레임워크 배지 버튼: 커서 pointer + hover 진한 청검정 (클릭 인지) */
+.fw-btn { cursor:pointer !important; transition:all 0.15s !important; }
+.fw-btn:hover { background:#23262C !important; color:#FFFFFF !important; border-color:#23262C !important; }
+.fw-btn.active { background:rgba(35,38,44,0.10) !important; color:#23262C !important; border-color:#23262C !important; }
+/* 상위 열 때 첫 하위 요소 아웃라인 깜빡임 (선택 유도) — 슬라이드/버튼/항목 공통 */
+@keyframes blinkHint { 0%,100% { outline-color:transparent; } 50% { outline-color:#23262C; } }
+.blink-hint { outline:2px solid transparent; outline-offset:1px; animation:blinkHint 0.5s ease-in-out 3 !important; }
+</style>
 
 </body>
 </html>
