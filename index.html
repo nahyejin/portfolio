@@ -3764,46 +3764,52 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         <span class="tag fw-btn" onclick="toggleFramework('konan-alert')">위기 알림 얼랏 시스템</span>
       </div>
       <div id="konan-centrality" class="fw-detail" style="display:none;">
-        <strong>중심성 분석</strong>
-        <p>목적: 성장·신생 이슈 키워드 중 가장 중심적으로 언급되는 핵심 키워드를 식별해 주요 트렌드를 도출.</p>
-        <p>방법: 최근 1년 언급 증가율이 높은 키워드 간 연관성·중심성을 분석. 연관어 간 함께 언급된 문서 비율로 연관성을 계산하고, 각 키워드가 다른 키워드와 맺는 연관성 점수를 합산해 중심성 지수를 산출.</p>
+        <strong>중심성 분석</strong> <span style="display:inline-block; font-size:10px; color:#909088; border:1px solid #D1D3D8; border-radius:3px; padding:1px 6px; margin-left:6px; vertical-align:middle;">이슈 분석 프레임</span>
+        <p>목적: 성장분면·신생분면 이슈 키워드 중 가장 중심적으로 언급되는 핵심 키워드를 식별해 주요 트렌드를 도출.</p>
+        <p>방법: 최근 1년 언급 증가율이 높은 키워드 간 연관성·중심성을 분석. 연관어 간 함께 언급된 문서 비율(동시 출현 빈도)로 연관성을 계산하고, 각 키워드가 다른 키워드와 맺는 연관성 점수를 합산해 중심성 지수를 산출.</p>
+        <p>프로세스: 성장·신생 키워드 선별 → 연관어 간 동시 출현 비율로 연관성 산출 → 연관성 점수 합산으로 중심성 지수 산정 → 연관성 Network 시각화 → 핵심 트렌드 키워드 도출</p>
         <p>기대효과: 떠오르는 키워드 중 핵심 트렌드를 선도하는 단어를 도출해 전략적 마케팅·트렌드 분석에 활용.</p>
-        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">중심성·연관성 분석 예시 이미지</span></div>
+        <img src="assets/PF_images/중심성_분석.png" alt="중심성 분석" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
       </div>
       <div id="konan-policy-sense" class="fw-detail" style="display:none;">
-        <strong>정책 체감도 분석</strong>
+        <strong>정책 체감도 분석</strong> <span style="display:inline-block; font-size:10px; color:#909088; border:1px solid #D1D3D8; border-radius:3px; padding:1px 6px; margin-left:6px; vertical-align:middle;">정책 분석 프레임</span>
         <p>목적: 정책 분야별 국민 체감도를 정량 분석해 핵심 정책을 파악하고 효율적 자원 배분·실행 전략을 수립.</p>
-        <p>방법: 언급량 TOP N 정책을 선정한 뒤 네이버 검색량과 SNS 언급량을 MIX(최댓값 100)해 수치화. 뉴스 원문을 제외해 국민 반응만 분석.</p>
-        <p>기대효과: 검색량과 SNS 언급량 차이를 보정해 정책 체감도를 통합 비교하고 국민 관심도·추세를 분석.</p>
-        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">정책 체감도 추이 예시 이미지</span></div>
+        <p>방법: 언급량 TOP N 정책을 선정한 뒤 뉴스 원문을 제외한 전 채널에서 네이버 검색량과 SNS 언급량을 MIX하여 최댓값 100으로 환산해 수치화. 국민 반응만을 분리하여 분석.</p>
+        <p>프로세스: 정책 분야별 언급량 순위 산출 → 뉴스 원문 제외 필터링 → 검색량 + SNS 언급량 MIX 지수(100점 만점) 산정 → 월별 체감도 추이 시각화 → 정책 간 체감도 비교 분석</p>
+        <p>기대효과: 검색량과 SNS 언급량의 채널 간 차이를 보정해 정책 체감도를 통합 비교하고, 국민 관심도·추세를 분석.</p>
+        <img src="assets/PF_images/정책_체감도_분석.png" alt="정책 체감도 분석" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
       </div>
       <div id="konan-policy-react" class="fw-detail" style="display:none;">
-        <strong>정책 현실 반영도·대응도·호응도 분석</strong>
-        <p>목적: 국민 관심 이슈와 사회관계장관회의 주제 간 일치도를 높이고 대응 방안을 마련.</p>
-        <p>방법: 현실 반영도(안건-이슈 일치 개수 ÷ 총 안건 수), 대응도(이슈 발생~안건 반영까지 걸린 시간), 호응도(안건 통과 후 언급량 변화) 3개 지표로 상관관계를 분석.</p>
-        <p>기대효과: 정책이 국민 요구에 얼마나 부합하는지 평가하고 정책 개선 방향을 제시.</p>
-        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">반영도·대응도·호응도 분석 예시 이미지</span></div>
+        <strong>현실 반영도·대응도·호응도 분석</strong> <span style="display:inline-block; font-size:10px; color:#909088; border:1px solid #D1D3D8; border-radius:3px; padding:1px 6px; margin-left:6px; vertical-align:middle;">정책 분석 프레임</span>
+        <p>목적: 국민 관심 이슈와 사회관계장관회의 주제 간 일치도를 분석하여 정책 대응 수준을 정량 평가.</p>
+        <p>방법: 현실 반영도(안건-이슈 일치 개수 ÷ 총 안건 수), 대응도(이슈 발생~안건 반영까지 걸린 시간), 호응도(안건 통과 후 언급량 변화) 3개 지표를 산출하고 상관관계를 분석.</p>
+        <p>프로세스: 국민 관심 이슈 TOP N 도출 → 사회관계장관회의 안건과 매칭 → 반영도·대응도·호응도 3개 지표 산출 → 지표 간 상관관계 분석 → 정책 개선 방향 도출</p>
+        <p>기대효과: 정책이 국민 요구에 얼마나 부합하는지 정량 평가하고, 대응 속도·효과까지 포괄하는 개선 방향을 제시.</p>
+        <img src="assets/PF_images/현실_반영도_대응도_호응도.png" alt="현실 반영도·대응도·호응도 분석" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
       </div>
       <div id="konan-seed" class="fw-detail" style="display:none;">
-        <strong>성별/연령별 Seed 구분 분석</strong>
-        <p>목적: 성별·연령별·지역별로 세분화된 데이터를 분석해 각 그룹의 특성과 니즈를 반영한 인사이트를 도출.</p>
-        <p>방법: 세대·성별·지역별로 많이 이용하는 대표 카페/커뮤니티를 Seed로 지정해 데이터를 수집(예: 2030 디시인사이드, 여성 맘스홀릭, 부산 중고나라).</p>
-        <p>기대효과: 그룹별 관심사와 주요 이슈를 반영해 타겟 마케팅 전략과 시장 니즈에 부합하는 실행 방안을 제시.</p>
-        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">세대·성별·지역 Seed 구분 예시 이미지</span></div>
+        <strong>성별/연령별 Seed 구분</strong> <span style="display:inline-block; font-size:10px; color:#909088; border:1px solid #D1D3D8; border-radius:3px; padding:1px 6px; margin-left:6px; vertical-align:middle;">데이터 수집 프레임</span>
+        <p>목적: 성별·연령별·지역별로 세분화된 카페/커뮤니티 기반 데이터를 수집·분석해 각 그룹의 특성과 니즈를 반영한 인사이트를 도출.</p>
+        <p>방법: 세대·성별·지역별로 많이 이용하는 대표 카페/커뮤니티를 Seed로 지정해 데이터를 수집. 예: 2030 디시인사이드, 여성 맘스홀릭베이비, 부산 지역 중고나라 등.</p>
+        <p>프로세스: 세대·성별·지역 분류 기준 설정 → 각 그룹별 대표 카페/커뮤니티 Seed 선정 → Seed 기반 데이터 수집 → 그룹별 관심사·이슈 비교 분석 → 타겟별 인사이트 도출</p>
+        <p>기대효과: 그룹별 관심사와 주요 이슈를 세분화하여 타겟 마케팅 전략과 시장 니즈에 부합하는 실행 방안을 제시.</p>
+        <img src="assets/PF_images/성별_연령별_SEED_구분.png" alt="성별/연령별 Seed 구분" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
       </div>
       <div id="konan-subject" class="fw-detail" style="display:none;">
-        <strong>긍·부정 분석 품질 개선 — 주체 매칭</strong>
-        <p>목적: 소셜 데이터 내 긍·부정 표현을 주체와 긴밀히 연결해 감성 분석 정확성과 신뢰도를 강화.</p>
-        <p>방법: ⓑ 주체 비하·긍정 명칭(예: 윤무능/어대윤)을 주체와 연결, ⓒ 뉴스 전문에서 주체·논조를 추출해 댓글과 매칭, ⓓ 주체별 긍·부정 결과를 대시보드에 반영.</p>
+        <strong>긍·부정 주체 매칭</strong> <span style="display:inline-block; font-size:10px; color:#909088; border:1px solid #D1D3D8; border-radius:3px; padding:1px 6px; margin-left:6px; vertical-align:middle;">감성 분석 프레임</span>
+        <p>목적: 소셜 데이터 내 긍·부정 표현을 주체와 긴밀히 연결해 감성 분석의 정확성과 신뢰도를 강화.</p>
+        <p>방법: ⓑ 주체 비하·긍정 명칭 처리(예: 윤무능/어대윤 → 실제 주체와 연결), ⓒ 뉴스 댓글-전문 간 의미적 연결성 확보(뉴스 전문에서 주체·논조를 추출해 댓글과 매칭), ⓓ 주체별 긍·부정 평가 결과를 대시보드에 반영.</p>
+        <p>프로세스: 주체 비하/긍정 명칭 사전 구축 → 명칭-주체 매핑 → 뉴스 전문 주체·논조 추출 → 댓글-전문 의미적 연결 → 주체별 긍·부정 평가 결과 대시보드 반영</p>
         <p>기대효과: 주체가 명확하지 않은 문장에서도 평가 대상을 식별해 감성 분석의 신뢰성과 품질을 향상.</p>
-        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">주체별 긍·부정 대시보드 예시 이미지</span></div>
+        <img src="assets/PF_images/긍_부정_주체_매칭.png" alt="긍·부정 주체 매칭" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
       </div>
       <div id="konan-alert" class="fw-detail" style="display:none;">
-        <strong>위기 알림 얼랏(Alert) 시스템</strong>
+        <strong>위기 알림 얼랏(Alert) 시스템</strong> <span style="display:inline-block; font-size:10px; color:#909088; border:1px solid #D1D3D8; border-radius:3px; padding:1px 6px; margin-left:6px; vertical-align:middle;">모니터링 시스템</span>
         <p>목적: 고객사 관심 키워드의 부정 이슈·급상승 이슈를 실시간 탐지해 빠르게 대응하도록 얼랏을 발송.</p>
-        <p>방법: 뉴스·커뮤니티/SNS에서 키워드 데이터를 실시간 수집(10분~1시간). 부정 얼랏·급상승 얼랏·SNS 얼랏 조건 충족 시 텔레그램 API로 이슈 요약·통계를 발송.</p>
+        <p>방법: 뉴스·커뮤니티/SNS에서 키워드 데이터를 실시간 수집(10분~1시간 주기). 부정 얼랏·급상승 얼랏·SNS 얼랏 조건 충족 시 텔레그램 API를 통해 이슈 요약·통계를 자동 발송.</p>
+        <p>프로세스: 실시간 키워드 데이터 수집(뉴스·커뮤니티·SNS) → 부정/급상승/SNS 얼랏 조건 판별 → 이슈 요약·통계 자동 생성 → 텔레그램 API 얼랏 발송 → 대응 현황 추적</p>
         <p>기대효과: 부정·급상승 이슈를 신속히 파악해 효율적인 대응과 위기 관리를 지원.</p>
-        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">얼랏 발송 예시 이미지</span></div>
+        <img src="assets/PF_images/위기_알림_얼랏_시스템.png" alt="위기 알림 얼랏 시스템" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
       </div>
       <!-- 클라이언트 분석 프로젝트 -->
       <div style="margin-top:24px; margin-bottom:8px; font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">CLIENT PROJECT · 소셜·여론 분석 보고서</div>
@@ -4126,7 +4132,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         <p>주요 전제: 레더링(Laddering) 기법으로 구매 행동을 속성(Attribute) → 혜택/결과(Consequence) → 가치(Value)로 계층 연결해 심층 분석. 속성이 제공하는 이점과 심리적·정서적 만족을 도출해 핵심 동기를 파악.</p>
         <p>구축 방법: ① 속성 — 제품 고유의 물리적·기능적 특징 텍스트(예: 무설탕 음료) / ② 혜택·결과 — 소비자에게 제공하는 직·간접 이익 텍스트(예: 다이어트에 도움) / ③ 가치 — 최종 심리적·개인적 만족 텍스트(예: 자신감 있는 삶).</p>
         <p>기대효과: 속성에서 가치로 이어지는 구조적 분석으로 소비자 내면의 욕구·동기를 파악하고 브랜드-소비자 간 정서적 유대감을 형성. 가치까지 연결되는 통찰로 정교한 마케팅·제품 개발 전략을 도출.</p>
-        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">레더링·HVM 소비자 가치단 계도 예시 이미지</span></div>
+        <img src="assets/PF_images/레더링_분석_방법론_텍사노미.png" alt="레더링 분석 방법론 텍사노미" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
       </div>
       <div id="wisenut-cdmap" class="fw-detail" style="display:none;">
         <strong>C-D MAP · 중심성(Centrality)–차별성(Distinctiveness) 맵</strong>
@@ -4135,7 +4141,7 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         <p>분석 방법: 중심성(X축) — 자사 브랜드 화제어 Top100이 전체 브랜드 화제어 Top100에 포함되는 비율(시장 대표성). 차별성(Y축) — 전체 대비 자사에서만 나타나는 고유 화제어 Top100 개수 비율(경쟁사 대비 차별화).</p>
         <p>4분면 해석: ① 열망 브랜드(중심성 高·차별성 高, 예: 벤츠·BMW) / ② 이례적 브랜드(중심성 低·차별성 高, 예: 테슬라·미니) / ③ 주변 브랜드(중심성 低·차별성 低, 예: 미쓰비시·마쓰다) / ④ 주류 브랜드(중심성 高·차별성 低, 예: 포드·쉐보레).</p>
         <p>기대효과: 시장 내 위치를 파악하고 경쟁사 대비 전략적 강점·개선 방향을 도출해 브랜드 전략(광고·커뮤니케이션·포지셔닝)을 수립.</p>
-        <div class="img-placeholder short"><span class="img-placeholder-icon">🖼</span><span class="img-placeholder-label">C-D MAP 4분면 예시 이미지</span></div>
+        <img src="assets/PF_images/C_D_MAP.png" alt="C-D MAP 중심성-차별성 맵" style="width:100%; border:1px solid #E3E5E9; border-radius:6px; display:block;">
       </div>
       <!-- 클라이언트 분석 프로젝트 -->
       <div style="margin-top:24px; margin-bottom:8px; font-family:var(--mono); font-size:11px; font-weight:700; color:#23262C; letter-spacing:0.12em; padding-bottom:6px; border-bottom:1px solid rgba(35,38,44,0.2);">CLIENT PROJECT · 소셜·여론 분석 보고서</div>
