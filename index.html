@@ -472,7 +472,11 @@ section {
 
 .light-section .po-link {
   color: #2E3138;
-  border-color: #4C505A;
+  border-left-color: #4C505A;
+  background: linear-gradient(135deg, rgba(76,80,90,0.07) 0%, rgba(35,38,44,0.02) 100%);
+}
+.light-section .po-link:hover {
+  background: linear-gradient(135deg, rgba(76,80,90,0.12) 0%, rgba(35,38,44,0.05) 100%);
 }
 
 .light-section .brand-pill {
@@ -819,17 +823,24 @@ section {
 }
 
 .po-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  position: relative;
+  display: block;
   font-family: var(--sans);
-  font-size: 13px;
-  color: var(--gold);
-  margin-top: 12px;
-  padding: 8px 14px;
-  border: 1px solid var(--gold-dim);
+  font-size: 13.5px;
+  color: #E8E6E0;
+  margin-top: 16px;
+  padding: 16px 20px 16px 24px;
+  border: none;
+  border-left: 3px solid var(--gold);
+  background: linear-gradient(135deg, rgba(245,197,24,0.08) 0%, rgba(201,162,39,0.03) 100%);
+  border-radius: 0 8px 8px 0;
   letter-spacing: -0.01em;
-  line-height: 1.6;
+  line-height: 1.75;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+}
+.po-link:hover {
+  background: linear-gradient(135deg, rgba(245,197,24,0.13) 0%, rgba(201,162,39,0.06) 100%);
 }
 
 /* 클라이언트 브랜드 월 */
