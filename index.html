@@ -2812,8 +2812,8 @@ footer {
         </div>
       </div>
     </div>
+    <p class="po-link" style="margin-top:16px; padding:0 24px;">→ 기획자에서 한 걸음 더 — 개발 3직군과 동등하게 에이전트를 직접 만들며, AI Agent 기술을 몸으로 이해하는 PO로 확장하고 있습니다.</p>
   </div>
-      <p class="po-link" style="margin-top:16px; padding:0 24px;">→ 기획자에서 한 걸음 더 — 개발 3직군과 동등하게 에이전트를 직접 만들며, AI Agent 기술을 몸으로 이해하는 PO로 확장하고 있습니다.</p>
     </div>
   </div>
   <!-- ── 02: Quettai MCP ── -->
@@ -2832,51 +2832,189 @@ footer {
       <span class="project-index">02</span>
       <span class="project-status status-ongoing">기획 진행 중</span>
     </div>
-    <h3 class="project-headline">Quettai MCP 외부 LLM 연동 — 사용자 화면 기획</h3>
-    <p class="project-subhead">MCP 인프라 기반 외부 LLM 연동 사용자 화면 전체 기획 · 2026.06–현재</p>
+    <h3 class="project-headline">Quetta Data MCP — 외부 LLM 연동 사용자 화면 기획</h3>
+    <p class="project-subhead">"MCP가 뭔데?" — 사용자가 모르는 기술을 자연스럽게 쓸 수 있도록, 연동 화면 전체를 처음부터 설계 · 2026.06–현재</p>
 
     <div class="slides">
+
+      <!-- ── SLIDE 01 : 기획 배경 & 나의 역할 ── -->
       <div class="slide-card">
         <div class="slide-card-header" onclick="toggleSlide(this)">
           <span class="slide-num">SLIDE 01</span>
-          <span class="slide-title">MCP 인프라 구조 &amp; 화면 기획 범위</span>
+          <span class="slide-title">기획 배경 &amp; 나의 역할</span>
           <span class="slide-toggle">+</span>
         </div>
         <div class="slide-content">
           <div class="slide-inner">
-            <p class="slide-headline">Quettai MCP — 외부 LLM 연동 사용자 화면을 직접 기획한 인프라 프로젝트</p>
+            <p class="slide-headline">MCP라는 새로운 프로토콜을 일반 사용자에게 "어떻게 보여줄 것인가" — 레퍼런스 없는 화면을 처음부터 기획</p>
 
-            <!-- MCP 구조 SVG -->
+            <div class="sub-headline">Quetta 시리즈 내 위치 — 세 번째 제품</div>
+
+            <!-- Product Map SVG -->
             <div class="diagram-wrap">
-              <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-                <rect width="760" height="200" fill="#1C1E24"/>
-                <rect x="20" y="20" width="720" height="38" fill="rgba(220,224,230,0.08)" stroke="#C4CAD1" stroke-width="0.5"/>
-                <text x="40" y="33" fill="#C4CAD1" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">SERVICE LAYER</text>
-                <text x="40" y="50" fill="#F6F7F9" font-family="Pretendard,sans-serif" font-size="13" font-weight="600">사용자 인터랙션 화면 + Agent 라인업</text>
-                <text x="680" y="43" fill="#9AA0A8" font-family="JetBrains Mono,monospace" font-size="9" text-anchor="end">기획자 담당</text>
-                <rect x="20" y="62" width="720" height="38" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.5"/>
-                <text x="40" y="75" fill="#9A9DA4" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">AI LAYER</text>
-                <text x="40" y="92" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">외부 LLM + 비즈니스 목적별 특화 프롬프트</text>
-                <rect x="20" y="104" width="720" height="38" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.5"/>
-                <text x="40" y="117" fill="#9A9DA4" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">INTEGRATION LAYER</text>
-                <text x="40" y="134" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">MCP 기반 데이터 연동 엔진 (빅데이터팀 구축)</text>
-                <rect x="20" y="146" width="720" height="38" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="0.5"/>
-                <text x="40" y="159" fill="#9A9DA4" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1">DATA LAYER</text>
-                <text x="40" y="176" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="13">사내 소셜 빅데이터 플랫폼 (SNS·뉴스·커뮤니티 수십억 건)</text>
+              <svg viewBox="0 0 760 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="130" fill="#1C1E24"/>
+                <!-- Quetta i -->
+                <rect x="20" y="25" width="210" height="80" rx="6" fill="none" stroke="#6A9FD8" stroke-width="1"/>
+                <text x="125" y="52" fill="#6A9FD8" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="700">Quetta i</text>
+                <text x="125" y="72" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">BASIC 분석</text>
+                <text x="125" y="88" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">사용자가 직접 검색·분석</text>
+                <polygon points="245,65 260,58 260,72" fill="#555"/>
+                <!-- Quetta Dex -->
+                <rect x="275" y="25" width="210" height="80" rx="6" fill="none" stroke="#E88A3A" stroke-width="1"/>
+                <text x="380" y="52" fill="#E88A3A" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="700">Quetta Dex</text>
+                <text x="380" y="72" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">Advanced 분석</text>
+                <text x="380" y="88" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">사용자가 대시보드 커스텀</text>
+                <polygon points="500,65 515,58 515,72" fill="#555"/>
+                <!-- Quetta Data MCP -->
+                <rect x="530" y="25" width="210" height="80" rx="6" fill="rgba(245,197,24,0.08)" stroke="#F5C518" stroke-width="1.2"/>
+                <text x="635" y="48" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="13" text-anchor="middle" font-weight="700">Quetta Data MCP</text>
+                <text x="635" y="68" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">AI가 직접 검색·분석</text>
+                <text x="635" y="84" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">외부 LLM이 MCP로 데이터 호출</text>
+                <text x="635" y="98" fill="#9AA0A8" font-family="JetBrains Mono,monospace" font-size="8" text-anchor="middle">← 현재 기획 중</text>
               </svg>
             </div>
 
+            <p style="color:#555; font-size:12px; line-height:1.7; margin:12px 0;">기존 Quetta 시리즈는 "사용자가 직접 분석하는" 도구였지만, Quetta Data MCP는 <strong style="color:#23262C;">사용자의 AI(ChatGPT, Claude 등)가 대신 데이터를 호출</strong>하는 완전히 새로운 구조입니다. 사용자 입장에서 MCP라는 개념 자체가 생소하기 때문에, "기술을 설명하는 화면"이 아니라 <strong style="color:#23262C;">"연동이 자연스럽게 완료되는 경험"</strong>을 설계하는 것이 핵심 과제였습니다.</p>
+
             <table class="content-table">
               <tr><td>기간</td><td>2026.06 ~ 현재 · 기획 진행 중</td></tr>
-              <tr><td>기획 범위</td><td>사용량 통계 · 호출 건수 · 연결 가이드 · 제약사항 화면 설계 — 외부 LLM과 연동되는 MCP 사용자 화면 전체 기획</td></tr>
-              <tr><td>역할</td><td>서비스 컨셉 설계 · 화면 인터랙션 기획 · 과금 정책 설계 · MCP Tools 특화 프롬프트 작성</td></tr>
+              <tr><td>핵심 과제</td><td>MCP 개념을 모르는 사용자도 4-Step만 따라하면 연동이 완료되는 화면 설계</td></tr>
+              <tr><td>역할</td><td>단독 기획 · 사용자 화면 전체 IA 설계 · 서비스 정책 수립 · 화면 기획서(Figma) 직접 작성</td></tr>
+              <tr><td>산출물</td><td>화면 기획서(Figma 28페이지) · 공통 정책 문서 · 화면 흐름도 · UX Writing 가이드</td></tr>
             </table>
+
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">[Figma] Product Map — Quetta 시리즈 내 MCP 포지셔닝</span>
+              <span class="img-placeholder-label">캡처 대상: Product Map 프레임</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- ── SLIDE 02 : 사용자 친화적 연동 가이드 설계 ── -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 02</span>
+          <span class="slide-title">"MCP를 모르는 사용자"를 위한 연동 가이드 설계</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">6종 LLM 환경별 4-Step 연동 가이드 — 기술 용어 대신 "지금 뭘 하면 되는지"에 집중</p>
+
+            <p style="color:#555; font-size:12px; line-height:1.7; margin:12px 0;">MCP 연동은 개발자에게도 익숙하지 않은 작업입니다. ChatGPT는 Actions 설정, Claude Desktop은 JSON config 파일 수정, VS Code는 Extension 설정 — <strong style="color:#23262C;">같은 "연동"이지만 LLM마다 방법이 전혀 다릅니다.</strong> 이 차이를 사용자가 직접 파악하게 두지 않고, 각 환경에 맞는 단계별 가이드를 화면 안에서 바로 제공하는 구조를 기획했습니다.</p>
+
+            <div class="sub-headline">6종 LLM 환경별 연동 가이드</div>
+
+            <!-- 6종 가이드 SVG -->
+            <div class="diagram-wrap">
+              <svg viewBox="0 0 760 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="160" fill="#1C1E24"/>
+                <text x="380" y="20" fill="#9AA0A8" font-family="JetBrains Mono,monospace" font-size="9" text-anchor="middle" letter-spacing="1">LLM 환경별 · 각각 4-Step 가이드 기획</text>
+                <!-- Row 1 -->
+                <rect x="15" y="32" width="235" height="50" rx="4" fill="rgba(106,159,216,0.06)" stroke="#6A9FD8" stroke-width="0.8"/>
+                <text x="132" y="54" fill="#6A9FD8" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="600">ChatGPT</text>
+                <text x="132" y="72" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">Actions 연동 · API Key 등록</text>
+
+                <rect x="262" y="32" width="235" height="50" rx="4" fill="rgba(232,138,58,0.06)" stroke="#E88A3A" stroke-width="0.8"/>
+                <text x="380" y="54" fill="#E88A3A" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="600">Claude Desktop</text>
+                <text x="380" y="72" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">JSON config 파일 설정</text>
+
+                <rect x="509" y="32" width="235" height="50" rx="4" fill="rgba(127,191,127,0.06)" stroke="#7FBF7F" stroke-width="0.8"/>
+                <text x="626" y="54" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="600">Claude Code (Console)</text>
+                <text x="626" y="72" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">MCP 서버 직접 설정</text>
+
+                <!-- Row 2 -->
+                <rect x="15" y="94" width="235" height="50" rx="4" fill="rgba(245,197,24,0.06)" stroke="#F5C518" stroke-width="0.8"/>
+                <text x="132" y="116" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="600">Claude Code (VS Code)</text>
+                <text x="132" y="134" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">VS Code Extension 설정</text>
+
+                <rect x="262" y="94" width="235" height="50" rx="4" fill="rgba(200,200,200,0.04)" stroke="#888" stroke-width="0.5" stroke-dasharray="4,3"/>
+                <text x="380" y="116" fill="#888" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="600">Gemini</text>
+                <text x="380" y="134" fill="#666" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">준비 중</text>
+
+                <rect x="509" y="94" width="235" height="50" rx="4" fill="rgba(180,160,220,0.06)" stroke="#9A8AC4" stroke-width="0.8"/>
+                <text x="626" y="116" fill="#9A8AC4" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="600">온프레미스 LLM</text>
+                <text x="626" y="134" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">MCP 서버 직접 설정</text>
+              </svg>
+            </div>
+
+            <div class="sub-headline">기획 시 고민한 UX 포인트</div>
+            <table class="content-table">
+              <tr><td>진입 장벽 낮추기</td><td>인증키 복사 → 해당 LLM 환경에 붙여넣기 — 복잡한 설정 과정을 "복사&붙여넣기" 수준으로 단순화</td></tr>
+              <tr><td>환경별 분리</td><td>같은 MCP 연동이지만 LLM마다 설정 방법이 다르므로, 환경을 먼저 선택하면 해당 가이드만 노출</td></tr>
+              <tr><td>질문 가이드</td><td>"기간 + 키워드 + 분석 방향 + 결과 형태"로 질문하는 방법까지 안내 — MCP 연동 후 실제로 어떻게 써야 하는지까지 커버</td></tr>
+              <tr><td>처음 오는 사용자</td><td>아직 연동 전인 사용자에게는 현황 대신 가이드 CTA를 먼저 보여주어, 자연스럽게 연동 흐름으로 유도</td></tr>
+            </table>
+
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">[Figma] 사용 가이드 — ChatGPT 연동 4-Step 예시 화면</span>
+              <span class="img-placeholder-label">캡처 대상: 70:23 프레임</span>
+            </div>
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">[Figma] 처음 방문 사용자 화면 — 연동 가이드 CTA 배치</span>
+              <span class="img-placeholder-label">캡처 대상: 24:212 프레임 (Empty 상태)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SLIDE 03 : MCP 인프라 전반을 이해한 서비스 정책 설계 ── -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 03</span>
+          <span class="slide-title">MCP 인프라 전반을 이해한 서비스 정책 설계</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">크레딧 과금 · OAuth 인증 · 키 재발급 · 연동 상태 관리 — 기술 인프라를 이해해야만 설계할 수 있는 정책들</p>
+
+            <p style="color:#555; font-size:12px; line-height:1.7; margin:12px 0;">이 프로젝트의 기획은 단순히 화면을 그리는 것이 아니었습니다. <strong style="color:#23262C;">MCP 프로토콜의 작동 구조, OAuth 인증 흐름, API 호출과 크레딧 차감 로직, 시크릿 키의 발급·만료·재발급 정책</strong>까지 — 개발 영역에 가까운 인프라 개념을 직접 이해한 뒤에야 정책을 설계할 수 있었습니다. 기획자로서 이 기술적 맥락을 체득한 것이 이 프로젝트의 가장 큰 자산입니다.</p>
+
+            <div class="sub-headline">직접 설계한 서비스 정책 영역</div>
+            <table class="content-table">
+              <tr><th>정책 영역</th><th>기획 판단</th><th>이해가 필요했던 기술적 맥락</th></tr>
+              <tr><td>크레딧 과금</td><td>월 10,000 크레딧 / 일 500회 한도 / Tool별 차등 차감(7~14)</td><td>MCP Tool별 API 호출 비용 구조 · 월 초기화 주기 · 소진 시 차단 로직</td></tr>
+              <tr><td>권한 체계</td><td>관리자(OAuth 설정 권한) / 일반 사용자(comKey 로그인) 분리</td><td>OAuth 인증 흐름 · 클라이언트 ID/시크릿 키의 역할 · 권한별 접근 범위</td></tr>
+              <tr><td>인증키 운영</td><td>시크릿 키 마스킹 · 재발급 시 기존 키 즉시 만료 · 만료일 표시</td><td>API Key 보안 정책 · 키 라이프사이클 · 재발급이 기존 연동에 미치는 영향</td></tr>
+              <tr><td>연동 상태</td><td>Active/Empty 상태 자동 분기 · 상태별 화면 전환</td><td>MCP 서버 연결 상태 판별 로직 · 연동 성공/실패 판정 기준</td></tr>
+            </table>
+
+            <div class="sub-headline">이 과정에서 체득한 것</div>
+            <table class="content-table">
+              <tr><td>MCP 프로토콜</td><td>MCP 서버-클라이언트 구조, Tool 호출 방식, 데이터 요청·응답 흐름을 이해하고 화면에 반영</td></tr>
+              <tr><td>API 인증 구조</td><td>OAuth 기반 인증 흐름과 API Key 관리 방식을 이해하고, 사용자 화면에서의 보안 UX를 설계</td></tr>
+              <tr><td>과금 설계 역량</td><td>호출 단위 과금 · 크레딧 차감 · 한도 초과 차단 등 SaaS 과금 모델을 직접 수립</td></tr>
+              <tr><td>개발팀 소통</td><td>기술 용어로 개발팀과 직접 논의하며, 기획 의도를 정확히 전달하고 검증</td></tr>
+            </table>
+
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">[Figma] 공통 정책 문서 — 크레딧·권한·운영 정책 전체</span>
+              <span class="img-placeholder-label">캡처 대상: 23:6 MAIN Common Policy 프레임</span>
+            </div>
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">[Figma] 화면 흐름도 — 사용자 진입부터 연동 완료까지의 전체 흐름</span>
+              <span class="img-placeholder-label">캡처 대상: 23:7 MAIN Flow Diagram 프레임</span>
+            </div>
+            <div class="img-placeholder">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">[Figma] 연동 완료 사용자 현황 화면 — 호출 한도·크레딧 잔여량 표시</span>
+              <span class="img-placeholder-label">캡처 대상: 24:182 프레임 (Active 상태)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+    <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ MCP 프로토콜·OAuth 인증·크레딧 과금 구조까지 직접 이해한 뒤, 그 기술적 복잡성을 사용자가 느끼지 않는 화면으로 풀어내는 과정을 기획하고 있습니다.</p>
   </div>
-      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 외부 LLM 연동이라는 기술적 미지의 영역에서, 기획자로서 사용자 화면 구조를 먼저 설계하고 개발팀과 함께 검증해나가고 있습니다.</p>
     </div>
   </div>
 
@@ -2897,55 +3035,301 @@ footer {
       <span class="project-status status-ongoing">기획 진행 중</span>
     </div>
     <h3 class="project-headline">Insight Lamp — 에이전트 성격별(16종) 분석 스토리텔링 서비스 기획</h3>
-    <p class="project-subhead">16종 에이전트 성격 × 데이터 호출 × 프롬프트 설계 → FAB 패널 기반 분석 스토리텔링 · 2026.06–현재</p>
+    <p class="project-subhead">16종 에이전트 × 시스템 프롬프트 × 데이터 호출 설계 → FAB 패널 기반 실시간 분석 스토리텔링 · 2026.06–현재</p>
 
     <div class="slides">
+
+      <!-- ── SLIDE 01 : 기획 배경 & 서비스 컨셉 ── -->
       <div class="slide-card">
         <div class="slide-card-header" onclick="toggleSlide(this)">
           <span class="slide-num">SLIDE 01</span>
-          <span class="slide-title">서비스 컨셉 &amp; 에이전트 라인업</span>
+          <span class="slide-title">기획 배경 &amp; 서비스 컨셉</span>
           <span class="slide-toggle">+</span>
         </div>
         <div class="slide-content">
           <div class="slide-inner">
-            <p class="slide-headline">16종 에이전트 성격별 데이터 호출·프롬프트 설계 기반 분석 스토리텔링</p>
+            <p class="slide-headline">탭 이동·수동 데이터 조합에 소모되는 분석 시간 — AI Agent가 즉시 가설과 인사이트를 제공한다</p>
 
-            <!-- Agent 카드 SVG -->
+            <!-- Before → After SVG -->
             <div class="diagram-wrap">
-              <svg viewBox="0 0 760 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-                <rect width="760" height="140" fill="#1C1E24"/>
-                <rect x="10" y="20" width="228" height="100" fill="none" stroke="#C4CAD1" stroke-width="0.5"/>
-                <text x="124" y="48" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">트렌드 분석</text>
-                <text x="124" y="66" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">마케터·기획자</text>
-                <text x="124" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">소셜 트렌드 변화 실시간</text>
-                <text x="124" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">분석·리포트 자동 생성</text>
-                <rect x="266" y="20" width="228" height="100" fill="none" stroke="#8A3A3A" stroke-width="0.5"/>
-                <text x="380" y="48" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">위기 감지</text>
-                <text x="380" y="66" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">브랜드 담당자·PR팀</text>
-                <text x="380" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">부정 언급 급증 감지</text>
-                <text x="380" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">위기 징후 조기 경보</text>
-                <rect x="522" y="20" width="228" height="100" fill="none" stroke="#4A6A4A" stroke-width="0.5"/>
-                <text x="636" y="48" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="14" text-anchor="middle" font-weight="700">신제품 분석</text>
-                <text x="636" y="66" fill="#9A9DA4" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">리서처·전략기획</text>
-                <text x="636" y="88" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">출시 전후 소비자 반응</text>
-                <text x="636" y="104" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">경쟁사 비교 자동 분석</text>
+              <svg viewBox="0 0 760 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="130" fill="#1C1E24"/>
+                <!-- Before -->
+                <rect x="10" y="10" width="340" height="110" rx="6" fill="#3A2020" stroke="#8A3A3A" stroke-width="0.5"/>
+                <text x="180" y="32" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="700">Before — 현재의 문제</text>
+                <text x="180" y="54" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">정보량 탭 → 채널 탭 → 연관어 탭 → 수동 조합</text>
+                <text x="180" y="74" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">분석 방향 설정에 과도한 시간 소모</text>
+                <text x="180" y="92" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">탐색 피로도 누적</text>
+                <!-- Arrow -->
+                <polygon points="370,65 390,55 390,75" fill="#F5C518"/>
+                <!-- After -->
+                <rect x="410" y="10" width="340" height="110" rx="6" fill="#1A2A1A" stroke="#4A6A4A" stroke-width="0.5"/>
+                <text x="580" y="32" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="700">After — Insight Lamp</text>
+                <text x="580" y="54" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">FAB 클릭 → Agent 선택 → 자동 분석 → 즉시 출력</text>
+                <text x="580" y="74" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">핵심 데이터 맥락과 가설/인사이트를</text>
+                <text x="580" y="92" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">1~2문단 스토리텔링 형태로 실시간 피드백</text>
+              </svg>
+            </div>
+
+            <div class="sub-headline">4-Step 작동 방식</div>
+
+            <!-- 4-Step Flow SVG -->
+            <div class="diagram-wrap">
+              <svg viewBox="0 0 760 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="90" fill="#1C1E24"/>
+                <rect x="10" y="15" width="165" height="60" rx="4" fill="none" stroke="#F5C518" stroke-width="0.8"/>
+                <text x="92" y="38" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">Step 1</text>
+                <text x="92" y="56" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">검색어·검색기간 설정</text>
+                <text x="185" y="48" fill="#555" font-family="Pretendard,sans-serif" font-size="14">→</text>
+                <rect x="200" y="15" width="165" height="60" rx="4" fill="none" stroke="#6A9FD8" stroke-width="0.8"/>
+                <text x="282" y="38" fill="#6A9FD8" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">Step 2</text>
+                <text x="282" y="56" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">분석 의도 파악 (Agent 선택)</text>
+                <text x="375" y="48" fill="#555" font-family="Pretendard,sans-serif" font-size="14">→</text>
+                <rect x="390" y="15" width="165" height="60" rx="4" fill="none" stroke="#E88A3A" stroke-width="0.8"/>
+                <text x="472" y="38" fill="#E88A3A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">Step 3</text>
+                <text x="472" y="56" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">자동 분석 (LLM + DB)</text>
+                <text x="565" y="48" fill="#555" font-family="Pretendard,sans-serif" font-size="14">→</text>
+                <rect x="580" y="15" width="165" height="60" rx="4" fill="none" stroke="#7FBF7F" stroke-width="0.8"/>
+                <text x="662" y="38" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">Step 4</text>
+                <text x="662" y="56" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">결과 출력 (FAB 패널)</text>
               </svg>
             </div>
 
             <table class="content-table">
-              <tr><td>서비스 컨셉</td><td>에이전트 성격별(16종) 데이터 호출 → 프롬프트 설계 → 3~4문단 분석 스토리텔링을 FAB 패널로 제공</td></tr>
-              <tr><td>에이전트 설계</td><td>16종 성격(트렌드·위기감지·신제품·경쟁사 등) — 마케팅 도메인 8년 지식 + 소셜 분석 노하우 기반 설계</td></tr>
-              <tr><td>보고서 로직</td><td>Neo4j에 데이터 분석가의 지식 흐름을 그래프로 축적 — 분석 스토리 자동 생성 로직 설계</td></tr>
-              <tr><td>프롬프트 설계</td><td>MCP Tools 특화 시스템 프롬프트 작성 · 현업 분석가 수준 인사이트 출력 튜닝 진행 중</td></tr>
+              <tr><td>서비스 위치</td><td>Quettai(trend.quettai.com) > 트렌드 검색 / 트렌드 비교 화면 내 FAB(Floating Action Button)</td></tr>
+              <tr><td>기간</td><td>2026.06 ~ 현재 (기획 진행 중)</td></tr>
+              <tr><td>기획 범위</td><td>서비스 컨셉 · Product Map · FAB UX 설계 · 화면 흐름 · 예외 처리 · 에이전트 명세 · 시스템 프롬프트 · 데이터 호출 스키마</td></tr>
+              <tr><td>역할</td><td>단독 기획 · 화면 기획서 v1.3 직접 작성 · 에이전트 명세서(엑셀) 직접 작성 · 개발팀 협업</td></tr>
+              <tr><td>산출물</td><td>화면 기획서(Figma) · 에이전트별 명세서(엑셀) · 시스템 프롬프트 문서 · 데이터 호출 스키마</td></tr>
             </table>
+
+            <div class="sub-headline">Roadmap — Insight Lamp v1 vs Insight Report v2</div>
+            <table class="content-table">
+              <tr><th>구분</th><th>Insight Lamp (v1 · 현재 기획)</th><th>Insight Report (v2 · 추후 예정)</th></tr>
+              <tr><td>핵심 가치</td><td>즉시성 &amp; 효율성 — 데이터 탐색·가설 수립 최적화</td><td>완결성 &amp; 전문성 — 최종 보고서</td></tr>
+              <tr><td>작동 위치</td><td>Quettai 서비스 내 FAB</td><td>외부 LLM 인터페이스 환경 연동</td></tr>
+              <tr><td>수행 방식</td><td>자체 개발 내부 LLM 기반 실시간 데이터 매핑 &amp; 인사이트 요약</td><td>대형 LLM / 내부 LLM 및 MCP 기반 심층 분석</td></tr>
+              <tr><td>결과물</td><td>1~2문단 분량의 요약형 자연어 인사이트 카드</td><td>PPT 포맷의 구조화된 분석 보고서</td></tr>
+            </table>
+
+            <!-- 이미지 영역 -->
+            <div class="img-placeholder tall">
+              <span class="img-placeholder-icon">🖼</span>
+              <span class="img-placeholder-label">[Figma 04] 기획개요 — 기획 배경(Before/After) + 4-Step 작동 방식 + Roadmap 표</span>
+              <span class="img-placeholder-label">페이지: 04 | insight Lamp 기획개요 전체 캡처</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- ── SLIDE 02 : 화면 구조 & FAB UX 설계 ── -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 02</span>
+          <span class="slide-title">화면 구조 &amp; FAB UX 설계</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">FAB → Agent 선택 패널 → 인사이트 결과 패널 → 확장모드 — 전체 화면 흐름을 직접 설계</p>
+
+            <!-- 화면 흐름 SVG -->
+            <div class="diagram-wrap">
+              <svg viewBox="0 0 760 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="100" fill="#1C1E24"/>
+                <!-- FAB -->
+                <rect x="10" y="20" width="130" height="60" rx="4" fill="none" stroke="#6A9FD8" stroke-width="0.8"/>
+                <text x="75" y="42" fill="#6A9FD8" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">07A</text>
+                <text x="75" y="60" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">FAB 버튼</text>
+                <text x="150" y="52" fill="#555" font-family="Pretendard,sans-serif" font-size="14">→</text>
+                <!-- Agent 선택 -->
+                <rect x="165" y="20" width="130" height="60" rx="4" fill="none" stroke="#E88A3A" stroke-width="0.8"/>
+                <text x="230" y="42" fill="#E88A3A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">07B</text>
+                <text x="230" y="60" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">Agent 선택 패널</text>
+                <text x="305" y="52" fill="#555" font-family="Pretendard,sans-serif" font-size="14">→</text>
+                <!-- 결과 패널 -->
+                <rect x="320" y="20" width="130" height="60" rx="4" fill="none" stroke="#7FBF7F" stroke-width="0.8"/>
+                <text x="385" y="42" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">07D</text>
+                <text x="385" y="60" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">인사이트 결과</text>
+                <text x="460" y="52" fill="#555" font-family="Pretendard,sans-serif" font-size="14">→</text>
+                <!-- 인사이트 목록 -->
+                <rect x="475" y="20" width="130" height="60" rx="4" fill="none" stroke="#C4CAD1" stroke-width="0.8"/>
+                <text x="540" y="42" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">07E</text>
+                <text x="540" y="60" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">인사이트 목록</text>
+                <text x="615" y="52" fill="#555" font-family="Pretendard,sans-serif" font-size="14">→</text>
+                <!-- 확장모드 -->
+                <rect x="630" y="20" width="120" height="60" rx="4" fill="none" stroke="#F5C518" stroke-width="0.8"/>
+                <text x="690" y="42" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">07F</text>
+                <text x="690" y="60" fill="#C4CAD1" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle">확장모드</text>
+              </svg>
+            </div>
+
+            <table class="content-table">
+              <tr><td>FAB 디자인</td><td>화면 우측 하단 고정 · 검색 완료 후 첫 분석 화면 진입 시 활성화 · Pulse 애니메이션으로 시선 유도</td></tr>
+              <tr><td>Agent 선택 패널</td><td>2탭 구성(새 인사이트 / 인사이트목록) · 검색어 미입력 시 안내 문구 노출 · 확장(↗) / 닫기(×) 버튼</td></tr>
+              <tr><td>인사이트 결과</td><td>헤더(←뒤로·서비스타이틀·확장·닫기) + 분석 맥락 정보 + 본문(1~2문단) + 공유 제어 푸터</td></tr>
+              <tr><td>인사이트 목록</td><td>전사 인사이트 / 내 인사이트 탭 · 카드별 배포 범위 상태(비공개/전사 공유 중) 배지·제어 버튼</td></tr>
+              <tr><td>확장모드</td><td>좌측 목록 + 우측 상세 분할 레이아웃 · 삭제 확인 컨펌 · 공유 상태 토글 즉시 전환</td></tr>
+              <tr><td>배경 인터랙션</td><td>패널 오픈 시 배경 Dimmed 없음(차트 가시성 유지) · 배경 탭 클릭 허용 · 스크롤 제한 없음</td></tr>
+            </table>
+
+            <!-- 이미지 영역 -->
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">[Figma 07B-1] 패널오픈 초기 진입 Default</span>
+                <span class="img-placeholder-label">FAB 버튼 + Insight Lamp 패널 (새 인사이트 탭)</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">[Figma 07D-1] 인사이트 결과 패널</span>
+                <span class="img-placeholder-label">분석 맥락 + 본문 + 공유 제어 푸터</span>
+              </div>
+            </div>
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">[Figma 07F-3] 확장모드 — 내 인사이트 활성화</span>
+                <span class="img-placeholder-label">좌측 목록 + 우측 상세 분할 · 삭제 컨펌</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">[Figma 05A] FAB 디자인 &amp; 동작 스펙</span>
+                <span class="img-placeholder-label">활성화 조건 · 클릭 동작 · Pulse 애니메이션</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SLIDE 03 : 16종 에이전트 라인업 & 설계 구조 ── -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 03</span>
+          <span class="slide-title">16종 에이전트 라인업 &amp; 설계 구조</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">16종 에이전트 × 에이전트별 데이터 호출 스키마 × 시스템 프롬프트 — MCP가 아닌 백엔드 인덱스 직접 설계</p>
+
+            <!-- 16종 에이전트 카테고리 SVG -->
+            <div class="diagram-wrap">
+              <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                <rect width="760" height="220" fill="#1C1E24"/>
+                <!-- 카테고리 헤더 -->
+                <text x="380" y="20" fill="#F5C518" font-family="Pretendard,sans-serif" font-size="12" text-anchor="middle" font-weight="700">16종 에이전트 라인업 (4개 카테고리)</text>
+                <!-- 트렌드 분석 -->
+                <rect x="10" y="35" width="178" height="175" rx="4" fill="none" stroke="#6A9FD8" stroke-width="0.8"/>
+                <text x="99" y="54" fill="#6A9FD8" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">트렌드 분석</text>
+                <text x="99" y="70" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">마케터·기획자</text>
+                <text x="99" y="90" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">SEARCH_AG_01 브랜드 동향</text>
+                <text x="99" y="106" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">SEARCH_AG_02 채널별 반응</text>
+                <text x="99" y="122" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">SEARCH_AG_03 감성 트렌드</text>
+                <text x="99" y="138" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">SEARCH_AG_04 연관어 맥락</text>
+                <text x="99" y="158" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">COMPARE_AG_01~04</text>
+                <text x="99" y="174" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">(트렌드 비교 화면 전용)</text>
+                <text x="99" y="198" fill="#6A9FD8" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">8종</text>
+                <!-- 위기 감지 -->
+                <rect x="198" y="35" width="178" height="175" rx="4" fill="none" stroke="#BF7F7F" stroke-width="0.8"/>
+                <text x="287" y="54" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">위기 감지</text>
+                <text x="287" y="70" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">브랜드 담당자·PR팀</text>
+                <text x="287" y="90" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">부정 언급 급증 감지</text>
+                <text x="287" y="106" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">위기 징후 조기 경보</text>
+                <text x="287" y="122" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">부정 확산 경로 추적</text>
+                <text x="287" y="198" fill="#BF7F7F" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">3종</text>
+                <!-- 신제품 분석 -->
+                <rect x="386" y="35" width="178" height="175" rx="4" fill="none" stroke="#7FBF7F" stroke-width="0.8"/>
+                <text x="475" y="54" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">신제품 분석</text>
+                <text x="475" y="70" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">리서처·전략기획</text>
+                <text x="475" y="90" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">출시 전후 소비자 반응</text>
+                <text x="475" y="106" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">경쟁사 비교 자동 분석</text>
+                <text x="475" y="122" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">카테고리 내 포지셔닝</text>
+                <text x="475" y="198" fill="#7FBF7F" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">3종</text>
+                <!-- 경쟁사 모니터링 -->
+                <rect x="574" y="35" width="178" height="175" rx="4" fill="none" stroke="#C9A227" stroke-width="0.8"/>
+                <text x="663" y="54" fill="#C9A227" font-family="Pretendard,sans-serif" font-size="11" text-anchor="middle" font-weight="700">경쟁사 모니터링</text>
+                <text x="663" y="70" fill="#777" font-family="Pretendard,sans-serif" font-size="9" text-anchor="middle">전략기획·경영진</text>
+                <text x="663" y="90" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">경쟁사 점유율 변화</text>
+                <text x="663" y="106" fill="#A0A09A" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle">경쟁 브랜드 대비 강약점</text>
+                <text x="663" y="198" fill="#C9A227" font-family="Pretendard,sans-serif" font-size="10" text-anchor="middle" font-weight="600">2종</text>
+              </svg>
+            </div>
+
+            <div class="sub-headline">에이전트별 명세 설계 구조 — 3섹션 시스템 프롬프트</div>
+            <table class="content-table">
+              <tr><td>Section 1 · 공통 모듈</td><td>톤 &amp; 매너 · 데이터 수치 표기 · 기간 라벨링 · 출력 포맷 규칙 — 16종 에이전트 공통 적용</td></tr>
+              <tr><td>Section 2 · Agent별 로직</td><td>에이전트 역할 부여 · 분석 로직(문단 분리·팩트 기술) · 인사이트 도출 규칙 · 출력 구조 — 에이전트별 개별 설계</td></tr>
+              <tr><td>Section 3 · 데이터 입력</td><td>백엔드 DB에서 실시간 호출하는 데이터 인덱스 스키마 — 에이전트별 호출 항목·매핑 대상 직접 정의</td></tr>
+            </table>
+
+            <div class="sub-headline">핵심 차별점 — MCP가 아닌 백엔드 데이터 인덱스 직접 설계</div>
+            <table class="content-table">
+              <tr><td>설계 방식</td><td>외부 MCP 연동이 아닌, 자사 백엔드 DB의 데이터 인덱스([0]~[N])를 기획자가 직접 설계하여 Agent에 주입</td></tr>
+              <tr><td>데이터 호출</td><td>에이전트별로 필요한 데이터 항목(정보량·채널·감성·연관어 등)을 인덱스 기반으로 매핑, DB에서 실시간 호출</td></tr>
+              <tr><td>명세 산출물</td><td>에이전트 16종 × (시스템 프롬프트 + 데이터 호출 스키마 + 테스트 케이스) = 엑셀 명세서로 관리</td></tr>
+            </table>
+
+            <!-- 이미지 영역 -->
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">[Figma 07B-5] Agent 항목 명세 — 상세 사양</span>
+                <span class="img-placeholder-label">안내 툴팁 / 매핑 데이터 / 프롬프트 튜닝 방향</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">[엑셀 명세서] 에이전트별 시스템 프롬프트 3섹션 구조 캡처</span>
+                <span class="img-placeholder-label">공통 모듈 + Agent별 로직 + 데이터 입력이 보이도록</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SLIDE 04 : 에이전트 명세 예시 — SEARCH_AG_01 ── -->
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 04</span>
+          <span class="slide-title">명세 예시 — SEARCH_AG_01 '브랜드 동향 요약'</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">16종 중 1개 에이전트의 명세 예시 — 데이터 호출 스키마부터 출력 구조까지 기획자가 직접 정의</p>
+
+            <table class="content-table">
+              <tr><td>에이전트 ID</td><td>SEARCH_AG_01 · 브랜드 동향 요약 (트렌드 검색 화면)</td></tr>
+              <tr><td>역할 부여</td><td>Brand Strategist — 전문적이되 쉽게 읽히는 톤</td></tr>
+              <tr><td>데이터 스키마</td><td>[0] 검색어 · [1] 전체 기간 · [2] 비교 구간 · [3] 구간별 추이 · [4] 전체 정보량 · [5] 채널별 분포 · [6] 감성 결과 · [7] 긍정 연관어 · [8] 부정 연관어</td></tr>
+              <tr><td>분석 로직</td><td>변곡점 유무에 따라 Case 분기 → 9종 진단명(상승세 지속·반등 신호·하락 전환 등) 자동 매핑</td></tr>
+              <tr><td>출력 구조</td><td>[분석 요약] 2문단 (수치 팩트 + 연관어) + [인사이트] 1문단 (진단명 + 전략적 시사점)</td></tr>
+              <tr><td>테스트 검증</td><td>3건의 테스트 케이스로 LLM 기대 출력을 사전 정의 → 출력 품질 튜닝 기준으로 활용</td></tr>
+            </table>
+
+            <!-- 이미지 영역 -->
+            <div class="img-row two">
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">[엑셀 명세서] SEARCH_AG_01 데이터 호출 스키마 [0]~[8]</span>
+                <span class="img-placeholder-label">백엔드 요청 데이터 항목 + 매핑 대상 표</span>
+              </div>
+              <div class="img-placeholder tall">
+                <span class="img-placeholder-icon">🖼</span>
+                <span class="img-placeholder-label">[엑셀 명세서] SEARCH_AG_01 테스트 케이스 출력 예시</span>
+                <span class="img-placeholder-label">테스트 케이스 3건의 LLM 기대 출력 원문</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 분석가의 판단 기준·데이터 해석 흐름·인사이트 도출 로직을 시스템 프롬프트와 데이터 스키마로 직접 옮기며, 사람의 분석 지식을 AI Agent로 전환하는 과정을 몸소 설계하고 있습니다.</p>
+  </div>
     </div>
   </div>
-      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 16종 에이전트 성격·보고서 로직·프롬프트까지 설계하며, 데이터 분석가의 지식을 AI Agent 서비스로 만들어가고 있습니다.</p>
-    </div>
-  </div>
+
     <div class="proj-accordion" id="p2">
     <div class="proj-acc-header" onclick="toggleProject(this)">
       <div class="proj-acc-num">04</div>
@@ -3169,8 +3553,8 @@ footer {
       </div>
 
     </div><!-- /slides -->
+    <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 약 50종의 시각화 위젯과 RBAC 인프라를 기획하며, 데이터 분석가 출신으로서 "사용자가 실제로 필요한 차트"와 "개발이 가능한 구조" 사이의 균형점을 찾는 데 집중했습니다.</p>
   </div><!-- /project-block P1 -->
-      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 약 50종의 시각화 위젯과 RBAC 인프라를 기획하며, 데이터 분석가 출신으로서 "사용자가 실제로 필요한 차트"와 "개발이 가능한 구조" 사이의 균형점을 찾는 데 집중했습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p3">
@@ -3286,8 +3670,8 @@ footer {
         </div>
       </div>
     </div>
+    <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 브랜드 페이지는 단순 소개가 아닌 "유료 전환 퍼널"로 설계했습니다. 솔루션별 브릿지 페이지를 통해 무료 사용자가 자연스럽게 유료로 넘어오는 구조를 기획한 첫 번째 경험이었습니다.</p>
   </div><!-- /P3 -->
-      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 브랜드 페이지는 단순 소개가 아닌 "유료 전환 퍼널"로 설계했습니다. 솔루션별 브릿지 페이지를 통해 무료 사용자가 자연스럽게 유료로 넘어오는 구조를 기획한 첫 번째 경험이었습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p4">
@@ -3481,8 +3865,8 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
       </div>
 
     </div>
+    <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 데이터 분석가 시절 직접 쿼리를 짜며 불편함을 느꼈던 경험이, 비전문가도 쓸 수 있는 AI 자동완성 기능 기획의 출발점이 되었습니다. 프롬프트 설계부터 화면 기획까지 End-to-End로 담당했습니다.</p>
   </div><!-- /P2 -->
-      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 데이터 분석가 시절 직접 쿼리를 짜며 불편함을 느꼈던 경험이, 비전문가도 쓸 수 있는 AI 자동완성 기능 기획의 출발점이 되었습니다. 프롬프트 설계부터 화면 기획까지 End-to-End로 담당했습니다.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
     <div class="proj-accordion" id="p5">
@@ -3616,8 +4000,8 @@ NOT ( "광고" OR "마케팅" OR "유통" OR "중국" OR "일본" )</div>
         </div>
       </div>
     </div>
+    <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 개발팀의 기술적 제약(크롤링 불가 언론사 대응)을 조율하며, 기술 현실과 사용자 가치 사이의 균형점을 기획 레벨에서 찾은 프로젝트. 언론사·기자 단위 타겟팅 구조는 소셜 분석 경험이 설계에 직접 반영된 사례.</p>
   </div><!-- /P4 -->
-      <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 개발팀의 기술적 제약(크롤링 불가 언론사 대응)을 조율하며, 기술 현실과 사용자 가치 사이의 균형점을 기획 레벨에서 찾은 프로젝트. 언론사·기자 단위 타겟팅 구조는 소셜 분석 경험이 설계에 직접 반영된 사례.</p>
     </div><!-- /proj-acc-body -->
   </div><!-- /proj-accordion -->
 
@@ -5761,25 +6145,33 @@ document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
       AFTER PO<br>
       <span class="fn-period">2025~ing · NewenAI</span>
     </div>
+    <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p-agent','projects-body','projects-toggle-icon')" data-section="p-agent">
+      <div class="fn-dot gold"></div>
+      <span class="fn-text">01 · AI Agent 국책과제</span>
+    </a>
     <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p1','projects-body','projects-toggle-icon')" data-section="p1">
       <div class="fn-dot gold"></div>
-      <span class="fn-text">01 · AI Agent 기획</span>
+      <span class="fn-text">02 · MCP 외부 LLM 연동</span>
+    </a>
+    <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p-lamp','projects-body','projects-toggle-icon')" data-section="p-lamp">
+      <div class="fn-dot gold"></div>
+      <span class="fn-text">03 · Insight Lamp</span>
     </a>
     <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p2','projects-body','projects-toggle-icon')" data-section="p2">
       <div class="fn-dot gold"></div>
-      <span class="fn-text">02 · 대시보드 기획</span>
+      <span class="fn-text">04 · 대시보드 기획</span>
     </a>
     <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p3','projects-body','projects-toggle-icon')" data-section="p3">
       <div class="fn-dot gold"></div>
-      <span class="fn-text">03 · 브랜드/브릿지 기획</span>
+      <span class="fn-text">05 · 브랜드/브릿지 기획</span>
     </a>
     <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p4','projects-body','projects-toggle-icon')" data-section="p4">
       <div class="fn-dot gold"></div>
-      <span class="fn-text">04 · AI Builder 기획</span>
+      <span class="fn-text">06 · AI Builder 기획</span>
     </a>
     <a class="fn-item fn-sub" data-group="afterpo" href="javascript:void(0)" onclick="goTo('p5','projects-body','projects-toggle-icon')" data-section="p5">
       <div class="fn-dot gold"></div>
-      <span class="fn-text">05 · 언론 분석 기획</span>
+      <span class="fn-text">07 · 언론 분석 기획</span>
     </a>
   </div>
 
