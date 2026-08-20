@@ -2736,6 +2736,29 @@ footer {
   display: block;
 }
 
+/* 작성중 워터마크 — 전체 오버레이 */
+.proj-acc-body.wip {
+  position: relative;
+}
+.proj-acc-body.wip::after {
+  content: '작 성 중';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-size: clamp(52px, 9vw, 88px);
+  font-weight: 900;
+  color: rgba(190, 45, 45, 0.16);
+  letter-spacing: 0.2em;
+  border: 5px solid rgba(190, 45, 45, 0.1);
+  border-radius: 8px;
+  transform: rotate(-16deg);
+  z-index: 20;
+  pointer-events: none;
+}
+
 /* before-po 타임라인 아이템 구분 강화 */
 .timeline-item {
   background: rgba(255,255,255,0.5);
@@ -2924,7 +2947,7 @@ footer {
       </div>
       <div class="proj-acc-toggle">＋</div>
     </div>
-    <div class="proj-acc-body">
+    <div class="proj-acc-body wip">
   <div class="project-block" style="opacity:1; transform:translateY(0px);">
     <div class="project-meta">
       <span class="project-index">01</span>
@@ -2985,7 +3008,7 @@ footer {
       </div>
       <div class="proj-acc-toggle">＋</div>
     </div>
-    <div class="proj-acc-body">
+    <div class="proj-acc-body wip">
   <div class="project-block">
     <div class="project-meta">
       <span class="project-index">02</span>
@@ -3187,7 +3210,7 @@ footer {
       </div>
       <div class="proj-acc-toggle">＋</div>
     </div>
-    <div class="proj-acc-body">
+    <div class="proj-acc-body wip">
   <div class="project-block">
     <div class="project-meta">
       <span class="project-index">03</span>
