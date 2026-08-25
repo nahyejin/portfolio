@@ -6464,6 +6464,28 @@ function buildPortfolioIndex() {
     if (text.length > 3000) text = text.substring(0, 3000) + '…(이하 생략)';
     PORTFOLIO_SECTIONS.push({ id: cfg.id, label: cfg.label, keywords: cfg.keywords, text: text });
   });
+
+  // 아코디언 세부 프로젝트 개별 인덱싱
+  var accItems = document.querySelectorAll('.fw-acc');
+  accItems.forEach(function(acc, idx) {
+    var titleEl = acc.querySelector('.fw-acc-title');
+    var metaEl = acc.querySelector('.fw-acc-meta');
+    var bodyEl = acc.querySelector('.fw-acc-body');
+    if (!titleEl) return;
+    var title = titleEl.textContent.trim();
+    var meta = metaEl ? metaEl.textContent.trim() : '';
+    var bodyText = bodyEl ? bodyEl.innerText.replace(/\s+/g, ' ').trim() : '';
+    var fullText = title + ' ' + meta + ' ' + bodyText;
+    if (fullText.length > 2000) fullText = fullText.substring(0, 2000) + '…(이하 생략)';
+    // 타이틀에서 키워드 자동 추출 (2글자 이상 단어)
+    var autoKeywords = title.toLowerCase().replace(/[·\-()]/g, ' ').split(/\s+/).filter(function(w) { return w.length >= 2; });
+    PORTFOLIO_SECTIONS.push({
+      id: 'acc-' + idx,
+      label: '세부 프로젝트: ' + title,
+      keywords: autoKeywords,
+      text: fullText
+    });
+  });
 }
 
 function searchPortfolio(query) {
