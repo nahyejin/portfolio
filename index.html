@@ -6399,7 +6399,7 @@ document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
 <script>
 // ── AI Chatbot ──
 var GEMINI_API_KEY = atob('QVEuQWI4Uk42Snl6Y0dmNDVEaTRORzc2T0VDeHdPdVNfRFBNeFRYOVp3akkxQ0ZRYmo4Wnc=');
-var GEMINI_MODEL = 'gemini-2.0-flash';
+var GEMINI_MODEL = 'gemini-3.5-flash-lite';
 
 var BASE_SYSTEM_PROMPT = [
   '너는 나혜진의 포트폴리오 AI 어시스턴트야. 구인 담당자(채용 담당자)가 나혜진에 대해 질문하면 아래 [기본 프로필]과 [관련 포트폴리오 내용]을 바탕으로 친절하고 전문적으로 답변해.',
@@ -6722,7 +6722,7 @@ async function sendChat() {
 
   try {
     var res = await fetch(
-      'https://generativelanguage.googleapis.com/v1/models/' + GEMINI_MODEL + ':generateContent?key=' + GEMINI_API_KEY,
+      'https://generativelanguage.googleapis.com/v1beta/models/' + GEMINI_MODEL + ':generateContent?key=' + GEMINI_API_KEY,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
