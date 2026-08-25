@@ -5799,6 +5799,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.slides').forEach(slides => {
     const first = slides.querySelector('.slide-card');
   });
+  // 챗봇 RAG 인덱스 빌드
+  if (typeof buildPortfolioIndex === 'function') buildPortfolioIndex();
 });
 
 // ── 모바일 터치 수정: onclick이 안 먹히는 환경 대응 ──
@@ -6354,45 +6356,101 @@ document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
 var GEMINI_API_KEY = atob('QVEuQWI4Uk42Snl6Y0dmNDVEaTRORzc2T0VDeHdPdVNfRFBNeFRYOVp3akkxQ0ZRYmo4Wnc=');
 var GEMINI_MODEL = 'gemini-3.6-flash';
 
-var PORTFOLIO_CONTEXT = [
-  '너는 나혜진의 포트폴리오 AI 어시스턴트야. 구인 담당자(채용 담당자)가 나혜진에 대해 질문하면 아래 정보를 바탕으로 친절하고 전문적으로 답변해.',
-  '답변은 한국어로, 간결하게(3~5문장). 포트폴리오에 없는 내용은 "포트폴리오에 기재되지 않은 내용입니다"라고 안내.',
+var BASE_SYSTEM_PROMPT = [
+  '너는 나혜진의 포트폴리오 AI 어시스턴트야. 구인 담당자(채용 담당자)가 나혜진에 대해 질문하면 아래 [기본 프로필]과 [관련 포트폴리오 내용]을 바탕으로 친절하고 전문적으로 답변해.',
+  '답변은 한국어로 작성하되, 질문에 충실하게 상세히 답변해. 포트폴리오에 없는 내용은 "포트폴리오에 기재되지 않은 내용입니다"라고 안내.',
   '',
-  '■ 인적사항: 나혜진 / (주)뉴엔AI / R&D그룹 AI플랫폼 사업부 / PO(Platform Operation) 대리',
-  '■ 배경: 소셜 빅데이터 분석·광고 전략 수립 경력, SQLD 자격증 보유, 데이터 구조 이해도 높음',
+  '[기본 프로필]',
+  '■ 인적사항: 나혜진 / (주)뉴엔AI / R&D그룹 AI플랫폼 사업부 / PO(Product Owner) 대리',
+  '■ 배경: 소셜 빅데이터 분석·광고 전략 수립 경력 약 10년, SQLD 자격증 보유, 데이터 구조 이해도 높음',
   '■ 핵심역량: 프로덕트 UI/UX 설계, 비즈니스 상품성 기획, AI/LLM/MCP 서비스 기획 및 프롬프트 최적화, QA·가이드라인 수립',
-  '',
-  '■ 프로젝트 (After PO):',
-  '01. AI Agent 국책과제 — "디자인 개선 전략" 에이전트 기획·개발 (2026.08~현재, 기획·개발 진행 중)',
-  '  - TFT 4인(개발3+기획1) 체제에서 AI Agent 1개를 기획~개발까지 1인 전담',
-  '  - MCP 데이터 연동 인프라 활용, 소셜 데이터 기반 AI Agent 서비스 화면 인터랙션 및 비즈니스 로직 설계',
-  '02. Quetta Data MCP — 외부 LLM 연동 사용자 화면 기획 (2026.06~현재, 기획 진행 중)',
-  '  - 외부 LLM(ChatGPT 등)과 플랫폼 소셜 데이터를 MCP로 실시간 연동하는 사용자 화면 기획',
-  '  - 크레딧 기반 과금 체계, Tool별 차등 차감 정책, 인증 키 관리 프로세스 설계',
-  '03. Insight Lamp — 에이전트 성격별 분석 스토리텔링 서비스 기획 (2026.06~현재, 기획 진행 중)',
-  '  - 17종 에이전트 컨셉 정의, 시스템 프롬프트 3층 구조(역할·관점·실행) 설계',
-  '  - 데이터 호출 방식 명세(JSON) 및 인터랙션 화면 설계',
-  '04. Quetta Dex 커스텀 대시보드 기획 (2026.01~현재, 1차 런칭 완료)',
-  '  - 약 50종 분석 시각화 위젯, RBAC 권한 체계, 편집 동시성 정책, Undo/Redo 스택 설계',
-  '  - GNB/LNB 글로벌 영역, 대시보드 생성·공유·초대 관리 프로세스 기획',
-  '05. Quetta 브랜드 페이지 + 브릿지 페이지 기획 (2025.12~2026.05, 런칭 완료)',
-  '  - 공식 브랜드 웹페이지(quettai.com) 및 솔루션 통합 브릿지 페이지 신규 기획',
-  '  - 마케팅 소구 문구 전담 작성, 넛지 전략 수립',
-  '06. AI Query Builder + Taxonomy Builder 기획 (2025.08~2026.01, 개발 완료)',
-  '  - 분류체계 40개+ 자동 수립 로직, Boolean 연산자 기반 검색 쿼리 자동 변환 기능 설계',
-  '  - 도메인 특화 시스템 프롬프트 최적화 및 성능 테스트·튜닝',
-  '07. Quettai 언론 분석 기능 기획 (2025.07~2025.08, 런칭 완료)',
-  '  - 뉴스·댓글 여론 분석 기능 신설, 핵심 기사 100개 샘플링 분석 프로세스 제안',
-  '08. 글로벌화 대응 영문화 작업 (2025.07, 완료)',
-  '  - 분석 속성어 다국어 매핑 테이블 구축 및 시스템 전수 검수',
-  '',
-  '■ 프로젝트 (Before PO):',
-  '09. CookMatch 앱 디자인·퍼블리싱 (2024) — 1인 풀스택 사이드 프로젝트, Flutter+Firebase',
-  '10. 소셜 빅데이터 분석 보고서 (2022~2024) — 뉴엔AI 마케팅기획팀 재직 시 실제 납품한 분석 프로젝트',
-  '11. 광고 전략 수립 보고서 (2020~2021) — 이전 직장(광고대행사) 재직 시 수행한 미디어 플래닝·전략 수립',
-  '',
   '■ 도구: Figma(화면 기획서), Claude(AI 협업), JIRA, Confluence, Slack, SQL(SQLD 자격증)',
-].join('\\n');
+  '',
+  '■ 경력 이력:',
+  '- (주)뉴엔AI (2024.07~현재) — R&D그룹 AI플랫폼 사업부 PO(대리). AI/LLM/MCP 기반 소셜 빅데이터 분석 플랫폼 기획.',
+  '- (주)뉴엔AI (2022.04~2024.06) — 마케팅기획팀. 소셜 빅데이터 분석 보고서 납품.',
+  '- 코난테크놀로지 (2019.04~2023.03) — 데이터사이언티스트부서, 데이터분석팀 대리~과장, 3년6개월. 소셜 빅데이터 분석, 정책/마케팅 전략 컨설팅, 분석 시스템 기획. 주요 클라이언트: 대통령실(청와대), 서울대 트렌드코리아, KT&G, MBC, 교육부, 통일부, 서울시, 부산시, 성남시 등.',
+  '- 와이즈넛 (2018.06~2019.04) — 데이터컨설팅부서, 데이터분석팀 사원, 11개월. 소셜 리스닝 기반 소비자 분석 및 마케팅 전략. 주요 클라이언트: 기획재정부, 다이슨, 현대자동차, 이롬 등.',
+  '- 코마코 (2015.09~2018.03) — 브랜딩연구소, Account Planner 사원, 2년7개월. 종합광고대행사에서 AE/AP 담당. 소셜 빅데이터 분석 프레임 9종 자체 개발(Trend Catcher 등). 주요 클라이언트: 아모레퍼시픽, 한국야쿠르트, 동국제약, 코스맥스, 웰크론 등.',
+  '- 대홍기획 (2015) — 인턴.',
+].join('\n');
+
+// 클라이언트 사이드 RAG — HTML 섹션에서 질문 관련 내용을 동적 추출
+var PORTFOLIO_SECTIONS = [];
+
+function buildPortfolioIndex() {
+  var sectionConfigs = [
+    // After PO 프로젝트
+    { id: 'p-agent', label: '01. AI Agent 국책과제', keywords: ['ai agent', '국책', '에이전트', 'mcp', 'tft'] },
+    { id: 'p1', label: '02. Quetta Data MCP', keywords: ['quetta data', 'mcp', 'llm 연동', '크레딧', '과금'] },
+    { id: 'p-lamp', label: '03. Insight Lamp', keywords: ['insight lamp', '인사이트 램프', '스토리텔링', '에이전트 컨셉'] },
+    { id: 'p2', label: '04. Quetta Dex 커스텀 대시보드', keywords: ['dex', '대시보드', '위젯', 'rbac'] },
+    { id: 'p3', label: '05. Quetta 브랜드 페이지', keywords: ['브랜드', '브릿지', 'quettai.com', '넛지'] },
+    { id: 'p4', label: '06. AI Query Builder', keywords: ['query builder', 'taxonomy', '분류체계', 'boolean', '쿼리'] },
+    { id: 'p5', label: '07. Quettai 언론 분석', keywords: ['언론', '뉴스', '댓글', '여론'] },
+    { id: 'p-global', label: '08. 글로벌화 영문화', keywords: ['글로벌', '영문화', '다국어'] },
+    // Before PO 경력
+    { id: 'exp-konan', label: '코난테크놀로지 경력 상세', keywords: ['코난', 'konan', '대통령실', '청와대', '트렌드코리아', '서울대', 'ktg', 'kt&g', '통일부', '서울시', '부산시', '성남시', '교육부', 'mbc', '대선', '앤티앤스', '잘풀리는집', '미래생활', '중심성 분석', '정책 체감도', '얼랏'] },
+    { id: 'exp-wisenut', label: '와이즈넛 경력 상세', keywords: ['와이즈넛', 'wisenut', '기획재정부', '다이슨', 'dyson', '현대자동차', '이롬', '레더링', 'c-d map'] },
+    { id: 'exp-komaco', label: '코마코·대홍기획 경력 상세', keywords: ['코마코', 'komaco', '대홍기획', '아모레퍼시픽', '야쿠르트', '동국제약', '코스맥스', '웰크론', 'trend catcher', 'trend speed', 'buzz structure', 'buzz norm', '광고대행사'] },
+    // 경력 요약 섹션
+    { id: 'cf-neuen', label: '뉴엔AI 경력 요약', keywords: ['뉴엔', 'neuen', 'quetta', '현재 회사'] },
+    { id: 'cf-konan', label: '코난테크놀로지 경력 요약', keywords: ['코난', '코난테크놀로지'] },
+    { id: 'cf-wisenut', label: '와이즈넛 경력 요약', keywords: ['와이즈넛'] },
+    { id: 'cf-komaco', label: '코마코 경력 요약', keywords: ['코마코'] },
+    { id: 'cf-daehong', label: '대홍기획 경력 요약', keywords: ['대홍기획', '대홍'] },
+  ];
+
+  PORTFOLIO_SECTIONS = [];
+  sectionConfigs.forEach(function(cfg) {
+    var el = document.getElementById(cfg.id);
+    if (!el) return;
+    var text = el.innerText.replace(/\s+/g, ' ').trim();
+    if (text.length > 3000) text = text.substring(0, 3000) + '…(이하 생략)';
+    PORTFOLIO_SECTIONS.push({ id: cfg.id, label: cfg.label, keywords: cfg.keywords, text: text });
+  });
+}
+
+function searchPortfolio(query) {
+  var q = query.toLowerCase();
+  var scored = [];
+  PORTFOLIO_SECTIONS.forEach(function(sec) {
+    var score = 0;
+    // 키워드 매칭
+    sec.keywords.forEach(function(kw) { if (q.indexOf(kw) !== -1) score += 10; });
+    // 라벨 매칭
+    if (q.indexOf(sec.label.toLowerCase()) !== -1) score += 8;
+    // 텍스트 내 질문어 포함 여부 (단어 단위)
+    var words = q.replace(/[?.,!]/g, '').split(/\s+/);
+    var secLower = sec.text.toLowerCase();
+    words.forEach(function(w) { if (w.length >= 2 && secLower.indexOf(w) !== -1) score += 2; });
+    if (score > 0) scored.push({ sec: sec, score: score });
+  });
+  // 점수 높은 순 정렬, 상위 5개
+  scored.sort(function(a, b) { return b.score - a.score; });
+  var top = scored.slice(0, 5);
+  // "경력" "요약" "전체" "회사" 같은 넓은 질문이면 모든 경력 요약 포함
+  var broadTerms = ['경력', '요약', '전체', '회사', '이력', '커리어', '다닌 회사', '어디', '뭘 했'];
+  var isBroad = broadTerms.some(function(t) { return q.indexOf(t) !== -1; });
+  if (isBroad && top.length < 3) {
+    // 경력 요약 섹션 모두 추가
+    ['cf-neuen', 'cf-konan', 'cf-wisenut', 'cf-komaco', 'cf-daehong', 'exp-konan', 'exp-wisenut', 'exp-komaco'].forEach(function(id) {
+      var already = top.some(function(t) { return t.sec.id === id; });
+      if (!already) {
+        var found = PORTFOLIO_SECTIONS.find(function(s) { return s.id === id; });
+        if (found) top.push({ sec: found, score: 1 });
+      }
+    });
+  }
+  return top.map(function(t) { return '[' + t.sec.label + ']\n' + t.sec.text; }).join('\n\n');
+}
+
+function buildContext(query) {
+  if (PORTFOLIO_SECTIONS.length === 0) buildPortfolioIndex();
+  var relevant = searchPortfolio(query);
+  if (!relevant) return BASE_SYSTEM_PROMPT;
+  return BASE_SYSTEM_PROMPT + '\n\n[관련 포트폴리오 내용 — 아래 내용을 참고하여 답변해]\n' + relevant;
+}
 
 var chatHistory = [];
 var allConversations = [];  // { id, title, date, messages, apiHistory }
@@ -6573,7 +6631,7 @@ async function sendChat() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          system_instruction: { parts: [{ text: PORTFOLIO_CONTEXT }] },
+          system_instruction: { parts: [{ text: buildContext(msg) }] },
           contents: chatHistory,
           generationConfig: { maxOutputTokens: 2048, temperature: 0.7 }
         })
