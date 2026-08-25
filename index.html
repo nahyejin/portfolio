@@ -6382,6 +6382,9 @@ document.querySelectorAll('.project-block, .timeline-item').forEach(el => {
         <button class="suggest-chip" onclick="askSuggestion(this)">주요 클라이언트는 어디였어?</button>
       </div>
     </div>
+    <div id="chatbot-suggest-link" style="text-align:center; padding:4px 0 0;">
+      <button onclick="showSuggestionsInChat()" style="background:none; border:none; color:#8A8A82; font-size:11px; cursor:pointer; font-family:var(--sans); padding:4px 8px;">💡 추천 질문 보기</button>
+    </div>
     <div id="chatbot-input-area">
       <input id="chatbot-input" type="text" placeholder="질문을 입력하세요..." onkeydown="if(event.key==='Enter')sendChat()">
       <button id="chatbot-send" onclick="sendChat()">
@@ -6521,6 +6524,13 @@ function askSuggestion(btn) {
   if (chips) chips.remove();
   document.getElementById('chatbot-input').value = text;
   sendChat();
+}
+
+function showSuggestionsInChat() {
+  if (document.getElementById('chat-suggestions')) return;
+  renderSuggestionChips();
+  var box = document.getElementById('chatbot-messages');
+  box.scrollTop = box.scrollHeight;
 }
 
 function renderSuggestionChips() {
@@ -6732,9 +6742,12 @@ async function sendChat() {
       appendMsg('bot', reply);
       saveCurrentConv();
     } else if (data.error) {
-      var errMsg = data.error.message || '';
-      if (errMsg.indexOf('quota') !== -1 || errMsg.indexOf('rate') !== -1 || errMsg.indexOf('Quota') !== -1 || errMsg.indexOf('Rate') !== -1) {
+      console.log('[Chatbot Error]', JSON.stringify(data.error));
+      var errMsg = (data.error.message || '') + ' ' + (data.error.status || '');
+      if (errMsg.indexOf('quota') !== -1 || errMsg.indexOf('rate') !== -1 || errMsg.indexOf('Quota') !== -1 || errMsg.indexOf('Rate') !== -1 || errMsg.indexOf('RESOURCE_EXHAUSTED') !== -1 || errMsg.indexOf('429') !== -1) {
         appendMsg('bot', '오늘 AI 응답 한도를 모두 사용했습니다. 내일 다시 이용해주세요 😊');
+      } else if (errMsg.indexOf('not found') !== -1 || errMsg.indexOf('NOT_FOUND') !== -1 || errMsg.indexOf('404') !== -1) {
+        appendMsg('bot', 'AI 모델 연결에 문제가 있습니다. 관리자에게 문의해주세요.');
       } else {
         appendMsg('bot', '일시적인 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
       }
