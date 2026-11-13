@@ -2204,8 +2204,10 @@ footer {
         <ul class="cfd-items">
           <li>(2026.11~) [AI Agent] Quettai Insight Report(분석 리포트 자동 작성) 기획 아이데이션 참여 <span style="color:#7FBF7F;">→ 진행 중</span></li>
           <li>(2026.10~) [Quettai] 키워드룰 설정 UI 개선 및 AI 키워드룰 생성 기획 · 키워드룰 프롬프트 고도화 <span style="color:#7FBF7F;">→ 진행 중</span></li>
+          <li>(2026.10) [Quettai] 트렌드분석 연관어 탭 기간별 순위표 화면 기획 <span style="color:var(--gold-dim);">→ 목업 완료</span></li>
           <li>(2026.10~) [AI 인프라] Quettai MCP '활용사례' 탭 기획 — MCP로 작성한 리포트 예시 정리 <span style="color:#7FBF7F;">→ 진행 중</span></li>
           <li>(2026.08) [국책과제] '디자인 개선 전략' AI Agent 직접 기획·개발 <span style="color:var(--gold-dim);">→ 산출물 완료</span></li>
+          <li>(2026.07~) [Quetta Dex] AI 분류 관리 개선 — 설정 화면 통합 · 분류 라이브러리(프리셋) 기획 <span style="color:var(--gold-dim);">→ 목업 v1.2</span></li>
           <li>(2026.06~) [AI 인프라] Quettai MCP 외부 LLM 연동 화면 기획 <span style="color:#7FBF7F;">→ 진행 중</span></li>
           <li>(2026.06~) [AI Agent] Insight Lamp 분석 스토리텔링 서비스 기획 <span style="color:#7FBF7F;">→ 진행 중</span></li>
           <li>(2026.01~2026.06) [Quetta Dex] 데이터 분석 사용자 커스텀 대시보드 기획 및 차트별 상세 정책 설계 <span style="color:var(--gold-dim);">→ 1차 런칭 완료</span></li>
@@ -3181,7 +3183,7 @@ else: RAG 결과만 사용</div>
   </div>
     </div>
   </div>
-  <!-- ── 02: 키워드룰 설정 UI 개선 ── -->
+  <!-- ── 02: 키워드룰 설정 UI 개선 (+연관어 탭) ── -->
   <div class="proj-accordion" id="p-kwrule">
     <div class="proj-acc-header" onclick="toggleProject(this)">
       <div class="proj-acc-num">02</div>
@@ -3238,6 +3240,20 @@ else: RAG 결과만 사용</div>
           </div>
         </div>
       </div>
+      <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 03</span>
+          <span class="slide-title">함께 진행 — 트렌드분석 연관어 탭 순위표 (2026.10, 목업 v0.1)</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">CX 조직의 "주별·월별 연관어 순위 변화를 보고 싶다"는 요청과 쿼리 부담 사이의 균형</p>
+            <table class="content-table"><tr><td style="white-space:nowrap; vertical-align:top;">제약 설계</td><td>조회 범위를 최대 4주 또는 4개월로 제한하고 [조회하기]를 눌렀을 때만 실행 — 일별 조회는 제외, 기존 연관어 영역은 유지</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">순위표</td><td>기간별 1~30위 + 직전 기간 대비 ▲/▼/NEW 표시, 7일 미만 집계 기간은 별도 표시</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">탐색 UX</td><td>마우스를 올리면 같은 연관어가 모든 기간에서 함께 강조, 클릭하면 최대 5개까지 고정해 순위 흐름 요약 · 조건 변경 시 안내하되 이전 결과 유지</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">연결</td><td>원문 보기 연결 · xlsx 다운로드</td></tr></table>
+          </div>
+        </div>
+      </div>
+
     </div>
     <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ 고객의 불편을 받은 그대로 화면에 옮기지 않고, 직접 만든 목업으로 버전을 빠르게 돌려가며 검증한 프로젝트입니다. 쿼리를 직접 짜던 분석가 경험이 키워드·쿼리 설정 구조와 AI 키워드룰 생성 설계의 기준이 되었습니다.</p>
   </div>
@@ -3430,7 +3446,6 @@ else: RAG 결과만 사용</div>
         </div>
       </div>
 
-      <!-- ── SLIDE 04 : 활용사례 탭 기획 ── -->
       <div class="slide-card">
         <div class="slide-card-header" onclick="toggleSlide(this)">
           <span class="slide-num">SLIDE 04</span>
@@ -3439,13 +3454,8 @@ else: RAG 결과만 사용</div>
         </div>
         <div class="slide-content">
           <div class="slide-inner">
-            <p class="slide-headline">연동은 끝났는데 "그래서 뭘 물어보면 되지?" — 연동 다음 단계의 막막함을 실제 사례로 풀기</p>
-            <p style="color:#555; font-size:12px; line-height:1.7; margin:12px 0;">연동 화면을 설계한 뒤, 사용자가 MCP를 연결하고도 활용 방법을 몰라 멈추는 지점에 주목했습니다. 사용자 화면에 <strong style="color:#23262C;">'활용사례' 탭</strong>을 새로 기획하고, Quetta 데이터 MCP로 실제 작성한 분석 리포트 예시를 정리해 바로 따라 할 수 있는 형태로 담고 있습니다.</p>
-            <table class="content-table">
-              <tr><td>기간</td><td>2026.10 – 현재 (진행 중)</td></tr>
-              <tr><td>나의 역할</td><td>활용사례 탭 화면 기획 · HTML 목업 제작 · MCP로 작성한 리포트 예시 수집·정리 · 활용 가이드 문서 작성</td></tr>
-              <tr><td>기획 의도</td><td>기능 설명이 아닌 결과물(리포트) 중심으로 보여줘, 연동 이후 실제 사용과 재방문으로 이어지게 함</td></tr>
-            </table>
+            <p class="slide-headline">질문하는 법만 알려주던 '사용 팁'에서, 실제로 얻는 결과물을 보여주는 '활용사례'로</p>
+            <table class="content-table"><tr><td style="white-space:nowrap; vertical-align:top;">문제</td><td>기존 '사용 팁' 탭은 질문 방법만 안내하고 결과물을 보여주지 못해, 처음 쓰는 사용자가 "내 업무에 어떻게 쓰지?"에서 멈춤</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">콘텐츠 기준</td><td>사내 TFT가 MCP로 실제 작성한 결과물을 근거로, 실제 산출물 여부 · 완성도 · 주제 적합성 · 업무 다양성 4가지 선정 기준 수립</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">분류 체계</td><td>업종 기준 → <strong style="color:#1A1A18;">직무 기준 4분야</strong>(브랜드/전략 · 상품기획/MD · 광고/캠페인 · 홍보/PR)로 전환 — 사용자가 자기 업무에서 바로 찾도록</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">화면 구조</td><td>목록 → 상세 2단계. 상세는 핵심 인사이트 → 분석 조건 → 리포트 지면 순, 오른쪽에 질문 복사 영역과 바꿔 쓸 부분 하이라이트</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">오해 방지</td><td>"질문 하나면 보고서가 나온다"는 오해를 막기 위해 v0.3에서 단계별 '질문 → 그 단계 결과'로 나눠 제시</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">원본 처리</td><td>TFT 원본은 노출하지 않고 지면 디자인을 새로 입히고 사실관계를 검증·보완. 같은 콘텐츠를 고객센터 가이드(HTML 불가 에디터)에 넣는 변형안도 설계</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">나의 역할</td><td>구성 기준 문서 작성 · 화면 기획 · HTML 목업(v0.1~v0.3) 제작</td></tr></table>
           </div>
         </div>
       </div>
@@ -3596,13 +3606,13 @@ else: RAG 결과만 사용</div>
       <div class="slide-card">
         <div class="slide-card-header" onclick="toggleSlide(this)">
           <span class="slide-num">SLIDE 06</span>
-          <span class="slide-title">고도화 — 컨셉 구체화 · 프롬프트 튜닝 (2026.10~)</span>
+          <span class="slide-title">고도화 — 컨셉 구체화 · 프롬프트 튜닝 (2026.07~)</span>
           <span class="slide-toggle">+</span>
         </div>
         <div class="slide-content">
           <div class="slide-inner">
-            <p class="slide-headline">1차 설계 이후, 실제 출력 결과를 보며 에이전트 컨셉과 프롬프트를 계속 다듬는 단계</p>
-            <table class="content-table"><tr><td style="white-space:nowrap;">컨셉 구체화</td><td>에이전트별 성격·역할·답변 톤을 더 구체적으로 정의해, 에이전트끼리 겹치지 않고 각자 다른 관점의 인사이트를 내도록 정리</td></tr><tr><td style="white-space:nowrap;">프롬프트 고도화</td><td>출력 결과를 검토하며 시스템 프롬프트를 반복 수정 — 같은 방식으로 키워드룰 생성 프롬프트도 함께 고도화</td></tr><tr><td style="white-space:nowrap;">연결</td><td>분석 리포트 자동 작성 서비스(Quettai Insight Report) 아이데이션에 참여하며 Lamp에서 쌓은 설계 경험을 확장</td></tr></table>
+            <p class="slide-headline">실제 출력 결과를 보며 에이전트 컨셉과 프롬프트를 계속 다듬은 단계</p>
+            <table class="content-table"><tr><td style="white-space:nowrap; vertical-align:top;">컨셉 구체화<br>(2026.09)</td><td>에이전트 이름·로직이 "브랜드·신제품" 검색을 전제로 짜여 있었지만 실제 검색어는 정책·콘텐츠 키워드일 수도 있음 → 이름에서 주어를 빼고 직무 전제 단어를 중립어로 교체(소비자 → 관심층, 신제품 → 변곡점, 경쟁사 → 비교 대상), 절대 시간 기준 배제. 이름 변경안만 37개 버전을 검토</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">구조 통합</td><td>트렌드 검색 에이전트를 <strong style="color:#1A1A18;">4종</strong>(종합 동향 · 여론 진단 · 관심 트렌드 진단 · 관심층 진단)으로 통합하고, 에이전트마다 2축 진단 매트릭스와 진단별 고정 제언 설계</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">예외 케이스</td><td>급증 구간이 없으면 문단이 비거나 깨지는 문제 → 구간 유무로 문단 구성을 나누고, 백엔드에 케이스별 샘플 데이터를 전달해 검증</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">프롬프트 튜닝</td><td>마이너스 부호 오판정 방지 규칙 · "한 문단 = 한 기간" 원칙(3 → 4문단) · LLM 3종 비교 테스트 후 내부 필드명이 그대로 노출되는 문제를 자연어 변환 예시로 해결 · 미세한 차이에도 경고가 붙는 문제를 최소 임계치로 완화 · 시나리오 문구를 데이터 방향에 따라 달라지게 일반화</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">역할 분리</td><td>LLM이 직접 뺄셈하던 구조를 백엔드가 미리 계산해 내려주는 방식으로 변경 — 계산은 시스템, 해석은 LLM</td></tr></table>
           </div>
         </div>
       </div>
@@ -3749,7 +3759,21 @@ else: RAG 결과만 사용</div>
             </table>
           </div>
         </div>
+        <div class="slide-card">
+        <div class="slide-card-header" onclick="toggleSlide(this)">
+          <span class="slide-num">SLIDE 05</span>
+          <span class="slide-title">후속 개선 — AI 분류 관리 개선 (2026.07~, 목업 v1.0~v1.2)</span>
+          <span class="slide-toggle">+</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-inner">
+            <p class="slide-headline">낯선 용어와 빈 화면 때문에 멈추던 AI 분류 설정을, 바로 시작할 수 있는 흐름으로</p>
+            <table class="content-table"><tr><td style="white-space:nowrap; vertical-align:top;">문제</td><td>불필요한 잠금 기능 · 분류 추가 후 빈 화면이라 다음 행동을 알 수 없음 · 불필요한 고급/추론 탭과 분류번호 · 낯선 용어 '레이블' · 분석 사전과 AI 분류의 차이 불분명 · 쓰임새를 알 수 있는 예시 부재</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">메뉴·안내</td><td>메뉴명을 "AI 분류 관리"로, 상위 이름을 "분류 목록"으로 정리하고 분석 사전 vs AI 분류 비교 툴팁 추가</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">설정 화면</td><td>잠금 제거 · 탭 3개를 한 화면으로 통합 · 분류를 클릭하거나 추가하면 설정 화면이 바로 열리게</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">용어</td><td>레이블 → 카테고리</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">분류 라이브러리</td><td>원클릭 프리셋 아이디어를 라이브러리로 확장 — 프리셋 4종(5단계 감성 · 가격/가성비 · 구매 여정 · 사용자 경험) 제공, 직접 만든 분류 공개 기능</td></tr><tr><td style="white-space:nowrap; vertical-align:top;">AI 분류 테스트</td><td>채팅형 테스트 화면 개선</td></tr></table>
+          </div>
+        </div>
       </div>
+
+    </div>
 
     </div><!-- /slides -->
     <p class="po-link" style="margin-top:16px; color:#23262C; padding:0 24px;">→ "차트 50종의 데이터 조합 × 권한 4단계 × 동시 편집 충돌" — 케이스가 끝없이 쏟아지는 프로젝트를 단독 기획하면서, 복잡도를 줄이는 원칙을 세우고 개발팀과 합의하는 과정을 반복했습니다.</p>
